@@ -6,6 +6,19 @@ What the harness reads from this repository: `final/gds/slot_7.gds` (top cell `s
 (macro `macros/slot7_testplatform/`, records `docs/slot7_testplatform/`: PLAN.md, RUNLOG.md, SUMMARY.md).
 This file is updated with each step; newest entry first.
 
+## 2026-11-06T19:03Z — stage B built and checked in the design repository (branch `claude/c5-testplatform`)
+
+`final/gds/slot_7.gds` on branch `claude/c5-testplatform` now contains stage B (not yet on `main`):
+- new cells: `tp_en_ctrl_b` (9 fail-safe enables) and `bias_tree_noab_pd` (the S2D pad's tree), both KLayout DRC 0 and
+  magic + netgen LVS "match uniquely"; 8 more transmission gates (`xgate`);
+- `slot_7.gds`: KLayout DRC (feol + beol) 0; LVS "netlists match uniquely", 190 devices, 120 nets (the same three known
+  port notes as stage A: stand-in pad-stub joins, frame `vss_1v2` strip);
+- simulation (5 corners, -40 / 27 / 125 C, 3.0 / 3.3 / 3.6 V): the tree runs from each reference; on `analog_bus2`,
+  vbn 0.82 .. 0.99 V, vbp 1.49 .. 2.44 V; `ibias1` through the slot 5.000 uA, off <= 29 pA; fail-safe holds (vdd_1v2
+  gated off, enable low); stage A unchanged (its tests repeated on the extracted stage-B layout);
+- the stage-A state is kept on branch `claude/slot7-stage-a` of this repository (and of the design and harness repos).
+Next: harness flow with this `slot_7.gds` on the fork, net check, then `main`.
+
 ## 2026-11-06T18:48Z — stage B started (work branch `claude/c5-testplatform`)
 
 Adds to the test platform (stage A stays as delivered on `main`):
