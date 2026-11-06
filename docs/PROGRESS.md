@@ -6,6 +6,13 @@ What the harness reads from this repository: `final/gds/slot_7.gds` (top cell `s
 (macro `macros/slot7_testplatform/`, records `docs/slot7_testplatform/`: PLAN.md, RUNLOG.md, SUMMARY.md).
 This file is updated with each step; newest entry first.
 
+## 2026-11-06T19:08Z — stage B through the harness flow (fork `tatzelbrumm/sg13cmos5l_ocd_chipalooza`, branch `claude/c5-testplatform-test`)
+
+With `s7_version` = this repository's `claude/c5-testplatform` c0726799: `make projects-clean / projects / projects-gds
+SLOTS=7` and `make gds-prefill` all exit 0; `slot_7` in the pre-fill top equals this `slot_7.gds` (XOR empty); net check
+of the pre-fill top (`docs/custom_pads/tools/netcheck_slot7_platform.py --stage b`): all 49 used and 14 unused slot pins
+OK. Stage B is ready for `main`; the merge is the slot owner's decision.
+
 ## 2026-11-06T19:03Z — stage B built and checked in the design repository (branch `claude/c5-testplatform`)
 
 `final/gds/slot_7.gds` on branch `claude/c5-testplatform` now contains stage B (not yet on `main`):
