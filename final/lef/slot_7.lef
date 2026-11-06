@@ -17,24 +17,6 @@ MACRO slot_7
         RECT 0.000 66.365 2.000 96.365 ;
     END
   END vss_1v2
-  PIN vdd_1v2
-    PORT
-      LAYER TopMetal1 ;
-        RECT 0.000 2.000 2.000 56.795 ;
-    END
-  END vdd_1v2
-  PIN vss_3v3
-    PORT
-      LAYER TopMetal1 ;
-        RECT 0.000 113.545 2.000 143.545 ;
-    END
-  END vss_3v3
-  PIN vdd_3v3
-    PORT
-      LAYER TopMetal1 ;
-        RECT 0.000 151.120 2.000 256.080 ;
-    END
-  END vdd_3v3
   PIN s7_an_0_vref
     PORT
       LAYER Metal3 ;
@@ -276,99 +258,115 @@ MACRO slot_7
     END
   END dig_in[4]
   PIN dig_in[3]
+    ANTENNAGATEAREA 0.900000 ;
     PORT
       LAYER Metal3 ;
-        RECT 0.000 79.670 2.000 79.890 ;
+        RECT 0.000 79.670 24.300 79.890 ;
     END
   END dig_in[3]
   PIN dig_in[2]
+    ANTENNAGATEAREA 0.900000 ;
     PORT
       LAYER Metal3 ;
-        RECT 0.000 79.230 2.000 79.450 ;
+        RECT 0.000 79.230 25.000 79.450 ;
     END
   END dig_in[2]
   PIN dig_in[1]
+    ANTENNAGATEAREA 0.900000 ;
     PORT
       LAYER Metal3 ;
-        RECT 0.000 78.790 2.000 79.010 ;
+        RECT 0.000 78.790 25.700 79.010 ;
     END
   END dig_in[1]
   PIN dig_in[0]
+    ANTENNAGATEAREA 0.900000 ;
     PORT
       LAYER Metal3 ;
-        RECT 0.000 78.350 2.000 78.570 ;
+        RECT 0.000 78.350 26.400 78.570 ;
     END
   END dig_in[0]
   PIN dig_out[11]
+    ANTENNADIFFAREA 0.170000 ;
     PORT
       LAYER Metal3 ;
-        RECT 0.000 77.030 2.000 77.250 ;
+        RECT 0.000 77.030 10.300 77.250 ;
     END
   END dig_out[11]
   PIN dig_out[10]
+    ANTENNADIFFAREA 0.170000 ;
     PORT
       LAYER Metal3 ;
-        RECT 0.000 76.590 2.000 76.810 ;
+        RECT 0.000 76.590 11.000 76.810 ;
     END
   END dig_out[10]
   PIN dig_out[9]
+    ANTENNADIFFAREA 0.170000 ;
     PORT
       LAYER Metal3 ;
-        RECT 0.000 76.150 2.000 76.370 ;
+        RECT 0.000 76.150 11.700 76.370 ;
     END
   END dig_out[9]
   PIN dig_out[8]
+    ANTENNADIFFAREA 0.170000 ;
     PORT
       LAYER Metal3 ;
-        RECT 0.000 75.710 2.000 75.930 ;
+        RECT 0.000 75.710 12.400 75.930 ;
     END
   END dig_out[8]
   PIN dig_out[7]
+    ANTENNADIFFAREA 0.170000 ;
     PORT
       LAYER Metal3 ;
-        RECT 0.000 75.270 2.000 75.490 ;
+        RECT 0.000 75.270 13.100 75.490 ;
     END
   END dig_out[7]
   PIN dig_out[6]
+    ANTENNADIFFAREA 0.170000 ;
     PORT
       LAYER Metal3 ;
-        RECT 0.000 74.830 2.000 75.050 ;
+        RECT 0.000 74.830 13.800 75.050 ;
     END
   END dig_out[6]
   PIN dig_out[5]
+    ANTENNADIFFAREA 0.170000 ;
     PORT
       LAYER Metal3 ;
-        RECT 0.000 74.390 2.000 74.610 ;
+        RECT 0.000 74.390 14.500 74.610 ;
     END
   END dig_out[5]
   PIN dig_out[4]
+    ANTENNADIFFAREA 0.170000 ;
     PORT
       LAYER Metal3 ;
-        RECT 0.000 73.950 2.000 74.170 ;
+        RECT 0.000 73.950 15.200 74.170 ;
     END
   END dig_out[4]
   PIN dig_out[3]
+    ANTENNADIFFAREA 0.680000 ;
     PORT
       LAYER Metal3 ;
-        RECT 0.000 73.510 2.000 73.730 ;
+        RECT 0.000 73.510 15.900 73.730 ;
     END
   END dig_out[3]
   PIN dig_out[2]
+    ANTENNADIFFAREA 0.680000 ;
     PORT
       LAYER Metal3 ;
-        RECT 0.000 73.070 2.000 73.290 ;
+        RECT 0.000 73.070 16.600 73.290 ;
     END
   END dig_out[2]
   PIN dig_out[1]
+    ANTENNADIFFAREA 0.680000 ;
     PORT
       LAYER Metal3 ;
-        RECT 0.000 72.630 2.000 72.850 ;
+        RECT 0.000 72.630 17.300 72.850 ;
     END
   END dig_out[1]
   PIN dig_out[0]
+    ANTENNADIFFAREA 0.680000 ;
     PORT
       LAYER Metal3 ;
-        RECT 0.000 72.190 2.000 72.410 ;
+        RECT 0.000 72.190 18.000 72.410 ;
     END
   END dig_out[0]
   PIN ibias0
@@ -396,21 +394,24 @@ MACRO slot_7
     END
   END analog_bus2
   PIN analog_bus1
+    ANTENNADIFFAREA 1.360000 ;
     PORT
       LAYER Metal3 ;
         RECT 0.000 108.915 2.000 110.915 ;
     END
   END analog_bus1
   PIN analog_bus0
+    ANTENNADIFFAREA 1.360000 ;
     PORT
       LAYER Metal3 ;
         RECT 0.000 111.855 2.000 113.855 ;
     END
   END analog_bus0
   PIN enable
+    ANTENNAGATEAREA 0.900000 ;
     PORT
       LAYER Metal3 ;
-        RECT 0.000 89.360 2.000 89.580 ;
+        RECT 0.000 89.360 27.100 89.580 ;
     END
   END enable
   PIN clk
@@ -425,7 +426,37 @@ MACRO slot_7
         RECT 0.000 88.910 2.000 89.130 ;
     END
   END reset
+  PIN vdd_1v2
+    ANTENNAGATEAREA 2.700000 ;
+    ANTENNADIFFAREA 6.391600 ;
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 2.000 2.000 56.795 ;
+    END
+  END vdd_1v2
+  PIN vss_3v3
+    ANTENNAGATEAREA 190.511993 ;
+    ANTENNADIFFAREA 274.222382 ;
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 113.545 2.000 143.545 ;
+    END
+  END vss_3v3
+  PIN vdd_3v3
+    ANTENNAGATEAREA 6.000000 ;
+    ANTENNADIFFAREA 202.450790 ;
+    PORT
+      LAYER TopMetal1 ;
+        RECT 0.000 151.120 2.000 256.080 ;
+    END
+  END vdd_3v3
   OBS
+      LAYER GatPoly ;
+        RECT 32.000 7.000 141.930 185.515 ;
+      LAYER Metal1 ;
+        RECT 30.955 7.035 142.550 197.000 ;
+      LAYER Metal2 ;
+        RECT 30.955 2.055 143.200 195.695 ;
       LAYER Metal3 ;
         RECT 0.000 261.325 529.890 261.825 ;
         RECT 0.000 260.785 531.390 261.325 ;
@@ -462,9 +493,38 @@ MACRO slot_7
         RECT 2.210 96.945 533.100 99.365 ;
         RECT 0.000 96.425 533.100 96.945 ;
         RECT 2.210 94.005 533.100 96.425 ;
-        RECT 0.000 93.615 533.100 94.005 ;
+        RECT 0.000 90.230 533.100 94.005 ;
+        RECT 2.210 89.790 533.100 90.230 ;
+        RECT 27.310 89.150 533.100 89.790 ;
+        RECT 2.210 80.100 533.100 89.150 ;
+        RECT 24.510 79.660 533.100 80.100 ;
+        RECT 25.210 79.220 533.100 79.660 ;
+        RECT 25.910 78.780 533.100 79.220 ;
+        RECT 26.610 78.140 533.100 78.780 ;
+        RECT 0.000 77.460 533.100 78.140 ;
+        RECT 10.510 77.020 533.100 77.460 ;
+        RECT 11.210 76.580 533.100 77.020 ;
+        RECT 11.910 76.140 533.100 76.580 ;
+        RECT 12.610 75.700 533.100 76.140 ;
+        RECT 13.310 75.260 533.100 75.700 ;
+        RECT 14.010 74.820 533.100 75.260 ;
+        RECT 14.710 74.380 533.100 74.820 ;
+        RECT 15.410 73.940 533.100 74.380 ;
+        RECT 16.110 73.500 533.100 73.940 ;
+        RECT 16.810 73.060 533.100 73.500 ;
+        RECT 17.510 72.620 533.100 73.060 ;
+        RECT 18.210 71.980 533.100 72.620 ;
+        RECT 0.000 2.050 533.100 71.980 ;
       LAYER Metal4 ;
-        RECT 527.850 123.720 530.150 222.950 ;
+        RECT 7.450 2.050 530.150 222.950 ;
+      LAYER TopMetal1 ;
+        RECT 3.640 149.480 150.000 200.000 ;
+        RECT 2.000 145.185 150.000 149.480 ;
+        RECT 3.640 111.905 150.000 145.185 ;
+        RECT 2.000 98.005 150.000 111.905 ;
+        RECT 3.640 64.725 150.000 98.005 ;
+        RECT 2.000 58.435 150.000 64.725 ;
+        RECT 3.640 40.000 150.000 58.435 ;
   END
 END slot_7
 END LIBRARY

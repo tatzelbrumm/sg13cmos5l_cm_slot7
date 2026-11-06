@@ -6,9 +6,15 @@ replace the analog pads `s7_an[0]` and `s7_an[1]` of slot 7. `macros/` holds bui
 circuit (the two bias cores); the harness does not read them. It has one branch, `main`, and no inherited history,
 so that a `git submodule add` of it stays small.
 
-**`slot_7.gds` is a plumbing stand-in.** It contains the slot frame, the 13 pad pins at the right edge and
-stand-in stubs and wiring, but no circuit, so that the harness flow can be tested end to end. The real slot circuit
-follows in a later commit of this repository.
+**`slot_7.gds` is the slot-7 test platform for the two bias references (stage A, branch `claude/c5-testplatform`).**
+It needs no custom pad: the Oguey–Aebischer core `oa_core_pd` and the Banba bandgap core `bg_core_pd`, each with a
+fail-safe 3.3 V enable (`dig_in[0]` / `dig_in[1]`, AND `enable`, AND the slot's `vdd_1v2` present), drive their output
+current (~5 uA, sourced) through a bare hv transmission gate (`xgate`, enabled by `dig_in[2]` / `dig_in[3]`, also
+fail-safe) onto `analog_bus0` / `analog_bus1`. An SMU on the chip pin `analog[0]` / `analog[1]` measures them;
+`dig_out[3:0]` read the four enables back (SPI reg 0x38). Procedure, pin map, results: design repository
+`docs/slot7_testplatform/` (PLAN.md, SUMMARY.md). The frame, the 13 custom-pad pins at the right edge and their
+stand-in stubs and wiring are unchanged from the previous `slot_7.gds` (sha256 5624ae45...), so it fits the
+custom-pad wrapper as before; the platform stays at x < 145 um. Ports, `slot_7.lib` and `slot_7.vh` are unchanged.
 
 The design work lives in [`tatzelbrumm/sg13cmos5l_cm_ip__single2diff2single`](https://github.com/tatzelbrumm/sg13cmos5l_cm_ip__single2diff2single);
 the files here are copies from fixed commits of it (table below).
@@ -17,15 +23,16 @@ the files here are copies from fixed commits of it (table below).
 
 Source repository for every file: `tatzelbrumm/sg13cmos5l_cm_ip__single2diff2single`.
 `T` = branch `toplevel` @ `91a7da8b67ac56a26c605501146667a1fde28c32`,
-`H` = branch `harness-test` @ `4611357166b7368be4fbf8e176b1e82b8a9a85d0`.
+`H` = branch `harness-test` @ `4611357166b7368be4fbf8e176b1e82b8a9a85d0`,
+`P` = branch `claude/c5-slot7-testplatform` @ `a665f66336e842abefbefaee35e6df1c91510f19`.
 
 | file here | commit | source path | sha256 (of the source file) |
 |---|---|---|---|
 | `LICENSE` | T | `LICENSE` | `a7fd04ca6fa87a80afd79015999a48e6e5db4966926af0a69182cb8c2d836d9f` |
-| `final/gds/slot_7.gds` | H | `final/gds/slot_7.gds` | `5624ae45efb7761fd0b405ecc785a3f2f3c3a93d93203d0aaca9feb15bedc11c` |
-| `final/lef/slot_7.lef` | H | `final/lef/slot_7.lef` | `9fd8d5b1c57d7a2d26ad8e4883d8634f5dec4bfc36a9026ad9becc5401c9d8a8` |
-| `final/lib/slot_7.lib` | H | `final/lib/slot_7.lib` | `6137d6230046318850c9f1fba2d8e79322ce28d9e18f0e2e64385099c419bd56` |
-| `final/vh/slot_7.vh` | H | `final/vh/slot_7.vh` | `1ba0f560eb7b9e23258d2f371b1e8ab0936b4103aeb7ccaece69990c75086976` |
+| `final/gds/slot_7.gds` | P | `macros/slot7_testplatform/final/gds/slot_7.gds` | `d0cdc81dd0855cc3dc56aeb77543e1eeabfc9a755943d35efbcdfb136a5d8ca6` |
+| `final/lef/slot_7.lef` | P | `macros/slot7_testplatform/final/lef/slot_7.lef` | `431c564ab63a16bae7f0f3f2f7934fe4da4cd7a605c47e4a94749c5691c8838b` |
+| `final/lib/slot_7.lib` | H (= P) | `final/lib/slot_7.lib` | `6137d6230046318850c9f1fba2d8e79322ce28d9e18f0e2e64385099c419bd56` |
+| `final/vh/slot_7.vh` | H (= P) | `final/vh/slot_7.vh` | `1ba0f560eb7b9e23258d2f371b1e8ab0936b4103aeb7ccaece69990c75086976` |
 | `final/pads/sg13cmos5l_IOPadDiff2Single.gds` | T | `macros/sg13cmos5l_IOPadDiff2Single/layout/klayout/sg13cmos5l_IOPadDiff2Single.klay.gds` | `13e176ab106d0cb307a6ebc42acf647ce38b6abc52183a9f1d9ffead2f6c2b17` |
 | `final/pads/sg13cmos5l_IOPadSingle2Diff.gds` | T | `macros/sg13cmos5l_IOPadSingle2Diff/layout/klayout/sg13cmos5l_IOPadSingle2Diff.klay.gds` | `f4b0e07320821248872780b344d71845d08bc250a4bfc9bcf8633a39bdef0182` |
 | `final/pads/sg13cmos5l_IOPadDiff2Single.spice` | T | `macros/sg13cmos5l_IOPadDiff2Single/netlist/schematic/sg13cmos5l_IOPadDiff2Single_magic.spice` | `b8d9103230bd7ced5c75a0fb38d56f078ec3cbf48d0f82a3772b85ff1edc2c1c` |
@@ -70,8 +77,9 @@ reason; IHP's own `IOPadAnalog` shows the same merge in the harness's magic + ne
 ## Bias cores for the slot's inner circuit
 
 `macros/bg_core_pd/` and `macros/oa_core_pd/` are the two reference-current cores that will feed the pads' `iref`
-pins from inside slot 7. They are building blocks for `slot_7.gds`: no harness script reads them, and they are not yet
-placed in `slot_7.gds`.
+pins from inside slot 7. They are building blocks for `slot_7.gds`: no harness script reads them. Since branch
+`claude/c5-testplatform` both are placed in `slot_7.gds` (sub-cells `slot7_oa_core_pd`, `slot7_bg_core_pd`; every
+sub-cell of `slot_7.gds` has the prefix `slot7_`).
 
 | cell | what | size (um) | ports |
 |---|---|---|---|
@@ -140,3 +148,11 @@ x 535.050..536.450 um, slot-local coordinates (origin = lower left of the 537.15
 ## License
 
 Solderpad Hardware License v2.1, see `LICENSE`.
+
+## Test platform checks (branch `claude/c5-testplatform`, 2026-11-06)
+
+In the design repository (commit P): PDK KLayout DRC (feol + beol) of `slot_7.gds`: 0; magic + netgen LVS against the
+platform netlist: "Netlists match uniquely" (104 devices, 72 nets), with the known port errors of the unchanged stubs
+(`s7_an_0_outp` / `_outn` joined to `s7_an_1_vinp` / `_vinn`) and of the frame's Metal2 `vss_1v2` strip (not connected
+inside the slot, as before). Harness flow on the fork branch `claude/c5-testplatform-test`: see that branch's
+`docs/custom_pads/RUNLOG.md`.
