@@ -16,6 +16,8 @@ fail-safe) onto `analog_bus0` / `analog_bus1`. An SMU on the chip pin `analog[0]
 stand-in stubs and wiring are unchanged from the previous `slot_7.gds` (sha256 5624ae45...), so it fits the
 custom-pad wrapper as before; the platform stays at x < 145 um. Ports, `slot_7.lib` and `slot_7.vh` are unchanged.
 
+Progress log for the harness owner: [`docs/PROGRESS.md`](docs/PROGRESS.md).
+
 The design work lives in [`tatzelbrumm/sg13cmos5l_cm_ip__single2diff2single`](https://github.com/tatzelbrumm/sg13cmos5l_cm_ip__single2diff2single);
 the files here are copies from fixed commits of it (table below).
 
