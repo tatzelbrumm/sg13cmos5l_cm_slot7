@@ -1,7 +1,7 @@
 # sg13cmos5l_cm_slot7 — Chipalooza slot 7 delivery repository
 
 This repository holds what the Chipalooza harness (`sg13cmos5l_ocd_chipalooza`) reads for **slot 7**:
-the slot layout `final/gds/slot_7.gds` (top cell `slot_7`) and two **custom I/O pad cells** (`final/pads/`) that
+the slot layout `final/gds/slot_7.gds` (top cell `slot_7`) and two **custom I/O pad cells** (`pads/`) that
 replace the analog pads `s7_an[0]` and `s7_an[1]` of slot 7. `macros/` holds building blocks of the slot's inner
 circuit (the two bias cores); the harness does not read them. It has one branch, `main`, and no inherited history,
 so that a `git submodule add` of it stays small.
@@ -29,15 +29,15 @@ Source repository for every file: `tatzelbrumm/sg13cmos5l_cm_ip__single2diff2sin
 | file here | commit | source path | sha256 (of the source file) |
 |---|---|---|---|
 | `LICENSE` | T | `LICENSE` | `a7fd04ca6fa87a80afd79015999a48e6e5db4966926af0a69182cb8c2d836d9f` |
-| `final/gds/slot_7.gds` | P | `macros/slot7_testplatform/final/gds/slot_7.gds` | `d0cdc81dd0855cc3dc56aeb77543e1eeabfc9a755943d35efbcdfb136a5d8ca6` |
-| `final/lef/slot_7.lef` | P | `macros/slot7_testplatform/final/lef/slot_7.lef` | `431c564ab63a16bae7f0f3f2f7934fe4da4cd7a605c47e4a94749c5691c8838b` |
-| `final/lib/slot_7.lib` | H (= P) | `final/lib/slot_7.lib` | `6137d6230046318850c9f1fba2d8e79322ce28d9e18f0e2e64385099c419bd56` |
-| `final/vh/slot_7.vh` | H (= P) | `final/vh/slot_7.vh` | `1ba0f560eb7b9e23258d2f371b1e8ab0936b4103aeb7ccaece69990c75086976` |
-| `final/pads/sg13cmos5l_IOPadDiff2Single.gds` | T | `macros/sg13cmos5l_IOPadDiff2Single/layout/klayout/sg13cmos5l_IOPadDiff2Single.klay.gds` | `13e176ab106d0cb307a6ebc42acf647ce38b6abc52183a9f1d9ffead2f6c2b17` |
-| `final/pads/sg13cmos5l_IOPadSingle2Diff.gds` | T | `macros/sg13cmos5l_IOPadSingle2Diff/layout/klayout/sg13cmos5l_IOPadSingle2Diff.klay.gds` | `f4b0e07320821248872780b344d71845d08bc250a4bfc9bcf8633a39bdef0182` |
-| `final/pads/sg13cmos5l_IOPadDiff2Single.spice` | T | `macros/sg13cmos5l_IOPadDiff2Single/netlist/schematic/sg13cmos5l_IOPadDiff2Single_magic.spice` | `b8d9103230bd7ced5c75a0fb38d56f078ec3cbf48d0f82a3772b85ff1edc2c1c` |
-| `final/pads/sg13cmos5l_IOPadSingle2Diff.spice` | T | `macros/sg13cmos5l_IOPadSingle2Diff/netlist/schematic/sg13cmos5l_IOPadSingle2Diff_magic.spice` | `5a4e67f9b12f5f9017978ad0da4305fb331c9aa3abf4657ec48f5c77a8d32810` |
-| `final/pads/pads.txt` | — | written here (manifest) | — |
+| `final/gds/slot_7.gds` | H | `final/gds/slot_7.gds` | `5624ae45efb7761fd0b405ecc785a3f2f3c3a93d93203d0aaca9feb15bedc11c` |
+| `final/lef/slot_7.lef` | H | `final/lef/slot_7.lef` | `9fd8d5b1c57d7a2d26ad8e4883d8634f5dec4bfc36a9026ad9becc5401c9d8a8` |
+| `final/lib/slot_7.lib` | H | `final/lib/slot_7.lib` | `6137d6230046318850c9f1fba2d8e79322ce28d9e18f0e2e64385099c419bd56` |
+| `final/vh/slot_7.vh` | H | `final/vh/slot_7.vh` | `1ba0f560eb7b9e23258d2f371b1e8ab0936b4103aeb7ccaece69990c75086976` |
+| `pads/sg13cmos5l_IOPadDiff2Single/sg13cmos5l_IOPadDiff2Single.gds` | T | `macros/sg13cmos5l_IOPadDiff2Single/layout/klayout/sg13cmos5l_IOPadDiff2Single.klay.gds` | `13e176ab106d0cb307a6ebc42acf647ce38b6abc52183a9f1d9ffead2f6c2b17` |
+| `pads/sg13cmos5l_IOPadSingle2Diff/sg13cmos5l_IOPadSingle2Diff.gds` | T | `macros/sg13cmos5l_IOPadSingle2Diff/layout/klayout/sg13cmos5l_IOPadSingle2Diff.klay.gds` | `f4b0e07320821248872780b344d71845d08bc250a4bfc9bcf8633a39bdef0182` |
+| `pads/sg13cmos5l_IOPadDiff2Single/sg13cmos5l_IOPadDiff2Single.spice` | T | `macros/sg13cmos5l_IOPadDiff2Single/netlist/schematic/sg13cmos5l_IOPadDiff2Single_magic.spice` | `b8d9103230bd7ced5c75a0fb38d56f078ec3cbf48d0f82a3772b85ff1edc2c1c` |
+| `pads/sg13cmos5l_IOPadSingle2Diff/sg13cmos5l_IOPadSingle2Diff.spice` | T | `macros/sg13cmos5l_IOPadSingle2Diff/netlist/schematic/sg13cmos5l_IOPadSingle2Diff_magic.spice` | `5a4e67f9b12f5f9017978ad0da4305fb331c9aa3abf4657ec48f5c77a8d32810` |
+| `pads/pads.txt` | — | written here (manifest) | — |
 | `macros/bg_core_pd/`, `macros/oa_core_pd/` | `toplevel` @ cf88683 | `macros/<cell>/...` | see "Bias cores" below |
 
 All files are byte copies, except that each `.spice` file starts with a 4-line `*` comment carrying its provenance;
@@ -48,7 +48,7 @@ none is needed (`FIXED_BBOX 0 0 80 180` is set on import).
 
 ## Pad cells
 
-`final/pads/pads.txt` lists, per pad cell, the `config.txt` pad it replaces and its core-side pins in order along the
+`pads/pads.txt` lists, per pad cell, the `config.txt` pad it replaces and its core-side pins in order along the
 core edge. Every pad cell also has the ring pins `iovdd iovss vdd vss` and the bond pad `pad`.
 
 | cell | replaces | core-side pins |
