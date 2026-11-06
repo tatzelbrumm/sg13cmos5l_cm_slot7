@@ -1,0 +1,3 @@
+# cell  config.txt-pad  core-side pins in order along the core edge
+sg13cmos5l_IOPadSingle2Diff  s7_an[0]  vref outp outn vcm en_3v3 en_3v3_b iref
+sg13cmos5l_IOPadDiff2Single  s7_an[1]  vinp vinn vref iref en_3v3_b en_3v3
