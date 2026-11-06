@@ -1,0 +1,180 @@
+
+Circuit 1 cell rhigh and Circuit 2 cell rhigh are black boxes.
+Warning: Equate pins:  cell rhigh is a placeholder, treated as a black box.
+Warning: Equate pins:  cell rhigh is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: rhigh                           |Circuit 2: rhigh                           
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes rhigh and rhigh are equivalent.
+
+Circuit 1 cell sg13_hv_pmos and Circuit 2 cell sg13_hv_pmos are black boxes.
+Warning: Equate pins:  cell sg13_hv_pmos is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sg13_hv_pmos is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sg13_hv_pmos                    |Circuit 2: sg13_hv_pmos                    
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13_hv_pmos and sg13_hv_pmos are equivalent.
+
+Circuit 1 cell sg13_hv_nmos and Circuit 2 cell sg13_hv_nmos are black boxes.
+Warning: Equate pins:  cell sg13_hv_nmos is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sg13_hv_nmos is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sg13_hv_nmos                    |Circuit 2: sg13_hv_nmos                    
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13_hv_nmos and sg13_hv_nmos are equivalent.
+
+Circuit 1 cell pnpMPA and Circuit 2 cell pnpMPA are black boxes.
+Warning: Equate pins:  cell pnpMPA is a placeholder, treated as a black box.
+Warning: Equate pins:  cell pnpMPA is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: pnpMPA                          |Circuit 2: pnpMPA                          
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes pnpMPA and pnpMPA are equivalent.
+
+Class bg_core_pd (0):  Merged 58 parallel devices.
+Class bg_core_pd (0):  Merged 36 series devices.
+Class bg_core_pd (1):  Merged 2 parallel devices.
+Class bg_core_pd (1):  Merged 36 series devices.
+Subcircuit summary:
+Circuit 1: bg_core_pd                      |Circuit 2: bg_core_pd                      
+-------------------------------------------|-------------------------------------------
+sg13_hv_pmos (57->17)                      |sg13_hv_pmos (17)                          
+sg13_hv_nmos (16->6)                       |sg13_hv_nmos (7->6)                        
+pnpMPA (9->2)                              |pnpMPA (9->2)                              
+rhigh (41->4)                              |rhigh (41->4)                              
+Number of devices: 29                      |Number of devices: 29                      
+Number of nets: 21                         |Number of nets: 21                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely with property errors.
+rhigh:80 vs. rhigh:R0[17]:
+Property mm_ok in circuit2 has no matching property in circuit1
+rhigh:80 vs. rhigh:R0[17]:
+Property mm_ok in circuit2 has no matching property in circuit1
+rhigh:52 vs. rhigh:R1A[10]:
+Property mm_ok in circuit2 has no matching property in circuit1
+rhigh:52 vs. rhigh:R1A[10]:
+Property mm_ok in circuit2 has no matching property in circuit1
+rhigh:26 vs. rhigh:R1B[9]:
+Property mm_ok in circuit2 has no matching property in circuit1
+rhigh:26 vs. rhigh:R1B[9]:
+Property mm_ok in circuit2 has no matching property in circuit1
+rhigh:76 vs. rhigh:RDUM[1]:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:66 vs. sg13_hv_nmos:MS2:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:66 vs. sg13_hv_nmos:MS2:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:17 vs. sg13_hv_nmos:MS3:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:17 vs. sg13_hv_nmos:MS3:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:94 vs. sg13_hv_nmos:NB:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:36 vs. sg13_hv_nmos:NA:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:16 vs. sg13_hv_nmos:SKS:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:16 vs. sg13_hv_nmos:SKS:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:4 vs. sg13_hv_nmos:MDUM2:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:4 vs. sg13_hv_nmos:MDUM2:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:4 vs. sg13_hv_nmos:MDUM2:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_pmos:8 vs. sg13_hv_pmos:PB:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_pmos:11 vs. sg13_hv_pmos:PBC:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_pmos:33 vs. sg13_hv_pmos:PAC:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_pmos:10 vs. sg13_hv_pmos:PO:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_pmos:3 vs. sg13_hv_pmos:PA:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_pmos:6 vs. sg13_hv_pmos:POC:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_pmos:20 vs. sg13_hv_pmos:SVPG:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_pmos:20 vs. sg13_hv_pmos:SVPG:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_pmos:60 vs. sg13_hv_pmos:MS1_0:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_pmos:60 vs. sg13_hv_pmos:MS1_0:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_pmos:72 vs. sg13_hv_pmos:MS1_1:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_pmos:72 vs. sg13_hv_pmos:MS1_1:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_pmos:48 vs. sg13_hv_pmos:MS1_2:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_pmos:48 vs. sg13_hv_pmos:MS1_2:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_pmos:54 vs. sg13_hv_pmos:MS1_3:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_pmos:54 vs. sg13_hv_pmos:MS1_3:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_pmos:31 vs. sg13_hv_pmos:MS1_4:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_pmos:31 vs. sg13_hv_pmos:MS1_4:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_pmos:44 vs. sg13_hv_pmos:MS1_5:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_pmos:44 vs. sg13_hv_pmos:MS1_5:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_pmos:25 vs. sg13_hv_pmos:MS1_6:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_pmos:25 vs. sg13_hv_pmos:MS1_6:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_pmos:34 vs. sg13_hv_pmos:MS1_7:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_pmos:34 vs. sg13_hv_pmos:MS1_7:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_pmos:13 vs. sg13_hv_pmos:MDUM1:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_pmos:5 vs. sg13_hv_pmos:MDUM0:
+Property mm_ok in circuit2 has no matching property in circuit1
+
+Subcircuit pins:
+Circuit 1: bg_core_pd                      |Circuit 2: bg_core_pd                      
+-------------------------------------------|-------------------------------------------
+en_3v3_b                                   |en_3v3_b                                   
+iout                                       |iout                                       
+en_3v3                                     |en_3v3                                     
+vdd                                        |vdd                                        
+vss                                        |vss                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes bg_core_pd and bg_core_pd are equivalent.
+
+Final result: Circuits match uniquely.
+Property errors were found.
+
+The following cells had property errors:
+ bg_core_pd

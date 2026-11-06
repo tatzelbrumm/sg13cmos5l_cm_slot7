@@ -1,0 +1,30 @@
+v {xschem version=3.4.8RC file_version=1.3}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+description="bg_core_pd: reference-current core with power-down"
+}
+V {}
+S {}
+F {}
+E {}
+L 4 20 -60 20 -40 {}
+L 4 0 40 0 60 {}
+L 4 40 0 60 0 {}
+L 4 -60 -20 -40 -20 {}
+L 4 -60 20 -50 20 {}
+B 5 17.5 -62.5 22.5 -57.5 {name=vdd dir=inout}
+B 5 -2.5 57.5 2.5 62.5 {name=vss dir=inout}
+B 5 57.5 -2.5 62.5 2.5 {name=iout dir=out}
+B 5 -62.5 -22.5 -57.5 -17.5 {name=en_3v3 dir=in}
+B 5 -62.5 17.5 -57.5 22.5 {name=en_3v3_b dir=in}
+A 4 -45 20 5 0 360 {}
+P 4 5 -40 -40 -40 40 40 40 40 -40 -40 -40 {}
+T {vdd} 26 -36 0 1 0.2 0.2 {}
+T {vss} -6 24 0 0 0.2 0.2 {}
+T {iout} 36 -7 0 1 0.2 0.2 {}
+T {en_3v3} -36 -27 0 0 0.2 0.2 {}
+T {en_3v3_b} -36 13 0 0 0.2 0.2 {}
+T {@symname} -40 44 0 0 0.25 0.25 {}
+T {@name} -40 -60 0 0 0.25 0.25 {}
