@@ -6,6 +6,21 @@ What the harness reads from this repository: `final/gds/slot_7.gds` (top cell `s
 (macro `macros/slot7_testplatform/`, records `docs/slot7_testplatform/`: PLAN.md, RUNLOG.md, SUMMARY.md).
 This file is updated with each step; newest entry first.
 
+## 2026-11-07 — matched bias tree in stage B (branch `claude/c5-testplatform`)
+
+`final/gds/slot_7.gds` on branch `claude/c5-testplatform`: the bias tree `bias_tree_noab_pd` is now laid out like the
+two cores, with a matched NMOS half and PMOS half and an assembly (design branch `claude/c5-tree-layout`, reports in
+`macros/slot7_testplatform/layout/tree/{nmos,pmos,assembly}/report.md`):
+- 32.21 x 18.68 um = 602 um2 (before: 57.31 x 34.41 um = 1972 um2); same netlist, devices split into common-centroid
+  unit fingers (NMOS 1.2/6, PMOS 1/6) with end dummies;
+- tree: DRC 0 (main and maximal deck), LVS match; `slot_7.gds`: KLayout DRC 0, LVS "netlists match uniquely", 190 devices,
+  120 nets (the same three known port notes);
+- extracted layout: stage A unchanged; the three references still agree to ~1 mV; the tree voltages shift against the
+  schematic by up to ~20 mV from the narrow-width effect of the unit fingers (tt, 27 C, OA reference: vbn 0.928 V
+  instead of 0.913, vbp 1.994 instead of 1.973);
+- ports, LEF pin names, `slot_7.lib` and `slot_7.vh` unchanged.
+Next: harness flow with this `slot_7.gds` on the fork branch `claude/c5-testplatform-test`, net check.
+
 ## 2026-11-06T19:08Z — stage B through the harness flow (fork `tatzelbrumm/sg13cmos5l_ocd_chipalooza`, branch `claude/c5-testplatform-test`)
 
 With `s7_version` = this repository's `claude/c5-testplatform` c0726799: `make projects-clean / projects / projects-gds

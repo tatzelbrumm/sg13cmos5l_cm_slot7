@@ -20,6 +20,8 @@ custom-pad wrapper as before. Ports, `slot_7.lib` and `slot_7.vh` are unchanged.
 reference selectable from the OA core, the BG core or the harness `ibias0` (`dig_in[4..6]`, tree enable `dig_in[7]`);
 its bias voltages `vbp vbn vbpc vbnc` onto `analog_bus2` (`dig_in[8..11]`), the harness `ibias1` onto `analog_bus3`
 (`dig_in[12]`); all enables fail-safe. Everything at x < 285 um. Stage A alone: branch `claude/slot7-stage-a`.
+The tree is now laid out matched like the cores (common-centroid unit fingers, 32.21 x 18.68 um instead of 57.31 x 34.41 um);
+same netlist, same ports. Its bias voltages differ from the schematic by up to ~20 mV (narrow-width effect of the unit fingers).
 
 Progress log for the harness owner: [`docs/PROGRESS.md`](docs/PROGRESS.md).
 
@@ -31,13 +33,13 @@ the files here are copies from fixed commits of it (table below).
 Source repository for every file: `tatzelbrumm/sg13cmos5l_cm_ip__single2diff2single`.
 `T` = branch `toplevel` @ `91a7da8b67ac56a26c605501146667a1fde28c32`,
 `H` = branch `harness-test` @ `4611357166b7368be4fbf8e176b1e82b8a9a85d0`,
-`P` = branch `claude/c5-slot7-testplatform` @ `efb8014101ba0afad1235859016592bf511b2117` (stage B; stage A was `a665f66336e842abefbefaee35e6df1c91510f19`).
+`P` = branch `claude/c5-tree-layout` @ `380d0e5887378e60a2f083ee6532e0ca68d192db` (stage B with the matched bias tree; stage B with the naive tree was branch `claude/c5-slot7-testplatform` @ `efb8014101ba0afad1235859016592bf511b2117`, stage A `a665f66336e842abefbefaee35e6df1c91510f19`).
 
 | file here | commit | source path | sha256 (of the source file) |
 |---|---|---|---|
 | `LICENSE` | T | `LICENSE` | `a7fd04ca6fa87a80afd79015999a48e6e5db4966926af0a69182cb8c2d836d9f` |
-| `final/gds/slot_7.gds` | P | `macros/slot7_testplatform/final/gds/slot_7.gds` | `abc7a3621726d59448cada103b2f90412faef4ad562888c2b1f9d5af3d231e11` |
-| `final/lef/slot_7.lef` | P | `macros/slot7_testplatform/final/lef/slot_7.lef` | `23894fc5461e197e8405597dd9aa88a185eac82c267890aca69013e6af36cd3e` |
+| `final/gds/slot_7.gds` | P | `macros/slot7_testplatform/final/gds/slot_7.gds` | `b08f8bfd60a07fe19303aeccf0759e0fbcd3d997a5e672796aa39ce9a25ebd5f` |
+| `final/lef/slot_7.lef` | P | `macros/slot7_testplatform/final/lef/slot_7.lef` | `8d925fc6fe62002494acee4d9262d61aeed2805c70e94b902dbd0001b8bcb684` |
 | `final/lib/slot_7.lib` | H (= P) | `final/lib/slot_7.lib` | `6137d6230046318850c9f1fba2d8e79322ce28d9e18f0e2e64385099c419bd56` |
 | `final/vh/slot_7.vh` | H (= P) | `final/vh/slot_7.vh` | `1ba0f560eb7b9e23258d2f371b1e8ab0936b4103aeb7ccaece69990c75086976` |
 | `pads/sg13cmos5l_IOPadDiff2Single/sg13cmos5l_IOPadDiff2Single.gds` | T | `macros/sg13cmos5l_IOPadDiff2Single/layout/klayout/sg13cmos5l_IOPadDiff2Single.klay.gds` | `13e176ab106d0cb307a6ebc42acf647ce38b6abc52183a9f1d9ffead2f6c2b17` |
