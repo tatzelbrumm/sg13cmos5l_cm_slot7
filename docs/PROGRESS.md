@@ -6,6 +6,14 @@ What the harness reads from this repository: `final/gds/slot_7.gds` (top cell `s
 (macro `macros/slot7_testplatform/`, records `docs/slot7_testplatform/`: PLAN.md, RUNLOG.md, SUMMARY.md).
 This file is updated with each step; newest entry first.
 
+## 2026-11-07T13:38Z — matched bias tree through the harness flow (fork `tatzelbrumm/sg13cmos5l_ocd_chipalooza`, branch `claude/c5-testplatform-test`)
+
+With `s7_version` = this repository's `claude/c5-testplatform` 5c3b9fcb, on the fork branch brought up to `custom-pad-test`
+(which includes the current harness `main`): `make projects-clean / projects / projects-gds SLOTS=7` and
+`make gds-prefill` all exit 0; `slot_7` in the pre-fill top equals this `slot_7.gds` (XOR empty, 49 layer/datatype
+pairs); net check of the pre-fill top (`netcheck_slot7_platform.py --stage b`): all 49 used and 14 unused slot pins OK.
+Fork commit f443ce1. Ready for `main`; the merge is the slot owner's decision.
+
 ## 2026-11-07 — matched bias tree in stage B (branch `claude/c5-testplatform`)
 
 `final/gds/slot_7.gds` on branch `claude/c5-testplatform`: the bias tree `bias_tree_noab_pd` is now laid out like the
