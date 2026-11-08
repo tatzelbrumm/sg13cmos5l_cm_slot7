@@ -31,6 +31,11 @@ Checks here (2026-11-08, KLayout 0.30.12, PDK `ihp-sg13cmos5l` decks): `run_drc.
 --disable_tap_extraction` against [`netlist/slot_7.cdl`](netlist/slot_7.cdl): netlists match, strict port mode, 0 errors,
 497 devices. In the CDL, pins that share one net are one port named with KLayout's comma list (for example
 `analog_bus2,s7_an_0_vcm,s7_an_1_vref`). Source netlist of the slot circuit: [`netlist/slot_7.spice`](netlist/slot_7.spice).
+**v3** (design `9052bd35`): same geometry as v2 (XOR 0, same labels); the bandgap's `pnpMPA` cell renamed `bgc_pnpMPA`, no
+`$$$CONTEXT_INFO$$$` cell. For magic + netgen use [`netlist/slot_7_netgen.spice`](netlist/slot_7_netgen.spice) (X cards);
+`netlist/netgen_check.sh` expects `slot_7.gds` next to it (copy `final/gds/slot_7.gds` there). Result here: 5 subcircuits
+match uniquely; top: one port error `vss_1v2_uq0` (the frame's second `vss_1v2` strip, unconnected inside the slot,
+joined by the harness). KLayout DRC / LVS on v3: as above (0 / 0, deep match, 497 devices).
 `final/lef/slot_7.lef` regenerated (magic `lef write -hide -pinonly 2um`, duplicate PIN blocks merged, as for stage A);
 `slot_7.lib` (pin-less stub) and `slot_7.vh` (same ports) unchanged.
 
@@ -48,16 +53,18 @@ the files here are copies from fixed commits of it (table below).
 Source repository for every file: `tatzelbrumm/sg13cmos5l_cm_ip__single2diff2single`.
 `T` = branch `toplevel` @ `91a7da8b67ac56a26c605501146667a1fde28c32`,
 `H` = branch `harness-test` @ `4611357166b7368be4fbf8e176b1e82b8a9a85d0`,
-`V` = branch `claude/c4-replica-bias` @ `fa930b292f18d22967d04168d942377d439adc4d` (slot_7 v2), `V′` = same branch @ `79fde286`.
+`V` = branch `claude/c4-replica-bias` @ `fa930b292f18d22967d04168d942377d439adc4d` (slot_7 v2), `V3` = same branch @ `9052bd35928c6d40344e8e686c9abbe736bfadb9` (slot_7 v3).
 
 | file here | commit | source path | sha256 (of the source file) |
 |---|---|---|---|
 | `LICENSE` | T | `LICENSE` | `a7fd04ca6fa87a80afd79015999a48e6e5db4966926af0a69182cb8c2d836d9f` |
-| `final/gds/slot_7.gds` | V | `macros/slot_7/layout/klayout/slot_7.klay.gds` | `5f8fd14a722ec458bf48b40e696fcb35f88a109cd8fa99e45aed988e3bdf60bd` |
+| `final/gds/slot_7.gds` | V3 | `macros/slot_7/layout/klayout/slot_7.klay.gds` | `7394d0923c511631013ca4727579a73c9285adcac022ec3276889fa73aff2acc` |
 | `netlist/slot_7.cdl` | V | `macros/slot_7/layout/klayout/slot_7.cdl` | `af1e5f027f9f90c1d44d30faa886eb630bf789e194d9210e9ad2cf5a1b9028e8` |
 | `netlist/slot_7.spice` | V | `macros/slot_7/netlist/source/slot_7.spice` | `b259a017dd381c7cbc8c70a80501df39eef7e666bac0584982951219c06da9f0` |
-| `docs/slot_7.md` | V | `macros/slot_7/README.md` | `2bd5abdf8cdc622d5fadd7b245ea91bdaf69fdb2b51748131a884545bae4adb3` |
-| `docs/FOR_TIM.md` | V′ | `docs/slot7_hookup/FOR_TIM.md` | `d5b234b3239504071d5a1010cf9eddf2b7b08332292cd8d0f9385dd8d7cd58ea` |
+| `netlist/slot_7_netgen.spice` | V3 | `macros/slot_7/layout/klayout/slot_7_netgen.spice` | `a1e08178c24776c7c8958521259b20e5ae6c84eeef22562def7d970694e67c90` |
+| `netlist/netgen_check.sh` | V3 | `macros/slot_7/layout/klayout/netgen_check.sh` | `6cd4e7b48546d6c380bcabc2924da0ad74f73c910f86f2a2b4ea2c9a08c803f5` |
+| `docs/slot_7.md` | V3 | `macros/slot_7/README.md` | `3c3f1578aaea821112148240dac3d1b89516ba598a748969eafae20a26dcbda8` |
+| `docs/FOR_TIM.md` | V3 | `docs/slot7_hookup/FOR_TIM.md` | `aee844fc47c685dcbd21a793340a6b137df619f8f7b2d985cf2bf667620f026c` |
 | `docs/slot_7.png` | V | `macros/slot_7/layout/klayout/slot_7.png` | `5dd9e396d3931bf2bf85907fdcab27307fb023b856a11ea09965ffd1968690df` |
 | `final/lef/slot_7.lef` | — | generated here from `final/gds/slot_7.gds` | `f23675342e0772b86024b74f7296f3713c622faf270ded3ccd88defe4310bd6f` |
 | `final/lib/slot_7.lib` | H | `final/lib/slot_7.lib` | `6137d6230046318850c9f1fba2d8e79322ce28d9e18f0e2e64385099c419bd56` |
