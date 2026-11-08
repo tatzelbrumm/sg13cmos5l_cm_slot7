@@ -1,5 +1,7 @@
 # sg13cmos5l_cm_slot7 — Chipalooza slot 7 delivery repository
 
+**For the harness owner: [`docs/FOR_TIM.md`](docs/FOR_TIM.md)** (modes, harness settings, expected values, verification).
+
 This repository holds what the Chipalooza harness (`sg13cmos5l_ocd_chipalooza`) reads for **slot 7**:
 the slot layout `final/gds/slot_7.gds` (top cell `slot_7`) and two **custom I/O pad cells** (`pads/`) that
 replace the analog pads `s7_an[0]` and `s7_an[1]` of slot 7. `macros/` holds building blocks of the slot's inner
@@ -46,7 +48,7 @@ the files here are copies from fixed commits of it (table below).
 Source repository for every file: `tatzelbrumm/sg13cmos5l_cm_ip__single2diff2single`.
 `T` = branch `toplevel` @ `91a7da8b67ac56a26c605501146667a1fde28c32`,
 `H` = branch `harness-test` @ `4611357166b7368be4fbf8e176b1e82b8a9a85d0`,
-`V` = branch `claude/c4-replica-bias` @ `fa930b292f18d22967d04168d942377d439adc4d` (slot_7 v2).
+`V` = branch `claude/c4-replica-bias` @ `fa930b292f18d22967d04168d942377d439adc4d` (slot_7 v2), `V′` = same branch @ `79fde286`.
 
 | file here | commit | source path | sha256 (of the source file) |
 |---|---|---|---|
@@ -55,6 +57,7 @@ Source repository for every file: `tatzelbrumm/sg13cmos5l_cm_ip__single2diff2sin
 | `netlist/slot_7.cdl` | V | `macros/slot_7/layout/klayout/slot_7.cdl` | `af1e5f027f9f90c1d44d30faa886eb630bf789e194d9210e9ad2cf5a1b9028e8` |
 | `netlist/slot_7.spice` | V | `macros/slot_7/netlist/source/slot_7.spice` | `b259a017dd381c7cbc8c70a80501df39eef7e666bac0584982951219c06da9f0` |
 | `docs/slot_7.md` | V | `macros/slot_7/README.md` | `2bd5abdf8cdc622d5fadd7b245ea91bdaf69fdb2b51748131a884545bae4adb3` |
+| `docs/FOR_TIM.md` | V′ | `docs/slot7_hookup/FOR_TIM.md` | `d5b234b3239504071d5a1010cf9eddf2b7b08332292cd8d0f9385dd8d7cd58ea` |
 | `docs/slot_7.png` | V | `macros/slot_7/layout/klayout/slot_7.png` | `5dd9e396d3931bf2bf85907fdcab27307fb023b856a11ea09965ffd1968690df` |
 | `final/lef/slot_7.lef` | — | generated here from `final/gds/slot_7.gds` | `f23675342e0772b86024b74f7296f3713c622faf270ded3ccd88defe4310bd6f` |
 | `final/lib/slot_7.lib` | H | `final/lib/slot_7.lib` | `6137d6230046318850c9f1fba2d8e79322ce28d9e18f0e2e64385099c419bd56` |
