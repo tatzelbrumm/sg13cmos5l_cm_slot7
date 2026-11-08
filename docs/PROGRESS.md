@@ -6,6 +6,13 @@ What the harness reads from this repository: `final/gds/slot_7.gds` (top cell `s
 (macro `macros/slot7_testplatform/`, records `docs/slot7_testplatform/`: PLAN.md, RUNLOG.md, SUMMARY.md).
 This file is updated with each step; newest entry first.
 
+## 2026-11-08T23:50Z — main: slot_7 v3 + tughra art (previous main v2 `454da6a` kept as branch `slot7-v2-tapeout`)
+
+v3 (design `claude/c4-replica-bias` 9052bd35: `pnpMPA` renamed `bgc_pnpMPA`, no context cell, netgen netlist; geometry =
+v2) plus the cell `tughra_art` (design `toplevel`, art rev 4) at (88.5, 141.3) µm. Nothing else changed (`art/check_art_only.py`).
+DRC clean without density, maximal + latch-up 0, density: same 7 rules as without the art (unfilled slot); LVS deep match,
+497 devices; magic + netgen as v3. Ports, LEF, lib, vh unchanged.
+
 ## 2026-11-08T18:20Z — slot 7 v2: the slot circuit for the custom pads (branch `claude/slot7-pads-v2`, not yet on `main`)
 
 `final/gds/slot_7.gds` replaced by the slot circuit from design repo `claude/c4-replica-bias` fa930b29 (`s7_ctrl`, bandgap

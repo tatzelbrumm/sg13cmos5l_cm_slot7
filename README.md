@@ -39,6 +39,16 @@ joined by the harness). KLayout DRC / LVS on v3: as above (0 / 0, deep match, 49
 `final/lef/slot_7.lef` regenerated (magic `lef write -hide -pinonly 2um`, duplicate PIN blocks merged, as for stage A);
 `slot_7.lib` (pin-less stub) and `slot_7.vh` (same ports) unchanged.
 
+**Tughra art (2026-11-08):** `final/gds/slot_7.gds` = v3 plus one instance of the cell `tughra_art` (`art/tughra_art.gds`,
+design repo `toplevel`, rev 4: floating GatPoly and Metal1–4 with no-fill markers, 158 × 90 µm) at (88.5, 141.3) µm, in the
+empty band between the TopMetal1 straps. Made by `art/add_art.py`; `art/check_art_only.py` proves nothing else changed:
+all 86 sub-cells and slot_7's own shapes and labels identical, one added instance, flat XOR against v3 + art = 0 on every
+layer, and 0 against the design repo's `art/slot7_with_art.gds` (v2 + art); every art stroke is ≥ 1 µm from existing
+shapes on its layer. Checks with the art: `run_drc.py --no_density` clean; maximal deck + latch-up 0; with density: the
+same 7 minimum-density rules as without the art (AFil.g, GFil.g, M1–M4.j, TM1.c: the unfilled slot, filled at chip level);
+KLayout LVS deep: match, 497 devices, strict ports; `netgen_check.sh`: as v3 (5 subcircuits match, top port `vss_1v2_uq0`).
+The art has no device and no pin; ports, LEF, lib and vh unchanged. Previous `main` (v2, `454da6a`): branch `slot7-v2-tapeout`.
+
 Open (from the design session's brief): mode simulations at ss / −40 °C: swap and mon stall at the bandgap's start-up
 node in the solver (tt and ff pass all 8 modes; at ss −40 °C default, feed and ext pass). Harness flow with these pads
 and this `slot_7.gds` (net check of the 13 pad nets): not yet run on this branch.
@@ -53,16 +63,17 @@ the files here are copies from fixed commits of it (table below).
 Source repository for every file: `tatzelbrumm/sg13cmos5l_cm_ip__single2diff2single`.
 `T` = branch `toplevel` @ `91a7da8b67ac56a26c605501146667a1fde28c32`,
 `H` = branch `harness-test` @ `4611357166b7368be4fbf8e176b1e82b8a9a85d0`,
-`V` = branch `claude/c4-replica-bias` @ `fa930b292f18d22967d04168d942377d439adc4d` (slot_7 v2), `V3` = same branch @ `9052bd35928c6d40344e8e686c9abbe736bfadb9` (slot_7 v3).
+`V` = branch `claude/c4-replica-bias` @ `fa930b292f18d22967d04168d942377d439adc4d` (slot_7 v2), `V3` = same branch @ `9052bd35928c6d40344e8e686c9abbe736bfadb9` (slot_7 v3), `A` = branch `toplevel` @ `a45cbb555b9a64baebda7ad68f05b62a3dca288f` (tughra art rev 4).
 
 | file here | commit | source path | sha256 (of the source file) |
 |---|---|---|---|
 | `LICENSE` | T | `LICENSE` | `a7fd04ca6fa87a80afd79015999a48e6e5db4966926af0a69182cb8c2d836d9f` |
-| `final/gds/slot_7.gds` | V3 | `macros/slot_7/layout/klayout/slot_7.klay.gds` | `7394d0923c511631013ca4727579a73c9285adcac022ec3276889fa73aff2acc` |
+| `final/gds/slot_7.gds` | V3 + art | v3 `macros/slot_7/layout/klayout/slot_7.klay.gds` (`7394d0923c511631013ca4727579a73c9285adcac022ec3276889fa73aff2acc`) + cell `tughra_art` at (88.5, 141.3) µm, `art/add_art.py` | `469f2327c4bc22b1d6fc1785fab2fd3830b6050e51989b361dc11b26be669c05` (this file) |
 | `netlist/slot_7.cdl` | V | `macros/slot_7/layout/klayout/slot_7.cdl` | `af1e5f027f9f90c1d44d30faa886eb630bf789e194d9210e9ad2cf5a1b9028e8` |
 | `netlist/slot_7.spice` | V | `macros/slot_7/netlist/source/slot_7.spice` | `b259a017dd381c7cbc8c70a80501df39eef7e666bac0584982951219c06da9f0` |
 | `netlist/slot_7_netgen.spice` | V3 | `macros/slot_7/layout/klayout/slot_7_netgen.spice` | `a1e08178c24776c7c8958521259b20e5ae6c84eeef22562def7d970694e67c90` |
 | `netlist/netgen_check.sh` | V3 | `macros/slot_7/layout/klayout/netgen_check.sh` | `6cd4e7b48546d6c380bcabc2924da0ad74f73c910f86f2a2b4ea2c9a08c803f5` |
+| `art/tughra_art.gds` | A | `art/tughra_art.gds` | `73d8861dafe710ba59265c96bfb2c56aa7de00f8d32b0869a2b4731f1955cbb5` |
 | `docs/slot_7.md` | V3 | `macros/slot_7/README.md` | `3c3f1578aaea821112148240dac3d1b89516ba598a748969eafae20a26dcbda8` |
 | `docs/FOR_TIM.md` | V3 | `docs/slot7_hookup/FOR_TIM.md` | `aee844fc47c685dcbd21a793340a6b137df619f8f7b2d985cf2bf667620f026c` |
 | `docs/slot_7.png` | V | `macros/slot_7/layout/klayout/slot_7.png` | `5dd9e396d3931bf2bf85907fdcab27307fb023b856a11ea09965ffd1968690df` |
