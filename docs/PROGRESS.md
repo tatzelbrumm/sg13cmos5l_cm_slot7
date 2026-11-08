@@ -6,6 +6,15 @@ What the harness reads from this repository: `final/gds/slot_7.gds` (top cell `s
 (macro `macros/slot7_testplatform/`, records `docs/slot7_testplatform/`: PLAN.md, RUNLOG.md, SUMMARY.md).
 This file is updated with each step; newest entry first.
 
+## 2026-11-08T18:20Z — slot 7 v2: the slot circuit for the custom pads (branch `claude/slot7-pads-v2`, not yet on `main`)
+
+`final/gds/slot_7.gds` replaced by the slot circuit from design repo `claude/c4-replica-bias` fa930b29 (`s7_ctrl`, bandgap
+core, `bias_dist_pd`, `pad_ref_rb`, `s7_doutpd`; modes in `docs/slot_7.md`). Same frame and pins as before (63 names,
+layers, positions identical; the stand-in's Metal4 stub pins gone). Checks here: DRC (`run_drc.py --no_density`) clean,
+maximal deck + latch-up 0; LVS deep against `netlist/slot_7.cdl`: match, strict ports, 497 devices. LEF regenerated;
+lib / vh unchanged. Open: harness flow + net check of the 13 pad nets with this layout; ss / −40 °C mode simulations
+(swap, mon) in the design repo.
+
 ## 2026-11-06T19:08Z — stage B through the harness flow (fork `tatzelbrumm/sg13cmos5l_ocd_chipalooza`, branch `claude/c5-testplatform-test`)
 
 With `s7_version` = this repository's `claude/c5-testplatform` c0726799: `make projects-clean / projects / projects-gds

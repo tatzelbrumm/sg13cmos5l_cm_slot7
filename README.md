@@ -6,20 +6,35 @@ replace the analog pads `s7_an[0]` and `s7_an[1]` of slot 7. `macros/` holds bui
 circuit (the two bias cores); the harness does not read them. It has one branch, `main`, and no inherited history,
 so that a `git submodule add` of it stays small.
 
-**`slot_7.gds` is the slot-7 test platform for the two bias references (stage A, branch `claude/c5-testplatform`).**
-It needs no custom pad: the Oguey–Aebischer core `oa_core_pd` and the Banba bandgap core `bg_core_pd`, each with a
-fail-safe 3.3 V enable (`dig_in[0]` / `dig_in[1]`, AND `enable`, AND the slot's `vdd_1v2` present), drive their output
-current (~5 uA, sourced) through a bare hv transmission gate (`xgate`, enabled by `dig_in[2]` / `dig_in[3]`, also
-fail-safe) onto `analog_bus0` / `analog_bus1`. An SMU on the chip pin `analog[0]` / `analog[1]` measures them;
-`dig_out[3:0]` read the four enables back (SPI reg 0x38). Procedure, pin map, results: design repository
-`docs/slot7_testplatform/` (PLAN.md, SUMMARY.md). The frame, the 13 custom-pad pins at the right edge and their
-stand-in stubs and wiring are unchanged from the previous `slot_7.gds` (sha256 5624ae45...), so it fits the
-custom-pad wrapper as before. Ports, `slot_7.lib` and `slot_7.vh` are unchanged.
+## Slot 7 v2: the slot circuit for the custom pads (branch `claude/slot7-pads-v2`)
 
-**Stage B (branch `claude/c5-testplatform`):** in addition, the bias tree `bias_tree_noab_pd` (the S2D pad's tree), its
-reference selectable from the OA core, the BG core or the harness `ibias0` (`dig_in[4..6]`, tree enable `dig_in[7]`);
-its bias voltages `vbp vbn vbpc vbnc` onto `analog_bus2` (`dig_in[8..11]`), the harness `ibias1` onto `analog_bus3`
-(`dig_in[12]`); all enables fail-safe. Everything at x < 285 um. Stage A alone: branch `claude/slot7-stage-a`.
+`final/gds/slot_7.gds` is the slot circuit that drives the two custom pads ([`docs/slot_7.md`](docs/slot_7.md): modes,
+default, registers; picture [`docs/slot_7.png`](docs/slot_7.png)). It replaces the test platform (stage A + B; still on
+`main` until this branch is merged, and on branch `claude/slot7-stage-a`). The frame and all 63 pin names, layers and
+positions are unchanged; only the stand-in's Metal4 stub pins are gone.
+
+- **Supplies:** `vdd_3v3` / `vss_3v3`; `vdd_1v2` only for the `dig_out` pull-downs.
+- **Enable:** `enable` = 1 turns the slot on in the default mode: bandgap → replica bias → pads, loop S2D → D2S direct,
+  vcm / vref on `analog_bus2` / `analog_bus3`.
+- **Modes:** `dig_in[0..5]` select modes only with the key `dig_in[3]` = 1, `dig_in[4]` = 0; route the dig_in
+  registers to 0 (0x0D) first. `dig_in[0]` swap (loop crossed), `[1]` S2D outputs → `analog_bus0/1`, `[2]`
+  `analog_bus0/1` → D2S (loop off), `[5]` external vcm / vref on `analog_bus2/3`.
+- **Buses:** close the harness's bus switches (reg 0x51 bits 4..7) for the buses in use; `analog_bus0/1` slow the
+  S2D → D2S loop while closed (stable, 10–30× slower).
+- **Disable:** `enable` = 0; with the slot's supplies off, the pads draw leakage only (≤ 67 nA at 125 °C).
+- **dig_out[11:0]:** held low.
+
+Checks here (2026-11-08, KLayout 0.30.12, PDK `ihp-sg13cmos5l` decks): `run_drc.py --no_density`: no violations,
+0 "exception" lines; maximal deck with `-rd latchUpRules=true`: 0; `run_lvs.py --run_mode=deep
+--disable_tap_extraction` against [`netlist/slot_7.cdl`](netlist/slot_7.cdl): netlists match, strict port mode, 0 errors,
+497 devices. In the CDL, pins that share one net are one port named with KLayout's comma list (for example
+`analog_bus2,s7_an_0_vcm,s7_an_1_vref`). Source netlist of the slot circuit: [`netlist/slot_7.spice`](netlist/slot_7.spice).
+`final/lef/slot_7.lef` regenerated (magic `lef write -hide -pinonly 2um`, duplicate PIN blocks merged, as for stage A);
+`slot_7.lib` (pin-less stub) and `slot_7.vh` (same ports) unchanged.
+
+Open (from the design session's brief): mode simulations at ss / −40 °C: swap and mon stall at the bandgap's start-up
+node in the solver (tt and ff pass all 8 modes; at ss −40 °C default, feed and ext pass). Harness flow with these pads
+and this `slot_7.gds` (net check of the 13 pad nets): not yet run on this branch.
 
 Progress log for the harness owner: [`docs/PROGRESS.md`](docs/PROGRESS.md).
 
@@ -31,15 +46,19 @@ the files here are copies from fixed commits of it (table below).
 Source repository for every file: `tatzelbrumm/sg13cmos5l_cm_ip__single2diff2single`.
 `T` = branch `toplevel` @ `91a7da8b67ac56a26c605501146667a1fde28c32`,
 `H` = branch `harness-test` @ `4611357166b7368be4fbf8e176b1e82b8a9a85d0`,
-`P` = branch `claude/c5-slot7-testplatform` @ `efb8014101ba0afad1235859016592bf511b2117` (stage B; stage A was `a665f66336e842abefbefaee35e6df1c91510f19`).
+`V` = branch `claude/c4-replica-bias` @ `fa930b292f18d22967d04168d942377d439adc4d` (slot_7 v2).
 
 | file here | commit | source path | sha256 (of the source file) |
 |---|---|---|---|
 | `LICENSE` | T | `LICENSE` | `a7fd04ca6fa87a80afd79015999a48e6e5db4966926af0a69182cb8c2d836d9f` |
-| `final/gds/slot_7.gds` | P | `macros/slot7_testplatform/final/gds/slot_7.gds` | `abc7a3621726d59448cada103b2f90412faef4ad562888c2b1f9d5af3d231e11` |
-| `final/lef/slot_7.lef` | P | `macros/slot7_testplatform/final/lef/slot_7.lef` | `23894fc5461e197e8405597dd9aa88a185eac82c267890aca69013e6af36cd3e` |
-| `final/lib/slot_7.lib` | H (= P) | `final/lib/slot_7.lib` | `6137d6230046318850c9f1fba2d8e79322ce28d9e18f0e2e64385099c419bd56` |
-| `final/vh/slot_7.vh` | H (= P) | `final/vh/slot_7.vh` | `1ba0f560eb7b9e23258d2f371b1e8ab0936b4103aeb7ccaece69990c75086976` |
+| `final/gds/slot_7.gds` | V | `macros/slot_7/layout/klayout/slot_7.klay.gds` | `5f8fd14a722ec458bf48b40e696fcb35f88a109cd8fa99e45aed988e3bdf60bd` |
+| `netlist/slot_7.cdl` | V | `macros/slot_7/layout/klayout/slot_7.cdl` | `af1e5f027f9f90c1d44d30faa886eb630bf789e194d9210e9ad2cf5a1b9028e8` |
+| `netlist/slot_7.spice` | V | `macros/slot_7/netlist/source/slot_7.spice` | `b259a017dd381c7cbc8c70a80501df39eef7e666bac0584982951219c06da9f0` |
+| `docs/slot_7.md` | V | `macros/slot_7/README.md` | `2bd5abdf8cdc622d5fadd7b245ea91bdaf69fdb2b51748131a884545bae4adb3` |
+| `docs/slot_7.png` | V | `macros/slot_7/layout/klayout/slot_7.png` | `5dd9e396d3931bf2bf85907fdcab27307fb023b856a11ea09965ffd1968690df` |
+| `final/lef/slot_7.lef` | — | generated here from `final/gds/slot_7.gds` | `f23675342e0772b86024b74f7296f3713c622faf270ded3ccd88defe4310bd6f` |
+| `final/lib/slot_7.lib` | H | `final/lib/slot_7.lib` | `6137d6230046318850c9f1fba2d8e79322ce28d9e18f0e2e64385099c419bd56` |
+| `final/vh/slot_7.vh` | H | `final/vh/slot_7.vh` | `1ba0f560eb7b9e23258d2f371b1e8ab0936b4103aeb7ccaece69990c75086976` |
 | `pads/sg13cmos5l_IOPadDiff2Single/sg13cmos5l_IOPadDiff2Single.gds` | T | `macros/sg13cmos5l_IOPadDiff2Single/layout/klayout/sg13cmos5l_IOPadDiff2Single.klay.gds` | `13e176ab106d0cb307a6ebc42acf647ce38b6abc52183a9f1d9ffead2f6c2b17` |
 | `pads/sg13cmos5l_IOPadSingle2Diff/sg13cmos5l_IOPadSingle2Diff.gds` | T | `macros/sg13cmos5l_IOPadSingle2Diff/layout/klayout/sg13cmos5l_IOPadSingle2Diff.klay.gds` | `f4b0e07320821248872780b344d71845d08bc250a4bfc9bcf8633a39bdef0182` |
 | `pads/sg13cmos5l_IOPadDiff2Single/sg13cmos5l_IOPadDiff2Single.spice` | T | `macros/sg13cmos5l_IOPadDiff2Single/netlist/schematic/sg13cmos5l_IOPadDiff2Single_magic.spice` | `b8d9103230bd7ced5c75a0fb38d56f078ec3cbf48d0f82a3772b85ff1edc2c1c` |
@@ -155,11 +174,3 @@ x 535.050..536.450 um, slot-local coordinates (origin = lower left of the 537.15
 ## License
 
 Solderpad Hardware License v2.1, see `LICENSE`.
-
-## Test platform checks (branch `claude/c5-testplatform`, 2026-11-06)
-
-In the design repository (commit P): PDK KLayout DRC (feol + beol) of `slot_7.gds`: 0; magic + netgen LVS against the
-platform netlist: "Netlists match uniquely" (104 devices, 72 nets), with the known port errors of the unchanged stubs
-(`s7_an_0_outp` / `_outn` joined to `s7_an_1_vinp` / `_vinn`) and of the frame's Metal2 `vss_1v2` strip (not connected
-inside the slot, as before). Harness flow on the fork branch `claude/c5-testplatform-test`: see that branch's
-`docs/custom_pads/RUNLOG.md`.
