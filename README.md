@@ -195,3 +195,19 @@ x 535.050..536.450 um, slot-local coordinates (origin = lower left of the 537.15
 ## License
 
 Solderpad Hardware License v2.1, see `LICENSE`.
+
+## Further documentation
+
+Added after the tapeout; the files above are unchanged.
+
+- [`docs/chipalooza2_as_taped_out/README.md`](docs/chipalooza2_as_taped_out/README.md): slot 7 as taped out (`158afc5`): electrical
+  function, blocks and their readiness, glue logic, layout hierarchy, verification state, data sheets, the earlier test platforms.
+  Note: `oa_core_pd` (`macros/oa_core_pd/`) is not in the taped-out `final/gds/slot_7.gds`; only `bg_core_pd` is.
+- [`docs/chipalooza2_as_taped_out/TEST_PLAN.md`](docs/chipalooza2_as_taped_out/TEST_PLAN.md): measurement plan for the fabricated chip
+  through the Chipalooza #2 harness (SPI sequence, modes, simulated intervals).
+- [`docs/AI_ASSISTANCE.md`](docs/AI_ASSISTANCE.md): what was AI-assisted and how the block is verified without AI.
+- [`docs/RULES_COMPLIANCE_chipalooza2.md`](docs/RULES_COMPLIANCE_chipalooza2.md): slot 7 against the Chipalooza #2 rules, with gaps.
+- [`signoff/README.md`](signoff/README.md): DRC and LVS reports of the slot's blocks and both pads, with source commits and sha256.
+- Chipalooza #4 proposal:
+  [`tatzelbrumm/sky130_cm_ip__single2diff2single`](https://github.com/tatzelbrumm/sky130_cm_ip__single2diff2single),
+  [`docs/PROPOSAL.md`](https://github.com/tatzelbrumm/sky130_cm_ip__single2diff2single/blob/HEAD/docs/PROPOSAL.md).

@@ -1,0 +1,7 @@
+LVS deep (--run_mode=deep ): Netlists match | port mismatches: 0 | devices: 497
+LVS flat ( ): Netlists don't match | port mismatches: 32 | devices: 497
+LVS flat_ignore_ports (--ignore_top_ports_mismatch ): Netlists match | port mismatches: 0 | devices: 497
+LVS deep_negative (--run_mode=deep ): Netlists don't match | port mismatches: 0 | devices: 497
+run_drc.py: No DRC violations detected | 'exception' lines: 0 | maximal+LU: 0
+gds sha256 7394d0923c511631, cdl af1e5f027f9f90c1
+netgen (magic extraction + netgen, netgen_check.sh): 5 subcircuits 'Netlists match uniquely'; top 'match uniquely with port errors': only vss_1v2_uq0 (the frame's second vss_1v2 strip, unconnected inside the slot as in the fallback, joined by the harness)
