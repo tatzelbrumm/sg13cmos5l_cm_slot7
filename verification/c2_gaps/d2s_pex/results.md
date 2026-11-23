@@ -29,7 +29,7 @@ schematic runs do not (see README.md: without it the PEX operating point did not
 | tran_params | done: 9 of 9 schematic runs have a PEX result |
 | noise_params | done: 3 of 3 schematic runs have a PEX result |
 | drive_params | done: 10 of 10 schematic runs have a PEX result |
-| enable_params | running / TBD |
+| enable_params | done: 3 of 3 schematic runs have a PEX result |
 | pd_params | running / TBD |
 | thd_params | running / TBD |
 
@@ -65,6 +65,10 @@ schematic runs do not (see README.md: without it the PEX operating point did not
 | drive_params | Vout_min[V] | 10 | 0.6396 | 0.6865 | 0.7386 | 10 | 0.6354 | 0.6823 | 0.736 | -0.646 |
 | drive_params | Isc_src[mA] | 10 | 0.04965 | 0.06698 | 0.09321 | 10 | 0.04971 | 0.06705 | 0.09331 | +0.133 |
 | drive_params | Isc_snk[mA] | 10 | 0.05303 | 0.08036 | 0.1203 | 10 | 0.05477 | 0.08297 | 0.1242 | +3.28 |
+| enable_params | t_on[us] | 3 | 8.054e-07 | 8.544e-07 | 1.228e-06 | 3 | 1.109e-06 | 1.349e-06 | 2.387e-06 | +94.4 |
+| enable_params | Glitch_max[mV] | 3 | 0.1119 | 0.1171 | 0.2244 | 3 | 0.1278 | 0.1287 | 0.2281 | +14.1 |
+| enable_params | Glitch_min[mV] | 3 | -0.1874 | -0.1196 | -0.1078 | 3 | -0.2248 | -0.1325 | -0.1283 | -20 |
+| enable_params | Iio_end[A] | 3 | 0.0002987 | 0.0003063 | 0.0003091 | 3 | 0.0003084 | 0.0003157 | 0.0003158 | +3.27 |
 
 ## PEX (pass 2) against the yaml limits (proposals, see the yaml header)
 
@@ -95,6 +99,11 @@ scripts/cace/spec_table.py of the design repository commit 91a7da8b on csv/*_pex
 | drive_params | Min output | V | <= 0.9 | 0.736 | 10 | pass |
 | drive_params | Short-circuit source current | mA | >= 20 | 49.71 | 10 | pass |
 | drive_params | Short-circuit sink current | mA | >= 20 | 54.77 | 10 | pass |
+| enable_params | Turn-on time | us | <= 5 | 2.387 | 3 | pass |
+| enable_params | Enable glitch, positive | mV | <= 400 | 228.1 | 3 | pass |
+| enable_params | Enable glitch, negative | mV | >= -400 | -224.8 | 3 | pass |
+| enable_params | IO ring current after start-up | uA | >= 200 | 308.4 | 3 | pass |
+| enable_params | IO ring current after start-up | uA | <= 400 | 315.8 | 3 | pass |
 
 
 ## dc_params pass 1 (templates unchanged, no rshunt)
