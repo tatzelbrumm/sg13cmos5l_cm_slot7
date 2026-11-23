@@ -7,7 +7,7 @@
 # 9052bd35928c6d40344e8e686c9abbe736bfadb9): copy of the yaml with own runs / netlist / docs folders and a layout path,
 # the prepared netlist (pex_for_sim.py --tie iovss 1e12, subckt renamed to the cell name) newer than the layout, so
 # that CACE takes it as up to date and does not extract again.
-# Usage: cace_pex.sh <macro_dir> <pex_netlist> <layout.gds> <out_dir> <jobs> <group> [<group> ...]
+# Usage: [RSHUNT=<ohm>] cace_pex.sh <macro_dir> <pex_netlist> <layout.gds> <out_dir> <jobs> <group> [<group> ...]
 set -u
 M=$(realpath "$1"); HERE=$(dirname "$(realpath "$0")"); PEXNET=$(realpath "$2"); GDS=$(realpath "$3"); OUT=$(realpath -m "$4"); JOBS=$5; shift 5
 T=sg13cmos5l_IOPadDiff2Single
@@ -28,6 +28,13 @@ python3 "$HERE/pex_sense.py" netlist_pex/pex/$T.spice
 # the tb_dc template reads the output-device currents by schematic instance name: read the 0 V senses instead
 sed -i -e 's/@n\.x1\.xfp\.xop\.nsg13_hv_pmos\[ids\]/i(v.x1.vop_sense)/g' \
        -e 's/@n\.x1\.xfn\.xon\.nsg13_hv_nmos\[ids\]/i(v.x1.von_sense)/g' templates/${T}_tb_dc.sch
+# RSHUNT (environment, e.g. 1e12): ngspice rshunt on every node, for the templates that do not set one already.
+# Without it the operating point of the PEX netlist did not converge (ac_params: every run); see README.md.
+if [ -n "${RSHUNT:-}" ]; then
+  for t in templates/*.sch; do
+    grep -q 'rshunt' "$t" || sed -i "s/^\.option warn=1\$/.option warn=1\n.option rshunt=$RSHUNT/" "$t"
+  done
+fi
 touch netlist_pex/pex/$T.spice
 status=0
 for g in "$@"; do

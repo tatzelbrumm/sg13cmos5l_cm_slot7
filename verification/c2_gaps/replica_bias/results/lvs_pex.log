@@ -1,0 +1,14 @@
+pad_ref_rb: magic C-coupled extraction (capacitors removed) vs source netlist
+Cell pin lists are equivalent.
+Number of devices: 33                      |Number of devices: 33                      
+Number of nets: 16                         |Number of nets: 16                         
+Netlists match uniquely.
+Cell pin lists are equivalent.
+Final result: Circuits match uniquely.
+bias_dist_pd: magic C-coupled extraction (capacitors removed) vs source netlist
+Cell pin lists are equivalent.
+Number of devices: 75                      |Number of devices: 75                      
+Number of nets: 50                         |Number of nets: 50                         
+Netlists match uniquely.
+Cell pin lists are equivalent.
+Final result: Circuits match uniquely.

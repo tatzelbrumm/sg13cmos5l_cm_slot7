@@ -63,9 +63,14 @@ sed -n '/^Subcircuit summary:/,/^Number of nets/p' "$WORK/lvs/lvs.out" | tail -1
 grep -E 'Final result|Property errors|match' "$WORK/lvs/lvs.out" | tail -4 >> "$WORK/out/lvs_summary.txt"
 echo "property errors other than mm_ok: $(grep -A1 -E '^(sg13|rhigh|rppd|d.*antenna)[a-z_0-9]*:' "$WORK/lvs/lvs.out" | grep '^Property' | grep -vc mm_ok || true)" >> "$WORK/out/lvs_summary.txt"
 
-# 4. CACE on the PEX view (see cace_pex.sh), then the comparison with the committed schematic CSVs
-"$HERE/cace_pex.sh" "$M" "$N" "$WORK/pex/$T.gds" "$WORK/out" "$JOBS" $GROUPS_ || echo "WARNING: some CACE group failed or missed a limit"
+# 4. CACE on the PEX view (see cace_pex.sh). Pass 1: dc_params exactly as the templates are (no rshunt).
+#    Pass 2: every group with ngspice rshunt=1e12 (the templates that set no rshunt), because without it the
+#    operating point of the PEX netlist did not converge (ac_params: all 15 runs failed); see README.md.
+"$HERE/cace_pex.sh" "$M" "$N" "$WORK/pex/$T.gds" "$WORK/out/norshunt" "$JOBS" dc_params || echo "WARNING: pass 1 dc_params had failed runs"
+RSHUNT=1e12 "$HERE/cace_pex.sh" "$M" "$N" "$WORK/pex/$T.gds" "$WORK/out/rshunt1e12" "$JOBS" $GROUPS_ || echo "WARNING: some CACE group failed or missed a limit"
 R=$M/verification/cace/results/$T
-python3 "$HERE/compare.py" "$R" "$WORK/out" $GROUPS_ > "$WORK/out/compare_table.md"
-python3 "$HERE/plots.py" "$R" "$WORK/out" "$WORK/out"
+python3 "$HERE/compare.py" "$R" "$WORK/out/norshunt" dc_params > "$WORK/out/compare_norshunt.md"
+python3 "$HERE/compare.py" "$R" "$WORK/out/rshunt1e12" $GROUPS_ > "$WORK/out/compare_rshunt1e12.md"
+python3 "$HERE/compare.py" "$WORK/out/norshunt" "$WORK/out/rshunt1e12" dc_params > "$WORK/out/compare_rshunt_effect.md"
+python3 "$HERE/plots.py" "$R" "$WORK/out/rshunt1e12" "$WORK/out"
 echo "done: $WORK/out"

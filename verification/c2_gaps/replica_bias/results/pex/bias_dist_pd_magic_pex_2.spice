@@ -1,0 +1,288 @@
+* PEX produced using /usr/local/bin/sak-pex.sh with m=2 and s=1
+* NGSPICE file created from bias_dist_pd_pex.ext - technology: ihp-sg13cmos5l
+
+.subckt bias_dist_pd_pex vddh vssh en_3v3 en_3v3_b iin0 iin1 iin2 iin3 en_in0
++ en_in1 en_in2 en_in3 iout0 iout1 iout2 iout3 en_out0 en_out1 en_out2 en_out3
+X0 a_3373_146# a_2883_146# vddh vddh sg13_hv_pmos ad=0.34p pd=2.68u as=0.19p ps=1.38u w=1u l=0.45u
+X1 a_6890_146# a_6400_146# vddh vddh sg13_hv_pmos ad=0.34p pd=2.68u as=0.19p ps=1.38u w=1u l=0.45u
+X2 a_9550_146# en_3v3 vddh vddh sg13_hv_pmos ad=0.19p pd=1.38u as=0.34p ps=2.68u w=1u l=0.45u
+X3 a_142_1770# en_3v3_b vssh vssh sg13_hv_nmos ad=0.34p pd=2.68u as=0.34p ps=2.68u w=1u l=0.45u
+X4 vddh en_in1 a_1131_146# vddh sg13_hv_pmos ad=0.19p pd=1.38u as=0.19p ps=1.38u w=1u l=0.45u
+X5 a_142_1770# a_2007_146# iin2 vddh sg13_hv_pmos ad=0.34p pd=2.68u as=0.34p ps=2.68u w=1u l=0.45u
+X6 vssh a_142_1770# a_142_1770# vssh sg13_hv_nmos ad=2.04p pd=12.68u as=2.04p ps=12.68u w=6u l=6u
+X7 a_6400_146# en_3v3 vddh vddh sg13_hv_pmos ad=0.19p pd=1.38u as=0.34p ps=2.68u w=1u l=0.45u
+X8 a_8990_146# a_8500_146# vssh vssh sg13_hv_nmos ad=0.34p pd=2.68u as=0.19p ps=1.38u w=1u l=0.45u
+X9 vddh a_2000_1702# vddh vddh sg13_hv_pmos ad=1.7p pd=10.68u as=77.7666p ps=0.35488m w=5u l=6u
+X10 a_142_1770# a_745_146# iin0 vssh sg13_hv_nmos ad=0.34p pd=2.68u as=0.34p ps=2.68u w=1u l=0.45u
+X11 a_5840_146# a_5350_146# vssh vssh sg13_hv_nmos ad=0.34p pd=2.68u as=0.19p ps=1.38u w=1u l=0.45u
+X12 vssh en_out3 a_9708_146# vssh sg13_hv_nmos ad=0.19p pd=1.38u as=0.19p ps=1.38u w=1u l=0.45u
+X13 a_8658_146# en_3v3 a_8500_146# vssh sg13_hv_nmos ad=0.19p pd=1.38u as=0.34p ps=2.68u w=1u l=0.45u
+X14 a_142_1770# a_255_146# iin0 vddh sg13_hv_pmos ad=0.34p pd=2.68u as=0.34p ps=2.68u w=1u l=0.45u
+X15 a_8990_146# a_8500_146# vddh vddh sg13_hv_pmos ad=0.34p pd=2.68u as=0.19p ps=1.38u w=1u l=0.45u
+X16 vddh en_out3 a_9550_146# vddh sg13_hv_pmos ad=0.19p pd=1.38u as=0.19p ps=1.38u w=1u l=0.45u
+X17 a_745_146# a_255_146# vssh vssh sg13_hv_nmos ad=0.34p pd=2.68u as=0.19p ps=1.38u w=1u l=0.45u
+X18 iout3 a_10040_146# a_9634_1516# vssh sg13_hv_nmos ad=0.34p pd=2.68u as=0.34p ps=2.68u w=1u l=0.45u
+X19 vddh a_2000_1702# a_8584_1516# vddh sg13_hv_pmos ad=1.7p pd=10.68u as=1.7p ps=10.68u w=5u l=6u
+X20 a_5840_146# a_5350_146# vddh vddh sg13_hv_pmos ad=0.34p pd=2.68u as=0.19p ps=1.38u w=1u l=0.45u
+X21 vddh a_2000_1702# a_5434_1516# vddh sg13_hv_pmos ad=1.7p pd=10.68u as=1.7p ps=10.68u w=5u l=6u
+X22 a_8500_146# en_3v3 vddh vddh sg13_hv_pmos ad=0.19p pd=1.38u as=0.34p ps=2.68u w=1u l=0.45u
+X23 a_2497_146# a_2007_146# vssh vssh sg13_hv_nmos ad=0.34p pd=2.68u as=0.19p ps=1.38u w=1u l=0.45u
+X24 a_745_146# a_255_146# vddh vddh sg13_hv_pmos ad=0.34p pd=2.68u as=0.19p ps=1.38u w=1u l=0.45u
+X25 iout1 a_6890_146# a_6484_1516# vssh sg13_hv_nmos ad=0.34p pd=2.68u as=0.34p ps=2.68u w=1u l=0.45u
+X26 iout3 a_9550_146# a_9634_1516# vddh sg13_hv_pmos ad=0.34p pd=2.68u as=0.34p ps=2.68u w=1u l=0.45u
+X27 a_142_1770# a_1621_146# iin1 vssh sg13_hv_nmos ad=0.34p pd=2.68u as=0.34p ps=2.68u w=1u l=0.45u
+X28 a_2165_146# en_3v3 a_2007_146# vssh sg13_hv_nmos ad=0.19p pd=1.38u as=0.34p ps=2.68u w=1u l=0.45u
+X29 a_2497_146# a_2007_146# vddh vddh sg13_hv_pmos ad=0.34p pd=2.68u as=0.19p ps=1.38u w=1u l=0.45u
+X30 iout1 a_6400_146# a_6484_1516# vddh sg13_hv_pmos ad=0.34p pd=2.68u as=0.34p ps=2.68u w=1u l=0.45u
+X31 a_1621_146# a_1131_146# vssh vssh sg13_hv_nmos ad=0.34p pd=2.68u as=0.19p ps=1.38u w=1u l=0.45u
+X32 vssh en_out1 a_6558_146# vssh sg13_hv_nmos ad=0.19p pd=1.38u as=0.19p ps=1.38u w=1u l=0.45u
+X33 vddh a_2000_1702# a_9634_1516# vddh sg13_hv_pmos ad=1.7p pd=10.68u as=1.7p ps=10.68u w=5u l=6u
+X34 a_3041_146# en_3v3 a_2883_146# vssh sg13_hv_nmos ad=0.19p pd=1.38u as=0.34p ps=2.68u w=1u l=0.45u
+X35 a_142_1770# a_1131_146# iin1 vddh sg13_hv_pmos ad=0.34p pd=2.68u as=0.34p ps=2.68u w=1u l=0.45u
+X36 a_2007_146# en_3v3 vddh vddh sg13_hv_pmos ad=0.19p pd=1.38u as=0.34p ps=2.68u w=1u l=0.45u
+X37 a_1621_146# a_1131_146# vddh vddh sg13_hv_pmos ad=0.34p pd=2.68u as=0.19p ps=1.38u w=1u l=0.45u
+X38 a_1289_146# en_3v3 a_1131_146# vssh sg13_hv_nmos ad=0.19p pd=1.38u as=0.34p ps=2.68u w=1u l=0.45u
+X39 a_5508_146# en_3v3 a_5350_146# vssh sg13_hv_nmos ad=0.19p pd=1.38u as=0.34p ps=2.68u w=1u l=0.45u
+X40 vddh en_out1 a_6400_146# vddh sg13_hv_pmos ad=0.19p pd=1.38u as=0.19p ps=1.38u w=1u l=0.45u
+X41 a_2000_1702# en_3v3 vddh vddh sg13_hv_pmos ad=0.34p pd=2.68u as=0.34p ps=2.68u w=1u l=0.45u
+X42 a_413_146# en_3v3 a_255_146# vssh sg13_hv_nmos ad=0.19p pd=1.38u as=0.34p ps=2.68u w=1u l=0.45u
+X43 iout2 a_8990_146# a_8584_1516# vssh sg13_hv_nmos ad=0.34p pd=2.68u as=0.34p ps=2.68u w=1u l=0.45u
+X44 vssh a_142_1770# vssh vssh sg13_hv_nmos ad=0.68p pd=4.68u as=45.9662p ps=0.291m w=2u l=6u
+X45 a_2883_146# en_3v3 vddh vddh sg13_hv_pmos ad=0.19p pd=1.38u as=0.34p ps=2.68u w=1u l=0.45u
+X46 a_10040_146# a_9550_146# vssh vssh sg13_hv_nmos ad=0.34p pd=2.68u as=0.19p ps=1.38u w=1u l=0.45u
+X47 a_1131_146# en_3v3 vddh vddh sg13_hv_pmos ad=0.19p pd=1.38u as=0.34p ps=2.68u w=1u l=0.45u
+X48 a_5350_146# en_3v3 vddh vddh sg13_hv_pmos ad=0.19p pd=1.38u as=0.34p ps=2.68u w=1u l=0.45u
+X49 a_255_146# en_3v3 vddh vddh sg13_hv_pmos ad=0.19p pd=1.38u as=0.34p ps=2.68u w=1u l=0.45u
+X50 iout2 a_8500_146# a_8584_1516# vddh sg13_hv_pmos ad=0.34p pd=2.68u as=0.34p ps=2.68u w=1u l=0.45u
+X51 vssh en_out2 a_8658_146# vssh sg13_hv_nmos ad=0.19p pd=1.38u as=0.19p ps=1.38u w=1u l=0.45u
+X52 vssh a_142_1770# vssh vssh sg13_hv_nmos ad=0.68p pd=4.68u as=0 ps=0 w=2u l=6u
+X53 vddh a_2000_1702# vddh vddh sg13_hv_pmos ad=1.7p pd=10.68u as=0 ps=0 w=5u l=6u
+X54 vddh a_2000_1702# a_6484_1516# vddh sg13_hv_pmos ad=1.7p pd=10.68u as=1.7p ps=10.68u w=5u l=6u
+X55 a_10040_146# a_9550_146# vddh vddh sg13_hv_pmos ad=0.34p pd=2.68u as=0.19p ps=1.38u w=1u l=0.45u
+X56 vssh en_in3 a_3041_146# vssh sg13_hv_nmos ad=0.19p pd=1.38u as=0.19p ps=1.38u w=1u l=0.45u
+X57 vssh en_out0 a_5508_146# vssh sg13_hv_nmos ad=0.19p pd=1.38u as=0.19p ps=1.38u w=1u l=0.45u
+X58 vssh a_142_1770# a_2000_1702# vssh sg13_hv_nmos ad=2.04p pd=12.68u as=2.04p ps=12.68u w=6u l=6u
+X59 vddh en_out2 a_8500_146# vddh sg13_hv_pmos ad=0.19p pd=1.38u as=0.19p ps=1.38u w=1u l=0.45u
+X60 vssh en_in0 a_413_146# vssh sg13_hv_nmos ad=0.19p pd=1.38u as=0.19p ps=1.38u w=1u l=0.45u
+X61 vddh en_out0 a_5350_146# vddh sg13_hv_pmos ad=0.19p pd=1.38u as=0.19p ps=1.38u w=1u l=0.45u
+X62 vddh en_in3 a_2883_146# vddh sg13_hv_pmos ad=0.19p pd=1.38u as=0.19p ps=1.38u w=1u l=0.45u
+X63 vssh en_in2 a_2165_146# vssh sg13_hv_nmos ad=0.19p pd=1.38u as=0.19p ps=1.38u w=1u l=0.45u
+X64 vddh a_2000_1702# a_2000_1702# vddh sg13_hv_pmos ad=1.7p pd=10.68u as=1.7p ps=10.68u w=5u l=6u
+X65 a_142_1770# a_3373_146# iin3 vssh sg13_hv_nmos ad=0.34p pd=2.68u as=0.34p ps=2.68u w=1u l=0.45u
+X66 iout0 a_5840_146# a_5434_1516# vssh sg13_hv_nmos ad=0.34p pd=2.68u as=0.34p ps=2.68u w=1u l=0.45u
+X67 vddh en_in0 a_255_146# vddh sg13_hv_pmos ad=0.19p pd=1.38u as=0.19p ps=1.38u w=1u l=0.45u
+X68 a_3373_146# a_2883_146# vssh vssh sg13_hv_nmos ad=0.34p pd=2.68u as=0.19p ps=1.38u w=1u l=0.45u
+X69 a_6890_146# a_6400_146# vssh vssh sg13_hv_nmos ad=0.34p pd=2.68u as=0.19p ps=1.38u w=1u l=0.45u
+X70 vddh en_in2 a_2007_146# vddh sg13_hv_pmos ad=0.19p pd=1.38u as=0.19p ps=1.38u w=1u l=0.45u
+X71 a_9708_146# en_3v3 a_9550_146# vssh sg13_hv_nmos ad=0.19p pd=1.38u as=0.34p ps=2.68u w=1u l=0.45u
+X72 a_142_1770# a_2883_146# iin3 vddh sg13_hv_pmos ad=0.34p pd=2.68u as=0.34p ps=2.68u w=1u l=0.45u
+X73 iout0 a_5350_146# a_5434_1516# vddh sg13_hv_pmos ad=0.34p pd=2.68u as=0.34p ps=2.68u w=1u l=0.45u
+X74 vssh en_in1 a_1289_146# vssh sg13_hv_nmos ad=0.19p pd=1.38u as=0.19p ps=1.38u w=1u l=0.45u
+X75 a_142_1770# a_2497_146# iin2 vssh sg13_hv_nmos ad=0.34p pd=2.68u as=0.34p ps=2.68u w=1u l=0.45u
+X76 a_6558_146# en_3v3 a_6400_146# vssh sg13_hv_nmos ad=0.19p pd=1.38u as=0.34p ps=2.68u w=1u l=0.45u
+C0 a_142_1770# vddh 1.11994f
+C1 a_413_146# a_255_146# 0.04328f
+C2 en_3v3 a_1621_146# 0.02993f
+C3 a_8990_146# a_8584_1516# 0.29476f
+C4 a_8990_146# en_out2 0.02336f
+C5 iout1 a_2000_1702# 0.05547f
+C6 a_6558_146# en_3v3 0.03196f
+C7 a_9634_1516# a_10040_146# 0.29476f
+C8 a_413_146# en_3v3 0.03196f
+C9 iin2 a_2497_146# 0.29219f
+C10 a_6890_146# vddh 0.06753f
+C11 iout3 a_9634_1516# 0.17875f
+C12 iin0 a_745_146# 0.29219f
+C13 a_6400_146# iout1 0.06851f
+C14 a_3041_146# en_3v3 0.03196f
+C15 a_6558_146# a_6400_146# 0.04328f
+C16 a_142_1770# iin3 0.3431f
+C17 en_out0 a_5840_146# 0.02336f
+C18 a_413_146# en_in0 0.03196f
+C19 a_8658_146# a_8500_146# 0.04328f
+C20 vddh a_1131_146# 0.53777f
+C21 a_142_1770# iin1 0.41399f
+C22 iout1 iout2 1.65761f
+C23 vddh a_6484_1516# 0.77239f
+C24 iout3 a_10040_146# 0.06194f
+C25 a_142_1770# a_2007_146# 0.21876f
+C26 a_142_1770# iin0 0.24614f
+C27 en_3v3 a_5840_146# 0.01906f
+C28 a_5508_146# a_5350_146# 0.04328f
+C29 a_8658_146# en_out2 0.03196f
+C30 vddh en_in2 0.14885f
+C31 en_out0 vddh 0.15426f
+C32 vddh en_in1 0.14885f
+C33 vddh a_255_146# 0.54559f
+C34 en_3v3 en_in3 0.24846f
+C35 a_3041_146# a_2883_146# 0.04328f
+C36 a_6484_1516# a_5434_1516# 0.02888f
+C37 en_3v3_b a_3373_146# 0.02677f
+C38 a_3373_146# a_2883_146# 0.23394f
+C39 vddh en_3v3 1.55047f
+C40 a_1131_146# iin1 0.09435f
+C41 vddh a_2000_1702# 27.1375f
+C42 a_2165_146# en_in2 0.03196f
+C43 iin2 a_142_1770# 0.36331f
+C44 vddh a_6400_146# 0.56376f
+C45 vddh en_in0 0.14885f
+C46 vddh a_9550_146# 0.5656f
+C47 a_6484_1516# iout0 0.05794f
+C48 a_2165_146# en_3v3 0.03196f
+C49 a_6890_146# en_out1 0.02336f
+C50 a_2007_146# en_in2 0.16915f
+C51 a_142_1770# a_2497_146# 0.06427f
+C52 vddh iout2 0.59306f
+C53 a_5434_1516# a_2000_1702# 0.29196f
+C54 en_3v3 a_9708_146# 0.03196f
+C55 iin0 a_255_146# 0.09426f
+C56 a_2883_146# en_in3 0.16915f
+C57 en_3v3_b en_in3 0.0249f
+C58 en_3v3 a_8500_146# 0.19628f
+C59 vddh a_2883_146# 0.5488f
+C60 a_2007_146# en_3v3 0.19794f
+C61 en_3v3_b vddh 0.02633f
+C62 en_out0 a_5350_146# 0.16915f
+C63 en_3v3 en_out3 0.24964f
+C64 a_2000_1702# iout0 1.21487f
+C65 a_9708_146# a_9550_146# 0.04328f
+C66 en_3v3 en_out2 0.26897f
+C67 a_8584_1516# a_2000_1702# 0.28237f
+C68 a_142_1770# a_745_146# 0.06422f
+C69 en_3v3 a_5350_146# 0.18896f
+C70 a_6400_146# iout0 0.0437f
+C71 iout2 a_8500_146# 0.06851f
+C72 vddh a_1621_146# 0.06753f
+C73 en_out1 en_3v3 0.26275f
+C74 a_2883_146# iin3 0.09498f
+C75 a_9550_146# en_out3 0.16915f
+C76 vddh iout1 0.88255f
+C77 a_9634_1516# a_2000_1702# 0.24016f
+C78 a_2497_146# en_in2 0.02336f
+C79 a_8584_1516# iout2 0.18888f
+C80 en_out1 a_6400_146# 0.16915f
+C81 a_3041_146# en_in3 0.03196f
+C82 a_3373_146# en_in3 0.02336f
+C83 a_9634_1516# a_9550_146# 0.09726f
+C84 a_2497_146# en_3v3 0.02993f
+C85 vddh a_3373_146# 0.06753f
+C86 a_9634_1516# iout2 0.04103f
+C87 a_1621_146# iin1 0.29219f
+C88 a_8990_146# en_3v3 0.01918f
+C89 a_10040_146# a_9550_146# 0.23394f
+C90 vddh a_5840_146# 0.06753f
+C91 a_142_1770# a_1131_146# 0.21887f
+C92 a_745_146# a_255_146# 0.23394f
+C93 iout3 a_9550_146# 0.06851f
+C94 iout1 iout0 2.91963f
+C95 en_out0 a_5508_146# 0.03196f
+C96 a_3373_146# iin3 0.29219f
+C97 en_3v3 a_745_146# 0.02993f
+C98 a_8584_1516# iout1 0.03464f
+C99 iout3 iout2 1.03163f
+C100 a_1289_146# a_1131_146# 0.04328f
+C101 vddh en_in3 0.1489f
+C102 a_8990_146# iout2 0.06194f
+C103 a_142_1770# a_255_146# 0.07736f
+C104 en_3v3 a_5508_146# 0.03196f
+C105 a_6890_146# a_6484_1516# 0.29476f
+C106 a_5434_1516# a_5840_146# 0.29476f
+C107 en_3v3 a_8658_146# 0.03196f
+C108 en_in0 a_745_146# 0.02336f
+C109 iout1 a_9634_1516# 0.03109f
+C110 a_6558_146# en_out1 0.03196f
+C111 a_1289_146# en_in1 0.03196f
+C112 a_142_1770# en_3v3 0.05765f
+C113 a_142_1770# a_2000_1702# 3.28614f
+C114 a_5840_146# iout0 0.06194f
+C115 vddh a_5434_1516# 0.82312f
+C116 en_3v3 a_1289_146# 0.03196f
+C117 vddh iin3 2.47659f
+C118 a_1131_146# en_in1 0.16915f
+C119 vddh iin1 0.10017f
+C120 a_5840_146# a_5350_146# 0.23394f
+C121 vddh a_8500_146# 0.56584f
+C122 vddh a_2007_146# 0.53777f
+C123 vddh iin0 0.10081f
+C124 en_3v3 a_1131_146# 0.19794f
+C125 vddh iout0 1.60467f
+C126 a_6890_146# a_6400_146# 0.23394f
+C127 vddh en_out3 0.15387f
+C128 vddh a_8584_1516# 0.79342f
+C129 vddh en_out2 0.15407f
+C130 a_142_1770# en_3v3_b 0.10215f
+C131 a_142_1770# a_2883_146# 0.2193f
+C132 a_6484_1516# a_2000_1702# 0.3171f
+C133 vddh a_5350_146# 0.56872f
+C134 a_2165_146# a_2007_146# 0.04328f
+C135 en_3v3 en_in2 0.2735f
+C136 iin3 iin1 0.01986f
+C137 a_6484_1516# a_6400_146# 0.09721f
+C138 en_out0 en_3v3 0.2686f
+C139 en_3v3 en_in1 0.2735f
+C140 vddh en_out1 0.15411f
+C141 vddh a_9634_1516# 0.80739f
+C142 iin2 vddh 0.16954f
+C143 en_3v3 a_255_146# 0.19794f
+C144 iin0 iin3 0.01994f
+C145 iin0 iin1 0.61668f
+C146 a_5434_1516# iout0 0.22942f
+C147 a_142_1770# a_1621_146# 0.06427f
+C148 a_9708_146# en_out3 0.03196f
+C149 en_3v3 a_2000_1702# 0.03395f
+C150 a_5434_1516# a_5350_146# 0.09727f
+C151 vddh a_10040_146# 0.06753f
+C152 en_in0 a_255_146# 0.16915f
+C153 a_8584_1516# a_8500_146# 0.09734f
+C154 vddh a_2497_146# 0.06753f
+C155 a_8500_146# en_out2 0.16915f
+C156 en_3v3 a_6400_146# 0.18213f
+C157 vddh iout3 1.25644f
+C158 en_3v3 en_in0 0.2735f
+C159 a_8584_1516# iout0 0.04669f
+C160 en_3v3 a_9550_146# 0.1743f
+C161 a_8990_146# vddh 0.06753f
+C162 iin2 iin3 1.66947f
+C163 iin2 iin1 1.14303f
+C164 a_6890_146# iout1 0.06194f
+C165 iout0 a_5350_146# 0.06851f
+C166 a_142_1770# a_3373_146# 0.06427f
+C167 iin2 a_2007_146# 0.09453f
+C168 iin2 iin0 0.01994f
+C169 a_1621_146# a_1131_146# 0.23394f
+C170 a_9634_1516# iout0 0.04702f
+C171 en_3v3 a_2883_146# 0.17428f
+C172 en_3v3_b en_3v3 0.04704f
+C173 a_8584_1516# a_9634_1516# 0.03349f
+C174 a_6484_1516# iout1 0.20867f
+C175 vddh a_745_146# 0.06753f
+C176 a_2497_146# a_2007_146# 0.23394f
+C177 a_9550_146# iout2 0.04435f
+C178 a_1621_146# en_in1 0.02336f
+C179 a_10040_146# en_out3 0.02336f
+C180 a_8990_146# a_8500_146# 0.23394f
+C181 iout3 vssh 3.58549f
+C182 iout2 vssh 0.29578f
+C183 iout1 vssh 0.32118f
+C184 iout0 vssh 0.2987f
+C185 iin3 vssh 0.35408f
+C186 iin2 vssh 0.5253f
+C187 iin1 vssh 0.39474f
+C188 iin0 vssh 0.71623f
+C189 vddh vssh 7.98329f
+C190 a_9708_146# vssh 0.2046f
+C191 a_8658_146# vssh 0.18693f
+C192 a_6558_146# vssh 0.19196f
+C193 a_5508_146# vssh 0.18693f
+C194 a_3041_146# vssh 0.18623f
+C195 a_2165_146# vssh 0.18543f
+C196 a_1289_146# vssh 0.05206f
+C197 a_413_146# vssh 0.18797f
+C198 a_1621_146# vssh 0.20407f
+C199 a_9634_1516# vssh 3.50982f
+C200 a_8584_1516# vssh 0.26941f
+C201 a_6484_1516# vssh 0.26456f
+C202 a_5434_1516# vssh 0.2773f
+C203 a_142_1770# vssh 0.36689f
+.ends
+

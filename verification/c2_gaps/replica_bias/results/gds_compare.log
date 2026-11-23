@@ -1,0 +1,12 @@
+slot repository: 6c4b80afd0c894a079859fd4d6045fe6cfd5b6ae; slot_7.gds blob 7fb01b9dcda8d88f956359da56eec6915bcf656f (at 158afc5: 7fb01b9dcda8d88f956359da56eec6915bcf656f)
+sha256 469f2327c4bc22b1d6fc1785fab2fd3830b6050e51989b361dc11b26be669c05  final/gds/slot_7.gds
+a: <slot>/final/gds/slot_7.gds bbox=(0,0;73.8,76.26) subcells=13
+b: <work>/tree/macros/pad_ref_rb/layout/klayout/pad_ref_rb.klay.gds bbox=(0,0;73.8,76.26) subcells=13
+layers compared: 39, polygons (a, flattened): 7188, layers with differences: 0
+XOR_RESULT pad_ref_rb: IDENTICAL
+wrote <work>/lay/pad_ref_rb.gds
+a: <slot>/final/gds/slot_7.gds bbox=(-0.35,-0.47;60.14,15.97) subcells=12
+b: <work>/tree/macros/bias_dist_pd/layout/klayout/bias_dist_pd.klay.gds bbox=(-0.35,-0.47;60.14,15.97) subcells=12
+layers compared: 39, polygons (a, flattened): 5291, layers with differences: 0
+XOR_RESULT bias_dist_pd: IDENTICAL
+wrote <work>/lay/bias_dist_pd.gds

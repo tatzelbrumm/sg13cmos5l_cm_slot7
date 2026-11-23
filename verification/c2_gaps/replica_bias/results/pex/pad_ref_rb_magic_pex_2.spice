@@ -1,0 +1,146 @@
+* PEX produced using /usr/local/bin/sak-pex.sh with m=2 and s=1
+* NGSPICE file created from pad_ref_rb_pex.ext - technology: ihp-sg13cmos5l
+
+.subckt pad_ref_rb_pex vddh vssh iref vcm vref en_3v3 en_3v3_b
+X0 rb_tree_p_0.ni en_3v3_b vssh vssh sg13_hv_nmos ad=0.34p pd=2.68u as=0.34p ps=2.68u w=1u l=0.45u
+X1 vcm vcm rb_tails_0.bt rb_tails_0.bt sg13_hv_pmos ad=1.9p pd=10.38u as=3.4p ps=20.68u w=10u l=1u
+X2 rb_tails_0.bt rb_avg_0.m rb_tubs_0.bd rb_tails_0.bt sg13_hv_pmos ad=3.4p pd=20.68u as=1.9p ps=10.38u w=10u l=1u
+X3 rb_casc_0.xp rb_tree_p_0.ni vssh vssh sg13_hv_nmos ad=2.04p pd=12.68u as=2.04p ps=12.68u w=6u l=6u
+X4 vssh rb_tree_p_0.vbnc vssh vssh sg13_hv_nmos ad=0.68p pd=4.68u as=0.43083n ps=1.77707m w=2u l=3u
+X5 vssh vref vssh vssh sg13_hv_nmos ad=11.594p pd=68.88u as=0 ps=0 w=34.1u l=16.9u
+X6 vddh rb_tree_p_0.vbnc vref vssh sg13_hv_nmos ad=5.1p pd=30.68u as=5.1p ps=30.68u w=15u l=3u
+X7 vssh vref vssh vssh sg13_hv_nmos ad=4.08p pd=24.68u as=0 ps=0 w=12u l=12u
+X8 vssh vcm vssh vssh sg13_hv_nmos ad=6.5416p pd=39.16u as=0 ps=0 w=19.24u l=12.66u
+X9 rb_tubs_0.bd rb_avg_0.m rb_tails_0.bt rb_tails_0.bt sg13_hv_pmos ad=1.9p pd=10.38u as=3.4p ps=20.68u w=10u l=1u
+X10 vssh rb_tree_p_0.ni vssh vssh sg13_hv_nmos ad=0.816p pd=5.48u as=0 ps=0 w=2.4u l=6u
+X11 vddh rb_tails_0.vbp vddh vddh sg13_hv_pmos ad=1.7p pd=10.68u as=0.10467n ps=0.60479m w=5u l=6u
+X12 vssh rb_tubs_0.bd vssh vssh sg13_hv_nmos ad=0.68p pd=4.68u as=0 ps=0 w=2u l=6u
+X13 vssh rb_tree_p_0.vbnc rb_tree_p_0.vbnc vssh sg13_hv_nmos ad=0.34p pd=2.68u as=0.34p ps=2.68u w=1u l=8u
+X14 rb_tree_n_0.gh rb_avg_0.m rb_avg_0.m rb_tree_n_0.gh sg13_hv_pmos ad=0.34p pd=2.68u as=0.34p ps=2.68u w=1u l=4u
+X15 vddh rb_tails_0.vbp vddh vddh sg13_hv_pmos ad=1.7p pd=10.68u as=0 ps=0 w=5u l=6u
+X16 vssh vcm vssh vssh sg13_hv_nmos ad=4.08p pd=24.68u as=0 ps=0 w=12u l=12u
+X17 rb_tails_0.bt rb_tails_0.vbp vddh vddh sg13_hv_pmos ad=1.7p pd=10.68u as=1.7p ps=10.68u w=5u l=6u
+X18 vddh rb_tails_0.vbp rb_tails_0.vbp vddh sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=6u
+X19 vssh rb_tree_p_0.vbnc vssh vssh sg13_hv_nmos ad=5.1p pd=30.68u as=0 ps=0 w=15u l=3u
+X20 rb_avg_0.m rb_casc_0.xp rb_avg_0.m rb_avg_0.m sg13_hv_pmos ad=0.34p pd=2.68u as=28.4273p ps=0.12673m w=1u l=4u
+X21 vddh vddh vddh vddh sg13_hv_pmos ad=3.4p pd=20.68u as=0 ps=0 w=10u l=1u
+X22 vssh vcm vssh vssh sg13_hv_nmos ad=0.986p pd=6.48u as=0 ps=0 w=2.9u l=12.4u
+X23 vddh rb_tree_p_0.vbnc vref vssh sg13_hv_nmos ad=5.1p pd=30.68u as=5.1p ps=30.68u w=15u l=3u
+X24 vssh rb_tubs_0.bd vssh vssh sg13_hv_nmos ad=0.68p pd=4.68u as=0 ps=0 w=2u l=6u
+X25 vssh vcm vssh vssh sg13_hv_nmos ad=2.7812p pd=17.04u as=0 ps=0 w=8.18u l=3.25u
+X26 rb_tree_n_0.gh rb_avg_0.m rb_tree_n_0.gh rb_tree_n_0.gh sg13_hv_pmos ad=0.34p pd=2.68u as=33.46305p ps=0.1864m w=1u l=4u
+X27 rb_tails_0.ts rb_tree_n_0.gh rb_tree_n_0.gh rb_tails_0.ts sg13_hv_pmos ad=3.4p pd=20.68u as=1.9p ps=10.38u w=10u l=1u
+X28 vssh rb_tree_p_0.vbnc vssh vssh sg13_hv_nmos ad=5.1p pd=30.68u as=0 ps=0 w=15u l=3u
+X29 vssh rb_tree_p_0.vbnc vssh vssh sg13_hv_nmos ad=0.68p pd=4.68u as=0 ps=0 w=2u l=3u
+X30 vssh rb_tree_p_0.vbnc vssh vssh sg13_hv_nmos ad=5.1p pd=30.68u as=0 ps=0 w=15u l=3u
+X31 rb_avg_0.m rb_casc_0.xp rb_casc_0.xp rb_avg_0.m sg13_hv_pmos ad=0.34p pd=2.68u as=0.34p ps=2.68u w=1u l=4u
+X32 rb_avg_0.m rb_casc_0.xp rb_avg_0.m rb_avg_0.m sg13_hv_pmos ad=0.34p pd=2.68u as=0 ps=0 w=1u l=4u
+X33 rb_tree_n_0.gh rb_tree_n_0.gh rb_tails_0.ts rb_tails_0.ts sg13_hv_pmos ad=1.9p pd=10.38u as=3.4p ps=20.68u w=10u l=1u
+X34 vssh vcm vssh vssh sg13_hv_nmos ad=2.7812p pd=17.04u as=0 ps=0 w=8.18u l=3.25u
+X35 vref rb_tree_p_0.ni vssh vssh sg13_hv_nmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=6u
+X36 rb_tubs_0.bd rb_tubs_0.bd vssh vssh sg13_hv_nmos ad=2.04p pd=12.68u as=2.04p ps=12.68u w=6u l=6u
+X37 rb_casc_0.xp rb_tree_p_0.vbnc vddh vssh sg13_hv_nmos ad=5.1p pd=30.68u as=5.1p ps=30.68u w=15u l=3u
+X38 iref en_3v3 rb_tree_p_0.ni vssh sg13_hv_nmos ad=0.34p pd=2.68u as=0.34p ps=2.68u w=1u l=0.45u
+X39 vref en_3v3_b vssh vssh sg13_hv_nmos ad=0.34p pd=2.68u as=0.19p ps=1.38u w=1u l=0.45u
+X40 vddh rb_tails_0.vbp rb_tree_p_0.vbnc vddh sg13_hv_pmos ad=0.68p pd=4.68u as=0.68p ps=4.68u w=2u l=6u
+X41 vref rb_tree_p_0.vbnc vddh vssh sg13_hv_nmos ad=5.1p pd=30.68u as=5.1p ps=30.68u w=15u l=3u
+X42 vcm rb_tubs_0.bd vssh vssh sg13_hv_nmos ad=2.04p pd=12.68u as=2.04p ps=12.68u w=6u l=6u
+X43 rb_tree_n_0.gh rb_tree_p_0.ni vssh vssh sg13_hv_nmos ad=0.816p pd=5.48u as=0.816p ps=5.48u w=2.4u l=6u
+X44 vref rb_tree_p_0.vbnc vddh vssh sg13_hv_nmos ad=5.1p pd=30.68u as=5.1p ps=30.68u w=15u l=3u
+X45 vssh rb_tree_p_0.vbnc vssh vssh sg13_hv_nmos ad=0.68p pd=4.68u as=0 ps=0 w=2u l=3u
+X46 rb_avg_0.m rb_casc_0.xp rb_casc_0.xp rb_avg_0.m sg13_hv_pmos ad=0.34p pd=2.68u as=0.34p ps=2.68u w=1u l=4u
+X47 vddh vddh vddh vddh sg13_hv_pmos ad=1.9p pd=10.38u as=0 ps=0 w=10u l=1u
+X48 rb_tree_n_0.gh rb_tree_p_0.ni vssh vssh sg13_hv_nmos ad=0.816p pd=5.48u as=0.816p ps=5.48u w=2.4u l=6u
+X49 rb_tree_p_0.ni rb_tree_p_0.ni vssh vssh sg13_hv_nmos ad=2.04p pd=12.68u as=2.04p ps=12.68u w=6u l=6u
+X50 vddh rb_tails_0.vbp vddh vddh sg13_hv_pmos ad=1.7p pd=10.68u as=0 ps=0 w=5u l=6u
+X51 vssh vref vssh vssh sg13_hv_nmos ad=11.594p pd=68.88u as=0 ps=0 w=34.1u l=16.9u
+X52 vssh vcm vssh vssh sg13_hv_nmos ad=6.5416p pd=39.16u as=0 ps=0 w=19.24u l=12.66u
+X53 vddh vddh vddh vddh sg13_hv_pmos ad=3.4p pd=20.68u as=0 ps=0 w=10u l=1u
+X54 rb_tree_p_0.ni en_3v3_b iref vddh sg13_hv_pmos ad=0.34p pd=2.68u as=0.34p ps=2.68u w=1u l=0.45u
+X55 vddh vddh vddh vddh sg13_hv_pmos ad=1.9p pd=10.38u as=0 ps=0 w=10u l=1u
+X56 rb_tails_0.vbp rb_tree_p_0.ni vssh vssh sg13_hv_nmos ad=0.816p pd=5.48u as=0.816p ps=5.48u w=2.4u l=6u
+X57 rb_tree_n_0.gh rb_avg_0.m rb_tree_n_0.gh rb_tree_n_0.gh sg13_hv_pmos ad=0.34p pd=2.68u as=0 ps=0 w=1u l=4u
+X58 rb_tails_0.bt vcm vcm rb_tails_0.bt sg13_hv_pmos ad=3.4p pd=20.68u as=1.9p ps=10.38u w=10u l=1u
+X59 vssh rb_tree_p_0.vbnc vssh vssh sg13_hv_nmos ad=0.68p pd=4.68u as=0 ps=0 w=2u l=3u
+X60 vssh en_3v3_b vcm vssh sg13_hv_nmos ad=0.19p pd=1.38u as=0.34p ps=2.68u w=1u l=0.45u
+X61 vssh rb_tree_p_0.ni vssh vssh sg13_hv_nmos ad=0.68p pd=4.68u as=0 ps=0 w=2u l=6u
+X62 rb_tails_0.ts rb_tails_0.vbp vddh vddh sg13_hv_pmos ad=1.7p pd=10.68u as=1.7p ps=10.68u w=5u l=6u
+C0 en_3v3_b rb_tails_0.bt 0.75051f
+C1 en_3v3_b vref 0.4045f
+C2 iref rb_tree_p_0.ni 0.58128f
+C3 rb_tails_0.vbp rb_tails_0.ts 0.29156f
+C4 rb_casc_0.xp en_3v3_b 0.24195f
+C5 vcm vddh 0.50361f
+C6 vref rb_tails_0.bt 0.43822f
+C7 rb_tree_n_0.gh rb_tubs_0.bd 0.24022f
+C8 vcm rb_avg_0.m 0.01263f
+C9 rb_tubs_0.bd rb_tails_0.ts 0.04885f
+C10 rb_casc_0.xp vref 0.13965f
+C11 en_3v3_b vddh 3.59506f
+C12 rb_avg_0.m en_3v3_b 0.06311f
+C13 rb_tree_n_0.gh rb_tree_p_0.ni 0.96481f
+C14 rb_tree_p_0.ni rb_tails_0.ts 0.06016f
+C15 vddh rb_tails_0.bt 0.90878f
+C16 vref vddh 2.41599f
+C17 rb_avg_0.m rb_tails_0.bt 2.79827f
+C18 rb_avg_0.m vref 0.23343f
+C19 rb_tree_p_0.ni en_3v3 0.06522f
+C20 rb_casc_0.xp vddh 0.41458f
+C21 rb_casc_0.xp rb_avg_0.m 5.67453f
+C22 rb_tubs_0.bd rb_tails_0.vbp 0.21443f
+C23 iref en_3v3_b 0.82861f
+C24 rb_avg_0.m vddh 0.49777f
+C25 iref rb_tails_0.bt 0.04771f
+C26 iref vref 0.09789f
+C27 rb_tree_p_0.ni rb_tails_0.vbp 2.82799f
+C28 iref rb_casc_0.xp 0.07445f
+C29 rb_tree_n_0.gh en_3v3_b 1.85264f
+C30 rb_tree_p_0.ni rb_tubs_0.bd 0.0967f
+C31 rb_tree_p_0.vbnc vref 5.07859f
+C32 en_3v3_b rb_tails_0.ts 0.07109f
+C33 iref vddh 3.24534f
+C34 rb_tree_p_0.vbnc rb_casc_0.xp 1.08102f
+C35 en_3v3_b en_3v3 0.08402f
+C36 rb_tree_n_0.gh vref 0.57981f
+C37 rb_tails_0.bt rb_tails_0.ts 0.18857f
+C38 rb_tree_n_0.gh rb_casc_0.xp 0.74173f
+C39 rb_tree_p_0.vbnc vddh 24.6629f
+C40 en_3v3_b rb_tails_0.vbp 1.24018f
+C41 rb_tree_n_0.gh vddh 0.38173f
+C42 vcm rb_tubs_0.bd 3.37691f
+C43 rb_tree_n_0.gh rb_avg_0.m 5.34447f
+C44 vddh rb_tails_0.ts 0.88021f
+C45 rb_avg_0.m rb_tails_0.ts 0.05862f
+C46 vref rb_tails_0.vbp 1.11847f
+C47 rb_tails_0.bt rb_tails_0.vbp 0.3262f
+C48 en_3v3_b rb_tubs_0.bd 1.30481f
+C49 rb_casc_0.xp rb_tails_0.vbp 0.88173f
+C50 rb_tails_0.bt rb_tubs_0.bd 1.10272f
+C51 vref rb_tubs_0.bd 0.57014f
+C52 iref rb_tree_n_0.gh 0.04822f
+C53 rb_tree_p_0.ni en_3v3_b 0.64294f
+C54 iref rb_tails_0.ts 0.04182f
+C55 vddh rb_tails_0.vbp 23.1921f
+C56 rb_avg_0.m rb_tails_0.vbp 0.63411f
+C57 iref en_3v3 0.02078f
+C58 rb_tree_p_0.ni rb_tails_0.bt 0.06487f
+C59 rb_tree_p_0.ni vref 0.25552f
+C60 vddh rb_tubs_0.bd 0.56025f
+C61 rb_casc_0.xp rb_tree_p_0.ni 1.17126f
+C62 rb_avg_0.m rb_tubs_0.bd 1.0698f
+C63 rb_tree_n_0.gh rb_tails_0.ts 3.73442f
+C64 iref rb_tails_0.vbp 2.04998f
+C65 rb_tree_p_0.ni vddh 2.80895f
+C66 vcm en_3v3_b 0.63398f
+C67 rb_tree_p_0.ni rb_avg_0.m 0.05726f
+C68 iref rb_tubs_0.bd 1.22351f
+C69 rb_tree_p_0.vbnc rb_tails_0.vbp 0.12328f
+C70 vcm rb_tails_0.bt 3.55523f
+C71 vcm vref 0.75267f
+C72 rb_tree_n_0.gh rb_tails_0.vbp 0.24687f
+C73 iref vssh 3.49578f
+C74 rb_tails_0.bt vssh 44.48622f
+C75 rb_tails_0.ts vssh 10.67118f
+C76 rb_tree_n_0.gh vssh 0.08308f
+.ends
+
