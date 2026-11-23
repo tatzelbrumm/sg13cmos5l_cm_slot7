@@ -1,6 +1,6 @@
 # SPDX-FileCopyrightText: 2026 Christoph Maier
 # SPDX-License-Identifier: Apache-2.0
-# IHP sg13cmos5l post-layout (magic PEX) simulation: sg13cmos5l_IOPadDiff2Single, CACE group dc_params, magic C-coupled PEX of pads/sg13cmos5l_IOPadDiff2Single/sg13cmos5l_IOPadDiff2Single.gds. Values SI (s, V, A, Hz) whatever the [unit] label says.
+# IHP sg13cmos5l post-layout (magic PEX) simulation: sg13cmos5l_IOPadDiff2Single, CACE group dc_params (pass 1, templates unchanged: no rshunt), magic C-coupled PEX of pads/sg13cmos5l_IOPadDiff2Single/sg13cmos5l_IOPadDiff2Single.gds. Values SI (s, V, A, Hz) whatever the [unit] label says.
 corner_mos,temp,vdd,Gain[],Vos_out[mV],INL[mV],Iio[A],Icore[A],IqP[A],IqN[A],Imin[A]
 ss,-40,3.3,0.499961,3.20198E-05,0.00749982,0.000305924,8.25282E-12,0.000220441,0.000220407,0.000104673
 tt,-40,3.3,0.49996,3.63932E-05,0.00238543,0.000311447,2.76807E-11,0.000225669,0.000225631,0.000110687

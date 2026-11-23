@@ -2359,3 +2359,200 @@
                     b_dc.sch                                                    
 [21:07:10] INFO     Parameter vcm_dc_params: Running    parameter_ngspice.py:564
                     simulations…                                                
+[21:07:32] INFO     Parameter vcm_dc_params: Collecting parameter_ngspice.py:663
+                    results…                                                    
+[21:07:32] INFO     Parameter vcm_dc_params: Saving     parameter_ngspice.py:846
+                    simulation summary as                                       
+                    'cace/_runs_pex/RUN_2026-11-23_21-0                         
+                    7-03/parameters/vcm_dc_params/simul                         
+                    ation_summary.md'…                                          
+                      Simulation Summary for vcm_dc_params                      
+
+                                                        
+ run     corner_mos  vdd  temp    Vcm   Vref         Ib 
+ ────────────────────────────────────────────────────── 
+ run_00          ss  3.3   -40  1.244  0.454  1.899e-05 
+ run_01          sf  3.3   -40  1.252  0.450  1.900e-05 
+ run_02          tt  3.3   -40  1.248  0.446  1.900e-05 
+ run_03          fs  3.3   -40  1.242  0.441  1.899e-05 
+ run_04          ff  3.3   -40  1.243  0.437  1.901e-05 
+ run_05          ss  3.6   -40  1.352  0.455  1.906e-05 
+ run_06          sf  3.6   -40  1.325  0.451  1.907e-05 
+ run_07          tt  3.6   -40  1.338  0.447  1.907e-05 
+ run_08          fs  3.6   -40  1.342  0.442  1.907e-05 
+ run_09          ff  3.6   -40  1.289  0.438  1.908e-05 
+ run_10          ss  3.3    27  1.260  0.503  1.907e-05 
+ run_11          sf  3.3    27  1.265  0.498  1.908e-05 
+ run_12          tt  3.3    27  1.261  0.494  1.908e-05 
+ run_13          fs  3.3    27  1.256  0.489  1.908e-05 
+ run_14          ff  3.3    27  1.256  0.484  1.909e-05 
+ run_15          ss  3.6    27  1.365  0.504  1.913e-05 
+ run_16          sf  3.6    27  1.340  0.499  1.915e-05 
+ run_17          tt  3.6    27  1.351  0.495  1.915e-05 
+ run_18          fs  3.6    27  1.354  0.490  1.915e-05 
+ run_19          ff  3.6    27  1.305  0.485  1.916e-05 
+ run_20          ss  3.3   125  1.294  0.595  1.917e-05 
+ run_21          sf  3.3   125  1.295  0.590  1.919e-05 
+ run_22          tt  3.3   125  1.292  0.585  1.918e-05 
+ run_23          fs  3.3   125  1.288  0.579  1.918e-05 
+ run_24          ff  3.3   125  1.282  0.574  1.921e-05 
+ run_25          ss  3.6   125  1.395  0.596  1.922e-05 
+ run_26          sf  3.6   125  1.363  0.591  1.924e-05 
+ run_27          tt  3.6   125  1.375  0.586  1.924e-05 
+ run_28          fs  3.6   125  1.380  0.580  1.924e-05 
+ run_29          ff  3.6   125  1.326  0.575  1.926e-05 
+                                                        
+─────────────────────── Completed vcm_dc_params: Pass ✅ ───────────────────────
+[21:07:32] INFO     Done with CACE simulations and evaluations   cace_cli.py:371
+                    in 0:00:28.                                                 
+                          CACE Summary for pad_ref_rb                           
+
+netlist source: pex                                                             
+
+                                                                                
+                            Min     Min     Typ     Typ     Max     Max         
+ Param…  Tool    Result   Limit   Value  Target   Value   Limit   Value  Status 
+ ────────────────────────────────────────────────────────────────────────────── 
+ Vcm:    ngspi…  Vcm      1.031   1.242     any   1.295  1.53 V   1.395   Pass  
+ outpu…                       V       V               V               V    ✅   
+ iovdd                                                                          
+ 3.3 /                                                                          
+ 3.6 V                                                                          
+ Vref    ngspi…  Vref       any   0.437     any   0.494     any   0.596   Pass  
+                                      V               V               V    ✅   
+ Supply  ngspi…  Ib         any  18.986     any  19.114   25 uA  19.260   Pass  
+ curre…                              uA              uA              uA    ✅   
+ (tree                                                                          
+ + both                                                                         
+ block…                                                                         
+ witho…                                                                         
+ the                                                                            
+ refer…                                                                         
+ Vcm:    ngspi…  Vcm      1.031        ​     any        ​   1.262        ​   Skip  
+ outpu…                       V                               V            🟧   
+ iovdd                                                                          
+ 3.0 V                                                                          
+ Vref    ngspi…  Vref       any        ​     any        ​     any        ​   Skip  
+                                                                           🟧   
+ Supply  ngspi…  Ib         any        ​     any        ​   25 uA        ​   Skip  
+ curre…                                                                    🟧   
+ (tree                                                                          
+ + both                                                                         
+ block…                                                                         
+ witho…                                                                         
+ the                                                                            
+ refer…                                                                         
+ Vcm:    ngspi…  Vcm      1.031        ​     any        ​   1.244        ​   Skip  
+ outpu…                       V                               V            🟧   
+ OA                                                                             
+ core /                                                                         
+ bandg…                                                                         
+ core,                                                                          
+ 3.0 V                                                                          
+ Vref    ngspi…  Vref       any        ​     any        ​     any        ​   Skip  
+                                                                           🟧   
+ Supply  ngspi…  Ib         any        ​     any        ​   35 uA        ​   Skip  
+ curre…                                                                    🟧   
+ (tree                                                                          
+ + both                                                                         
+ block…                                                                         
+ witho…                                                                         
+ the                                                                            
+ refer…                                                                         
+ Vcm     ngspi…  Vcm        any        ​     any        ​     any        ​   Skip  
+                                                                           🟧   
+ Vref:   ngspi…  Vref    0.47 V        ​     any        ​  0.51 V        ​   Skip  
+ output                                                                    🟧   
+ at 27                                                                          
+ C (pad                                                                         
+ range                                                                          
+ from 0                                                                         
+ V)                                                                             
+ Supply  ngspi…  Ib         any        ​     any        ​   25 uA        ​   Skip  
+ curre…                                                                    🟧   
+ (tree                                                                          
+ + both                                                                         
+ block…                                                                         
+ witho…                                                                         
+ the                                                                            
+ refer…                                                                         
+ Vcm     ngspi…  Vcm        any        ​     any        ​     any        ​   Skip  
+                                                                           🟧   
+ Vref:   ngspi…  Vref    0.55 V        ​     any        ​   0.7 V        ​   Skip  
+ output                                                                    🟧   
+ at 125                                                                         
+ C                                                                              
+ (above                                                                         
+ the                                                                            
+ S2D                                                                            
+ input                                                                          
+ INL                                                                            
+ edge,                                                                          
+ <=                                                                             
+ 0.542                                                                          
+ V)                                                                             
+ Supply  ngspi…  Ib         any        ​     any        ​   25 uA        ​   Skip  
+ curre…                                                                    🟧   
+ (tree                                                                          
+ + both                                                                         
+ block…                                                                         
+ witho…                                                                         
+ the                                                                            
+ refer…                                                                         
+ Vcm     ngspi…  Vcm        any        ​     any        ​     any        ​   Skip  
+                                                                           🟧   
+ Vref:   ngspi…  Vref    0.35 V        ​     any        ​   0.5 V        ​   Skip  
+ output                                                                    🟧   
+ at -40                                                                         
+ C (pad                                                                         
+ range                                                                          
+ from 0                                                                         
+ V)                                                                             
+ Supply  ngspi…  Ib         any        ​     any        ​   25 uA        ​   Skip  
+ curre…                                                                    🟧   
+ (tree                                                                          
+ + both                                                                         
+ block…                                                                         
+ witho…                                                                         
+ the                                                                            
+ refer…                                                                         
+ Vcm:    ngspi…  Vcm        any        ​     any        ​   0.001        ​   Skip  
+ disab…                                                       V            🟧   
+ Vref:   ngspi…  Vref       any        ​     any        ​   0.001        ​   Skip  
+ disab…                                                       V            🟧   
+ Supply  ngspi…  Ib         any        ​     any        ​  0.1 uA        ​   Skip  
+ curre…                                                                    🟧   
+ (tree                                                                          
+ + both                                                                         
+ block…                                                                         
+ witho…                                                                         
+ the                                                                            
+ refer…                                                                         
+ Vcm:    ngspi…  Vcm      1.2 V        ​     any        ​  1.32 V        ​   Skip  
+ misma…                                                                    🟧   
+ (tt 27                                                                         
+ C 3.3                                                                          
+ V)                                                                             
+ Vref:   ngspi…  Vref    0.47 V        ​     any        ​  0.52 V        ​   Skip  
+ misma…                                                                    🟧   
+ (tt 27                                                                         
+ C 3.3                                                                          
+ V)                                                                             
+ Supply  ngspi…  Ib         any        ​     any        ​   25 uA        ​   Skip  
+ curre…                                                                    🟧   
+ (tree                                                                          
+ + both                                                                         
+ block…                                                                         
+ witho…                                                                         
+ the                                                                            
+ refer…                                                                         
+                                                                                
+[21:07:32] INFO     Generating documentation in         parameter_manager.py:255
+                    'cace/_docs_pex'                                            
+[21:07:34] ERROR    Subprocess exited with error code 1            common.py:689
+[21:07:34] ERROR    Error output generated by subprocess:          common.py:693
+[21:07:34] ERROR    ERROR: RuntimeError: Unable to open file:      common.py:695
+                    /foss/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.te              
+                    ch/klayout/tech//sg13g2.lyp (errno=2) in                    
+                    LayoutViewBase.load_layer_props                             
+[21:07:34] ERROR      klayout_script.py:34                         common.py:695
