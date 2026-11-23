@@ -15,7 +15,7 @@ export PDK_ROOT=${PDK_ROOT:-/foss/pdks} PDK=${PDK:-ihp-sg13cmos5l}
 SPICEINIT="$PDK_ROOT/$PDK/libs.tech/ngspice/.spiceinit"
 [ -f "$SPICEINIT" ] || SPICEINIT=/foss/pdks/IHP-Open-PDK/ihp-sg13cmos5l/libs.tech/ngspice/.spiceinit
 TREE="$WORK/tree"
-NPAR=2   # at most 2 ngspice runs in parallel
+export NPAR=${NPAR:-2}   # parallel ngspice runs (slot modes and bg_core.py)
 
 fetch() {
   # only the needed paths of the design repository, at the commit (no full clone)
@@ -33,13 +33,15 @@ fetch() {
 }
 
 designer() {
-  # the designer's own run_modes.py, unchanged, at all three of its points (writes modes.txt in the fetched tree)
+  # the designer's own run_modes.py, unchanged, at all three of its points (writes modes.txt in the fetched tree);
+  # its DC sweeps stall for minutes where they fail. (designer_modes_rerun_ss.txt here: ss -40 C only, see README)
   (cd "$TREE/docs/slot7_hookup/tier1" && python3 -I run_modes.py)
   cp "$TREE/docs/slot7_hookup/tier1/modes.txt" "$HERE/designer_modes_rerun.txt"
 }
 
 modes() {
-  rm -f "$HERE"/slot_modes_*.csv.raw
+  mkdir -p "$WORK/slot_out"
+  rm -f "$WORK/slot_out"/slot_modes_pu.csv "$WORK/slot_out"/slot_modes_dcop.csv "$WORK/slot_out"/slot_modes_dcns.csv
   # job list: see jobs_modes.txt (one job per line, <mode>:<mos>:<temp>:<vdd>[:variant])
   grep -v '^#' "$HERE/jobs_modes.txt" | xargs -P "$NPAR" -n 1 \
     python3 -I "$HERE/slot_modes.py" "$TREE" "$WORK/slot" "$WORK/slot_out"
@@ -51,6 +53,7 @@ bg() {
 
 tables() {
   python3 -I "$HERE/tables.py" "$WORK" "$HERE"
+  python3 -I "$HERE/plots.py" "$WORK" "$HERE"
 }
 
 case "$STEP" in

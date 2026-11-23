@@ -1,0 +1,14 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# IHP sg13cmos5l simulation: the designer's docs/slot7_hookup/tier1/run_modes.py (design repo 9052bd3), unchanged, re-run here
+# at ss -40 C 3.0 V only (PDK .spiceinit). no_key_swap: not re-run (stopped by the time limit; its line is edited to say so).
+# Other lines as written by run_modes.py --parse:
+# mode       corner     | error max [mV] vs expected | v(bus0)-v(outp), v(bus1)-v(outn) [mV] (mon)
+default     ss  -40 |     1.31 |        -        -
+swap        ss  -40 | FAILED
+mon         ss  -40 | FAILED
+feed        ss  -40 | FAILED
+ext         ss  -40 | FAILED
+all_high    ss  -40 |     1.31 |        -        -
+swap+feed   ss  -40 | FAILED
+no_key_swap ss  -40 | not re-run (time limit)

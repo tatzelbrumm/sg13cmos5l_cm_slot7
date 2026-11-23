@@ -23,7 +23,7 @@ schematic runs do not (see README.md: without it the PEX operating point did not
 
 | group | status |
 |---|---|
-| dc_params | pass 1 (no rshunt) done: 25 of 30 runs, see below; pass 2 (rshunt) queued last |
+| dc_params | done: 30 of 30 schematic runs have a PEX result |
 | ac_params | done: 15 of 15 schematic runs have a PEX result |
 | ac_load_params | done: 6 of 6 schematic runs have a PEX result |
 | tran_params | done: 9 of 9 schematic runs have a PEX result |
@@ -37,6 +37,14 @@ schematic runs do not (see README.md: without it the PEX operating point did not
 
 | group | quantity | N sch | sch min | sch median | sch max | N pex | pex min | pex median | pex max | max per-run change % |
 |---|---|---|---|---|---|---|---|---|---|---|
+| dc_params | Gain[] | 30 | 0.4981 | 0.5 | 0.5 | 30 | 0.4983 | 0.5 | 0.5 | +0.0542 |
+| dc_params | Vos_out[mV] | 30 | 3.487e-05 | 7.344e-05 | 0.001947 | 30 | 4.414e-05 | 7.998e-05 | 0.001748 | +26.6 |
+| dc_params | INL[mV] | 30 | 0.0001222 | 0.0004804 | 0.007404 | 30 | 0.0001199 | 0.0004495 | 0.0075 | -9.14 |
+| dc_params | Iio[A] | 30 | 0.0002932 | 0.0003017 | 0.000314 | 30 | 0.0003018 | 0.0003113 | 0.0003253 | +3.58 |
+| dc_params | Icore[A] | 30 | 8.253e-12 | 1.185e-10 | 2.389e-08 | 30 | 1.425e-11 | 1.245e-10 | 2.39e-08 | +72.7 |
+| dc_params | IqP[A] | 30 | 0.0002074 | 0.0002154 | 0.0002266 | 30 | 0.0002166 | 0.0002255 | 0.0002386 | +5.35 |
+| dc_params | IqN[A] | 30 | 0.000207 | 0.0002146 | 0.0002265 | 30 | 0.0002162 | 0.000225 | 0.0002385 | +5.35 |
+| dc_params | Imin[A] | 30 | 9.577e-05 | 0.0001051 | 0.0001119 | 30 | 0.0001047 | 0.0001133 | 0.0001203 | +9.3 |
 | ac_params | Acl_dB[dB] | 15 | -6.055 | -6.022 | -6.021 | 15 | -6.05 | -6.021 | -6.021 | +0.0801 |
 | ac_params | f3dB[MHz] | 15 | 1.778e+06 | 2.015e+06 | 2.252e+06 | 15 | 1.569e+06 | 1.774e+06 | 2.016e+06 | -12.9 |
 | ac_params | Peak_dB[dB] | 15 | 3.027e-07 | 9.28e-07 | 1.532e-06 | 15 | 4.475e-07 | 1.224e-06 | 1.815e-06 | +107 |
@@ -84,6 +92,18 @@ scripts/cace/spec_table.py of the design repository commit 91a7da8b on csv/*_pex
 
 | group | quantity | unit | limit | worst | runs | verdict |
 |---|---|---|---:|---:|---:|---|
+| dc_params | Gain |  | >= 0.49 | 0.4983 | 30 | pass |
+| dc_params | Gain |  | <= 0.51 | 0.5 | 30 | pass |
+| dc_params | Output offset | mV | >= -5 | 0.04414 | 30 | pass |
+| dc_params | Output offset | mV | <= 5 | 1.748 | 30 | pass |
+| dc_params | Integral nonlinearity | mV | <= 10 | 7.5 | 30 | pass |
+| dc_params | IO ring supply current | uA | <= 400 | 325.3 | 30 | pass |
+| dc_params | Core ring supply current | nA | <= 100 | 23.9 | 30 | pass |
+| dc_params | Quiescent current OP | uA | >= 150 | 216.6 | 30 | pass |
+| dc_params | Quiescent current OP | uA | <= 300 | 238.6 | 30 | pass |
+| dc_params | Quiescent current ON | uA | >= 150 | 216.2 | 30 | pass |
+| dc_params | Quiescent current ON | uA | <= 300 | 238.5 | 30 | pass |
+| dc_params | Minimum output-device current | uA | >= 30 | 104.7 | 30 | pass |
 | ac_params | Closed-loop gain | dB | >= -6.2 | -6.05 | 15 | pass |
 | ac_params | Closed-loop gain | dB | <= -5.85 | -6.021 | 15 | pass |
 | ac_params | Bandwidth | MHz | >= 1 | 1.569 | 15 | pass |
@@ -139,9 +159,25 @@ sf/-40/3.3, ff/-40/3.3, sf/-40/3.6, ff/-40/3.6, ff/27/3.6. Schematic: all 30 run
 | dc_params | IqN[A] | 30 | 0.000207 | 0.0002146 | 0.0002265 | 25 | 0.0002162 | 0.0002244 | 0.0002335 | +5.32 |
 | dc_params | Imin[A] | 30 | 9.577e-05 | 0.0001051 | 0.0001119 | 25 | 0.0001047 | 0.0001125 | 0.0001184 | +9.3 |
 
+## Effect of rshunt = 1e12 on the PEX view (dc_params pass 1 vs pass 2)
+
+Both columns are PEX; pass 1 without rshunt (25 runs), pass 2 with rshunt 1e12 (30 runs). The per-run change over
+the 25 common runs bounds what rshunt does to the DC quantities.
+
+| group | quantity | N pass 1 | pass 1 min | pass 1 median | pass 1 max | N pass 2 | pass 2 min | pass 2 median | pass 2 max | max per-run change % |
+|---|---|---|---|---|---|---|---|---|---|---|
+| dc_params | Gain[] | 25 | 0.4983 | 0.5 | 0.5 | 30 | 0.4983 | 0.5 | 0.5 | +0.0018 |
+| dc_params | Vos_out[mV] | 25 | 3.202e-05 | 7.024e-05 | 0.001737 | 30 | 4.414e-05 | 7.998e-05 | 0.001748 | +37.9 |
+| dc_params | INL[mV] | 25 | 0.0001209 | 0.0004867 | 0.0075 | 30 | 0.0001199 | 0.0004495 | 0.0075 | -2.81 |
+| dc_params | Iio[A] | 25 | 0.0003017 | 0.0003107 | 0.0003198 | 30 | 0.0003018 | 0.0003113 | 0.0003253 | +0.00381 |
+| dc_params | Icore[A] | 25 | 8.253e-12 | 2.435e-10 | 2.389e-08 | 30 | 1.425e-11 | 1.245e-10 | 2.39e-08 | +72.7 |
+| dc_params | IqP[A] | 25 | 0.0002166 | 0.000225 | 0.0002335 | 30 | 0.0002166 | 0.0002255 | 0.0002386 | +0.00343 |
+| dc_params | IqN[A] | 25 | 0.0002162 | 0.0002244 | 0.0002335 | 30 | 0.0002162 | 0.000225 | 0.0002385 | -0.00272 |
+| dc_params | Imin[A] | 25 | 0.0001047 | 0.0001125 | 0.0001184 | 30 | 0.0001047 | 0.0001133 | 0.0001203 | +0.00542 |
+
 ## Plots
 
 - plots/f3dB_per_corner.png: closed-loop -3 dB bandwidth per corner_mos/temp (ac_params, pass 2)
-- plots/inl_per_corner.png: INL per corner_mos/temp/vdd (dc_params; pass 2 once it has run, else pass 1)
-- plots/iqp_per_corner.png: quiescent current of the output PMOS (dc_params; PEX = sum over the 82 extracted fingers)
+- plots/inl_per_corner.png: INL per corner_mos/temp/vdd (dc_params, pass 2)
+- plots/iqp_per_corner.png: quiescent current of the output PMOS (dc_params pass 2; PEX = sum over the 82 extracted fingers)
 
