@@ -46,7 +46,7 @@ def slot_plot():
         a.grid(alpha=0.3)
         a.legend(fontsize=6, ncol=3)
     ax[2].set_ylim(-20, 200)
-    fig.suptitle("IHP sg13cmos5l simulation: slot 7 power-up, ss / -40 C / 3.0 V\n(bg_core_pd schematic; pads, "
+    fig.suptitle("IHP sg13cmos5l simulation: slot 7 power-up, ss / -40 C / 3.0 V, pad out 1 Gohm || 10 pF\n(bg_core_pd schematic; pads, "
                  "pad_ref_rb, bias_dist_pd extracted)", fontsize=9)
     fig.tight_layout()
     fig.savefig(OUT / "slot_powerup_ss_m40.png", dpi=90)

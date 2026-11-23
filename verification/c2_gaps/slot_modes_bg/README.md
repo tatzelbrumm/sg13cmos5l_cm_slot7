@@ -56,11 +56,17 @@ loads as in `run_modes.py`), but as a transient from all nodes at 0 V (`uic`, no
 vdd_3v3 and iovdd ramp 0 → V in 10 µs, v12 = 1.2 V and the mode bits from t = 0 (register written before enable),
 `enable` 0 → 1.2 V at 20 µs. Pad in 0.5 V to 40 µs, then 0 / 0.25 / 0.5 / 0.75 / 1.0 V for 10 µs each, sampled at each
 step's end; error = pad out − expected (`run_modes.py`'s expressions: direct vcm + (in − vref), swap vcm − (in − vref),
-feed vcm + (bus0 − bus1)/2, ext 1.30 + in − 0.50). Feed modes: pad in fixed 0.5 V, one sample at 90 µs. Solver aids
-(no circuit change): `method=gear`, `cshunt=1e-15` (as the designer's own transient in `run_tier1.py`), maximum time
-step 10 ns. Without the step limit the transient aborts with "timestep too small" in the D2S pad's antenna diode `X$3`
-(`dpantenna`, pad → iovdd): at 5.9 µs (trapezoidal, no cshunt), 21.3 µs (gear + cshunt, swap) and 6.6 µs (gear +
-cshunt + rshunt 1 TΩ, default mode); these aborts are what the logs show, the bandgap was running in each case.
+feed vcm + (bus0 − bus1)/2, ext 1.30 + in − 0.50). Feed modes: pad in fixed 0.5 V, one sample at 90 µs. The bus
+sources (feed bus0 / bus1 1.45 / 1.05 V, ext bus2 / bus3 1.30 / 0.50 V, each through 10 kΩ) switch on at 25 … 26 µs,
+after enable (instrument connected to a powered slot). Pad out: 1 GΩ (as `run_modes.py`) ∥ **10 pF** (probe / board
+load; variant `pu`); variant `pu0` is 1 GΩ only. Solver aids (no circuit change): `method=gear`, `cshunt=1e-15` (as
+the designer's own transient in `run_tier1.py`), maximum time step 10 ns; variant `pu2` (retry of aborted runs):
+enable edge 1 µs, maximum step 5 ns. Without these the transient aborts with "timestep too small" in the D2S pad's
+antenna diode `X$3` (`dpantenna`, pad → iovdd): at 5.9 µs (trapezoidal, no cshunt), 21.3 µs (gear + cshunt, swap),
+6.6 µs (gear + cshunt + rshunt 1 TΩ, default mode). With 1 GΩ only, or with the feed sources on from t = 0, more runs
+abort at the same diode during the supply ramp or at the enable edge. All aborts are listed as `FAILED` in the tables
+with the instance ngspice names. The ss −40 °C runs of section 1 of `results.md` were done in this order (pu0 first,
+then pu); `slot_modes_powerup.csv` has a `cload` column.
 
 **DC diagnosis (`dcop`, `dcns`).** The designer's DC deck, unchanged, with ngspice's stderr kept, and the same deck
 with `.nodeset` of the bandgap nodes (g, vpc, vpg, ks, ibg) at their running values (from the power-up transient).
