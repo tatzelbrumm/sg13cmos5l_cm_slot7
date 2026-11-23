@@ -1,0 +1,13 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# IHP sg13cmos5l post-layout (magic PEX) simulation: sg13cmos5l_IOPadDiff2Single, CACE group tran_params, magic C-coupled PEX of the taped-out GDS, ngspice rshunt=1e12 (pass 2). Values SI whatever the [unit] label says.
+corner_mos,cload,SR_rise[V/us],SR_fall[V/us],Overshoot[%],ts_rise[us],ts_fall[us]
+ss,1e-11,1.7361E+06,1.75164E+06,-5E-07,4.85572E-07,4.8332E-07
+tt,1e-11,1.66469E+06,1.67893E+06,0,5.05708E-07,5.03845E-07
+ff,1e-11,1.59066E+06,1.60333E+06,-9E-07,5.28345E-07,5.26959E-07
+ss,1e-10,2.28499E+06,2.28415E+06,1E-06,3.54916E-07,3.62412E-07
+tt,1e-10,2.15141E+06,2.14966E+06,0,3.85495E-07,3.91559E-07
+ff,1e-10,2.01616E+06,2.01407E+06,-9E-07,4.17382E-07,4.22265E-07
+ss,3e-10,2.73181E+06,2.7939E+06,0.079858,5.27249E-07,5.12475E-07
+tt,3e-10,2.61868E+06,2.66683E+06,0.068095,5.37134E-07,5.22671E-07
+ff,3e-10,2.49509E+06,2.52897E+06,0.056497,5.47794E-07,5.33595E-07

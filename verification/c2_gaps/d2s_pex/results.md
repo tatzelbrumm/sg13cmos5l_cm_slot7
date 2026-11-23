@@ -26,8 +26,8 @@ schematic runs do not (see README.md: without it the PEX operating point did not
 | dc_params | pass 1 (no rshunt) done: 25 of 30 runs, see below; pass 2 (rshunt) queued last |
 | ac_params | done: 15 of 15 schematic runs have a PEX result |
 | ac_load_params | done: 6 of 6 schematic runs have a PEX result |
-| tran_params | running / TBD |
-| noise_params | running / TBD |
+| tran_params | done: 9 of 9 schematic runs have a PEX result |
+| noise_params | done: 3 of 3 schematic runs have a PEX result |
 | drive_params | running / TBD |
 | enable_params | running / TBD |
 | pd_params | running / TBD |
@@ -53,6 +53,14 @@ schematic runs do not (see README.md: without it the PEX operating point did not
 | ac_load_params | CMRR_1k[] | 6 | 124 | 124 | 124 | 6 | 110.2 | 110.2 | 110.2 | -11.1 |
 | ac_load_params | Zout_1k[] | 6 | 0.2176 | 0.2176 | 0.2176 | 6 | 0.2278 | 0.2278 | 0.2278 | +4.72 |
 | ac_load_params | Zout_1M[] | 6 | 159 | 180.8 | 237 | 6 | 167.7 | 193.2 | 255.7 | +7.91 |
+| tran_params | SR_rise[V/us] | 9 | 1.76e+06 | 2.448e+06 | 3.054e+06 | 9 | 1.591e+06 | 2.151e+06 | 2.732e+06 | -12.5 |
+| tran_params | SR_fall[V/us] | 9 | 1.781e+06 | 2.466e+06 | 3.166e+06 | 9 | 1.603e+06 | 2.15e+06 | 2.794e+06 | -13.3 |
+| tran_params | Overshoot[%] | 9 | -7e-07 | 1e-06 | 0.09321 | 9 | -9e-07 | 0 | 0.07986 | -100 |
+| tran_params | ts_rise[us] | 9 | 2.959e-07 | 4.562e-07 | 6.892e-07 | 9 | 3.549e-07 | 5.057e-07 | 5.478e-07 | -23.5 |
+| tran_params | ts_fall[us] | 9 | 3.036e-07 | 4.532e-07 | 6.165e-07 | 9 | 3.624e-07 | 5.038e-07 | 5.336e-07 | +19.4 |
+| noise_params | En_1k[nV/rtHz] | 3 | 6.076e-07 | 6.817e-07 | 7.185e-07 | 3 | 6.05e-07 | 6.787e-07 | 7.153e-07 | -0.452 |
+| noise_params | En_100k[nV/rtHz] | 3 | 1.426e-07 | 1.525e-07 | 1.564e-07 | 3 | 1.421e-07 | 1.519e-07 | 1.557e-07 | -0.474 |
+| noise_params | Vn_int[uV] | 3 | 0.0002227 | 0.0002342 | 0.0002351 | 3 | 0.000214 | 0.0002239 | 0.0002242 | -4.64 |
 
 
 ## dc_params pass 1 (templates unchanged, no rshunt)
