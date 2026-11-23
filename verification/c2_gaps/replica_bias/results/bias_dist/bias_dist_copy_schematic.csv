@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
 dut,case,corner,temp,vc[V],i_in0[A],i_out0[A],i_out1[A],i_out2[A],i_out3[A],ratio0,ratio1,ratio2,ratio3
 schematic,on,tt,-40,0.500,5.000000e-06,5.068855e-06,5.068855e-06,5.068855e-06,5.068855e-06,1.013771,1.013771,1.013771,1.013771
 schematic,on,tt,-40,0.550,5.000000e-06,5.068565e-06,5.068565e-06,5.068565e-06,5.068565e-06,1.013713,1.013713,1.013713,1.013713

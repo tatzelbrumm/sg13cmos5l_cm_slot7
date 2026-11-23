@@ -30,7 +30,7 @@ schematic runs do not (see README.md: without it the PEX operating point did not
 | noise_params | done: 3 of 3 schematic runs have a PEX result |
 | drive_params | done: 10 of 10 schematic runs have a PEX result |
 | enable_params | done: 3 of 3 schematic runs have a PEX result |
-| pd_params | running / TBD |
+| pd_params | done: 48 of 48 schematic runs have a PEX result |
 | thd_params | done: 3 of 3 schematic runs have a PEX result |
 
 ## Schematic vs PEX (pass 2, rshunt 1e12)
@@ -69,6 +69,12 @@ schematic runs do not (see README.md: without it the PEX operating point did not
 | enable_params | Glitch_max[mV] | 3 | 0.1119 | 0.1171 | 0.2244 | 3 | 0.1278 | 0.1287 | 0.2281 | +14.1 |
 | enable_params | Glitch_min[mV] | 3 | -0.1874 | -0.1196 | -0.1078 | 3 | -0.2248 | -0.1325 | -0.1283 | -20 |
 | enable_params | Iio_end[A] | 3 | 0.0002987 | 0.0003063 | 0.0003091 | 3 | 0.0003084 | 0.0003157 | 0.0003158 | +3.27 |
+| pd_params | Iio_pd[A] | 48 | 4.144e-11 | 2.576e-07 | 6.422e-07 | 48 | 6.358e-11 | 2.576e-07 | 6.422e-07 | +53.4 |
+| pd_params | Icore_pd[A] | 48 | -0 | 6.509e-10 | 2.389e-08 | 48 | -0 | 6.509e-10 | 2.389e-08 | +0.000101 |
+| pd_params | Ipad_pd[A] | 48 | -3.683e-08 | 4.72e-11 | 9.71e-09 | 48 | -3.685e-08 | 1.756e-10 | 1.495e-08 | +125 |
+| pd_params | Is12_pd[A] | 48 | -0 | 1.271e-14 | 9.055e-07 | 48 | -0 | 1.271e-14 | 9.055e-07 | +0 |
+| pd_params | Is33_pd[A] | 48 | -0 | 1.149e-13 | 1.114e-06 | 48 | -0 | 1.149e-13 | 1.114e-06 | -0.0197 |
+| pd_params | Ven3[V] | 48 | 2.688e-10 | 1.392e-07 | 7.104e-07 | 48 | 2.688e-10 | 1.392e-07 | 7.104e-07 | +0 |
 | thd_params | THD[dB] | 3 | -73.2 | -57.79 | -38.87 | 3 | -73.15 | -57.66 | -38.66 | +0.526 |
 | thd_params | Vout_amp[V] | 3 | 0.25 | 0.4999 | 0.7503 | 3 | 0.25 | 0.4999 | 0.7504 | +0.00466 |
 
@@ -106,6 +112,13 @@ scripts/cace/spec_table.py of the design repository commit 91a7da8b on csv/*_pex
 | enable_params | Enable glitch, negative | mV | >= -400 | -224.8 | 3 | pass |
 | enable_params | IO ring current after start-up | uA | >= 200 | 308.4 | 3 | pass |
 | enable_params | IO ring current after start-up | uA | <= 400 | 315.8 | 3 | pass |
+| pd_params | IO ring current, off | nA | <= 1000 | 642.2 | 48 | pass |
+| pd_params | Core ring current, off | nA | <= 100 | 23.89 | 48 | pass |
+| pd_params | Pad leakage, off | nA | >= -100 | -36.85 | 48 | pass |
+| pd_params | Pad leakage, off | nA | <= 100 | 14.95 | 48 | pass |
+| pd_params | vdd1v2_sense current | nA | <= 2000 | 905.5 | 48 | pass |
+| pd_params | vdd3v3_sense current | nA | <= 2000 | 1114 | 48 | pass |
+| pd_params | Internal enable | V | <= 0.1 | 7.104e-07 | 48 | pass |
 | thd_params | THD | dB | <= -35 | -38.66 | 3 | pass |
 | thd_params | Output amplitude | V |  any | 0.25 .. 0.7504 | 3 | report |
 

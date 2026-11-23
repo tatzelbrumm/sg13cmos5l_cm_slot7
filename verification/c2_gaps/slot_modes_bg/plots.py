@@ -41,7 +41,7 @@ def slot_plot():
     ax[0].set_ylabel("V")
     ax[1].set_ylabel("V")
     ax[2].set_ylabel("uA")
-    ax[2].set_xlabel("time [us]  (supplies 0->V 0..10 us, enable at 20 us, pad-in steps from 200 us)")
+    ax[2].set_xlabel("time [us]  (supplies 0->V 0..10 us, enable at 20 us, pad-in steps 40..90 us)")
     for a in ax:
         a.grid(alpha=0.3)
         a.legend(fontsize=6, ncol=3)
@@ -62,10 +62,13 @@ def bg_plot():
         tt, y = load(f)
         k = 0 if tr == "1u" else 1
         ax[k].plot(tt * (1e6 if k == 0 else 1e3), y[:, 0], label=f"{mos} {t} C {v} V", lw=0.8)
-    ax[0].set_xlabel("time [us] (vdd = en_3v3 ramp 0->V in 1 us)")
+    ax[0].set_xlim(0, 10)
+    for a in ax:
+        a.set_ylim(-1, 7)
+    ax[0].set_xlabel("time [us] (vdd = en_3v3 ramp 0->V in 1 us; first 10 us of 300 us)")
     ax[1].set_xlabel("time [ms] (vdd = en_3v3 ramp 0->V in 1 ms)")
     for a in ax:
-        a.set_ylabel("iout into 0.7 V [uA]")
+        a.set_ylabel("iout into 0.7 V [uA] (clipped: ramp displacement spikes)")
         a.grid(alpha=0.3)
         a.legend(fontsize=6)
     fig.suptitle("IHP sg13cmos5l simulation: bg_core_pd (schematic) start-up by supply ramp", fontsize=9)

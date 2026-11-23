@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
 slot repository: 6c4b80afd0c894a079859fd4d6045fe6cfd5b6ae; slot_7.gds blob 7fb01b9dcda8d88f956359da56eec6915bcf656f (at 158afc5: 7fb01b9dcda8d88f956359da56eec6915bcf656f)
 sha256 469f2327c4bc22b1d6fc1785fab2fd3830b6050e51989b361dc11b26be669c05  final/gds/slot_7.gds
 a: <slot>/final/gds/slot_7.gds bbox=(0,0;73.8,76.26) subcells=13

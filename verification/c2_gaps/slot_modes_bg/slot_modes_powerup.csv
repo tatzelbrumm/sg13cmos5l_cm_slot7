@@ -1,0 +1,5 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# IHP sg13cmos5l simulation. slot 7 modes from power-up (slot_modes.py 'pu'); bg_core_pd schematic, pads / pad_ref_rb / bias_dist_pd extracted. err_max_mV = max |pad out - expected| over the pad-in steps; t_* absolute (enable at 20 us)
+mode,mos,temp,vdd,variant,v_g_V,v_ibg_V,vcm_V,vref_V,i_slot_uA,t_g90_us,t_vcm98_us,settle_85_90us_V,err_max_mV,n_samples
+default,ss,-40,3.0,pu,1.77259,0.99486,1.11476,0.44747,48.3844,20.81,21.62,0.0,1.37,5

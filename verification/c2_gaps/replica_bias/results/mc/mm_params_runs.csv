@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
 iterations,corner_mos,temp,Vcm[V],Vref[V],Ib[A]
 1,tt_mismatch,27,1.26099,0.496387,1.9254e-05
 2,tt_mismatch,27,1.25051,0.486193,1.88324e-05

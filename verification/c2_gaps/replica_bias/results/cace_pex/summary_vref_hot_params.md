@@ -1,3 +1,7 @@
+<!--
+SPDX-FileCopyrightText: 2026 Christoph Maier
+SPDX-License-Identifier: Apache-2.0
+-->
 
 # CACE Summary for pad_ref_rb
 

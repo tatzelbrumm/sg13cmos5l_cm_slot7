@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
 en,vdd,corner_mos,temp,Vcm[V],Vref[V],Ib[A]
 0,3.6,tt,27,1.89726E-09,9.40251E-08,7.06003E-11
 0,3.6,ff,27,2.19069E-08,1.14998E-06,9.23854E-10

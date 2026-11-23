@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
 pad_ref_rb: magic C-coupled extraction (capacitors removed) vs source netlist
 Cell pin lists are equivalent.
 Number of devices: 33                      |Number of devices: 33                      

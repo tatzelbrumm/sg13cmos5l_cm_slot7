@@ -1,3 +1,5 @@
+* SPDX-FileCopyrightText: 2026 Christoph Maier
+* SPDX-License-Identifier: Apache-2.0
 * PEX produced using /usr/local/bin/sak-pex.sh with m=2 and s=1
 * NGSPICE file created from bias_dist_pd_pex.ext - technology: ihp-sg13cmos5l
 

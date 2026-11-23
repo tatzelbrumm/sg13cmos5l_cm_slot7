@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# IHP sg13cmos5l simulation. the designer's DC deck (dcop) and the same with .nodeset of the bandgap nodes (dcns), ss -40 C 3.0 V; solver_notes = ngspice messages
+mode,mos,temp,vdd,variant,err_max_mV,v_g_V,trouble
+swap,ss,-40,3.0,dcop,FAILED,,Timestep too small;  vin = 0: trouble with dparea-instance d.x2d.xlay.x$3.d1
+swap,ss,-40,3.0,dcns,FAILED,,Timestep too small;  vin = 0: trouble with dparea-instance d.x2d.xlay.x$3.d1
+mon,ss,-40,3.0,dcns,1.37,1.7726,
+feed,ss,-40,3.0,dcns,FAILED,,Timestep too small; trouble with dparea-instance d.x2s.xlay.x$63.d1
+ext,ss,-40,3.0,dcns,FAILED,,Timestep too small;  vin = 0: trouble with dparea-instance d.x2s.xlay.x$63.d1
+swap+feed,ss,-40,3.0,dcns,FAILED,,Timestep too small; trouble with dparea-instance d.x2s.xlay.x$63.d1

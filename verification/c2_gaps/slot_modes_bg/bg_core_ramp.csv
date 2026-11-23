@@ -1,0 +1,32 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# IHP sg13cmos5l simulation, bg_core_pd alone (view per row)
+view,mos,temp,vdd,ramp,i_end_uA,t90_us,i_ramp20us_uA
+schematic,tt,-40,3.0,1u,4.862,1.552,4.862
+schematic,tt,-40,3.0,1m,4.862,836.96,4.862
+schematic,tt,125,3.6,1u,4.8906,1.417,4.8906
+schematic,tt,125,3.6,1m,4.8906,502.467,4.8906
+schematic,ss,-40,3.0,1u,4.8548,1.607,4.8548
+schematic,ss,-40,3.0,1m,4.8548,882.473,4.8548
+schematic,ss,125,3.6,1u,4.8854,1.395,4.8854
+schematic,ss,125,3.6,1m,4.8854,539.038,4.8854
+schematic,ff,-40,3.0,1u,4.868,1.628,4.868
+schematic,ff,-40,3.0,1m,4.868,791.742,4.868
+schematic,ff,125,3.6,1u,4.8958,1.441,4.8958
+schematic,ff,125,3.6,1m,4.8958,466.179,4.8958
+schematic,sf,-40,3.0,1u,4.8638,1.572,4.8638
+schematic,sf,-40,3.0,1m,4.8638,814.528,4.8638
+schematic,sf,125,3.6,1u,4.8913,1.433,4.8913
+schematic,sf,125,3.6,1m,4.8913,484.611,4.8913
+schematic,fs,-40,3.0,1u,4.8599,1.575,4.8599
+schematic,fs,-40,3.0,1m,4.8599,859.389,4.8599
+schematic,fs,125,3.6,1u,4.8899,1.406,4.8899
+schematic,fs,125,3.6,1m,4.8899,520.345,4.8899
+extracted,ss,-40,3.0,1u,4.8545,2.361,4.8545
+extracted,ss,-40,3.0,1m,4.8545,882.453,4.8545
+extracted,ss,125,3.6,1u,4.8851,1.655,4.8851
+extracted,ss,125,3.6,1m,4.8851,539.023,4.8851
+extracted,ff,-40,3.0,1u,4.8677,2.112,4.8677
+extracted,ff,-40,3.0,1m,4.8677,791.722,4.8677
+extracted,ff,125,3.6,1u,4.8955,1.881,4.8955
+extracted,ff,125,3.6,1m,4.8955,466.164,4.8955
