@@ -31,7 +31,7 @@ schematic runs do not (see README.md: without it the PEX operating point did not
 | drive_params | done: 10 of 10 schematic runs have a PEX result |
 | enable_params | done: 3 of 3 schematic runs have a PEX result |
 | pd_params | running / TBD |
-| thd_params | running / TBD |
+| thd_params | done: 3 of 3 schematic runs have a PEX result |
 
 ## Schematic vs PEX (pass 2, rshunt 1e12)
 
@@ -69,6 +69,8 @@ schematic runs do not (see README.md: without it the PEX operating point did not
 | enable_params | Glitch_max[mV] | 3 | 0.1119 | 0.1171 | 0.2244 | 3 | 0.1278 | 0.1287 | 0.2281 | +14.1 |
 | enable_params | Glitch_min[mV] | 3 | -0.1874 | -0.1196 | -0.1078 | 3 | -0.2248 | -0.1325 | -0.1283 | -20 |
 | enable_params | Iio_end[A] | 3 | 0.0002987 | 0.0003063 | 0.0003091 | 3 | 0.0003084 | 0.0003157 | 0.0003158 | +3.27 |
+| thd_params | THD[dB] | 3 | -73.2 | -57.79 | -38.87 | 3 | -73.15 | -57.66 | -38.66 | +0.526 |
+| thd_params | Vout_amp[V] | 3 | 0.25 | 0.4999 | 0.7503 | 3 | 0.25 | 0.4999 | 0.7504 | +0.00466 |
 
 ## PEX (pass 2) against the yaml limits (proposals, see the yaml header)
 
@@ -104,6 +106,8 @@ scripts/cace/spec_table.py of the design repository commit 91a7da8b on csv/*_pex
 | enable_params | Enable glitch, negative | mV | >= -400 | -224.8 | 3 | pass |
 | enable_params | IO ring current after start-up | uA | >= 200 | 308.4 | 3 | pass |
 | enable_params | IO ring current after start-up | uA | <= 400 | 315.8 | 3 | pass |
+| thd_params | THD | dB | <= -35 | -38.66 | 3 | pass |
+| thd_params | Output amplitude | V |  any | 0.25 .. 0.7504 | 3 | report |
 
 
 ## dc_params pass 1 (templates unchanged, no rshunt)

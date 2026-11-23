@@ -1,0 +1,7 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# IHP sg13cmos5l post-layout (magic PEX) simulation: sg13cmos5l_IOPadDiff2Single, CACE group thd_params, magic C-coupled PEX of the taped-out GDS, ngspice rshunt=1e12 (pass 2). Values SI whatever the [unit] label says.
+vdamp,THD[dB],Vout_amp[V]
+0.5,-73.1548,0.249953
+1,-57.6584,0.499948
+1.5,-38.665,0.750372
