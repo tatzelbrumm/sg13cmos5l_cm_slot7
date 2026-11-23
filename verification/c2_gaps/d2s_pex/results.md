@@ -14,7 +14,7 @@ Sources of the numbers:
   from run.sh in this task (CACE 2.11.0, ngspice-47).
 
 Values are SI (V, A, Hz, s, V/s, Ohm, dB) as cace_to_csv.py writes them, whatever the [unit] label of the column says
-(e.g. INL[mV] 0.0074 = 7.4 mV, f3dB[MHz] 2.0e+06 = 2.0 MHz, SR[V/us] 1.9e+06 = 1.9 V/us). min / median / max are over
+(e.g. INL[mV] 0.0074 = 7.4 mV, f3dB[MHz] 2.0e+06 = 2.0 MHz, SR[V/us] 1.9e+06 = 1.9 V/us, Overshoot[%] 0.08 = 8 %). min / median / max are over
 all runs of each view (N differs where PEX runs failed); "max per-run change" is the largest |PEX - sch| / |sch| in %
 (sign kept) over runs with equal conditions. Pass-2 PEX runs carry ngspice rshunt = 1e12 Ohm on every node, the
 schematic runs do not (see README.md: without it the PEX operating point did not converge).
@@ -61,6 +61,32 @@ schematic runs do not (see README.md: without it the PEX operating point did not
 | noise_params | En_1k[nV/rtHz] | 3 | 6.076e-07 | 6.817e-07 | 7.185e-07 | 3 | 6.05e-07 | 6.787e-07 | 7.153e-07 | -0.452 |
 | noise_params | En_100k[nV/rtHz] | 3 | 1.426e-07 | 1.525e-07 | 1.564e-07 | 3 | 1.421e-07 | 1.519e-07 | 1.557e-07 | -0.474 |
 | noise_params | Vn_int[uV] | 3 | 0.0002227 | 0.0002342 | 0.0002351 | 3 | 0.000214 | 0.0002239 | 0.0002242 | -4.64 |
+
+## PEX (pass 2) against the yaml limits (proposals, see the yaml header)
+
+scripts/cace/spec_table.py of the design repository commit 91a7da8b on csv/*_pex_rshunt1e12.csv; worst case in display units.
+
+| group | quantity | unit | limit | worst | runs | verdict |
+|---|---|---|---:|---:|---:|---|
+| ac_params | Closed-loop gain | dB | >= -6.2 | -6.05 | 15 | pass |
+| ac_params | Closed-loop gain | dB | <= -5.85 | -6.021 | 15 | pass |
+| ac_params | Bandwidth | MHz | >= 1 | 1.569 | 15 | pass |
+| ac_params | Gain peaking | dB | <= 1 | 1.815e-06 | 15 | pass |
+| ac_params | PSRR iovdd 1 kHz | dB | >= 60 | 70.04 | 15 | pass |
+| ac_params | PSRR iovdd 100 kHz | dB | >= 25 | 30.1 | 15 | pass |
+| ac_params | CMRR 1 kHz | dB | >= 70 | 95.13 | 15 | pass |
+| ac_params | Output impedance 1 kHz | Ω | <= 10 | 3.304 | 15 | pass |
+| ac_params | Output impedance 1 MHz | Ω | <= 300 | 216.9 | 15 | pass |
+| ac_load_params | Bandwidth | MHz | >= 1 | 1.425 | 6 | pass |
+| ac_load_params | Gain peaking | dB | <= 4 | 2.466 | 6 | pass |
+| tran_params | Slew rate, rising | V/us | >= 1 | 1.591 | 9 | pass |
+| tran_params | Slew rate, falling | V/us | >= 1 | 1.603 | 9 | pass |
+| tran_params | Overshoot | % | <= 15 | 7.986 | 9 | pass |
+| tran_params | Settling time, rising | us | <= 1 | 0.5478 | 9 | pass |
+| tran_params | Settling time, falling | us | <= 1 | 0.5336 | 9 | pass |
+| noise_params | Output noise 1 kHz | nV/rtHz | <= 1000 | 715.3 | 3 | pass |
+| noise_params | Output noise 100 kHz | nV/rtHz | <= 200 | 155.7 | 3 | pass |
+| noise_params | Integrated output noise | uV | <= 300 | 224.2 | 3 | pass |
 
 
 ## dc_params pass 1 (templates unchanged, no rshunt)
