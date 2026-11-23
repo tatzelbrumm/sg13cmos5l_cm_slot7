@@ -28,7 +28,7 @@ schematic runs do not (see README.md: without it the PEX operating point did not
 | ac_load_params | done: 6 of 6 schematic runs have a PEX result |
 | tran_params | done: 9 of 9 schematic runs have a PEX result |
 | noise_params | done: 3 of 3 schematic runs have a PEX result |
-| drive_params | running / TBD |
+| drive_params | done: 10 of 10 schematic runs have a PEX result |
 | enable_params | running / TBD |
 | pd_params | running / TBD |
 | thd_params | running / TBD |
@@ -61,6 +61,10 @@ schematic runs do not (see README.md: without it the PEX operating point did not
 | noise_params | En_1k[nV/rtHz] | 3 | 6.076e-07 | 6.817e-07 | 7.185e-07 | 3 | 6.05e-07 | 6.787e-07 | 7.153e-07 | -0.452 |
 | noise_params | En_100k[nV/rtHz] | 3 | 1.426e-07 | 1.525e-07 | 1.564e-07 | 3 | 1.421e-07 | 1.519e-07 | 1.557e-07 | -0.474 |
 | noise_params | Vn_int[uV] | 3 | 0.0002227 | 0.0002342 | 0.0002351 | 3 | 0.000214 | 0.0002239 | 0.0002242 | -4.64 |
+| drive_params | Vout_max[V] | 10 | 3.266 | 3.275 | 3.283 | 10 | 3.266 | 3.275 | 3.283 | +0.00153 |
+| drive_params | Vout_min[V] | 10 | 0.6396 | 0.6865 | 0.7386 | 10 | 0.6354 | 0.6823 | 0.736 | -0.646 |
+| drive_params | Isc_src[mA] | 10 | 0.04965 | 0.06698 | 0.09321 | 10 | 0.04971 | 0.06705 | 0.09331 | +0.133 |
+| drive_params | Isc_snk[mA] | 10 | 0.05303 | 0.08036 | 0.1203 | 10 | 0.05477 | 0.08297 | 0.1242 | +3.28 |
 
 ## PEX (pass 2) against the yaml limits (proposals, see the yaml header)
 
@@ -87,6 +91,10 @@ scripts/cace/spec_table.py of the design repository commit 91a7da8b on csv/*_pex
 | noise_params | Output noise 1 kHz | nV/rtHz | <= 1000 | 715.3 | 3 | pass |
 | noise_params | Output noise 100 kHz | nV/rtHz | <= 200 | 155.7 | 3 | pass |
 | noise_params | Integrated output noise | uV | <= 300 | 224.2 | 3 | pass |
+| drive_params | Max output | V | >= 3.0 | 3.266 | 10 | pass |
+| drive_params | Min output | V | <= 0.9 | 0.736 | 10 | pass |
+| drive_params | Short-circuit source current | mA | >= 20 | 49.71 | 10 | pass |
+| drive_params | Short-circuit sink current | mA | >= 20 | 54.77 | 10 | pass |
 
 
 ## dc_params pass 1 (templates unchanged, no rshunt)
