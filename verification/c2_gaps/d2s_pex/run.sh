@@ -72,5 +72,6 @@ R=$M/verification/cace/results/$T
 python3 "$HERE/compare.py" "$R" "$WORK/out/norshunt" dc_params > "$WORK/out/compare_norshunt.md"
 python3 "$HERE/compare.py" "$R" "$WORK/out/rshunt1e12" $GROUPS_ > "$WORK/out/compare_rshunt1e12.md"
 python3 "$HERE/compare.py" "$WORK/out/norshunt" "$WORK/out/rshunt1e12" dc_params > "$WORK/out/compare_rshunt_effect.md"
+(cd "$M/verification/cace" && python3 "$WORK/design/scripts/cace/spec_table.py" $T.yaml "$WORK/out/rshunt1e12" $GROUPS_) > "$WORK/out/spec_table_pex.md"
 python3 "$HERE/plots.py" "$R" "$WORK/out/rshunt1e12" "$WORK/out"
 echo "done: $WORK/out"

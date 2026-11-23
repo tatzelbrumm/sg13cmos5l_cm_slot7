@@ -20,7 +20,7 @@ GDS is this cell unchanged), made the same way as the S2D pad's PEX view.
    substrate node, so the extracted cell has no vss port; vss is added and tied to iovss by 1 Ohm (the sheet's Rsub),
    as for S2D. Ports reordered to the symbol (`sak-pin-reorder.py` with `<cell>_pex.sym` = symbol with type=primitive).
    Result: [sg13cmos5l_IOPadDiff2Single_magic_pex_2.spice](sg13cmos5l_IOPadDiff2Single_magic_pex_2.spice)
-   (282 devices + 482 coupling/ground capacitors, 2-line SPDX/provenance header added).
+   (293 devices + 482 coupling/ground capacitors; 4-line SPDX/provenance header added).
 3. Device check: netgen LVS of the same extraction with the capacitors dropped against the committed schematic LVS
    netlist `pads/sg13cmos5l_IOPadDiff2Single/sg13cmos5l_IOPadDiff2Single.spice`: **Circuits match uniquely**,
    76 = 76 devices after merging (hv_pmos 154 extracted fingers / hv_nmos 111 / rhigh 18 / rppd 2 / dantenna 4 /
@@ -49,14 +49,25 @@ Groups run (priority order): dc_params, ac_params, ac_load_params, tran_params, 
 enable_params, pd_params, thd_params. Not run: mm_params (mismatch is vacuous on an extracted netlist: magic writes no
 mm_ok), dc_3v0 / dc_sel / dc_sel3 / dc_ibias / ac_1nF (not requested in this pass).
 
+## Outcome (details and numbers: results.md)
+
+All nine groups ran on the PEX view (pass 2, rshunt 1e12): 127 of 127 runs have results, and every quantity is
+within the yaml limits (proposals). Largest PEX vs schematic shifts: bandwidth f3dB about -12 % (ac_params median
+2.015 -> 1.774 MHz), slew rates about -12 ... -13 %, CMRR 1 kHz median 124 -> 109 dB, enable t_on up to +94 %
+(median 0.854 -> 1.349 us), IqP / IqN about +5 %, Iio about +3.6 %, INL per run -9 ... +x % with the max 7.40 -> 7.50 mV
+(ss/-40 C/3.3 V), integrated noise -4.6 %, Isc_snk +3.3 %; gain, PSRR, THD and output swing within about 2 %. Pass 1 (no rshunt): dc_params 25 of 30 runs.
+
 ## Reproduce
 
 ```
 verification/c2_gaps/d2s_pex/run.sh [<work_dir>] [<group> ...]
 ```
 from a checkout of this repository (it fetches the design repository commit itself: shallow, blobless, only the
-paths it needs). Results go to `<work_dir>/out/`; the CSVs here are those files with a 3-line `#` header added.
-Wall clock in this task (4 shared CPUs, 2 parallel ngspice): magic PEX < 1 min, dc_params about 8 min.
+paths it needs). Results go to `<work_dir>/out/`: `norshunt/dc_params.csv` and `rshunt1e12/<group>.csv` are
+`csv/dc_params_pex_norshunt.csv` and `csv/<group>_pex_rshunt1e12.csv` here (3-line `#` header added), the
+`compare_*.md` and `spec_table_pex.md` files are the tables of results.md, the PNGs are plots/.
+Wall clock in this task (4 shared CPUs, 2 parallel ngspice): magic PEX < 1 min, pass 1 (dc_params) about 8 min,
+pass 2 (all nine groups) about 10 min. PNG files carry no header: same copyright and license as this README.
 
 ## Tool versions
 
