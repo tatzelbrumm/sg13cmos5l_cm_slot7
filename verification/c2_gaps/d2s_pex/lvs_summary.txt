@@ -1,0 +1,22 @@
+SPDX-FileCopyrightText: 2026 Christoph Maier
+SPDX-License-Identifier: Apache-2.0
+netgen LVS: magic extraction of the taped-out GDS (capacitors dropped) vs pads/sg13cmos5l_IOPadDiff2Single/sg13cmos5l_IOPadDiff2Single.spice
+
+Subcircuit summary:
+Circuit 1: sg13cmos5l_IOPadDiff2Single     |Circuit 2: sg13cmos5l_IOPadDiff2Single     
+-------------------------------------------|-------------------------------------------
+sg13_hv_pmos (154->40)                     |sg13_hv_pmos (51->40)                      
+sg13_hv_nmos (111->23)                     |sg13_hv_nmos (31->23)                      
+dantenna (4->3)                            |dantenna (4->3)                            
+rppd (2)                                   |rppd (2)                                   
+dpantenna (4->3)                           |dpantenna (4->3)                           
+rhigh (18->5)                              |rhigh (18->5)                              
+Number of devices: 76                      |Number of devices: 76                      
+Number of nets: 36                         |Number of nets: 36                         
+Final result: Circuits match uniquely.
+Property errors were found.
+property errors other than mm_ok: 0 (117 lines, all 'Property mm_ok in circuit2 has no matching property in circuit1')
+Cell sg13cmos5l_IOPadDiff2Single (0) disconnected node: vdd
+Cell sg13cmos5l_IOPadDiff2Single (0) disconnected node: vss
+Cell sg13cmos5l_IOPadDiff2Single (1) disconnected node: vdd
+Cell sg13cmos5l_IOPadDiff2Single (1) disconnected node: vss
