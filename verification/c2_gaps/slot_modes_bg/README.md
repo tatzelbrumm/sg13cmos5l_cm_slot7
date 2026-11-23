@@ -37,7 +37,7 @@ Verdict and numbers: **`results.md`**. Generated tables: `results_tables.md`, CS
 
 | file | what |
 |---|---|
-| `run.sh` | reproduces everything: `./run.sh [WORKDIR] [fetch\|designer\|modes\|bg\|tables]` (default all; at most 2 ngspice in parallel, set `NPAR` in the script) |
+| `run.sh` | reproduces everything: `./run.sh [WORKDIR] [fetch\|designer\|modes\|bg\|tables]` (default all; parallel ngspice runs: environment variable `NPAR`, default 2) |
 | `slot_modes.py` | slot 7 decks: `pu` = power-up transient per mode (the method of task 1), `dcop` = the designer's DC deck with stderr kept, `dcns` = `dcop` + `.nodeset` of the bandgap nodes (diagnosis only) |
 | `jobs_modes.txt` | job list for `slot_modes.py`, priority order |
 | `bg_core.py` | bg_core_pd alone: DC table, supply ramps, zero-state diagnosis |
@@ -90,6 +90,7 @@ state, and a transient with the supply up and `.ic` at the zero-current state.
 - Supply ramps for the slot: one shape (10 µs, enable at 20 µs); for bg_core_pd alone: 1 µs and 1 ms, enable tied to
   vdd. Not covered: enable toggling while powered, supply dips / brown-out, very slow (> 1 ms) ramps.
 - The slot mode table covers only the PVT points that finished in the time box (see `results.md`); `run.sh` runs the
-  full job list.
+  full job list. Several cold-corner slot transients abort in ngspice during the supply ramp (before enable) or at the
+  enable edge; those runs give no information on start-up (listed with the abort time).
 - Absence of a second state is shown for the PVT points simulated, by the methods above; it is not a proof for all
   conditions.

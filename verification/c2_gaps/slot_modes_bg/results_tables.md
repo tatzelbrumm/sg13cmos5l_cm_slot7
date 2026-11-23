@@ -4,16 +4,18 @@ SPDX-License-Identifier: Apache-2.0
 -->
 ### Slot 7 modes from power-up, pad out 1 Gohm || 10 pF: max |D2S pad out - expected| [mV]
 
-IHP sg13cmos5l simulation; bg_core_pd schematic, both pads / pad_ref_rb / bias_dist_pd extracted, ls_up_fs / s7_ctrl source. Pad in 0 / 0.25 / 0.5 / 0.75 / 1.0 V (feed modes: 0.5 V). `FAILED` = the transient aborted (see slot_modes_powerup.csv / README); `retry` = the same run with a 1 us enable edge and a 5 ns maximum step (variant pu2); empty = not run in the time box.
+IHP sg13cmos5l simulation; bg_core_pd schematic, both pads / pad_ref_rb / bias_dist_pd extracted, ls_up_fs / s7_ctrl source. Pad in 0 / 0.25 / 0.5 / 0.75 / 1.0 V (feed modes: 0.5 V). `FAILED @t` = the transient aborted at t ("timestep too small"; enable is at 20 us, so t < 20 us is during the supply ramp, before the bandgap is enabled); `retry` = the same run with a 1 us enable edge and a 5 ns maximum step (variant pu2); empty = not run in the time box.
 
 | MOS | T [C] | V | default | swap | mon | feed | ext | all_high | swap+feed | no_key_swap | vcm / vref [V] | bandgap g [V] | t(g 90 %) after enable [us] |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| sf | -40 | 3.0 | 1.13 | 1.04 | FAILED | FAILED | 1.67 | 1.13 | FAILED |  | 1.138 / 0.444 | 1.746 | 0.79 ... 0.79 |
+| ff | -40 | 3.0 |  | 0.99 | 1.18 | FAILED @6.13 us |  |  |  |  | 1.136 / 0.432 | 1.665 | 0.73 ... 0.74 |
+| sf | -40 | 3.0 | 1.13 | 1.04 | FAILED @20.07 us; retry FAILED @3.95 us | FAILED @3.95 us; retry FAILED @3.95 us | 1.67 | 1.13 | FAILED @3.95 us; retry FAILED @3.95 us | 1.13 | 1.138 / 0.444 | 1.746 | 0.79 ... 0.79 |
 | ss | -40 | 3.0 | 1.37 | 1.12 | 1.43 | 0.24 | 4.92 | 1.37 | 0.24 | 1.37 | 1.115 / 0.447 | 1.773 | 0.80 ... 0.83 |
+| tt | -40 | 3.0 |  | FAILED @2.94 us | FAILED @2.94 us | FAILED @2.94 us |  |  |  |  |  |  |  |
 
 ### Slot 7 modes from power-up, pad out 1 Gohm only (as run_modes.py): max |D2S pad out - expected| [mV]
 
-IHP sg13cmos5l simulation; bg_core_pd schematic, both pads / pad_ref_rb / bias_dist_pd extracted, ls_up_fs / s7_ctrl source. Pad in 0 / 0.25 / 0.5 / 0.75 / 1.0 V (feed modes: 0.5 V). `FAILED` = the transient aborted (see slot_modes_powerup.csv / README); `retry` = the same run with a 1 us enable edge and a 5 ns maximum step (variant pu2); empty = not run in the time box.
+IHP sg13cmos5l simulation; bg_core_pd schematic, both pads / pad_ref_rb / bias_dist_pd extracted, ls_up_fs / s7_ctrl source. Pad in 0 / 0.25 / 0.5 / 0.75 / 1.0 V (feed modes: 0.5 V). `FAILED @t` = the transient aborted at t ("timestep too small"; enable is at 20 us, so t < 20 us is during the supply ramp, before the bandgap is enabled); `retry` = the same run with a 1 us enable edge and a 5 ns maximum step (variant pu2); empty = not run in the time box.
 
 | MOS | T [C] | V | default | swap | mon | feed | ext | all_high | swap+feed | no_key_swap | vcm / vref [V] | bandgap g [V] | t(g 90 %) after enable [us] |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|

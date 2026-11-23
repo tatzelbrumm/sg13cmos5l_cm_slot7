@@ -55,6 +55,15 @@ def fnum(x):
 
 
 md = []
+
+
+def abort_at(tag):
+    """' @ t us' of the transient abort in <work>/slot/<tag>.log, '' if not found."""
+    lg = WORK / "slot" / f"{tag}.log"
+    m = re.search(r"Timestep too small; time = (\S+),", lg.read_text()) if lg.exists() else None
+    return f" @{float(m.group(1)) * 1e6:.2f} us" if m else ""
+
+
 # ---------------- slot modes from power-up
 pu = kv_rows(WORK / "slot_out" / "slot_modes_pu.csv") + kv_rows(WORK / "slot_out" / "slot_modes_pu0.csv")
 retry = {(r["mode"], r["mos"], r["temp"], r["vdd"]): r for r in kv_rows(WORK / "slot_out" / "slot_modes_pu2.csv")}
@@ -75,7 +84,8 @@ for cl, title in (("10p", "pad out 1 Gohm || 10 pF"), ("none", "pad out 1 Gohm o
     md.append(f"### Slot 7 modes from power-up, {title}: max |D2S pad out - expected| [mV]\n")
     md.append("IHP sg13cmos5l simulation; bg_core_pd schematic, both pads / pad_ref_rb / bias_dist_pd extracted, "
               "ls_up_fs / s7_ctrl source. Pad in 0 / 0.25 / 0.5 / 0.75 / 1.0 V (feed modes: 0.5 V). "
-              "`FAILED` = the transient aborted (see slot_modes_powerup.csv / README); `retry` = the same run with a 1 us "
+              "`FAILED @t` = the transient aborted at t (\"timestep too small\"; enable is at 20 us, so t < 20 us is "
+              "during the supply ramp, before the bandgap is enabled); `retry` = the same run with a 1 us "
               "enable edge and a 5 ns maximum step (variant pu2); empty = not run in the time box.\n")
     md.append("| MOS | T [C] | V | " + " | ".join(MODES) + " | vcm / vref [V] | bandgap g [V] | t(g 90 %) after "
               "enable [us] |")
@@ -86,8 +96,12 @@ for cl, title in (("10p", "pad out 1 Gohm || 10 pF"), ("none", "pad out 1 Gohm o
             r = seen.get((cl, m, *p))
             cell = "" if r is None else str(r.get("err_max_mV", ""))
             rr = retry.get((m, *p)) if cl != "none" else None
-            if rr is not None and cell == "FAILED":
-                cell = f"FAILED; retry {rr.get('err_max_mV', '')}"
+            if cell == "FAILED" and cl != "none":
+                cell += abort_at(f"pu_{m}_{p[0]}_{p[1]}_{p[2]}")
+            if rr is not None and cell.startswith("FAILED"):
+                cell += f"; retry {rr.get('err_max_mV', '')}"
+                if rr.get("err_max_mV") == "FAILED":
+                    cell += abort_at(f"pu2_{m}_{p[0]}_{p[1]}_{p[2]}")
             cells.append(cell)
             if r is not None and fnum(r.get("vcm_V")) is not None and m != "ext" and not vv:
                 vv = f"{float(r['vcm_V']):.3f} / {float(r['vref_V']):.3f}"
