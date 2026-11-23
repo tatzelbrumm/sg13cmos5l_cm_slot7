@@ -2,13 +2,14 @@
 SPDX-FileCopyrightText: 2026 Christoph Maier
 SPDX-License-Identifier: Apache-2.0
 -->
-### Slot 7 modes from power-up: max |D2S pad out - expected| [mV]
+### Slot 7 modes from power-up, pad out 1 Gohm only (as run_modes.py): max |D2S pad out - expected| [mV]
 
-IHP sg13cmos5l simulation; bg_core_pd schematic, both pads / pad_ref_rb / bias_dist_pd extracted, ls_up_fs / s7_ctrl source. Pad in 0 / 0.25 / 0.5 / 0.75 / 1.0 V (feed modes: 0.5 V). `FAILED` = simulator gave no result; empty = not run in the time box.
+IHP sg13cmos5l simulation; bg_core_pd schematic, both pads / pad_ref_rb / bias_dist_pd extracted, ls_up_fs / s7_ctrl source. Pad in 0 / 0.25 / 0.5 / 0.75 / 1.0 V (feed modes: 0.5 V). `FAILED` = the transient aborted (see slot_modes_powerup.csv / README); empty = not run in the time box.
 
 | MOS | T [C] | V | default | swap | mon | feed | ext | all_high | swap+feed | no_key_swap | vcm / vref [V] | bandgap g [V] | t(g 90 %) after enable [us] |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| ss | -40 | 3.0 | 1.37 |  |  |  |  |  |  |  | 1.115 / 0.447 | 1.773 | 0.81 ... 0.81 |
+| sf | -40 | 3.0 | 1.13 | FAILED | FAILED | FAILED |  |  |  |  | 1.138 / 0.444 | 1.746 | 0.79 ... 0.79 |
+| ss | -40 | 3.0 | 1.37 | 1.12 | 1.43 | 0.24 | 4.92 | 1.37 | FAILED | 1.37 | 1.115 / 0.447 | 1.773 | 0.80 ... 0.86 |
 
 ### DC solver diagnosis at ss / -40 C / 3.0 V (designer's DC deck)
 

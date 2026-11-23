@@ -1,5 +1,16 @@
 # SPDX-FileCopyrightText: 2026 Christoph Maier
 # SPDX-License-Identifier: Apache-2.0
-# IHP sg13cmos5l simulation. slot 7 modes from power-up (slot_modes.py 'pu'); bg_core_pd schematic, pads / pad_ref_rb / bias_dist_pd extracted. err_max_mV = max |pad out - expected| over the pad-in steps; t_* absolute (enable at 20 us)
-mode,mos,temp,vdd,variant,v_g_V,v_ibg_V,vcm_V,vref_V,i_slot_uA,t_g90_us,t_vcm98_us,settle_85_90us_V,err_max_mV,n_samples
-default,ss,-40,3.0,pu,1.77259,0.99486,1.11476,0.44747,48.3844,20.81,21.62,0.0,1.37,5
+# IHP sg13cmos5l simulation. slot 7 modes from power-up (slot_modes.py 'pu' with 10 pF at pad out, 'pu0' 1 Gohm only); bg_core_pd schematic, pads / pad_ref_rb / bias_dist_pd extracted. err_max_mV = max |pad out - expected| over the pad-in steps; t_* absolute (enable at 20 us)
+mode,mos,temp,vdd,variant,v_g_V,v_ibg_V,vcm_V,vref_V,i_slot_uA,t_g90_us,t_vcm98_us,settle_85_90us_V,err_max_mV,n_samples,cload
+default,ss,-40,3.0,pu0,1.77259,0.99486,1.11476,0.44747,48.3844,20.81,21.62,0.0,1.37,5,none
+swap,ss,-40,3.0,pu0,1.77259,0.99486,1.11476,0.44747,48.453,20.8,21.62,0.0,1.12,5,none
+mon,ss,-40,3.0,pu0,1.77259,0.99486,1.11476,0.44747,48.453,20.8,21.62,0.0,1.43,5,none
+feed,ss,-40,3.0,pu0,1.77259,0.99486,1.11476,0.44747,48.453,20.82,21.63,0.0,0.24,1,none
+ext,ss,-40,3.0,pu0,1.77259,0.99486,1.3,0.5,48.4526,20.81,21.16,0.0,4.92,5,none
+all_high,ss,-40,3.0,pu0,1.77259,0.99486,1.11476,0.44747,48.5903,20.8,21.62,0.0,1.37,5,none
+swap+feed,ss,-40,3.0,pu0,FAILED,FAILED,FAILED,FAILED,FAILED,FAILED,FAILED,FAILED,FAILED,0,none
+no_key_swap,ss,-40,3.0,pu0,1.77259,0.99486,1.11476,0.44747,48.4187,20.86,21.64,0.0,1.37,5,none
+default,sf,-40,3.0,pu0,1.74638,0.96815,1.13763,0.44412,48.6094,20.79,21.54,0.0,1.13,5,none
+swap,sf,-40,3.0,pu0,FAILED,FAILED,FAILED,FAILED,FAILED,FAILED,FAILED,FAILED,FAILED,0,none
+mon,sf,-40,3.0,pu0,FAILED,FAILED,FAILED,FAILED,FAILED,FAILED,FAILED,FAILED,FAILED,0,none
+feed,sf,-40,3.0,pu0,FAILED,FAILED,FAILED,FAILED,FAILED,FAILED,FAILED,FAILED,FAILED,0,none

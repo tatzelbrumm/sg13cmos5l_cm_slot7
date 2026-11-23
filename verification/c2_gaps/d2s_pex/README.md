@@ -54,7 +54,7 @@ mm_ok), dc_3v0 / dc_sel / dc_sel3 / dc_ibias / ac_1nF (not requested in this pas
 All nine groups ran on the PEX view (pass 2, rshunt 1e12): 127 of 127 runs have results, and every quantity is
 within the yaml limits (proposals). Largest PEX vs schematic shifts: bandwidth f3dB about -12 % (ac_params median
 2.015 -> 1.774 MHz), slew rates about -12 ... -13 %, CMRR 1 kHz median 124 -> 109 dB, enable t_on up to +94 %
-(median 0.854 -> 1.349 us), IqP / IqN about +5 %, Iio about +3.6 %, INL per run -9 ... +x % with the max 7.40 -> 7.50 mV
+(median 0.854 -> 1.349 us), IqP / IqN about +5 %, Iio about +3.6 %, INL per run -9.1 ... +1.5 % with the max 7.40 -> 7.50 mV
 (ss/-40 C/3.3 V), integrated noise -4.6 %, Isc_snk +3.3 %; gain, PSRR, THD and output swing within about 2 %. Pass 1 (no rshunt): dc_params 25 of 30 runs.
 
 ## Reproduce
@@ -68,6 +68,11 @@ paths it needs). Results go to `<work_dir>/out/`: `norshunt/dc_params.csv` and `
 `compare_*.md` and `spec_table_pex.md` files are the tables of results.md, the PNGs are plots/.
 Wall clock in this task (4 shared CPUs, 2 parallel ngspice): magic PEX < 1 min, pass 1 (dc_params) about 8 min,
 pass 2 (all nine groups) about 10 min. PNG files carry no header: same copyright and license as this README.
+
+Reproduction check (run.sh from scratch in a fresh work folder, same machine, 21:17-21:31 UTC): the extracted netlist
+has the same devices and the same capacitors (magic numbers and orders the capacitors differently from run to run);
+the CSVs agree with the ones here to 0.05 % or better in pass 2 (pd_params to 1e-13 A absolute) and to 0.9 % in
+pass 1 (INL at the 0.14 mV level): the capacitor order changes ngspice's rounding.
 
 ## Tool versions
 

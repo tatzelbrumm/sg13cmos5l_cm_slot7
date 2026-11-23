@@ -15,7 +15,12 @@ bias_dist_pd from their extracted layout netlists; bg_core_pd from its schematic
 "pu": vdd_3v3 and iovdd ramp 0 -> V in 10 us; v12 (1.2 V) and the mode bits d0..d5 are there from t = 0 (the harness
 writes the register before enabling), enable 0 -> 1.2 V at 20 us (100 ns edge). Pad in 0.5 V until 40 us (values
 "at 39 us" = settled with pad in 0.5 V), then a staircase 0 / 0.25 / 0.5 / 0.75 / 1.0 V (10 us each, 40 ... 90 us,
-sampled at each step's end; settle = pad-out change between 85 and 90 us). Feed modes: bus0 / bus1 through 10 kohm to 1.45 /
+sampled at each step's end; settle = pad-out change between 85 and 90 us). Pad out: 1 Gohm as in run_modes.py plus
+10 pF (a probe / board load; variant "pu0": 1 Gohm only, as the designer). With 1 Gohm only, several runs abort with
+"timestep too small" at the D2S pad's antenna diode X$3 (sf -40 C swap / mon / feed, at 6.3 or 20.1 us). The bus sources (feed: bus0 / bus1, ext:
+bus2 / bus3) switch on 25 ... 26 us, after enable: with them on from t = 0 (driving the unpowered slot) the feed runs
+abort during the supply ramp (6.6 us, "timestep too small" at the D2S pad's antenna diode X$3); the ext run at
+ss -40 C with the sources on from t = 0 completed (4.92 mV) and is listed in README. Feed modes: bus0 / bus1 through 10 kohm to 1.45 /
 1.05 V (as run_modes.py), pad in fixed at 0.5 V. ext: bus2 / bus3 through 10 kohm to 1.30 / 0.50 V. Error =
 pad out - expected at the end of each step (expected as in run_modes.py). No .nodeset / .ic: plain transient with uic
 from all-zero (every node starts at 0 V), i.e. no circuit change and no forced state. Integration options as the
@@ -70,17 +75,23 @@ Rout padout 0 1G
 BG = "v(xs.xbg.g) v(xs.xbg.vpc) v(xs.xbg.vpg) v(xs.xbg.ks) v(xs.ibg)"
 
 
-def deck_pu(name, c, t, v, incs):
+CLOAD = "10p"  # pad-out load capacitance in the 'pu' runs (see module doc); 'pu0' runs use none
+
+
+def deck_pu(name, c, t, v, incs, cload=CLOAD):
     bits, kind = MODES[name]
     d = [float(b) * 1.2 for b in bits.split()]
     feed, ext = kind == "feed", kind == "ext"
     pin = "0.5" if feed else ("pwl(0 0.5 40u 0.5 40.1u 0 50u 0 50.1u 0.25 60u 0.25 60.1u 0.5 70u 0.5 70.1u 0.75"
                               " 80u 0.75 80.1u 1.0 90u 1.0)")
-    bus = ("Vb0 b0s 0 1.45\nVb1 b1s 0 1.05\nRb0 b0s b0 10k\nRb1 b1s b1 10k" if feed else "Rb0 b0 0 1G\nRb1 b1 0 1G")
-    bus += "\n" + ("Vb2 b2s 0 1.30\nVb3 b3s 0 0.50\nRb2 b2s b2 10k\nRb3 b3s b3 10k" if ext else "Rb2 b2 0 1G\nRb3 b3 0 1G")
+    # bus sources (instrument) switched on 25 ... 26 us, after enable (see module doc)
+    bus = ("Vb0 b0s 0 pwl(0 0 25u 0 26u 1.45)\nVb1 b1s 0 pwl(0 0 25u 0 26u 1.05)\nRb0 b0s b0 10k\nRb1 b1s b1 10k"
+           if feed else "Rb0 b0 0 1G\nRb1 b1 0 1G")
+    bus += "\n" + ("Vb2 b2s 0 pwl(0 0 25u 0 26u 1.30)\nVb3 b3s 0 pwl(0 0 25u 0 26u 0.50)\nRb2 b2s b2 10k\nRb3 b3s b3 10k"
+                   if ext else "Rb2 b2 0 1G\nRb3 b3 0 1G")
     meas = "\n".join(f"meas tran e{k} find err at={ts * 1e6:.1f}u\nmeas tran o{k} find v(padout) at={ts * 1e6:.1f}u\n"
                      f"meas tran x{k} find ex at={ts * 1e6:.1f}u" for k, (_, ts) in enumerate(STEPS))
-    tag = f"pu_{name}_{c}_{t}_{v}"
+    tag = f"pu{'' if cload else '0'}_{name}_{c}_{t}_{v}"
     return tag, f"* slot 7 mode {name} from power-up, {c} {t} C, {v} V\n" + header(c, t, v, incs, TOPT) + f"""
 Vslot vdd_3v3 0 pwl(0 0 10u {v})
 Vio iovdd 0 pwl(0 0 10u {v})
@@ -88,7 +99,8 @@ Ven enable 0 pwl(0 0 20u 0 20.1u 1.2)
 Vv12 v12 0 1.2
 """ + "".join(f"Vd{i} d{i} 0 {d[i]}\n" for i in range(6)) + f"""Vin padin 0 {pin}
 {bus}
-{DUT}.control
+{DUT}{f"Cload padout 0 {cload}" if cload else ""}
+.control
 tran 100n 90u 0 10n uic
 let ex = {EXP[kind]}
 let err = v(padout) - ex
@@ -151,13 +163,17 @@ def main():
         p = job.split(":")
         name, c, t, v = p[0], p[1], int(p[2]), float(p[3])
         var = p[4] if len(p) > 4 else "pu"
-        tag, deck = deck_pu(name, c, t, v, incs) if var == "pu" else deck_dcop(name, c, t, v, incs, var)
+        if var in ("pu", "pu0"):
+            tag, deck = deck_pu(name, c, t, v, incs, CLOAD if var == "pu" else "")
+        else:
+            tag, deck = deck_dcop(name, c, t, v, incs, var)
         f = WORK / f"{tag}.spice"
         f.write_text(deck)
         r = subprocess.run(["ngspice", "-b", f.name], cwd=WORK, capture_output=True, text=True)
         f.with_suffix(".log").write_text(r.stdout + "\n#### stderr\n" + r.stderr)
-        res = {"mode": name, "mos": c, "temp": t, "vdd": v, "variant": var}
-        if var == "pu":
+        res = {"mode": name, "mos": c, "temp": t, "vdd": v, "variant": var,
+               "cload": (CLOAD if var == "pu" else "none") if var.startswith("pu") else ""}
+        if var.startswith("pu"):
             a = re.search(r"^PU (.*)$", r.stdout, re.M)
             b = re.search(r"^STEPS (.*)$", r.stdout, re.M)
             vals = a.group(1).split() if a else []

@@ -56,34 +56,42 @@ def fnum(x):
 
 md = []
 # ---------------- slot modes from power-up
-pu = kv_rows(WORK / "slot_out" / "slot_modes_pu.csv")
+pu = kv_rows(WORK / "slot_out" / "slot_modes_pu.csv") + kv_rows(WORK / "slot_out" / "slot_modes_pu0.csv")
 seen = {}
-for r in pu:  # last run of a job wins
-    seen[(r["mode"], r["mos"], r["temp"], r["vdd"])] = r
+for r in pu:  # last run of a job wins; rows without 'cload' are from runs before the 10 pF load was added (1 Gohm only)
+    r["cload"] = r.get("cload") or "none"
+    r["variant"] = "pu" if r["cload"] != "none" else "pu0"
+    seen[(r["cload"], r["mode"], r["mos"], r["temp"], r["vdd"])] = r
 pu = list(seen.values())
-write(pu, OUT / "slot_modes_powerup.csv", "slot 7 modes from power-up (slot_modes.py 'pu'); bg_core_pd schematic, "
-      "pads / pad_ref_rb / bias_dist_pd extracted. err_max_mV = max |pad out - expected| over the pad-in steps; "
-      "t_* absolute (enable at 20 us)")
-pts = sorted({(r["mos"], r["temp"], r["vdd"]) for r in pu}, key=lambda p: (int(p[1]), p[0], float(p[2])))
-md.append("### Slot 7 modes from power-up: max |D2S pad out - expected| [mV]\n")
-md.append("IHP sg13cmos5l simulation; bg_core_pd schematic, both pads / pad_ref_rb / bias_dist_pd extracted, "
-          "ls_up_fs / s7_ctrl source. Pad in 0 / 0.25 / 0.5 / 0.75 / 1.0 V (feed modes: 0.5 V). "
-          "`FAILED` = simulator gave no result; empty = not run in the time box.\n")
-md.append("| MOS | T [C] | V | " + " | ".join(MODES) + " | vcm / vref [V] | bandgap g [V] | t(g 90 %) after enable [us] |")
-md.append("|---|---|---|" + "---|" * len(MODES) + "---|---|---|")
-for p in pts:
-    cells, vv, gg, tg = [], "", "", ""
-    for m in MODES:
-        r = seen.get((m, *p))
-        cells.append("" if r is None else str(r.get("err_max_mV", "")))
-        if r is not None and fnum(r.get("vcm_V")) is not None and not vv:
-            vv = f"{float(r['vcm_V']):.3f} / {float(r['vref_V']):.3f}"
-            gg = f"{float(r['v_g_V']):.3f}"
-    tgs = [fnum(seen[(m, *p)].get("t_g90_us")) for m in MODES if (m, *p) in seen]
-    tgs = [x - 20.0 for x in tgs if x is not None]
-    tg = f"{min(tgs):.2f} ... {max(tgs):.2f}" if tgs else ""
-    md.append(f"| {p[0]} | {p[1]} | {p[2]} | " + " | ".join(cells) + f" | {vv} | {gg} | {tg} |")
-md.append("")
+write(pu, OUT / "slot_modes_powerup.csv", "slot 7 modes from power-up (slot_modes.py 'pu' with 10 pF at pad out, 'pu0' "
+      "1 Gohm only); bg_core_pd schematic, pads / pad_ref_rb / bias_dist_pd extracted. err_max_mV = max |pad out - "
+      "expected| over the pad-in steps; t_* absolute (enable at 20 us)")
+for cl, title in (("10p", "pad out 1 Gohm || 10 pF"), ("none", "pad out 1 Gohm only (as run_modes.py)")):
+    pts = sorted({(r["mos"], r["temp"], r["vdd"]) for r in pu if r["cload"] == cl},
+                 key=lambda p: (int(p[1]), p[0], float(p[2])))
+    if not pts:
+        continue
+    md.append(f"### Slot 7 modes from power-up, {title}: max |D2S pad out - expected| [mV]\n")
+    md.append("IHP sg13cmos5l simulation; bg_core_pd schematic, both pads / pad_ref_rb / bias_dist_pd extracted, "
+              "ls_up_fs / s7_ctrl source. Pad in 0 / 0.25 / 0.5 / 0.75 / 1.0 V (feed modes: 0.5 V). "
+              "`FAILED` = the transient aborted (see slot_modes_powerup.csv / README); empty = not run in the time "
+              "box.\n")
+    md.append("| MOS | T [C] | V | " + " | ".join(MODES) + " | vcm / vref [V] | bandgap g [V] | t(g 90 %) after "
+              "enable [us] |")
+    md.append("|---|---|---|" + "---|" * len(MODES) + "---|---|---|")
+    for p in pts:
+        cells, vv, gg = [], "", ""
+        for m in MODES:
+            r = seen.get((cl, m, *p))
+            cells.append("" if r is None else str(r.get("err_max_mV", "")))
+            if r is not None and fnum(r.get("vcm_V")) is not None and m != "ext" and not vv:
+                vv = f"{float(r['vcm_V']):.3f} / {float(r['vref_V']):.3f}"
+                gg = f"{float(r['v_g_V']):.3f}"
+        tgs = [fnum(seen[(cl, m, *p)].get("t_g90_us")) for m in MODES if (cl, m, *p) in seen]
+        tgs = [x - 20.0 for x in tgs if x is not None]
+        tg = f"{min(tgs):.2f} ... {max(tgs):.2f}" if tgs else ""
+        md.append(f"| {p[0]} | {p[1]} | {p[2]} | " + " | ".join(cells) + f" | {vv} | {gg} | {tg} |")
+    md.append("")
 
 # ---------------- DC diagnosis
 dd = kv_rows(WORK / "slot_out" / "slot_modes_dcop.csv") + kv_rows(WORK / "slot_out" / "slot_modes_dcns.csv")
