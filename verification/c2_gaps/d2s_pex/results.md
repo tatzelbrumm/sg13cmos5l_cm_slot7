@@ -25,7 +25,7 @@ schematic runs do not (see README.md: without it the PEX operating point did not
 |---|---|
 | dc_params | pass 1 (no rshunt) done: 25 of 30 runs, see below; pass 2 (rshunt) queued last |
 | ac_params | done: 15 of 15 schematic runs have a PEX result |
-| ac_load_params | running / TBD |
+| ac_load_params | done: 6 of 6 schematic runs have a PEX result |
 | tran_params | running / TBD |
 | noise_params | running / TBD |
 | drive_params | running / TBD |
@@ -45,6 +45,14 @@ schematic runs do not (see README.md: without it the PEX operating point did not
 | ac_params | CMRR_1k[dB] | 15 | 93.79 | 124 | 127.5 | 15 | 95.13 | 109 | 110.3 | -14.5 |
 | ac_params | Zout_1k[Ω] | 15 | 0.1951 | 0.2176 | 3.85 | 15 | 0.2083 | 0.2278 | 3.304 | -17.1 |
 | ac_params | Zout_1M[Ω] | 15 | 159 | 171.7 | 206.1 | 15 | 166 | 181.3 | 216.9 | +6.64 |
+| ac_load_params | Acl_dB[] | 6 | -6.022 | -6.021 | -6.021 | 6 | -6.021 | -6.021 | -6.021 | +0.00133 |
+| ac_load_params | f3dB[MHz] | 6 | 1.582e+06 | 2.162e+06 | 3.006e+06 | 6 | 1.425e+06 | 1.961e+06 | 2.713e+06 | -11.6 |
+| ac_load_params | Peak_dB[dB] | 6 | 3.682e-07 | 0.0265 | 2.899 | 6 | 7.193e-08 | 1.537e-06 | 2.466 | +188 |
+| ac_load_params | PSRR_1k[] | 6 | 71.56 | 71.56 | 71.56 | 6 | 70.93 | 70.93 | 70.93 | -0.877 |
+| ac_load_params | PSRR_100k[] | 6 | 31.59 | 31.62 | 31.63 | 6 | 30.95 | 30.98 | 31 | -2.03 |
+| ac_load_params | CMRR_1k[] | 6 | 124 | 124 | 124 | 6 | 110.2 | 110.2 | 110.2 | -11.1 |
+| ac_load_params | Zout_1k[] | 6 | 0.2176 | 0.2176 | 0.2176 | 6 | 0.2278 | 0.2278 | 0.2278 | +4.72 |
+| ac_load_params | Zout_1M[] | 6 | 159 | 180.8 | 237 | 6 | 167.7 | 193.2 | 255.7 | +7.91 |
 
 
 ## dc_params pass 1 (templates unchanged, no rshunt)
