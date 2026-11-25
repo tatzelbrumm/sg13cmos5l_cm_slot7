@@ -69,6 +69,7 @@ PEX of the whole slot, ESD / latch-up simulation of the pads, silicon measuremen
 | question | go to |
 |---|---|
 | How is the slot built, block by block? | [§2](#2-electrical-function); schematics: [pix/schematics/](pix/schematics/README.md); layout: [pix/layout/](pix/layout/README.md) |
+| Why does it work, and how is it sized? | [HOW_IT_WORKS.md](HOW_IT_WORKS.md) (principles, design equations, sizing tables per block; plots: [pix/plots/](pix/plots/README.md)) |
 | What do the modes and the `dig_in` bits do? | [§2.4](#24-modes), [glue_logic.md](glue_logic.md) |
 | Which pins, where? | [§4](#4-physical-interface-and-layout-hierarchy) |
 | What does each pad do, in numbers? | data sheets: [S2D](datasheets/sg13cmos5l_IOPadSingle2Diff.md), [D2S](datasheets/sg13cmos5l_IOPadDiff2Single.md), [replica bias](datasheets/pad_ref_rb.md), [whole slot](datasheets/slot_7_system.md) ([how the data sheets were made](datasheets/README.md)) |
