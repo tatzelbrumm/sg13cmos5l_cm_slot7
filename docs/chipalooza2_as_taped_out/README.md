@@ -389,6 +389,9 @@ coordinates. Made on 2026-11-22 with KLayout and matplotlib from the chip data, 
 | design-side checks (quoted) | XOR of slot_7 with the art removed against the original: 0 on all 39 layer/datatypes; LVS deep before and after: match, extracted netlists identical; no rule newly violated by the art in DRC with density and antenna on (the 7 density rules AFil.g, GFil.g, M1–M4.j, TM1.c are violated with and without it: unfilled slot); closest approach to existing shapes on its own layer: 36.6 µm on Metal3, more than 60 µm on the others; the PDK filler script keeps out of the marker box (filler test) |
 | layers not used | no TopMetal1 art. *Checked on 2026-11-22:* the slot's TopMetal1 (4 merged polygons, the supply straps) has 0 µm² inside the marker box, so the box is a clear area of the TopMetal1 straps |
 
+The art is why `slot_7.gds` differs from v3 (`7394d092…`) by one instance; `art/check_art_only.py` in the delivery proves it (86 sub-cells and slot_7's own shapes
+and labels identical; flat XOR of the result against v3 + art = 0 on every layer, and 0 against the design repository's `art/slot7_with_art.gds`).
+
 ### 7.1 The inscription
 
 The tughra spells, in Ottoman Turkish in Arabic script, **اوراخلی وزیر اوزدمیر جم بکلربکی حضرتلری**, *Urachlı Vezir Özdemir Cem
@@ -414,8 +417,18 @@ author; no reader of Ottoman calligraphy has checked them.
 *Figure: the source picture (`art/source/tughra_source.webp` of the design repository at `a45cbb55`, converted to PNG); the legend row
 below the calligraphy is not part of the art on the chip.*
 
-The art is why `slot_7.gds` differs from v3 (`7394d092…`) by one instance; `art/check_art_only.py` in the delivery proves it (86 sub-cells and slot_7's own shapes
-and labels identical; flat XOR of the result against v3 + art = 0 on every layer, and 0 against the design repository's `art/slot7_with_art.gds`).
+### 7.2 Why a tughra
+
+A tughra is the calligraphic monogram of an Ottoman sultan. This one gives Ottoman court titles (*vezir*, *beylerbeyi*,
+*hazretleri*) to Cem Özdemir, born in Bad Urach, Minister-President of Baden-Württemberg and a former federal minister of
+education. The choice is deliberate. During the challenge the designer tried to establish, by analogy, what a reviewer
+expected, the equivalent of a target bandwidth and the best achievable S₂₁. The answer was an accusation of latent racism
+and the advice to take the matter elsewhere. In the designer's view the accusation was unfounded; he took the matter
+elsewhere: to the Minister-President.
+
+The tughra is what latent racism looks like when it is actually there: it assigns an Ottoman court to a Swabian on the
+strength of his name and his parents' origin ("Muhteşem Urach instead of Haus am Berg-Sozialpädagogik", in the designer's
+words). It is not latent: it sits openly on the die, in metal.
 
 ## 8. About this document set
 
