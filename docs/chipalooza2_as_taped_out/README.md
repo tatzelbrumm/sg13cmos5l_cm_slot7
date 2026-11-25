@@ -103,8 +103,8 @@ For reuse in a system. All simulation, no silicon; "limits" are the designer's w
 | What do the modes and the `dig_in` bits do? | [§2.4](#24-modes), [glue_logic.md](glue_logic.md) |
 | Which pins, where? | [§4](#4-physical-interface-and-layout-hierarchy) |
 | What does each pad do, in numbers? | data sheets: [S2D](datasheets/sg13cmos5l_IOPadSingle2Diff.md), [D2S](datasheets/sg13cmos5l_IOPadDiff2Single.md), [replica bias](datasheets/pad_ref_rb.md), [whole slot](datasheets/slot_7_system.md) ([how the data sheets were made](datasheets/README.md)) |
-| Frequency response, steps, noise, enable transients | [AC / transient](../../verification/c2_gaps/ac_tran/README.md) (23 figures; read `results.md` first) |
-| DC transfer, input / output range, linearity | [DC curves](../../verification/c2_gaps/dc_curves/README.md) (36 figures; read `results.md` first) |
+| Frequency response, steps, noise, enable transients | [AC / transient](../../verification/c2_gaps/ac_tran/README.md) (20 figures; read `results.md` first) |
+| DC transfer, input / output range, linearity | [DC curves](../../verification/c2_gaps/dc_curves/README.md) (22 figures; read `results.md` first) |
 | Which working limits were met, and by what margin? | [ACHIEVED_VS_LIMITS.md](ACHIEVED_VS_LIMITS.md) (per pad and `pad_ref_rb`; working limits, not a specification) |
 | What was verified, and what is open? | [§3](#3-readiness-of-the-blocks-that-were-kicked-off), [§5](#5-verification-state), [§5a](#5a-gap-simulations-of-2026-11-23), [signoff](../../signoff/README.md) |
 | How to measure the chip | [TEST_PLAN.md](TEST_PLAN.md) |
