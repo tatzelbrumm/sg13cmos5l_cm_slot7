@@ -50,6 +50,9 @@ Round-trip −3 dB bandwidth [MHz] (relative to the gain at 1 kHz; `rt_bode_tt27
   (pad_s2d ≈ 0.078 V on the falling slope; the same input level when the sine phase is shifted, also with cshunt
   1 fF / 10 fF and rshunt; no node moves faster there in the saved waveforms: a numerical problem of that netlist
   combination, not found). The schematic and PEX pads run through. TBD.
+  **Resolved 2026-11-25** (see the Follow-up at the end and [../klayout_pad_diodes](../klayout_pad_diodes/README.md)):
+  the converted KLayout netlists simulate the pad diodes at the PDK default size; with the extracted size the sine
+  runs through and matches the schematic pads within 0.07 mV.
 - Solver aids: PEX pads always rshunt=1e12; schematic pads only in the runs marked `*` / `aid=rshunt` in the CSVs
   (ss −40 °C AC / step / sine, sf −40 °C step: operating point not found without it). Its effect, measured on the tt
   27 °C schematic AC run forced with it: f−3dB +0.0005 %, gain −4e-6 dB (`tables/rt_consistency.md`).
@@ -162,3 +165,25 @@ Remarks found on the way (no change made): the CACE yaml labels S2D `Vcm_dev` an
 mV, but the templates compute them in V (S2D Vcm_dev = 0.012 means 12 mV; its 50 "mV" limit is therefore compared
 with a value in V, i.e. effectively 50 V). Several other CSV unit labels (f3dB "MHz", En "nV/rtHz", SR "V/µs") are
 likewise SI values; this folder converts them.
+
+## Follow-up 2026-11-25: the KLayout sine abort
+
+Cause found; details, scripts and data in [../klayout_pad_diodes](../klayout_pad_diodes/README.md).
+
+- **The conversion bug.** The designer's converter `run_starve.convert()` (design repository 9052bd35,
+  `macros/en_ctrl_3v3/testbenches/spice/run_starve.py` lines 44–45; used by `run_tier1.wrapped()`) passes KLayout's
+  diode `A=` / `P=` to the PDK subcircuits `dantenna` / `dpantenna` as `a=` / `p=`. Those subcircuits read only
+  `l` / `w`. ngspice drops the unknown parameters without a message, so all pad antenna diodes are simulated at
+  0.78 × 0.78 µm, 0.7 … 1.7 % of their area.
+- **Why the run aborts.** ngspice's `darea` model has a 37 pA current step at a reverse voltage of 3·n·kT/q
+  = 78.3 mV (27 °C). The step is the soft-breakdown term (ibv, nbv = 48.9), added when the model switches to its
+  reverse-region expression. pad_s2d = 0.0783 V is that point on the S2D pad diode X$65. With the default size
+  ngspice cannot pass the step: X$65 alone under the same sine aborts at the same 65.9723 µs. With the extracted size
+  it passes.
+- **The sine with the fix.** The diodes get l / w from A / P (the schematic sizes). The run then goes through with no
+  solver aid. Unloaded: THD −78.3 dB, gain 0.9985, delay 148 ns, error 9.3 mVpp; pad_d2s is within 0.07 mV of the
+  schematic pads. With 1 kΩ ∥ 100 pF: THD −69.9 dB, delay 175 ns.
+- **Other KLayout results.** The KLayout AC / step results of section 1 change by under 0.1 % with the fix. The
+  KLayout DC range-end shift in ../dc_curves is **not** caused by the diodes: it is unchanged within 2 nV. It sits in
+  the S2D output common mode, 33 mV lower than schematic at tt 27 °C, cause not found.
+- **Still open.** The −40 °C aborts in ../slot_modes_bg are not cured by the fix.

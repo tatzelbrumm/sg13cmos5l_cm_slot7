@@ -89,7 +89,8 @@ iout into 0.7 V, `.op` (equal to the end of a 200 µs power-up transient within 
   netlists in ngspice; not investigated further. The converted pad netlists call `dpantenna` with `a=` / `p=`, which
   the PDK subckt does not take (it takes `l` / `w`; defaults 0.78 × 0.78 µm), so these diodes are simulated at the
   default size: a netlist-conversion detail of the designer's `run_starve.convert()`, unchanged here (TBD for the
-  designer).
+  designer). **Checked 2026-11-25** in [../klayout_pad_diodes](../klayout_pad_diodes/README.md): the size bug is
+  confirmed and located, but fixing it does **not** cure the ss / sf −40 °C aborts listed here; they remain open.
 - ngspice's `.op` of the full bg_core_pd PEX (with capacitors) is wrong at ss −40 °C (6.92 µA pex_3, 8.29 µA pex_2:
   "transient op" ends with capacitor currents flowing); the DC table uses the PEX without capacitors.
 - Mode table: PVT points not reached in the time box, and the cold-corner runs that aborted before enable (section 2).

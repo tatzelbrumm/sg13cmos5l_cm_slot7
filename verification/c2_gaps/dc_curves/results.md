@@ -199,6 +199,9 @@ are the same). All views and the 10 mV ranges: `tables/rt.md`.
 - Views: magic PEX = schematic within 0.3 mV (range ends) and 0.01 mV (max |err|). The KLayout-extracted pads (the
   designer's tier-1 view) give the same error inside the range (+0.03 … +0.38 mV) but range ends that differ by up to
   55 mV (high end lower by 7.7 … 55.2 mV, low end up to 32.9 mV higher at −40 °C); the reason was not investigated here.
+  **Update 2026-11-25** ([../klayout_pad_diodes](../klayout_pad_diodes/README.md) item 5): not the undersized pad
+  diodes (fixing them changes no node by more than 2 nV); the S2D output common mode of the KLayout-extracted netlist is
+  33 mV lower than schematic / PEX at tt 27 °C. Cause still not found.
 - Cross-check: with the KLayout-extracted pads, max |err| over pad in 0 … 1 V = 0.90 / 1.37 / 6.48 / 3.37 / 1.13 mV at
   tt / ss / ff / fs / sf; the designer's `results.txt` (same deck, 50 mV steps) has 0.90 / 1.31 / 6.49 / 3.37 / 1.11 mV.
 
