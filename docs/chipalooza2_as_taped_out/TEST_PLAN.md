@@ -23,7 +23,12 @@ with its source; none of them is a guaranteed limit, and the design had no speci
 | RL | `docs/replica_bias/RUNLOG.md` rows 121, 122, 129 | design repository @ `9052bd35` |
 | RB | [datasheets/pad_ref_rb.md](datasheets/pad_ref_rb.md) (CACE, schematic) | design repository @ `9052bd35` |
 | SD | [datasheets/sg13cmos5l_IOPadSingle2Diff.md](datasheets/sg13cmos5l_IOPadSingle2Diff.md) (CACE, schematic and magic PEX) | design repository @ `91a7da8b` |
-| DS | [datasheets/sg13cmos5l_IOPadDiff2Single.md](datasheets/sg13cmos5l_IOPadDiff2Single.md) (CACE, schematic; results predate the layout) | design repository @ `91a7da8b` |
+| DS | [datasheets/sg13cmos5l_IOPadDiff2Single.md](datasheets/sg13cmos5l_IOPadDiff2Single.md) (CACE, schematic, re-run on 2026-11-25 on the taped-out schematic; replaces the committed results of 2026-10-21, which predated the final schematic) | yaml: design repository @ `91a7da8b`; results: [d2s_schematic_rerun](../../verification/c2_gaps/d2s_schematic_rerun/results.md) |
+| DP | [verification/c2_gaps/d2s_pex/results.md](../../verification/c2_gaps/d2s_pex/results.md) (D2S, CACE on the magic PEX of the taped-out cell) | this repository |
+| DC | [verification/c2_gaps/dc_curves/results.md](../../verification/c2_gaps/dc_curves/results.md) (DC curves of both pads and of the round trip) | this repository |
+| AT | [verification/c2_gaps/ac_tran/results.md](../../verification/c2_gaps/ac_tran/results.md) (AC, transient, noise of both pads and of the round trip) | this repository |
+| RP | [verification/c2_gaps/replica_bias/results.md](../../verification/c2_gaps/replica_bias/results.md) (`pad_ref_rb` PEX and mismatch) | this repository |
+| SM | [verification/c2_gaps/slot_modes_bg/results.md](../../verification/c2_gaps/slot_modes_bg/results.md) (modes at ss −40 °C from power-up, `bg_core_pd` alone) | this repository |
 | EC | `macros/en_ctrl_3v3/README.md`, "starvation" row (pad leakage with the enables at any level) | design repository @ `9052bd35` |
 | PL | `docs/slot7_testplatform/PLAN.md` §5 (verified stage A / B measurement procedure) | design repository @ `efb80141` |
 | HK | `verilog/rtl/housekeeping.v` (register map), `verilog/rtl/router.v` (route codes), `verilog/rtl/user_project_control.v` and `user_project_control_base.v` (per-slot gating) | harness `tatzelbrumm/sg13cmos5l_ocd_chipalooza` @ `7eeb3cb` (tapeout commit; the four files are unchanged at the branch tip `055993f`) |
@@ -74,7 +79,7 @@ The `0x51` values below are composed from the bit map above; values marked PL ar
 
 ## 3. Sequence
 
-Bench: SMU or precision source on `s7_an[0]`; high-impedance voltmeter (or SMU in voltage-measure mode) on `s7_an[1]`; high-impedance
+Bench (minimum capabilities: §8; acceptance intervals per step: §9): SMU or precision source on `s7_an[0]`; high-impedance voltmeter (or SMU in voltage-measure mode) on `s7_an[1]`; high-impedance
 voltmeters or sources on `analog[0..3]` as the step says; ammeters on the chip's 3.3 V supply and pad-ring supply for current differences.
 Set every bench source on `s7_an[0]` and `analog[0..3]` to 0 V before power-up.
 
@@ -99,8 +104,10 @@ analog results as with `vdd_1v2`; `dig_out` is then not held low by the slot (GL
 | D2 | as D1 (or `0x51 = 0x0F` to keep the buses off the references) | `s7_an[0]` swept 0 … 1.0 V (T1, MO: "Pad in swept 0 ... 1.0 V") | `s7_an[1]` | D2S out = `vcm` + (in − `vref`) with the `vcm` / `vref` of D1 (FT; README §2.1). Maximum deviation from that line over 0 … 1 V: tt 27 °C 0.90 mV, ss −40 °C 1.31 mV, sf −40 °C 1.11 mV, fs 125 °C 3.37 mV, ff 125 °C 6.49 mV (T1); FT: "≤ 1.3 mV (−40 / 27 °C), ≤ 6.5 mV (125 °C)". D2S load in simulation: 1 GΩ (datasheets/slot_7_system.md) |
 
 Context for D2 from the pad sheets (each pad simulated alone, not in the slot): S2D input range with `vref` = 0.5 V, low end 0 … 0.087 V,
-high end 1.057 … 1.299 V (SD, `window_params`); D2S output swing, minimum output 0.6396 … 0.7386 V, maximum 3.266 … 3.283 V (DS,
-`drive_params`). With `vcm` ≈ 1.26 V and `vref` ≈ 0.49 V an input of 0 V maps to about 0.77 V at the D2S output, close to that minimum.
+high end 1.057 … 1.299 V (SD, `window_params`); D2S output swing, minimum output 0.6354 … 0.7359 V, maximum 3.266 … 3.283 V (DS,
+`drive_params`, at the CACE input common mode 1.65 V). With `vcm` ≈ 1.26 V and `vref` ≈ 0.49 V an input of 0 V maps to about 0.77 V at
+the D2S output; at the slot's own operating point (D2S `vicm` = `vref` = 1.26 V) the D2S is linear (10 mV) over 0.211 … 2.317 V at
+tt 27 °C 3.3 V, worst 0.328 … 2.258 V (DC §2b, 1 kΩ to 1.26 V), so 0.77 V is well inside it.
 
 ### 3.3 Manual modes (key valid)
 
@@ -109,11 +116,11 @@ not part of FT): `0x51` bit 3 = 0, route writes, `0x51` bit 3 = 1. Return to the
 
 | step | route writes | `0x51` | stimulus (as simulated, MO) | measure | simulated interval (MO unless stated) |
 |---|---|---|---|---|---|
-| M1 swap | `0x23 = 0x0E`, `0x20 = 0x0E` | `0x0F` | `s7_an[0]` 0 … 1.0 V | `s7_an[1]` | D2S out = `vcm` − (in − `vref`) (FT). Max deviation: tt 27 °C 0.99 mV, ff 125 °C 2.88 mV; **ss −40 °C: no simulated value** (no DC result; in the power-up transient swap stalls at the bandgap's start-up node, RL rows 121–122) |
-| M2 mon | `0x23 = 0x0E`, `0x21 = 0x0E` | `0x3F` (bus switches 0, 1) | `s7_an[0]` 0 … 1.0 V; `analog[0]` / `[1]` high-impedance | `analog[0]` = `outp`, `analog[1]` = `outn`; `s7_an[1]` | loop unchanged: max deviation tt 27 °C 0.94 mV, ff 125 °C 6.55 mV; `v(bus0) − v(outp)` = `v(bus1) − v(outn)` = 0.01 mV (into 1 GΩ). Pad relation `outp − outn` = 2 (in − `vref`), (`outp` + `outn`)/2 = `vcm` (README §2.3); S2D gain 1.998 … 1.999, output common-mode error 5.003 … 18.05 mV (SD, `dc_params`, both views). The loop is slower while the bus switches are closed (FT); "stable, 10–30× slower" (this repository's `README.md`). ss −40 °C: no simulated value (as swap) |
-| M3 feed | `0x23 = 0x0E`, `0x22 = 0x0E` | `0x3F` | `analog[0]` = `vcm` + 0.2 V, `analog[1]` = `vcm` − 0.2 V (MO: sources at `vcm` ± 0.2 V through 10 kΩ); `s7_an[0]` fixed 0.5 V | `s7_an[1]` | D2S out = `vcm` + (`v(bus0)` − `v(bus1)`)/2 = `vcm` + 0.2 V (MO). Max deviation: tt 27 °C 0.05 mV, ff 125 °C 2.22 mV; ss −40 °C: no DC result, power-up transient 0.24 mV (RL row 122). D2S alone: gain 0.4981 … 0.5, output offset 0.03487 … 1.947 mV (DS, `dc_params`, 3.3 / 3.6 V) |
-| M4 ext | `0x23 = 0x0E`, `0x25 = 0x0E` | `0xCF` (bus switches 2, 3) | `analog[2]` = 1.30 V, `analog[3]` = 0.50 V (MO: "driven at 1.30 / 0.50 V through 10 kohm"); `s7_an[0]` 0 … 1.0 V | `s7_an[1]` | D2S out = `vcm` + (in − `vref`) with the external values (MO). Max deviation: tt 27 °C 0.91 mV, ff 125 °C 6.39 mV; ss −40 °C: no DC result, power-up transient 0.04 mV (RL row 122). `pad_ref_rb` stays enabled and keeps drawing its current (GL §3) |
-| M5 swap + feed | `0x23 = 0x0E`, `0x20 = 0x0E`, `0x22 = 0x0E` | `0x3F` | as M3 | `s7_an[1]` | feed wins over swap (GL §3): as M3; tt 27 °C 0.05 mV, ff 125 °C 2.22 mV; ss −40 °C: no simulated value |
+| M1 swap | `0x23 = 0x0E`, `0x20 = 0x0E` | `0x0F` | `s7_an[0]` 0 … 1.0 V | `s7_an[1]` | D2S out = `vcm` − (in − `vref`) (FT). Max deviation: tt 27 °C 0.99 mV, ff 125 °C 2.88 mV; ss −40 °C 3.0 V: no DC result; power-up transient from 0 V 1.12 mV (SM §1, pad out 1 GΩ ∥ 10 pF; the stall reported in RL rows 121–122 is traced there to the solver at the pads' antenna diodes, not to the bandgap) |
+| M2 mon | `0x23 = 0x0E`, `0x21 = 0x0E` | `0x3F` (bus switches 0, 1) | `s7_an[0]` 0 … 1.0 V; `analog[0]` / `[1]` high-impedance | `analog[0]` = `outp`, `analog[1]` = `outn`; `s7_an[1]` | loop unchanged: max deviation tt 27 °C 0.94 mV, ff 125 °C 6.55 mV; `v(bus0) − v(outp)` = `v(bus1) − v(outn)` = 0.01 mV (into 1 GΩ). Pad relation `outp − outn` = 2 (in − `vref`), (`outp` + `outn`)/2 = `vcm` (README §2.3); S2D gain 1.998 … 1.999, output common-mode error 5.003 … 18.05 mV (SD, `dc_params`, both views). The loop is slower while the bus switches are closed (FT); "stable, 10–30× slower" (this repository's `README.md`). ss −40 °C 3.0 V: no DC result; power-up transient 1.43 mV (SM §1) |
+| M3 feed | `0x23 = 0x0E`, `0x22 = 0x0E` | `0x3F` | `analog[0]` = `vcm` + 0.2 V, `analog[1]` = `vcm` − 0.2 V (MO: sources at `vcm` ± 0.2 V through 10 kΩ); `s7_an[0]` fixed 0.5 V | `s7_an[1]` | D2S out = `vcm` + (`v(bus0)` − `v(bus1)`)/2 = `vcm` + 0.2 V (MO). Max deviation: tt 27 °C 0.05 mV, ff 125 °C 2.22 mV; ss −40 °C: no DC result, power-up transient 0.24 mV (RL row 122; SM §1 the same). D2S alone: gain 0.4983 … 0.5000, output offset 0.032 … 1.737 mV (DS, `dc_params`, 3.3 / 3.6 V) |
+| M4 ext | `0x23 = 0x0E`, `0x25 = 0x0E` | `0xCF` (bus switches 2, 3) | `analog[2]` = 1.30 V, `analog[3]` = 0.50 V (MO: "driven at 1.30 / 0.50 V through 10 kohm"); `s7_an[0]` 0 … 1.0 V | `s7_an[1]` | D2S out = `vcm` + (in − `vref`) with the external values (MO). Max deviation: tt 27 °C 0.91 mV, ff 125 °C 6.39 mV; ss −40 °C: no DC result, power-up transient 0.04 mV (RL row 122); SM §1: 4.92 mV, there taken against the source values 1.30 / 0.50 V behind their 10 kΩ. `pad_ref_rb` stays enabled and keeps drawing its current (GL §3) |
+| M5 swap + feed | `0x23 = 0x0E`, `0x20 = 0x0E`, `0x22 = 0x0E` | `0x3F` | as M3 | `s7_an[1]` | feed wins over swap (GL §3): as M3; tt 27 °C 0.05 mV, ff 125 °C 2.22 mV; ss −40 °C: no DC result, power-up transient 0.24 mV (SM §1) |
 | M6 all high | `0x20 … 0x37 = 0x0E` | `0x0F` | as D2 | `s7_an[1]` | key invalid (`dig_in[4]` = 1) → default: 0.90 mV (tt 27 °C), 1.31 mV (ss −40 °C), 6.50 mV (ff 125 °C) |
 | M7 no key, swap | `0x20 = 0x0E` only | `0x0F` | as D2 | `s7_an[1]` | default (not crossed): 0.90 / 1.31 / 6.50 mV at tt 27 / ss −40 / ff 125 °C |
 
@@ -127,8 +134,8 @@ M6 and M7 test the key: a crossed or opened loop there is outside the simulated 
 | F2 enable with `vdd_1v2` off | `0x51 = 0x0B` | as D1, D2 | same as D1, D2 (P3'–P5'); the level shifters run from `vdd_3v3` only (GL §2) |
 | F3 slot supplies off | `0x51` bits 1, 2 = 0 | pad-ring current | ≤ 67 nA at 125 °C (FT); per pad as P1 (EC) |
 | F4 slot not selected | `0x50` = another slot | pad-ring current | the power gates follow `select` (HK), so as F3; `dig_in` latches reset to 0 (HK) |
-| F5 pad leakage, disabled pads | F3 state, `s7_an[0]` and `s7_an[1]` each at 0 and 3.3 V | pad current | S2D pad input leakage −7.64 … 5.876 nA (SD, `pd_params`, schematic; PEX −7.647 … 5.869 nA); D2S pad leakage −36.83 … 9.71 nA (DS, `pd_params`); both over the CACE power-down states, 27 / 125 °C |
-| F6 enable timing (optional, oscilloscope on `s7_an[1]`, `s7_an[0]` at a fixed level) | toggle `0x51` bit 0 | settling after enable | S2D pad enable time 1.359 … 1.43 µs (SD schematic), 1.463 … 1.524 µs (SD PEX); D2S turn-on 0.8054 … 1.228 µs (DS); `pad_ref_rb` enable: `vcm` 0.79 … 1.81 µs, `vref` 1.03 … 2.02 µs (README §2.3). S2D enable kick through the ext switches (tt 27 °C): `vcm` +118 / −63 mV, `vref` +85 / −62 mV (S7) |
+| F5 pad leakage, disabled pads | F3 state, `s7_an[0]` and `s7_an[1]` each at 0 and 3.3 V | pad current | S2D pad input leakage −7.64 … 5.876 nA (SD, `pd_params`, schematic; PEX −7.647 … 5.869 nA); D2S pad leakage −36.83 … 14.94 nA (DS, `pd_params`; PEX −36.85 … 14.95 nA, DP); both over the CACE power-down states, 27 / 125 °C |
+| F6 enable timing (optional, oscilloscope on `s7_an[1]`, `s7_an[0]` at a fixed level) | toggle `0x51` bit 0 | settling after enable | S2D pad enable time 1.359 … 1.43 µs (SD schematic), 1.463 … 1.524 µs (SD PEX); D2S turn-on 0.982 … 1.819 µs (DS), 1.109 … 2.387 µs (DP); `pad_ref_rb` enable: `vcm` 0.79 … 1.81 µs, `vref` 1.03 … 2.02 µs (README §2.3). S2D enable kick through the ext switches (tt 27 °C): `vcm` +118 / −63 mV, `vref` +85 / −62 mV (S7) |
 
 Power-down order (carried over from PL §5 as a precaution): open the bus switches (`0x51` bits 7:4 = 0) and set every bench source on
 `analog[0..3]` and `s7_an[0]` to 0 V **before** gating `vdd_3v3` off. In stage A a voltage on a bus drove the transmission gate's PMOS into
@@ -151,7 +158,7 @@ point, so compare each value with the whole interval over corners at that temper
   `analog[0..3]` (simulated as 10 kΩ, MO).
 - **Not covered by any simulation** (classify as "no simulated interval", not as outside): mismatch at slot level (only `pad_ref_rb` has a
   Monte Carlo result, RB; deviations of the loop that come from offsets can exceed the corner intervals); swap, mon, feed, ext and
-  swap + feed at ss −40 °C in DC (MO, RL rows 121–122); the 3.0 / 3.6 V supplies for the modes (MO runs tt 27 °C 3.3 V, ss −40 °C 3.0 V, ff 125 °C 3.6 V only);
+  swap + feed at ss −40 °C in DC (MO, RL rows 121–122; power-up transients exist for all 8 modes there, SM §1); the 3.0 / 3.6 V supplies for the modes (MO runs tt 27 °C 3.3 V, ss −40 °C 3.0 V, ff 125 °C 3.6 V only);
   whole-slot PEX (README §5); `s7_doutpd` on its own (GL §6).
 
 ## 6. What from the stage A / B procedure applies
@@ -176,3 +183,61 @@ for this chip.
 Chip identity (SPI reads of `0x01 … 0x07`, HK), die / board, temperature, supply readings, the `0x51` value and route writes, the bench
 settings (source values and impedances), raw readings, and the step key of this plan. Keep raw data in a plain-text or CSV file next to the
 summary.
+
+## 8. Equipment needed
+
+Instrument *types* and the minimum capability each step needs (no availability, no persons). Adapted from the equipment list
+of the sky130 proposal repository `sky130_cm_ip__single2diff2single` (`docs/EQUIPMENT_NEEDED.md`); the capabilities here are derived from this chip's simulated values (column 4), so
+they are working estimates for a bench, not requirements of a specification.
+
+| instrument | used in steps | minimum capability | derived from |
+|---|---|---|---|
+| harness test board with its SPI / control host | all | writes of `0x50`, `0x51`, `0x20 … 0x37`; reads of `0x38`, `0x39`, `0x01 … 0x07` | §2, §7 (HK) |
+| chip supplies (3.3 V slot supply, pad ring) | all | as the harness board provides; 3.0 / 3.6 V settable if the 3.0 / 3.6 V corner intervals are to be compared at their own supply | T1 simulates −40 °C at 3.0 V and 125 °C at 3.6 V |
+| current meters on the chip's 3.3 V supply and on the pad-ring supply (SMU or ammeter in series) | P1, P3, P5, F1, F3, F4 | µA range with ≤ 0.1 µA resolution for the enabled step; ≤ 1 nA resolution for the disabled and unpowered states; stable over the minutes of a state change, because the slot is seen only as a difference on supplies shared with the rest of the chip (§1) | enabled 48.38 … 49.74 µA (slot), 364.58 … 395.62 µA (ring); disabled 25.36 … 56.20 nA / 9.01 … 58.22 nA (T1); unpowered ≤ 67 nA (FT) |
+| source-measure unit on `s7_an[0]` | D2, M1, M2, M4, M6, M7 (sweep 0 … 1.0 V, optionally to 1.5 V for the range ends, §9), M3 (fixed 0.5 V), F5 (0 / 3.3 V), D3–D5 (DC level) | 0 … 3.3 V; low source impedance (the S2D was characterized from 50 Ω, SD); current resolution ≤ 0.1 nA for F5 | S2D pad leakage −7.640 … 5.876 nA (SD) |
+| DC voltmeters, high input impedance, at least 3 (`s7_an[1]`; `analog[2]` and `analog[3]`, or `analog[0]` and `analog[1]` in mon; and the applied `s7_an[0]` level) | D1, D2, M1–M7, F2 | 6½ digits, 10 µV resolution or better over 0 … 3.3 V, input impedance ≥ 1 GΩ | smallest simulated deviation 0.05 mV (M3, MO); bus vs pad difference 0.01 mV into 1 GΩ (MO); FT: "read them with a high-impedance voltmeter" |
+| DC voltage sources, 2 channels, each behind a 10 kΩ series resistor | M3 (`analog[0]` / `[1]` at `vcm` ± 0.2 V), M4 (`analog[2]` / `[3]` at 1.30 / 0.50 V) | 0 … 3.3 V; set to 0 V before power-down (§3.4) | the mode simulations drive the buses through 10 kΩ (MO) |
+| oscilloscope | F6; D4 (optional) | 2 channels plus a trigger from the SPI write (F6); ≥ 20 MHz bandwidth (≥ 10× the highest round-trip bandwidth; derived here); able to resolve 5 mV on a 0.5 V step (the 1 % band) and excursions of 0.1 … 0.3 V | round trip 1.08 … 1.69 MHz, 1 % settling 399 … 623 ns (AT §1); D2S enable excursion +228.1 / −224.8 mV (DP) |
+| function generator | D3–D5 (optional) | sine 1 kHz … 10 MHz with DC offset; step 0.25 ↔ 0.75 V with edges ≤ 10 ns; sine distortion at 10 kHz below the −78.2 dB to be measured | AT §1 (10 ns edges as simulated, THD −78.2 dB at tt 27 °C) |
+| frequency-response analyzer, or the generator with the oscilloscope / a lock-in amplifier | D3 (optional) | magnitude and phase from 1 kHz to ≥ 5 MHz | round trip 1.08 … 1.69 MHz, gain at 1 kHz −0.011 … −0.048 dB (AT §1) |
+| FFT analyzer, audio analyzer or ≥ 24-bit ADC with FFT | D5 (optional) | > 80 dB dynamic range at 10 kHz … 70 kHz (harmonics 2–7) | THD −78.2 … −53.4 dB (AT §1) |
+| loads for `s7_an[1]` | D2 (open), D3, D4 | open (≥ 1 GΩ); 1 kΩ to a source set to the measured `vcm`, with 10 pF and 100 pF; the board's and probe's own capacitance counted in the load | AT §1: "1 kΩ to an ideal copy of vref_d2s with 10 or 100 pF"; T1: 1 GΩ |
+| SMU with pA resolution on a shared pin (only for bus-current measurements) | §4 leak subtraction | pA resolution | PL §5 |
+| temperature chamber or thermal forcer, with a die or board temperature reading | §4 | −40, 27, 125 °C | the simulated temperatures (§4) |
+
+## 9. Acceptance table
+
+One row per measurement step: the quantity, the conditions, the **simulated** interval with its source, and how to classify
+the reading. The intervals are the current ones (DC curves of 2026-11-24, AC / transient, the D2S re-run of 2026-11-25, the
+ss −40 °C power-up runs); none is a guaranteed limit, and the design had no specification. "Inside" / "outside" always means
+**inside / outside the simulated interval** of §5, not pass / fail. A die sits at one process point, so compare with the
+interval over all simulated corners at the measured temperature; where only one corner was simulated at a temperature (27 °C:
+tt only), a reading outside it says little by itself. Mismatch is in none of the slot-level intervals (§5; D2S output offset
+σ 6.28 mV, DR §2; S2D input offset −17.25 … 18.17 mV over 100 samples, SD), so a loop deviation above its corner interval is
+recorded as outside and then checked against the mismatch spread before the circuit is suspected. DR = the D2S re-run
+([d2s_schematic_rerun](../../verification/c2_gaps/d2s_schematic_rerun/results.md)); other keys: §0.
+
+| step | quantity | conditions | simulated interval (source) | classify |
+|---|---|---|---|---|
+| P1, F3, F4 | pad-ring current, slot supplies off | `0x51` = 0 (F4: another slot selected), bench sources at 0 V | ≤ 67 nA at 125 °C (FT); per pad S2D ≤ 0.4 nA (−40 / 27 °C), ≤ 25 nA (125 °C), D2S ≤ 4.3 nA / ≤ 67 nA (EC) | inside if ≤ the value at the nearest simulated temperature; the ring also supplies the other pads of the chip, so only the part attributable to slot 7's pads can be compared |
+| P3, F1 | slot `vdd_3v3` and ring current, `enable` = 0 | 150–170 µs or later after the enable falls | −40 °C (ss, sf, 3.0 V): 25.36 … 25.55 nA / 9.01 … 9.09 nA; 27 °C (tt, 3.3 V): 31.63 / 12.24 nA; 125 °C (ff, fs, 3.6 V): 48.64 … 56.20 nA / 32.10 … 58.22 nA (T1) | inside / outside the interval at that temperature |
+| P4 | `0x38`, `0x39` low nibble | `dig_ena` = 1, all `dig_in` = 0, `vdd_1v2` on | `0x00` / 0 (logic expectation, GL §6; no simulation of `s7_doutpd`) | equal / not equal |
+| P5 | enabled current step from P4 | `s7_an[1]` open, `s7_an[0]` at 0 V | −40 °C (3.0 V): slot 48.38 … 48.61 µA, ring 364.58 … 369.44 µA; 27 °C (tt): 49.74 / 387.56 µA; 125 °C (3.6 V): 49.23 … 49.40 / 392.13 … 395.62 µA (T1, D2S at 1 GΩ) | inside / outside; a load on `s7_an[1]` adds its own current to the ring |
+| D1 | `vcm` on `analog[2]`, `vref` on `analog[3]` | default mode, high-impedance meters | slot (T1): `vcm` −40 °C 1.115 … 1.138 V, 27 °C 1.257 V, 125 °C 1.299 … 1.366 V; `vref` 0.444 … 0.447 / 0.492 / 0.571 … 0.576 V. `pad_ref_rb` alone, 5 corners × 3.0 / 3.3 / 3.6 V (RP §1, schematic = PEX): `vcm` 1.242 … 1.395 V (3.3 / 3.6 V), 1.120 … 1.193 V (3.0 V); `vref` 0.4363 … 0.4553 V (−40 °C), 0.4832 … 0.5038 V (27 °C), 0.5724 … 0.5964 V (125 °C). Mismatch, tt 27 °C 3.3 V, 100 samples: `vcm` 1246.91 … 1273.95 mV (σ 5.415 mV), `vref` 481.36 … 501.81 mV (σ 3.788 mV) (RP §2) | inside the corner interval at that temperature and supply; outside it but within the mismatch spread: record as "outside the corner interval, within the mismatch range" (corners and mismatch were not simulated together) |
+| D2 | max \|`s7_an[1]` − (`vcm` + `s7_an[0]` − `vref`)\| over `s7_an[0]` = 0 … 1 V, with the `vcm` / `vref` measured in D1 | default mode, `s7_an[1]` open | per PVT point, envelope of the schematic / magic PEX pads (DC §3), the KLayout-extracted pads (DC §3) and T1: tt 27 °C 3.3 V 0.86 … 0.90 mV; ss −40 °C 3.0 V 1.31 … 1.37 mV; sf −40 °C 3.0 V 1.10 … 1.13 mV; fs 125 °C 3.6 V 3.10 … 3.37 mV; ff 125 °C 3.6 V 6.10 … 6.49 mV | inside if ≤ the largest value at that temperature (−40 °C 1.37 mV, 27 °C 0.90 mV, 125 °C 6.49 mV) |
+| D2 | round-trip gain (slope of `s7_an[1]` vs `s7_an[0]` near `s7_an[0]` = `vref`) | as above | 0.99848 … 0.99882 over the five PVT points (DC §3) | inside / outside (insensitive to offsets) |
+| D2 | 1 mV-linear input range (contiguous around `s7_an[0]` = `vref`, error from the straight line < 1 mV), sweep extended to 1.5 V | as above | high end: −40 °C 1.055 … 1.114 V, 27 °C 1.281 V, 125 °C 1.367 … 1.440 V; low end above 0 V only at 125 °C: 0.028 … 0.096 V (DC §3, schematic pads; the KLayout-extracted pads give high ends up to 55.2 mV lower) | inside / outside |
+| D3 (optional) | round-trip −3 dB bandwidth (relative to 1 kHz), peaking | `s7_an[0]` 0.5 V DC plus a small sine; loads open, 1 kΩ ∥ 10 pF, 1 kΩ ∥ 100 pF (1 kΩ to `vcm`) | tt 27 °C: 1.122 … 1.532 MHz; −40 °C (ss, sf, 3.0 V): 1.082 … 1.553 MHz; 125 °C (ff, fs, 3.6 V): 1.166 … 1.694 MHz; no peaking above the 1 kHz gain in any run (AT §1; three pad views, three loads) | inside / outside the interval at that temperature; state the actual load (board + probe) |
+| D4 (optional) | settling of `s7_an[1]` to 1 % after a 0.25 → 0.75 V step (10 ns edges), overshoot, output step | loads as D3 | 1 %: tt 27 °C 453 … 623 ns (three views, three loads); over the five PVT points 399 … 499 ns (schematic, open and 1 kΩ ∥ 100 pF), 474 … 551 ns (PEX, tt / ss −40 °C / ff 125 °C); overshoot ≤ 0.05 %; output step 497.99 … 499.36 mV (AT §1) | inside / outside |
+| D5 (optional) | THD (harmonics 2–7) of a 10 kHz sine 0 … 1 V | open or 1 kΩ ∥ 100 pF | tt 27 °C: −78.2 … −72.0 dB; open, schematic: −40 °C −70.6 … −67.9 dB, 125 °C −61.7 … −53.4 dB (AT §1; at 125 °C the bottom of the sine lies below the linear input range) | inside if not worse than the worst value at that temperature |
+| M1 swap | max \|`s7_an[1]` − (`vcm` − (`s7_an[0]` − `vref`))\| | as D2 | tt 27 °C 0.99 mV, ff 125 °C 2.88 mV (MO); ss −40 °C 1.12 mV (SM §1, power-up transient) | inside if ≤ the value at that temperature; a non-inverted output is a logic fault, not a deviation |
+| M2 mon | deviation as D2; `v(analog[0])` − `v(analog[1])` against 2 (`s7_an[0]` − `vref`), (`v(analog[0])` + `v(analog[1])`)/2 against `vcm` | bus switches 0, 1 closed, high-impedance meters | loop: tt 27 °C 0.94 mV, ff 125 °C 6.55 mV (MO), ss −40 °C 1.43 mV (SM §1); S2D gain 1.99849 … 1.99930, output CM error 5.003 … 18.050 mV (SD, `dc_params`); bus − pin 0.01 mV into 1 GΩ (MO) | inside / outside; the loop is 10–30× slower while the bus switches are closed (this repository's `README.md`), so let readings settle |
+| M3 feed | `s7_an[1]` − (`vcm` + (`v(analog[0])` − `v(analog[1])`)/2) | sources at `vcm` ± 0.2 V through 10 kΩ, `s7_an[0]` 0.5 V | tt 27 °C 0.05 mV, ff 125 °C 2.22 mV (MO); ss −40 °C 0.24 mV (RL row 122, SM §1); D2S alone at `vicm` 1.65 V: gain 0.4983 … 0.5000, offset 0.032 … 1.737 mV (DS) | inside / outside |
+| M4 ext | deviation as D2 with the measured `v(analog[2])` / `v(analog[3])` | sources 1.30 / 0.50 V through 10 kΩ | tt 27 °C 0.91 mV, ff 125 °C 6.39 mV (MO); ss −40 °C 0.04 mV (RL row 122) or 4.92 mV when taken against the source values behind the 10 kΩ (SM §1) | inside / outside; state which reference voltages were used |
+| M5 swap + feed | as M3 | as M3 | as M3: tt 27 °C 0.05 mV, ff 125 °C 2.22 mV (MO), ss −40 °C 0.24 mV (SM §1) | inside / outside; a crossed output means feed did not win (GL §3) |
+| M6, M7 | as D2 (key invalid → default) | as D2 | tt 27 °C 0.90 mV, ff 125 °C 6.50 mV, ss −40 °C 1.31 mV (MO; SM §1 1.37 mV) | inside / outside; a crossed or opened loop is a logic fault |
+| F2 | D1 and D2 with `vdd_1v2` off | `0x51 = 0x0B` | as D1, D2 (FT: the slot works with only `vdd_3v3`; not simulated separately) | inside / outside the D1, D2 intervals |
+| F5 | pad current, pads disabled | F3 state; each pad at 0 V and 3.3 V | S2D −7.640 … 5.876 nA (SD schematic; PEX −7.647 … 5.869 nA); D2S −36.83 … 14.94 nA (DS; PEX −36.85 … 14.95 nA, DP); CACE power-down states at 27 / 125 °C | inside / outside at 27 / 125 °C; at −40 °C only EC (P1 row) |
+| F6 | time from the enable write to `s7_an[1]` within 1 mV / 1 % of its final value; excursion of `s7_an[1]` | `s7_an[0]` fixed, `s7_an[1]` open or 1 kΩ | no slot-level interval except ss −40 °C (`vcm` at 98 % 1.6 µs after enable, bandgap at 90 % after 0.80 … 0.83 µs, SM §1). Block values: `pad_ref_rb` `vcm` 0.79 … 1.81 µs, `vref` 1.03 … 2.02 µs (README §2.3); S2D 1.359 … 1.524 µs (SD, schematic … PEX); D2S 0.982 … 2.387 µs, excursion +121.6 … +228.1 / −104.3 … −224.8 mV with 1 kΩ (DS … DP) | no slot-level interval at 27 / 125 °C ("not covered", §5): record and compare with the block values; at −40 °C compare with SM |
+| F6 (ext) | kick on `analog[2]` / `analog[3]` at the S2D enable | ext mode, tt 27 °C | `vcm` +118 / −63 mV, `vref` +85 / −62 mV (S7) | inside / outside at 27 °C; no value at other temperatures |
