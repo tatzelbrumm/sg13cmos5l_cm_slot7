@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# round-trip jobs for roundtrip.py, priority order: <view>:<mos>:<temp>:<vdd>
+# the PVT points of the designer's tier-1 deck (run_tier1.py POINTS), each with the three pad views
+schematic:tt:27:3.3
+pex:tt:27:3.3
+klayout:tt:27:3.3
+schematic:ss:-40:3.0
+schematic:ff:125:3.6
+pex:ss:-40:3.0
+pex:ff:125:3.6
+klayout:ss:-40:3.0
+klayout:ff:125:3.6
+schematic:fs:125:3.6
+schematic:sf:-40:3.0
+pex:fs:125:3.6
+pex:sf:-40:3.0
+klayout:fs:125:3.6
+klayout:sf:-40:3.0
