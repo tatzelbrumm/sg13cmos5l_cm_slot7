@@ -69,11 +69,11 @@ below the calligraphy is not part of the art on the chip.*
 ## Why a tughra
 
 A tughra is the calligraphic monogram of an Ottoman sultan. This one gives Ottoman court titles (*vezir*, *beylerbeyi*,
-*hazretleri*) to Cem Özdemir, born in Bad Urach, Minister-President of Baden-Württemberg and a former federal minister of
-education. The choice is deliberate. During the challenge the designer tried to establish, by analogy, what a reviewer
+*hazretleri*) to Cem Özdemir, born in Bad Urach, Minister-President of Baden-Württemberg and a former Federal Minister of
+Education and Research. The choice is deliberate. During the challenge the designer tried to establish, by analogy, what a reviewer
 expected, the equivalent of a target bandwidth and the best achievable S₂₁. The answer was an accusation of latent racism
-and the advice to take the matter elsewhere. In the designer's view the accusation was unfounded; he took the matter
-elsewhere: to the Minister-President.
+and the advice to take the matter elsewhere. In the designer's view the accusation was unfounded; the designer took the
+matter elsewhere: to the Minister-President.
 
 The tughra is what latent racism looks like when it is actually there: it assigns an Ottoman court to a Swabian on the
 strength of his name and his parents' origin ("Muhteşem Urach instead of Haus am Berg-Sozialpädagogik", in the designer's
