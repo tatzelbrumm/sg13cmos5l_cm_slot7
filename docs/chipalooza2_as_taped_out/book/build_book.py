@@ -514,6 +514,7 @@ table.figs { table-layout: fixed; }
 table.figs td { border: none; width: 50%; font-size: 7.6pt; padding: 0 3pt; text-align: left; }
 table.figs td img { max-width: 80%; max-height: 85mm; }
 table.figs th { display: none; }
+table.figs td img[alt$="pad layout"] { max-height: 52mm; }
 '''
 
 
