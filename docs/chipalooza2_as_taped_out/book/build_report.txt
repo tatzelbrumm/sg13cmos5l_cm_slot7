@@ -1,1 +1,1 @@
-# build_book.py report, source commit 77c7d489acae90174cf65156200e3e9fd33e068f
+# build_book.py report, source commit 2a0867adfcc776830b2799821d14e342e75d47c6
