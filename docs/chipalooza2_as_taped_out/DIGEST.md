@@ -107,8 +107,8 @@ Typical: tt, 27 °C, 3.3 V, default mode, slot's own references. Min / max: 5 pr
 |---|---|---:|---:|---:|---|
 | **End to end (S2D → D2S)** | | | | | |
 | error from out = vcm + (in − vref), in 0 … 1 V | | | 0.86 | 6.5 | mV |
-| −3 dB bandwidth | 5 PVT points; unloaded, 1 kΩ ∥ 10 pF, 1 kΩ ∥ 100 pF; schematic and (x) | 1.08 | | 1.69 | MHz |
-| settling to 1 %, 0.25 → 0.75 V step | 27 °C; the same loads; schematic and (x) | 453 | | 623 | ns |
+| −3 dB bandwidth | 5 PVT points; unloaded, 1 kΩ ∥ 10 pF, 1 kΩ ∥ 100 pF; schematic, (x) and whole slot extracted | 1.04 | | 1.69 | MHz |
+| settling to 1 %, 0.25 → 0.75 V step | 27 °C; the same loads; schematic, (x) and whole slot extracted | 453 | | 643 | ns |
 | THD, 10 kHz | | | −78 | −53 | dB |
 | **S2D input pad** | | | | | |
 | gain (outp − outn) / (pad − vref) | (x) | 1.9985 | 1.999 | 1.9993 | |
@@ -126,8 +126,8 @@ Typical: tt, 27 °C, 3.3 V, default mode, slot's own references. Min / max: 5 pr
 | slew rate | 10 … 300 pF (x) | 1.59 | | 2.79 | V/µs |
 | output offset from mismatch, 1 σ | 30 Monte Carlo runs | | 6.3 | | mV |
 | **References** | | | | | |
-| vcm | | 1.115 | 1.257 | 1.395 | V |
-| vref | | 0.436 | 0.492 | 0.596 | V |
+| vcm | | 1.120 | 1.262 | 1.395 | V |
+| vref | | 0.436 | 0.494 | 0.596 | V |
 | bandgap reference current | | 3.83 | 4.96 | 6.37 | µA |
 | **Supply current** | | | | | |
 | slot `vdd_3v3`, enabled | 5 PVT points | 48.4 | | 49.7 | µA |
@@ -155,7 +155,9 @@ Typical: tt, 27 °C, 3.3 V, default mode, slot's own references. Min / max: 5 pr
 
 Both pads were simulated on their extracted layout (magic, C-coupled) with the same test benches as the schematic. The
 layout leaves the DC values unchanged. S2D: bandwidth −8 %, step response +12 %. D2S: bandwidth and slew rate about −11 %,
-settling and enable time about +10 %, noise within 5 %.
+settling and enable time about +10 %, noise within 5 %. The whole slot, extracted (magic, C-coupled and with wire
+resistance; LVS match): end-to-end bandwidth a further −2.5 … −3.9 %, settling +2.5 … +4.6 %, DC error unchanged
+(≤ 0.2 mV), supply current within 0.3 %.
 
 | | |
 |---|---|
@@ -211,9 +213,12 @@ Taped-out GDS, re-run on 2026-11-25 with the IHP decks (reports: `signoff/taped_
 | KLayout density | 7 minimum-density rules, filled at chip level | 4, filled at chip level | 4, filled at chip level |
 | KLayout LVS | match, 497 devices | match, 76 devices | match, 77 devices |
 | magic DRC | 48 "Metal1 overlap of Via1" markers in `bg_core_pd` (KLayout passes the same rules) | 0 | 0 |
-| magic + netgen LVS | 5 subcircuits match; top level: pin `vss_1v2_uq0` | `vss` / `iovss` substrate merge | `vss` / `iovss` substrate merge |
-| post-layout simulation | pads, replica bias and bias distribution extracted in the slot simulation | extracted, full characterization | extracted, full characterization |
-| ESD / latch-up simulation; whole-slot extraction | not performed | not performed | not performed |
+| KLayout antenna rules | 0 | 0 | 0 |
+| magic + netgen LVS | 5 subcircuits match; top level: pin `vss_1v2_uq0`; whole-slot extraction: 371 = 371 devices, 222 = 222 nets | `vss` / `iovss` substrate merge | `vss` / `iovss` substrate merge |
+| post-layout simulation | whole slot extracted (C-coupled and with wire resistance), 5 PVT points | extracted, full characterization | extracted, full characterization |
+| ESD, human-body model ±0.5 … 2 kV, with the harness pad ring (stand-in diode models; indicative) | – | pad +9.3 / −4.7 V, input gate–drain 8.8 V at 2 kV | pad +6.3 / −2.6 V, gates ≤ 6.4 V at 2 kV |
+| latch-up I-test, ±100 mA into the pad at 3.6 V | – | pad +4.95 / −1.26 V | pad +2.02 / −0.79 V |
+| pad-ring supply at 5.4 V | – | largest drain–source voltage 5.0 V (breakdown ≥ 5.3 V), both pads in one run | |
 
 ## Silicon bring-up
 
@@ -224,7 +229,7 @@ Register values and acceptance intervals: test plan (`docs/chipalooza2_as_taped_
 3. Slot supplies on, `enable` = 0: leakage only (slot 25 … 56 nA, pad ring 9 … 58 nA).
 4. Digital latches on: `dig_out[11:0]` reads 0.
 5. `enable` = 1, default mode: supply current rises by 48.4 … 49.7 µA (slot) and 365 … 396 µA (pad ring).
-6. Close bus switches 2 and 3: vcm 1.115 … 1.366 V and vref 0.444 … 0.576 V (27 °C typical 1.257 / 0.492 V).
+6. Close bus switches 2 and 3: vcm 1.120 … 1.379 V and vref 0.446 … 0.578 V (27 °C typical 1.262 / 0.494 V).
 7. Sweep `s7_an[0]` 0 … 1 V, read `s7_an[1]`: vcm + (in − vref), deviation ≤ 0.9 mV typical, ≤ 6.5 mV over corners.
 8. Modes swap, mon, feed and ext, each with the key, then back to the default.
 9. Disable and supply-off: leakage as in steps 1 and 3.

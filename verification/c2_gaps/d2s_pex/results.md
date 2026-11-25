@@ -5,6 +5,10 @@
 > **Note added 2026-11-25:** the "schematic" columns below are the committed CACE results of 2026-10-21, which predate the final D2S schematic; the schematic-vs-PEX changes below therefore mix layout effects with schematic changes. **Against the taped-out schematic** (re-run, `../d2s_schematic_rerun/results.md` §3 and §5) the layout leaves DC unchanged (currents ≤ 0.02 %, INL ≤ 0.75 %) and lowers bandwidth and slew rate by about 11 %; the +5 % current shifts reported below are not layout effects. The PEX columns are current.
 
 
+> **Note added 2026-11-25 (whole-slot extraction):** the PEX netlist used here (`sak-pex.sh`, magic's hierarchical output) lacks 0.66 pF of
+> the D2S pad's node-to-substrate capacitance (the bond pad's 223 fF among it). The bandwidth and slew figures below are therefore somewhat
+> optimistic; DC values are not affected. Details: [../slot_pex/results.md](../slot_pex/results.md) §2, §5 item 7. This folder was not rerun.
+
 **IHP sg13cmos5l post-layout (magic PEX) simulation** of the taped-out cell
 (`pads/sg13cmos5l_IOPadDiff2Single/sg13cmos5l_IOPadDiff2Single.gds`), magic C-coupled extraction, compared with the
 committed schematic results. Method and caveats: [README.md](README.md).

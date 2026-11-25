@@ -11,6 +11,11 @@ SPDX-License-Identifier: Apache-2.0
 > (it had no layout at the time of the run). The slot's `s7_ctrl` glue was simulated in the mode runs. Slot `vdd_3v3` and pad-ring `iovdd` both 3.3 V (3.0 / 3.6 V at the corners), harness enable 1.2 V, S2D input swept 0 … 1.0 V, D2S output unloaded (1 GΩ);
 > expected D2S out = `vcm` + (in − `vref`). Source files: [`docs/slot7_hookup/tier1/results.txt`](https://github.com/tatzelbrumm/sg13cmos5l_cm_ip__single2diff2single/blob/9052bd35928c6d40344e8e686c9abbe736bfadb9/docs/slot7_hookup/tier1/results.txt), [`modes.txt`](https://github.com/tatzelbrumm/sg13cmos5l_cm_ip__single2diff2single/blob/9052bd35928c6d40344e8e686c9abbe736bfadb9/docs/slot7_hookup/tier1/modes.txt), scripts `run_tier1.py`, `run_modes.py` in the same folder.
 > **No simulation was run for this page;** the two files are copied verbatim below.
+>
+> **Correction (2026-11-25).** The whole-slot magic extraction ([slot PEX](../../../verification/c2_gaps/slot_pex/results.md) §3.3, §3.5) shows that the `vcm` / `vref` below
+> are low: this deck uses the KLayout-converted `pad_ref_rb` netlist, which gives `vcm` 3.5 … 4.9 mV lower at −40 / 27 °C, 13 … 24 mV lower at 125 °C, and `vref` 1.8 mV lower than the
+> `pad_ref_rb` schematic, its magic PEX and the extracted slot. Extracted slot: `vcm` / `vref` tt 27 °C 1.262 / 0.494 V, ss −40 °C 1.120 / 0.449 V, ff 125 °C 1.323 / 0.573 V,
+> fs 125 °C 1.379 / 0.578 V, sf −40 °C 1.141 / 0.446 V. The round-trip error and the supply currents are not affected (≤ 0.003 mV, ≤ 0.3 %).
 
 ## Figures
 
@@ -62,8 +67,8 @@ sf  -40 3.0  | 1.138 0.444 |    1.11 |  48.61 369.44 |    25.55     9.09
 
 | quantity | value over the five corners |
 |---|---|
-| `vcm` | 1.115 … 1.366 V (tt 27 °C 1.257 V) |
-| `vref` | 0.444 … 0.576 V (tt 27 °C 0.492 V) |
+| `vcm` | 1.115 … 1.366 V (tt 27 °C 1.257 V); extracted slot 1.120 … 1.379 V (1.262 V), see the correction above |
+| `vref` | 0.444 … 0.576 V (tt 27 °C 0.492 V); extracted slot 0.446 … 0.578 V (0.494 V) |
 | round-trip error, max over 0 … 1 V input | 0.90 … 6.49 mV |
 | slot `vdd_3v3` current, enabled | 48.4 … 49.7 µA |
 | pad ring `iovdd` current, enabled | 364.6 … 395.6 µA |
@@ -106,4 +111,4 @@ At ss −40 °C the manual modes did not converge in DC (default, all-high and n
 
 ## 3. Not covered
 
-Monte Carlo of the slot; PEX of the whole slot; the 3.0 / 3.6 V × all-corner mode grid (modes at tt 27 °C, ss −40 °C and ff 125 °C only); a CACE suite for the slot; silicon.
+Monte Carlo of the slot; PEX of the whole slot (done after the tapeout: [slot PEX](../../../verification/c2_gaps/slot_pex/results.md)); the 3.0 / 3.6 V × all-corner mode grid (modes at tt 27 °C, ss −40 °C and ff 125 °C only); a CACE suite for the slot; silicon.

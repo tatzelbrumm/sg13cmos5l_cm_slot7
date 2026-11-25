@@ -10,6 +10,12 @@ limits: [README.md](README.md). Every number here is from the runs of `run.sh` i
 
 Status: complete.
 
+> **Note added 2026-11-25 (whole-slot extraction):** the slot-level runs here use the designer's tier-1 deck, whose `pad_ref_rb` is the
+> KLayout-converted netlist. Its `vcm` is 3.5 … 4.9 mV low at −40 / 27 °C and 13 … 24 mV low at 125 °C, `vref` 1.8 mV low, against the
+> `pad_ref_rb` schematic, its PEX and the extracted whole slot; the round-trip error is unchanged (≤ 0.003 mV), the 1 mV-linear range's
+> high end moves up with `vcm` (+6 mV at tt 27 °C, +32 mV at ff 125 °C). The pad PEX netlists lack the pads' substrate capacitance
+> (no effect on DC). Details: [../slot_pex/results.md](../slot_pex/results.md) §3.
+
 ## Key numbers
 
 | quantity | conditions | result |

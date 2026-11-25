@@ -54,7 +54,7 @@ port named with KLayout's comma list, e.g. `analog_bus2,s7_an_0_vcm,s7_an_1_vref
 `--ignore_top_ports_mismatch` because the blocks' own labels join the net names). magic + netgen: `netlist/slot_7_netgen.spice`
 (X cards, unused harness pins as ports; `netlist/netgen_check.sh`): all blocks match uniquely; the only top-level pin
 error is `vss_1v2_uq0`, the frame's second vss_1v2 strip, unconnected inside the slot. Use `slot_7.cdl` /
-`slot_7_netgen.spice` for LVS (`slot_7.spice` holds only the slot's own levels). Not done: PEX of the whole slot, fill.
+`slot_7_netgen.spice` for LVS (`slot_7.spice` holds only the slot's own levels). Not done: PEX of the whole slot, fill. (Whole-slot PEX was done after the tapeout, 2026-11-25: [`verification/c2_gaps/slot_pex/`](../verification/c2_gaps/slot_pex/results.md).)
 
 Contact: Christoph Maier. Design sources: `tatzelbrumm/sg13cmos5l_cm_ip__single2diff2single`, branch
 `claude/c4-replica-bias`, `macros/slot_7/`.

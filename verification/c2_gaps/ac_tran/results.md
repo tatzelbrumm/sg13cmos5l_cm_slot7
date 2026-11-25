@@ -8,6 +8,11 @@ SPDX-License-Identifier: Apache-2.0
 Every number here is evaluated by the scripts of this folder from the plotted curves (`csv/*_summary.csv`, one row per
 run) with the CACE template definitions; ranges are over the runs named. Units SI-prefixed as stated.
 
+> **Note added 2026-11-25 (whole-slot extraction):** the `vcm` / `vref` of the slot runs here are low by the KLayout-converted `pad_ref_rb`
+> netlist of the tier-1 deck (`vcm` 3.5 … 24 mV, `vref` 1.8 mV); the pad PEX netlists lack 0.44 pF (S2D) and 0.66 pF (D2S) of substrate
+> capacitance. With the whole slot extracted the round-trip bandwidth is 2.5 … 3.9 % lower and the settling 2.5 … 4.6 % longer than below.
+> Details: [../slot_pex/results.md](../slot_pex/results.md) §3.
+
 ## 1. Slot round trip (tier-1 slot deck, default mode, replica bias, pad_s2d at 0.5 V DC)
 
 Five tier-1 PVT points (corner, temperature, iovdd = vdd_3v3). Loads: unloaded = only the deck's 1 GΩ; 1 kΩ to an

@@ -127,7 +127,7 @@ low (as the fallback slot did); with it off the pull-downs are off, and the slot
 | S2D enable kick through the ext switches (tt 27 °C) | `vcm` +118 / −63 mV, `vref` +85 / −62 mV (shorted: +107 / −58, +81 / −54 mV) | `slot_7` README |
 | mon / bus load | with the bus switches closed the S2D → D2S loop is 10–30× slower, stable; the bus taps add a shared chip pad on `outp` / `outn` | `slot_7` README, RUNLOG |
 
-Not verified (as far as the sources say): glue-level Monte Carlo; PEX of the whole slot; the hv-TG on-resistance and its effect on the loop at the corners other than those
+Not verified (as far as the sources say): glue-level Monte Carlo; PEX of the whole slot (done after the tapeout, 2026-11-25: [slot PEX](../../verification/c2_gaps/slot_pex/results.md); the modes at tt 27 °C change by < 0.01 mV); the hv-TG on-resistance and its effect on the loop at the corners other than those
 listed; silicon.
 
 ## 8. Discrepancies to be aware of

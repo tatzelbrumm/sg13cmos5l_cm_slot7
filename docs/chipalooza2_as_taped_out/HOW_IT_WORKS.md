@@ -553,7 +553,7 @@ draw leakage only (S2D ≤ 0.4 nA at −40 / 27 °C, ≤ 25 nA at 125 °C; D2S �
 - How the class-AB loop reconciles the P-side ratio 41 and the N-side ratio 34 at equal quiescent current.
 - Why the D2S linear range at 3.0 V ends at a slightly higher top-gate voltage at vicm 1.26 V than at 1.65 V.
 - The effect of `pad_ref_rb` running on the slot's `vdd_3v3` instead of the pads' iovdd (the README asks for iovdd).
-- A matching specification for `bias_dist_pd`; Monte Carlo of `ls_up_fs`; ESD / latch-up simulation of either pad.
+- A matching specification for `bias_dist_pd`; Monte Carlo of `ls_up_fs`; ESD / latch-up simulation of either pad (simulated after the tapeout with stand-in diode models: [pad ESD / latch-up](../../verification/c2_gaps/pad_esd_latchup/results.md)).
 - The rhigh sheet resistance and its corner values (so the 1/R□ scaling in section 5 is checked only by its ratios).
 - Why the bandgap, and not the Oguey–Aebischer core, became the slot's only reference: answered in section 5 ("Why this
   reference").
