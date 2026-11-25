@@ -98,6 +98,9 @@ supplies are clamped by the pads' diodes.
 | load capacitance, D2S pad | 10 | | 300 | pF |
 | load resistance, D2S pad (to 1.26 V) | 1 | | | kΩ |
 
+At 3.6 V the devices that switch rail to rail see VGS = 3.6 V, above the 3.3 V that the process specification gives
+for 27 °C; 3.6 V is a supply-tolerance corner of the characterization, 3.3 V is the operating point.
+
 ## Electrical characteristics
 
 Typical: tt, 27 °C, 3.3 V, default mode, slot's own references. Min / max: 5 process corners × −40 / 27 / 125 °C ×

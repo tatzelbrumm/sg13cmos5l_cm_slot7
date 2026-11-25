@@ -27,7 +27,7 @@ VG = 'verification/c2_gaps'
 # (part title, [(file, gallery spec or None, include h2 in TOC)])
 # gallery spec: (image glob roots relative to ROOT, caption source files)
 GAP_FOLDERS = ['d2s_pex', 'replica_bias', 'slot_modes_bg', 'dc_curves', 'ac_tran', 'd2s_schematic_rerun',
-               's2d_mismatch', 'klayout_pad_diodes', 'pad_esd_latchup', 'slot_pex']
+               's2d_mismatch', 'klayout_pad_diodes', 'pad_esd_latchup', 'slot_pex', 'voltage_stress']
 BOOK = [
     ('Part I — Description', [
         (f'{DOCS}/README.md#body', None, True),
