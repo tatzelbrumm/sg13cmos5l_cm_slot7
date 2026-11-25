@@ -7,7 +7,7 @@
 #
 #   usage: run_signoff.sh [OUT_DIR] [STEP ...]
 #     OUT_DIR  run directory (default: ./signoff_run); everything is written there, nothing in the repository
-#     STEP     any of: env drc maxlu density lvs magicdrc netgen summary  (default: all, in this order)
+#     STEP     any of: env drc maxlu density antenna lvs magicdrc netgen summary  (default: all, in this order)
 #   environment: PDK_ROOT (default /foss/pdks), PDK (default ihp-sg13cmos5l), THR (KLayout threads, default 2),
 #                SAK (directory of sak-drc.sh / sak-lvs.sh, default /foss/tools/sak)
 #
@@ -21,7 +21,7 @@ HERE=$(cd "$(dirname "$0")" && pwd)
 REPO=$(cd "$HERE/../.." && pwd)
 OUT=$(realpath -m "${1:-$PWD/signoff_run}")
 [ $# -gt 0 ] && shift
-STEPS=${*:-env drc maxlu density lvs magicdrc netgen summary}
+STEPS=${*:-env drc maxlu density antenna lvs magicdrc netgen summary}
 
 export PDK_ROOT=${PDK_ROOT:-/foss/pdks}
 export PDK=${PDK:-ihp-sg13cmos5l}
@@ -132,6 +132,14 @@ step_maxlu() {
 	done
 }
 
+# 1d. antenna rules only (added 2026-11-25)
+step_antenna() {
+	for c in $CELLS; do
+		run "$c" antenna python3 "$KLT/drc/run_drc.py" --path="${GDS[$c]}" --topcell="${TOP[$c]}" \
+			--run_dir="$OUT/$c/klayout_antenna" --antenna_only --mp=1 --density_thr="$THR"
+	done
+}
+
 # 1c. density only (the slot and the pads are not filled; fill is done at chip level)
 step_density() {
 	for c in $CELLS; do
@@ -188,7 +196,7 @@ step_summary() {
 
 for s in $STEPS; do
 	case $s in
-		env|drc|maxlu|density|lvs|magicdrc|netgen|summary) "step_$s" ;;
+		env|drc|maxlu|density|antenna|lvs|magicdrc|netgen|summary) "step_$s" ;;
 		*) echo "unknown step $s"; exit 2 ;;
 	esac
 done

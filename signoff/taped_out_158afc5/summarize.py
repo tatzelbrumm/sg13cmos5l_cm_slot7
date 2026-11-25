@@ -278,7 +278,7 @@ table = []
 for cell in CELLS:
     if not os.path.isdir(os.path.join(OUT, cell)):
         continue
-    for step, sub in (("drc", "klayout_drc"), ("maxlu", "klayout_maximal_lu"), ("density", "klayout_density")):
+    for step, sub in (("drc", "klayout_drc"), ("maxlu", "klayout_maximal_lu"), ("density", "klayout_density"), ("antenna", "klayout_antenna")):
         if os.path.isdir(os.path.join(OUT, cell, sub)):
             out, total, exc, ndb = drc_summary(cell, step, sub)
             write("%s.%s.txt" % (cell, step), out)

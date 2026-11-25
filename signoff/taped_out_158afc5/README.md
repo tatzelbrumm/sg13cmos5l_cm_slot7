@@ -29,6 +29,7 @@ S2D = `sg13cmos5l_IOPadSingle2Diff`, D2S = `sg13cmos5l_IOPadDiff2Single`. "Expec
 | slot_7 DRC, designer's flags (`run_drc.py --no_density`: main deck + maximal deck) | KLayout 0.30.12, PDK deck | **0 violations** in 546 rule categories; 0 "exception" / "Traceback" / "ERROR" log lines | no violations, 0 exception lines | `slot_7.drc.txt`, `slot_7.drc.slot_7_slot_7_full.lyrdb` |
 | slot_7 maximal deck, `-rd latchUpRules=true` | KLayout, `sg13cmos5l_maximal.drc` | **0** in 271 categories (incl. LU.a/c/c1/d/d1 and 56 OffGrid rules); 0 exception lines | 0 | `slot_7.maxlu.txt`, `slot_7.maxlu.slot_7_maximal_lu.lyrdb` |
 | slot_7 density (`run_drc.py --density_only`) | KLayout, `density.drc` | **7 violations, 1 each**: AFil.g (Activ 4.01 % < 35), GFil.g (GatPoly 3.64 % < 15), M1.j (2.01 %), M2.j (0.94 %), M3.j (2.47 %), M4.j (0.98 %) < 35, TM1.c (TopMetal1 7.04 % < 25); no max-density rule violated | the same 7 min-density rules (unfilled slot, filled at chip level) | `slot_7.density.txt`, `slot_7.density.slot_7_slot_7_density.lyrdb` |
+| slot_7 antenna (`run_drc.py --antenna_only`, step `antenna`, added 2026-11-25) | KLayout, `antenna.drc` | **0 violations** in 23 categories (Ant.a … Ant.i, cumulative ratios per metal and via); 0 exception lines | 0 | `slot_7.antenna.txt`, `slot_7.antenna.slot_7_slot_7_antenna.lyrdb` |
 | slot_7 LVS vs `netlist/slot_7.cdl`, `--run_mode=deep --disable_tap_extraction` | KLayout, `run_lvs.py` | **"Congratulations! Netlists match."**, strict port mode; runner: layout = **497** devices; cross-reference: 6 circuits Match, 376 device pairs (after simplification), 0 not matching, 35 top pin pairs, 0 not matching | match, strict ports, 0 port errors, 497 devices | `slot_7.lvs.txt`, `slot_7.lvs.slot_7.lvsdb` |
 | slot_7 magic + netgen (`netlist/netgen_check.sh`, unchanged) | magic 8.3.685, netgen 1.5.324 | **5 subcircuits "Netlists match uniquely"** (bg_core_pd 29 devices, pad_ref_rb 33, s7_ctrl 222, s7_doutpd 12, bias_dist_pd 75); top `slot_7`: "match uniquely with port errors", one pin without partner: **`vss_1v2_uq0`**; 4 pin rows flagged `**Mismatch**` are the comma-named merged ports (same net, other name); "Final result: Top level cell failed pin matching." | 5 match; top: one port error `vss_1v2_uq0` | `slot_7.netgen.txt`, `slot_7.netgen.comp_slot_7.out` |
 | slot_7 magic DRC, `drc(full)` (`sak-drc.sh -m`) | magic 8.3.685 | **COUNT 48**, all "Metal1 overlap of Via1 < 0.005um (V1.c - M2.c)", at 8 places (6 markers each) in `bg_core_pd/bg_pmir_pcas_c` (x ≈ 333.55 and 376.38 µm, y 186.9–200.0 µm) | not recorded for the slot; `bg_core_pd` committed report: COUNT 0 | `slot_7.magicdrc.txt`, `slot_7.magicdrc.slot_7.magic.drc.rpt` |
@@ -36,6 +37,7 @@ S2D = `sg13cmos5l_IOPadSingle2Diff`, D2S = `sg13cmos5l_IOPadDiff2Single`. "Expec
 | S2D / D2S DRC, `run_drc.py --no_density` | KLayout | **0 / 0** violations (546 categories each), 0 exception lines | 0 (committed `.lyrdb`, T) | `S2D.drc.txt`, `D2S.drc.txt` |
 | S2D / D2S maximal + latch-up | KLayout | **0 / 0** (271 categories each) | not recorded | `S2D.maxlu.txt`, `D2S.maxlu.txt` |
 | S2D / D2S density | KLayout | **4 each**: M1.j, M2.j (min 35 %: S2D 17.37 / 15.41 %, D2S 24.31 / 18.74 %), M3.k, M4.k (max 60 %: 81.3 / 81.2 %) | not recorded | `S2D.density.txt`, `D2S.density.txt` |
+| S2D / D2S antenna (`run_drc.py --antenna_only`, added 2026-11-25) | KLayout | **0 / 0** in 23 categories each | 0 | `S2D.antenna.txt`, `D2S.antenna.txt` and their `.lyrdb` |
 | S2D / D2S KLayout LVS (deep, no tap extraction) against a CDL derived from `pads/*/*.spice` | KLayout | **match / match**, strict port mode; 76 / 77 device pairs, all Match; 10 / 9 pin pairs, all Match | Match, 76 / 77 device pairs (committed `.lvsdb`, T) | `S2D.lvs.txt`, `D2S.lvs.txt`, `*.netlist.*.cdl` |
 | S2D / D2S KLayout LVS against `pads/*/*.spice` **as given** | KLayout | **no match**: schematic side has 0 devices (the X-card primitives are not read as devices) | — (diagnostic) | `S2D.lvs_spice_as_given.txt`, `D2S.lvs_spice_as_given.txt` |
 | S2D / D2S magic + netgen (`sak-lvs.sh -m`) | magic, netgen | 76 devices / 37 nets and 76 / 36 on both sides, "Netlists match with 7 symmetries with property errors", "Final result: Top level cell failed pin matching", only `vss` without partner (the `vss`–`iovss` substrate merge). The `.lvs.out` files are **byte-identical** to the committed ones | only the documented vss / iovss merge | `S2D.netgen.txt`, `D2S.netgen.txt` |
@@ -108,7 +110,8 @@ scans all logs for "exception", "Traceback" and "ERROR", so a bare "Passed" of t
 6. **Pad density** was not recorded before: M1/M2 below the minimum and M3/M4 above the 60 % maximum (81 %) as stand-alone
    cells; density is evaluated at chip level.
 
-Not done here: antenna rules (`run_drc.py --antenna`), chip-level DRC / LVS with the harness, PEX.
+Not done here: chip-level DRC / LVS with the harness (antenna effects of the chip-level routing included), PEX. The antenna
+rules above are checked per cell (slot and pads), added on 2026-11-25 as step `antenna` of `run_signoff.sh`.
 
 ## Files
 

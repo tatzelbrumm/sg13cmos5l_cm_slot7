@@ -299,3 +299,7 @@ command: sh /foss/tools/sak/sak-drc.sh -m -w /tmp/claude-0/-home-user/468ace82-a
 exit code: 1, wall time: 0s
 report bg_core_pd/magic_drc/bg_core_pd.magic.drc/bg_core_pd.magic.drc.rpt: COUNT 48
        48  Metal1 overlap of Via1 < 0.005um (V1.c - M2.c)
+# antenna step added 2026-11-25 (run_signoff.sh antenna; same tool versions)
+slot_7	antenna	1 report(s)	0 violations	0 exception/Traceback log lines
+S2D	antenna	1 report(s)	0 violations	0 exception/Traceback log lines
+D2S	antenna	1 report(s)	0 violations	0 exception/Traceback log lines
