@@ -88,6 +88,8 @@ SUMMARY_SRC = f'{DOCS}/README.md#summary'
 SPLIT_HEADING = '1. Which version was taped out'   # README: everything before this heading is the summary
 
 problems = []
+problems_info = []   # not errors; listed in the report
+BRANCH = 'chipalooza2-documentation'
 
 
 def problem(msg):
@@ -147,7 +149,15 @@ class Book:
     def gh(self, path, frag=''):
         p = os.path.join(ROOT, path)
         kind = 'tree' if os.path.isdir(p) else 'blob'
-        return f'{REPO_URL}/{kind}/{self.sha}/{urllib.parse.quote(path.rstrip("/"))}' + (f'#{frag}' if frag else '')
+        ref = self.sha
+        if subprocess.run(['git', 'cat-file', '-e', f'{self.sha}:{path.rstrip("/")}'], cwd=ROOT,
+                          capture_output=True).returncode:
+            # not in the source commit (e.g. the PDFs themselves, committed after it): link to the branch
+            ref = BRANCH
+            note = f'link to {path}: not in {self.sha[:7]}, linked to branch {BRANCH}'
+            if note not in problems_info:
+                problems_info.append(note)
+        return f'{REPO_URL}/{kind}/{ref}/{urllib.parse.quote(path.rstrip("/"))}' + (f'#{frag}' if frag else '')
 
     def resolve_link(self, src, url):
         if re.match(r'^[a-z][a-z0-9+.-]*:', url, re.I):
@@ -384,7 +394,8 @@ def build_book(sha, check_only):
         problem(f'{s}: internal anchor not found in the book: #{i}')
     report = os.path.join(HERE, 'build_report.txt')
     with open(report, 'w') as fh:
-        fh.write(f'# build_book.py report, source commit {sha}\n' + ''.join(p + '\n' for p in problems))
+        fh.write(f'# build_book.py report, source commit {sha}\n' + ''.join(p + '\n' for p in problems)
+                 + ''.join(f'note: {p}\n' for p in problems_info))
     print(f'{len(problems)} problem(s); see {os.path.relpath(report, ROOT)}')
     for p in problems:
         print('  ' + p)
