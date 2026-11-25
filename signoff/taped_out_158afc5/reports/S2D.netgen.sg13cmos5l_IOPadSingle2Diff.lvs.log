@@ -1,0 +1,163 @@
+Netgen 1.5.324 compiled on Fri Oct 30 17:15:29 UTC 2026
+Warning: netgen command 'format' use fully-qualified name '::netgen::format'
+Warning: netgen command 'global' use fully-qualified name '::netgen::global'
+Reading netlist file /tmp/claude-0/-home-user/468ace82-a4b3-592d-8838-6ea52a1be021/scratchpad/signoff/final/S2D/magic_lvs/sg13cmos5l_IOPadSingle2Diff.magic.lvs/sg13cmos5l_IOPadSingle2Diff.ext.spc for /tmp/claude-0/-home-user/468ace82-a4b3-592d-8838-6ea52a1be021/scratchpad/signoff/final/S2D/magic_lvs/sg13cmos5l_IOPadSingle2Diff.magic.lvs/sg13cmos5l_IOPadSingle2Diff.ext.spc sg13cmos5l_IOPadSingle2Diff
+Call to undefined subcircuit sg13_hv_pmos
+Creating placeholder cell definition.
+Call to undefined subcircuit rhigh
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13_hv_nmos
+Creating placeholder cell definition.
+Call to undefined subcircuit rppd
+Creating placeholder cell definition.
+Call to undefined subcircuit dpantenna
+Creating placeholder cell definition.
+Call to undefined subcircuit dantenna
+Creating placeholder cell definition.
+Reading netlist file /home/user/sg13cmos5l_cm_slot7/pads/sg13cmos5l_IOPadSingle2Diff/sg13cmos5l_IOPadSingle2Diff.spice for /home/user/sg13cmos5l_cm_slot7/pads/sg13cmos5l_IOPadSingle2Diff/sg13cmos5l_IOPadSingle2Diff.spice sg13cmos5l_IOPadSingle2Diff
+Call to undefined subcircuit bias_tree_noab_pd
+Creating placeholder cell definition.
+Call to undefined subcircuit s2d_mpdda_pd
+Creating placeholder cell definition.
+Call to undefined subcircuit s2d_pad_esd
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13_hv_nmos
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13_hv_pmos
+Creating placeholder cell definition.
+Call to undefined subcircuit s2d_mpdda
+Creating placeholder cell definition.
+Call to undefined subcircuit rhigh
+Creating placeholder cell definition.
+Call to undefined subcircuit dpantenna
+Creating placeholder cell definition.
+Call to undefined subcircuit dantenna
+Creating placeholder cell definition.
+Call to undefined subcircuit rppd
+Creating placeholder cell definition.
+Call to undefined subcircuit unit_r2
+Creating placeholder cell definition.
+
+Reading setup file /foss/pdks/ihp-sg13cmos5l/libs.tech/netgen/ihp-sg13cmos5l_setup.tcl
+
+Model rppd pin 1 == 2
+No property b found for device rppd
+Model rppd pin 1 == 2
+Model rhigh pin 1 == 2
+No property b found for device rhigh
+Model rhigh pin 1 == 2
+Model sg13_hv_nmos pin 1 == 3
+No property ng found for device sg13_hv_nmos
+No property trise found for device sg13_hv_nmos
+No property z1 found for device sg13_hv_nmos
+No property z2 found for device sg13_hv_nmos
+No property wmin found for device sg13_hv_nmos
+No property rfmode found for device sg13_hv_nmos
+No property pre_layout found for device sg13_hv_nmos
+Model sg13_hv_nmos pin 1 == 3
+No property as found for device sg13_hv_nmos
+No property ad found for device sg13_hv_nmos
+No property pd found for device sg13_hv_nmos
+No property ps found for device sg13_hv_nmos
+No property trise found for device sg13_hv_nmos
+No property z1 found for device sg13_hv_nmos
+No property z2 found for device sg13_hv_nmos
+No property wmin found for device sg13_hv_nmos
+No property rfmode found for device sg13_hv_nmos
+No property pre_layout found for device sg13_hv_nmos
+Model sg13_hv_pmos pin 1 == 3
+No property ng found for device sg13_hv_pmos
+No property trise found for device sg13_hv_pmos
+No property z1 found for device sg13_hv_pmos
+No property z2 found for device sg13_hv_pmos
+No property wmin found for device sg13_hv_pmos
+No property rfmode found for device sg13_hv_pmos
+No property pre_layout found for device sg13_hv_pmos
+Model sg13_hv_pmos pin 1 == 3
+No property as found for device sg13_hv_pmos
+No property ad found for device sg13_hv_pmos
+No property pd found for device sg13_hv_pmos
+No property ps found for device sg13_hv_pmos
+No property trise found for device sg13_hv_pmos
+No property z1 found for device sg13_hv_pmos
+No property z2 found for device sg13_hv_pmos
+No property wmin found for device sg13_hv_pmos
+No property rfmode found for device sg13_hv_pmos
+No property pre_layout found for device sg13_hv_pmos
+No property DEV_A found for device dantenna
+No property DEV_P found for device dantenna
+No property DEV_C found for device dantenna
+No property DEV_A found for device dantenna
+No property DEV_P found for device dantenna
+No property DEV_C found for device dantenna
+No property DEV_A found for device dpantenna
+No property DEV_P found for device dpantenna
+No property DEV_C found for device dpantenna
+No property DEV_A found for device dpantenna
+No property DEV_P found for device dpantenna
+No property DEV_C found for device dpantenna
+Comparison output logged to file /tmp/claude-0/-home-user/468ace82-a4b3-592d-8838-6ea52a1be021/scratchpad/signoff/final/S2D/magic_lvs/sg13cmos5l_IOPadSingle2Diff.magic.lvs/sg13cmos5l_IOPadSingle2Diff.lvs.out
+Logging to file "/tmp/claude-0/-home-user/468ace82-a4b3-592d-8838-6ea52a1be021/scratchpad/signoff/final/S2D/magic_lvs/sg13cmos5l_IOPadSingle2Diff.magic.lvs/sg13cmos5l_IOPadSingle2Diff.lvs.out" enabled
+Circuit sg13_hv_pmos contains no devices.
+Circuit rhigh contains no devices.
+Circuit sg13_hv_nmos contains no devices.
+Circuit dpantenna contains no devices.
+Circuit dantenna contains no devices.
+Circuit rppd contains no devices.
+
+Contents of circuit 1:  Circuit: 'sg13cmos5l_IOPadSingle2Diff'
+Circuit sg13cmos5l_IOPadSingle2Diff contains 225 device instances.
+  Class: sg13_hv_nmos          instances:  73
+  Class: rppd                  instances:   2
+  Class: rhigh                 instances:  26
+  Class: dantenna              instances:   2
+  Class: dpantenna             instances:   2
+  Class: sg13_hv_pmos          instances: 120
+Circuit contains 55 nets, and 1 disconnected pin.
+Contents of circuit 2:  Circuit: 'sg13cmos5l_IOPadSingle2Diff'
+Circuit sg13cmos5l_IOPadSingle2Diff contains 119 device instances.
+  Class: sg13_hv_nmos          instances:  34
+  Class: rppd                  instances:   2
+  Class: rhigh                 instances:  26
+  Class: dantenna              instances:   2
+  Class: dpantenna             instances:   2
+  Class: sg13_hv_pmos          instances:  53
+Circuit contains 55 nets, and 2 disconnected pins.
+
+Circuit was modified by parallel/series device merging.
+New circuit summary:
+
+Contents of circuit 1:  Circuit: 'sg13cmos5l_IOPadSingle2Diff'
+Circuit sg13cmos5l_IOPadSingle2Diff contains 76 device instances.
+  Class: sg13_hv_nmos          instances:  23
+  Class: rppd                  instances:   2
+  Class: rhigh                 instances:   7
+  Class: dantenna              instances:   1
+  Class: dpantenna             instances:   1
+  Class: sg13_hv_pmos          instances:  42
+Circuit contains 37 nets, and 1 disconnected pin.
+Contents of circuit 2:  Circuit: 'sg13cmos5l_IOPadSingle2Diff'
+Circuit sg13cmos5l_IOPadSingle2Diff contains 76 device instances.
+  Class: sg13_hv_nmos          instances:  23
+  Class: rppd                  instances:   2
+  Class: rhigh                 instances:   7
+  Class: dantenna              instances:   1
+  Class: dpantenna             instances:   1
+  Class: sg13_hv_pmos          instances:  42
+Circuit contains 37 nets, and 2 disconnected pins.
+
+Circuit 1 contains 76 devices, Circuit 2 contains 76 devices.
+Circuit 1 contains 37 nets,    Circuit 2 contains 37 nets.
+
+No more changes can be made to series/parallel networks.
+No more changes can be made to series/parallel networks.
+
+Final result: 
+Top level cell failed pin matching.
+
+
+The following cells had property errors:
+ sg13cmos5l_IOPadSingle2Diff
+
+Logging to file "/tmp/claude-0/-home-user/468ace82-a4b3-592d-8838-6ea52a1be021/scratchpad/signoff/final/S2D/magic_lvs/sg13cmos5l_IOPadSingle2Diff.magic.lvs/sg13cmos5l_IOPadSingle2Diff.lvs.out" disabled
+LVS Done.

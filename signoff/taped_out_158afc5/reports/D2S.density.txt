@@ -1,0 +1,30 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# written by summarize.py from the run directory of run_signoff.sh
+command: python3 /foss/pdks/ihp-sg13cmos5l/libs.tech/klayout/tech/drc/run_drc.py --path=/home/user/sg13cmos5l_cm_slot7/pads/sg13cmos5l_IOPadDiff2Single/sg13cmos5l_IOPadDiff2Single.gds --topcell=sg13cmos5l_IOPadDiff2Single --run_dir=/tmp/claude-0/-home-user/468ace82-a4b3-592d-8838-6ea52a1be021/scratchpad/signoff/final/D2S/klayout_density --density_only --density_thr=2
+exit code: 1, wall time: 2s
+report D2S/klayout_density/sg13cmos5l_IOPadDiff2Single_sg13cmos5l_IOPadDiff2Single_density.lyrdb: 9 rule categories, 4 items (violations)
+    M1.j                1   5.16. M1.j: Min. global Metal1 density [%]: 35.00.
+    M2.j                1   5.17. M2.j: Min. global Metal2 density [%]: 35.00.
+    M3.k                1   5.17. M3.k: Max. global Metal3 density [%]: 60.00.
+    M4.k                1   5.17. M4.k: Max. global Metal4 density [%]: 60.00.
+logs scanned: D2S/klayout_density/drc_run_2026_11_25_03_55_53.log, D2S/klayout_density/sg13cmos5l_IOPadDiff2Single_sg13cmos5l_IOPadDiff2Single_density.log, logs/D2S.density.log
+log lines: 'exception' 0, 'Traceback' 0, 'ERROR' 8
+    drc_run_2026_11_25_03_55_53.log: 25-Nov-2026 03:55:54 | ERROR   | ==================================================================================
+    drc_run_2026_11_25_03_55_53.log: 25-Nov-2026 03:55:54 | ERROR   | KLayout DRC Check Failed: Violations were detected in the layout.
+    drc_run_2026_11_25_03_55_53.log: 25-Nov-2026 03:55:54 | ERROR   | ==================================================================================
+    drc_run_2026_11_25_03_55_53.log: 25-Nov-2026 03:55:54 | ERROR   | Violated rules are : {'M2.j', 'M3.k', 'M4.k', 'M1.j'}
+    D2S.density.log: 25-Nov-2026 03:55:54 | ERROR   | ==================================================================================
+    D2S.density.log: 25-Nov-2026 03:55:54 | ERROR   | KLayout DRC Check Failed: Violations were detected in the layout.
+    D2S.density.log: 25-Nov-2026 03:55:54 | ERROR   | ==================================================================================
+    D2S.density.log: 25-Nov-2026 03:55:54 | ERROR   | Violated rules are : {'M2.j', 'M3.k', 'M4.k', 'M1.j'}
+density: Activ      Density % = 43.46%  [Min = 35.00%,  Max = 55.00%]
+density: GatPoly    Density % = 24.04%  [Min = 15.00%]
+density: Metal1     Density % = 24.31%  [Min = 35.00%,  Max = 60.00%]
+density: Metal2     Density % = 18.74%  [Min = 35.00%,  Max = 60.00%]
+density: Metal3     Density % = 81.31%  [Min = 35.00%,  Max = 60.00%]
+density: Metal4     Density % = 81.19%  [Min = 35.00%,  Max = 60.00%]
+density: TopMetal1  Density % = 61.61%  [Min = 25.00%,  Max = 70.00%]
+density: LBE        Density % =  0.00%  [Max = 20.00%]
+runner says: 25-Nov-2026 03:55:54 | ERROR   | KLayout DRC Check Failed: Violations were detected in the layout.
+runner says: 25-Nov-2026 03:55:54 | ERROR   | Violated rules are : {'M2.j', 'M3.k', 'M4.k', 'M1.j'}

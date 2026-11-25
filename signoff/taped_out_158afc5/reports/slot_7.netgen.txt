@@ -1,0 +1,30 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# written by summarize.py from the run directory of run_signoff.sh
+command: bash /tmp/claude-0/-home-user/468ace82-a4b3-592d-8838-6ea52a1be021/scratchpad/signoff/final/slot_7/netgen/netgen_check.sh
+exit code: 0, wall time: 1s
+report slot_7/netgen/comp_slot_7.out
+      5 x  Netlists match uniquely.
+      1 x  Netlists match uniquely with port errors.
+      1 x  Final result: Top level cell failed pin matching.
+    Final result: Top level cell failed pin matching.
+pin-table rows: 4 flagged '**Mismatch**' (same net, different pin names), 1 '(no matching pin)'
+    s7_an_0_vcm                                |analog_bus2,s7_an_0_vcm,s7_an_1_vref **Mis
+    analog_bus3                                |analog_bus3,s7_an_0_vref **Mismatch**
+    s7_an_1_en_3v3                             |s7_an_0_en_3v3,s7_an_1_en_3v3 **Mismatch**
+    s7_an_1_en_3v3_b                           |s7_an_0_en_3v3_b,s7_an_1_en_3v3_b **Mismat
+    vss_1v2_uq0                                |(no matching pin)
+    Number of devices: 29                      |Number of devices: 29
+    Number of nets: 21                         |Number of nets: 21
+    Number of devices: 33                      |Number of devices: 33
+    Number of nets: 16                         |Number of nets: 16
+    Number of devices: 222                     |Number of devices: 222
+    Number of nets: 148                        |Number of nets: 148
+    Number of devices: 12                      |Number of devices: 12
+    Number of nets: 15                         |Number of nets: 15
+    Number of devices: 75                      |Number of devices: 75
+    Number of nets: 50                         |Number of nets: 50
+    Number of devices: 5                       |Number of devices: 5
+    Number of nets: 40                         |Number of nets: 40
+log slot_7/netgen/magic.log: 0 lines with error / unknown layer / context
+log slot_7/netgen/netgen.log: 0 lines with error / unknown layer / context

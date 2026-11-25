@@ -1,0 +1,9 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# written by summarize.py from the run directory of run_signoff.sh
+command: python3 /foss/pdks/ihp-sg13cmos5l/libs.tech/klayout/tech/drc/run_drc.py --path=/home/user/sg13cmos5l_cm_slot7/pads/sg13cmos5l_IOPadSingle2Diff/sg13cmos5l_IOPadSingle2Diff.gds --topcell=sg13cmos5l_IOPadSingle2Diff --run_dir=/tmp/claude-0/-home-user/468ace82-a4b3-592d-8838-6ea52a1be021/scratchpad/signoff/final/S2D/klayout_drc --no_density --mp=1 --density_thr=2
+exit code: 0, wall time: 19s
+report S2D/klayout_drc/sg13cmos5l_IOPadSingle2Diff_sg13cmos5l_IOPadSingle2Diff_full.lyrdb: 546 rule categories, 0 items (violations)
+logs scanned: S2D/klayout_drc/drc_run_2026_11_25_03_54_11.log, S2D/klayout_drc/sg13cmos5l_IOPadSingle2Diff_sg13cmos5l_IOPadSingle2Diff_main.log, S2D/klayout_drc/sg13cmos5l_IOPadSingle2Diff_sg13cmos5l_IOPadSingle2Diff_sg13cmos5l_maximal.log, logs/S2D.drc.log
+log lines: 'exception' 0, 'Traceback' 0, 'ERROR' 0
+runner says: 25-Nov-2026 03:54:30 | INFO    | KLayout DRC Check Passed: No DRC violations detected in the layout.

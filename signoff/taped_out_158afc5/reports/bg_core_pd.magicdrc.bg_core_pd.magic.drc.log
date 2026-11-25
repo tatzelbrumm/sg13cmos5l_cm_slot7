@@ -1,0 +1,43 @@
+
+Magic 8.3 revision 685 - Compiled on Fri Oct 30 17:15:33 UTC 2026.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+WARNING: RLIMIT_NOFILE is above 1024 and Tcl_Version<9 this may cause runtime issues [rlim_cur=20000]
+Using NULL graphics device.
+Processing system .magicrc file
+Switching to WIRING tool.
+Switching to NETLIST tool.
+Switching to PICK tool.
+Switching to BOX tool.
+Sourcing design .magicrc for technology ihp-sg13cmos5l ...
+2 Magic internal units = 1 Lambda
+Input style sg13cmos5l(): scaleFactor=2, multiplier=2
+The following types are not handled by extraction and will be treated as non-electrical types:
+    pblock pbase sealcont difffill sealvia1 sealvia2 sealvia3 sealvia4 seal glass thruvia inductor 
+Scaled tech values by 2 / 1 to match internal grid scaling
+Loading ihp-sg13cmos5l Device Generator Menu ...
+Loading "/tmp/claude-0/-home-user/468ace82-a4b3-592d-8838-6ea52a1be021/scratchpad/signoff/final/bg_core_pd/magic_drc/bg_core_pd.magic.drc/drc_bg_core_pd.tcl" from command line.
+Warning: Calma reading is not undoable!  I hope that's OK.
+Library written using GDS-II Release 6.0
+Library name: LIB
+Reading "pnpMPA".
+Reading "rhigh$1".
+Reading "nmosHV$10".
+Reading "nmosHV$11".
+Reading "nmosHV$7".
+Reading "nmosHV_w2_l1".
+Reading "nmosHV$9".
+Reading "nmosHV$5".
+Reading "pmosHV$14".
+Reading "pmosHV_w0p3_l1".
+Reading "pmosHV$13".
+Reading "pmosHV$7".
+Reading "bg_pnp_c".
+Reading "bg_res_c".
+Reading "bg_n4".
+Reading "bg_pmir_pcas_c".
+Reading "bg_ms1".
+Reading "bg_svpg".
+Reading "bg_core_pd".
+DRC style is now "drc(full)"
+Loading DRC CIF style.

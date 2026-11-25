@@ -1,0 +1,88 @@
+
+Magic 8.3 revision 685 - Compiled on Fri Oct 30 17:15:33 UTC 2026.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+WARNING: RLIMIT_NOFILE is above 1024 and Tcl_Version<9 this may cause runtime issues [rlim_cur=20000]
+Using NULL graphics device.
+Processing system .magicrc file
+Switching to WIRING tool.
+Switching to NETLIST tool.
+Switching to PICK tool.
+Switching to BOX tool.
+Sourcing design .magicrc for technology ihp-sg13cmos5l ...
+2 Magic internal units = 1 Lambda
+Input style sg13cmos5l(): scaleFactor=2, multiplier=2
+The following types are not handled by extraction and will be treated as non-electrical types:
+    pblock pbase sealcont difffill sealvia1 sealvia2 sealvia3 sealvia4 seal glass thruvia inductor 
+Scaled tech values by 2 / 1 to match internal grid scaling
+Loading ihp-sg13cmos5l Device Generator Menu ...
+Loading "/tmp/claude-0/-home-user/468ace82-a4b3-592d-8838-6ea52a1be021/scratchpad/signoff/final/D2S/magic_drc/sg13cmos5l_IOPadDiff2Single.magic.drc/drc_sg13cmos5l_IOPadDiff2Single.tcl" from command line.
+Warning: Calma reading is not undoable!  I hope that's OK.
+Library written using GDS-II Release 6.0
+Library name: LIB
+Reading "$$$CONTEXT_INFO$$$".
+Error while reading cell "$$$CONTEXT_INFO$$$" (byte position 128): Unknown layer/datatype in boundary, layer=0 type=0
+Reading "pmosHV_w20_l1_ng2".
+Reading "rppd".
+CIF file read warning: CIF style sg13cmos5l(): units rescaled by factor of 5 / 1
+Reading "dantenna".
+Reading "dpantenna".
+Reading "nmosHV".
+Reading "nmosHV$1".
+Reading "nmosHV$2".
+Reading "nmosHV$3".
+Reading "pmosHV".
+Reading "rhigh".
+Reading "nmosHV$4".
+Reading "nmosHV$5".
+Reading "nmosHV$6".
+Reading "nmosHV$7".
+Reading "pmosHV_w2_l6".
+Reading "pmosHV_w1_l0p45".
+Reading "pmosHV_w6p66_l0p6".
+Reading "pmosHV_w15_l3".
+Reading "pmosHV_w1_l4".
+Reading "pmosHV_w6_l4".
+Reading "pmosHV_w5_l6".
+Reading "tub_p20x1_c2".
+Reading "pwr_f2".
+Reading "d2s_sp2k_f2".
+Reading "d2s_ab_n_f2".
+Reading "bias_tree_n_f2".
+Reading "d2s_tgsw_f2".
+Reading "d2s_rhigh_f2".
+Reading "d2s_casc_n_f2".
+Reading "sinks_6x6_f2".
+Reading "d2s_ab_p_f2".
+Reading "bias_tree_p_f2".
+Reading "d2s_casc_p_c2".
+Reading "d2s_loads_c2".
+Reading "d2s_tails_c2".
+Reading "d2s_inputs_c2".
+Reading "pad_wiring_f2".
+Reading "d2s_block".
+Reading "gate_feeds".
+Reading "replica_lines".
+Reading "m2_junction".
+Reading "m2_comb_p".
+Reading "m2_comb_n".
+Reading "d2s_cmb".
+Reading "d2s_cma".
+Reading "contacts".
+Reading "Metal3ViasUp".
+Reading "TopLayersTo4".
+Reading "Clamp_P_M1".
+Reading "Clamp_P_M1_wiring".
+Reading "Clamp_N_M1".
+Reading "Clamp_N_M1_wiring".
+Reading "Clamp_N_M1_wiring$1".
+Reading "DCNDiode".
+Reading "DCPDiode".
+Reading "cm_rings".
+Reading "guard_tie".
+Reading "nw_isolator".
+Reading "edge_stubs".
+Reading "sg13cmos5l_IOPadDiff2Single".
+DRC style is now "drc(full)"
+Loading DRC CIF style.
+No errors found.

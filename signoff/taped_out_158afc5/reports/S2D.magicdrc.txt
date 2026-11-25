@@ -1,0 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# written by summarize.py from the run directory of run_signoff.sh
+command: sh /foss/tools/sak/sak-drc.sh -m -w /tmp/claude-0/-home-user/468ace82-a4b3-592d-8838-6ea52a1be021/scratchpad/signoff/final/S2D/magic_drc /home/user/sg13cmos5l_cm_slot7/pads/sg13cmos5l_IOPadSingle2Diff/sg13cmos5l_IOPadSingle2Diff.gds
+exit code: 0, wall time: 1s
+report S2D/magic_drc/sg13cmos5l_IOPadSingle2Diff.magic.drc/sg13cmos5l_IOPadSingle2Diff.magic.drc.rpt: COUNT 0

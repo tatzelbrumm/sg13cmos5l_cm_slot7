@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# written by summarize.py from the run directory of run_signoff.sh
+command: klayout -b -r /foss/pdks/ihp-sg13cmos5l/libs.tech/klayout/tech/drc/rule_decks/sg13cmos5l_maximal.drc -rd input=/home/user/sg13cmos5l_cm_slot7/final/gds/slot_7.gds -rd topcell=slot_7 -rd run_mode=deep -rd thr=2 -rd threads=2 -rd latchUpRules=true -rd report=/tmp/claude-0/-home-user/468ace82-a4b3-592d-8838-6ea52a1be021/scratchpad/signoff/final/slot_7/klayout_maximal_lu/slot_7_maximal_lu.lyrdb -rd log=/tmp/claude-0/-home-user/468ace82-a4b3-592d-8838-6ea52a1be021/scratchpad/signoff/final/slot_7/klayout_maximal_lu/slot_7_maximal_lu.log
+exit code: 0, wall time: 21s
+report slot_7/klayout_maximal_lu/slot_7_maximal_lu.lyrdb: 271 rule categories, 0 items (violations)
+logs scanned: slot_7/klayout_maximal_lu/slot_7_maximal_lu.log, logs/slot_7.maxlu.log
+log lines: 'exception' 0, 'Traceback' 0, 'ERROR' 0

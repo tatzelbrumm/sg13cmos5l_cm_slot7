@@ -1,0 +1,33 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# written by summarize.py from the run directory of run_signoff.sh
+command: python3 /foss/pdks/ihp-sg13cmos5l/libs.tech/klayout/tech/drc/run_drc.py --path=/home/user/sg13cmos5l_cm_slot7/final/gds/slot_7.gds --topcell=slot_7 --run_dir=/tmp/claude-0/-home-user/468ace82-a4b3-592d-8838-6ea52a1be021/scratchpad/signoff/final/slot_7/klayout_density --density_only --density_thr=2
+exit code: 1, wall time: 4s
+report slot_7/klayout_density/slot_7_slot_7_density.lyrdb: 12 rule categories, 7 items (violations)
+    AFil.g              1   5.6. AFil.g: Min. global Activ density [%]: 35.00.
+    GFil.g              1   5.9. GFil.g: Min. global GatPoly density [%]: 15.00.
+    M1.j                1   5.16. M1.j: Min. global Metal1 density [%]: 35.00.
+    M2.j                1   5.17. M2.j: Min. global Metal2 density [%]: 35.00.
+    M3.j                1   5.17. M3.j: Min. global Metal3 density [%]: 35.00.
+    M4.j                1   5.17. M4.j: Min. global Metal4 density [%]: 35.00.
+    TM1.c               1   5.22. TM1.c: Min. global TopMetal1 density [%]: 25.00.
+logs scanned: slot_7/klayout_density/drc_run_2026_11_25_03_55_47.log, slot_7/klayout_density/slot_7_slot_7_density.log, logs/slot_7.density.log
+log lines: 'exception' 0, 'Traceback' 0, 'ERROR' 8
+    drc_run_2026_11_25_03_55_47.log: 25-Nov-2026 03:55:50 | ERROR   | ==================================================================================
+    drc_run_2026_11_25_03_55_47.log: 25-Nov-2026 03:55:50 | ERROR   | KLayout DRC Check Failed: Violations were detected in the layout.
+    drc_run_2026_11_25_03_55_47.log: 25-Nov-2026 03:55:50 | ERROR   | ==================================================================================
+    drc_run_2026_11_25_03_55_47.log: 25-Nov-2026 03:55:50 | ERROR   | Violated rules are : {'M2.j', 'AFil.g', 'M4.j', 'M3.j', 'M1.j', 'GFil.g', 'TM1.c'}
+    slot_7.density.log: 25-Nov-2026 03:55:50 | ERROR   | ==================================================================================
+    slot_7.density.log: 25-Nov-2026 03:55:50 | ERROR   | KLayout DRC Check Failed: Violations were detected in the layout.
+    slot_7.density.log: 25-Nov-2026 03:55:50 | ERROR   | ==================================================================================
+    slot_7.density.log: 25-Nov-2026 03:55:50 | ERROR   | Violated rules are : {'M2.j', 'AFil.g', 'M4.j', 'M3.j', 'M1.j', 'GFil.g', 'TM1.c'}
+density: Activ      Density % =  4.01%  [Min = 35.00%,  Max = 55.00%]
+density: GatPoly    Density % =  3.64%  [Min = 15.00%]
+density: Metal1     Density % =  2.01%  [Min = 35.00%,  Max = 60.00%]
+density: Metal2     Density % =  0.94%  [Min = 35.00%,  Max = 60.00%]
+density: Metal3     Density % =  2.47%  [Min = 35.00%,  Max = 60.00%]
+density: Metal4     Density % =  0.98%  [Min = 35.00%,  Max = 60.00%]
+density: TopMetal1  Density % =  7.04%  [Min = 25.00%,  Max = 70.00%]
+density: LBE        Density % =  0.00%  [Max = 20.00%]
+runner says: 25-Nov-2026 03:55:50 | ERROR   | KLayout DRC Check Failed: Violations were detected in the layout.
+runner says: 25-Nov-2026 03:55:50 | ERROR   | Violated rules are : {'M2.j', 'AFil.g', 'M4.j', 'M3.j', 'M1.j', 'GFil.g', 'TM1.c'}

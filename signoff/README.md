@@ -47,8 +47,30 @@ to their sources (sha256 above); they are tool output and have no licence header
 | `macros/<pad>/verification/lvs/<pad>.magic.lvs/<pad>.ext.spc` (T; 26584 and 33097 bytes) | the extracted netlist used by the magic LVS, not a report |
 | `pad_ref_rb`, `bias_dist_pd`, `hv_logic` | no DRC or LVS report is committed at V (`verification/lvs/` holds only a `.gitignore`). Their READMEs state the results: `pad_ref_rb` "KLayout DRC (`--no_density`) clean, maximal deck with latch-up 0 (F), `make klayout-lvs` OK"; `bias_dist_pd` "KLayout DRC (`--no_density`) clean, maximal deck with latch-up 0, flat LVS against D's CDL (a negative test fails), `make klayout-lvs` OK"; `hv_logic` "No layout yet" (its gates were laid out as `bdp_*` cells inside `bias_dist_pd`) |
 | LVS reports of `s7_ctrl`, `en_ctrl_3v3`, `ls_up_fs` | not committed at V (only the DRC `.lyrdb` files) |
-| reports for the **taped-out** `final/gds/slot_7.gds` (v3 + tughra art, sha256 `469f2327…`) | none committed anywhere read here; `slot_7_checks.txt` above is for v3 without the art. The checks of the final GDS (DRC clean, maximal + latch-up 0, density: the same 7 minimum-density rules as without the art, LVS deep match 497 devices, `netgen_check.sh` as v3) are stated in `../README.md` (2026-11-08) as text only |
+| reports for the **taped-out** `final/gds/slot_7.gds` (v3 + tughra art, sha256 `469f2327…`) | none committed anywhere read here (2026-11-23; **re-run on 2026-11-25, see below and [`taped_out_158afc5/`](taped_out_158afc5/README.md)**); `slot_7_checks.txt` above is for v3 without the art. The checks of the final GDS (DRC clean, maximal + latch-up 0, density: the same 7 minimum-density rules as without the art, LVS deep match 497 devices, `netgen_check.sh` as v3) are stated in `../README.md` (2026-11-08) as text only |
 | `oa_core_pd` reports (in `../macros/oa_core_pd/verification/`) | `oa_core_pd` is not in the taped-out slot (`../docs/chipalooza2_as_taped_out/README.md`) |
 
 To complete the sign-off set of the taped-out slot, the KLayout DRC report (`.lyrdb`) and LVS database (`.lvsdb`) of
-`final/gds/slot_7.gds` against `netlist/slot_7.cdl`, and the `netgen_check.sh` output, would have to be generated and added; this was not done here.
+`final/gds/slot_7.gds` against `netlist/slot_7.cdl`, and the `netgen_check.sh` output, would have to be generated and added; this was not done
+on 2026-11-23. It was done on 2026-11-25 (next section).
+
+## Re-run for the taped-out GDS (2026-11-25): [`taped_out_158afc5/`](taped_out_158afc5/README.md)
+
+Unlike the files above, these were **generated** here, on 2026-11-25, from `../final/gds/slot_7.gds` (sha256 `469f2327…`, equal to
+the provenance table of `../README.md`) and the two pad GDS files of `../pads/`, with KLayout 0.30.12, magic 8.3.685, netgen 1.5.324
+and the PDK `ihp-sg13cmos5l` at IHP-Open-PDK `df4c5054` (2026-10-14). `taped_out_158afc5/run_signoff.sh` reproduces every run;
+`taped_out_158afc5/README.md` has the commands, versions, run times and the full results table.
+
+| check (slot_7, taped-out GDS) | result |
+|---|---|
+| `run_drc.py --no_density` | 0 violations (546 rule categories), 0 exception / Traceback lines |
+| maximal deck, `-rd latchUpRules=true` | 0 (271 categories) |
+| density | 7 violations, 1 each: AFil.g, GFil.g, M1.j, M2.j, M3.j, M4.j, TM1.c (unfilled slot) |
+| KLayout LVS deep, `--disable_tap_extraction`, vs `netlist/slot_7.cdl` | netlists match, strict ports, 497 layout devices (376 device pairs after simplification, all Match) |
+| `netgen_check.sh` | 5 subcircuits match uniquely; top: one pin without partner, `vss_1v2_uq0` |
+| magic DRC `drc(full)` | **48** "Metal1 overlap of Via1" markers at 8 places in `bg_pmir_pcas_c` (`bg_core_pd`); the stand-alone `bg_core_pd` macro gives the same 48 with today's magic, although its committed report above says COUNT 0: a tool-version difference, not a layout change |
+
+Pads: KLayout DRC 0 / 0, maximal + latch-up 0 / 0; KLayout LVS match (76 / 77 device pairs) against a CDL derived from
+`../pads/*/*.spice` by `taped_out_158afc5/spice2cdl.py` (the netgen netlist as given gives no match in KLayout: its X-card devices
+are not read as devices); magic DRC and netgen reports byte-identical to the committed ones above (COUNT 0; only the `vss` /
+`iovss` merge); density as stand-alone cells: M1.j, M2.j, M3.k, M4.k.

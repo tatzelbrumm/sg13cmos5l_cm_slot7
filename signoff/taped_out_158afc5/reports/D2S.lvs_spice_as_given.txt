@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# written by summarize.py from the run directory of run_signoff.sh
+command: python3 /foss/pdks/ihp-sg13cmos5l/libs.tech/klayout/tech/lvs/run_lvs.py --layout=/home/user/sg13cmos5l_cm_slot7/pads/sg13cmos5l_IOPadDiff2Single/sg13cmos5l_IOPadDiff2Single.gds --netlist=/home/user/sg13cmos5l_cm_slot7/pads/sg13cmos5l_IOPadDiff2Single/sg13cmos5l_IOPadDiff2Single.spice --topcell=sg13cmos5l_IOPadDiff2Single --run_dir=/tmp/claude-0/-home-user/468ace82-a4b3-592d-8838-6ea52a1be021/scratchpad/signoff/final/D2S/klayout_lvs_spice_as_given --run_mode=deep --disable_tap_extraction
+exit code: 0, wall time: 4s
+log lvs_run_2026_11_25_03_56_09.log: 25-Nov-2026 03:56:13 | ERROR   |   - 2026-11-25 03:56:13 +0000: Memory Usage (456532K) : ERROR : Netlists don't match
+log sg13cmos5l_IOPadDiff2Single.log: 2026-11-25 03:56:13 +0000: Memory Usage (456532K) : Devices to compare: layout=293 schematic=0 (schematic counted before alignment, both per circuit definition)
+log sg13cmos5l_IOPadDiff2Single.log: 2026-11-25 03:56:13 +0000: Memory Usage (456532K) : Starting SG13CMOS5L LVS Comparison in strict port mode.
+log sg13cmos5l_IOPadDiff2Single.log: 2026-11-25 03:56:13 +0000: Memory Usage (456532K) : ERROR : Netlists don't match
+circuit sg13cmos5l_IOPadDiff2Single / -: Mismatch; device pairs 0 (not matching 0), net pairs 0 (not matching 0, with warning 0), pin pairs 0 (not matching 0), subcircuit pairs 0 (not matching 0)
+layout netlist flattened: 77 devices
+log lines: 'exception' 0, 'Traceback' 0, 'ERROR' 3
+    lvs_run_2026_11_25_03_56_09.log: 25-Nov-2026 03:56:13 | ERROR   | Key errors:
+    lvs_run_2026_11_25_03_56_09.log: 25-Nov-2026 03:56:13 | ERROR   |   - 2026-11-25 03:56:13 +0000: Memory Usage (456532K) : ERROR : Netlists don't match
+    sg13cmos5l_IOPadDiff2Single.log: 2026-11-25 03:56:13 +0000: Memory Usage (456532K) : ERROR : Netlists don't match

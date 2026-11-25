@@ -1,0 +1,33 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+date (UTC): 2026-11-25T03:53:43Z
+host: Linux 6.18.44-fc-v880 x86_64, 4 CPUs, KLayout threads used: 2
+klayout: KLayout 0.30.12
+python3: Python 3.13.18, klayout python module: 0.30.12
+magic: 8.3.685
+netgen: Netgen 1.5.324 compiled on Fri Oct 30 17:15:29 UTC 2026
+PDK: PDK_ROOT=/foss/pdks PDK=ihp-sg13cmos5l -> /foss/pdks/IHP-Open-PDK/ihp-sg13cmos5l
+PDK git: df4c5054ee8ca481c3eb873687274f28cdb50b1e (Wed Oct 14 14:25:44 2026 +0200: Merge pull request #1261 from Mauricio-xx/fix/precheck-min-rules)
+PDK git describe: v0.3.0-1049-gdf4c5054
+PDK work tree: 0 modified/untracked entries (git status --porcelain)
+PDK broken symlinks under libs.tech/klayout: 1 /foss/pdks/ihp-sg13cmos5l/libs.tech/klayout/README.md 
+tool build: magic https://github.com/RTimothyEdwards/magic bed8d4ff84333767aa923d469d339cd05c56a00a 8.3.685
+tool build: netgen https://github.com/RTimothyEdwards/netgen abe6117e21dd143b82461043572b673a6cea2f87 1.5.324
+tool build: iic https://github.com/iic-jku/IIC-OSIC-TOOLS 68d3f07e6eeb9ded2cf79d4db9ca9d574862db02 2026.10
+tool build: ihp-open-pdk https://github.com/iic-jku/IHP-Open-PDK df4c5054ee8ca481c3eb873687274f28cdb50b1e   (OSDI models in osdi/ihp-sg13cmos5l-df4c5054ee8ca481c3eb873687274f28cdb50b1e)
+sak scripts: /foss/tools/sak (sha256 sak-drc.sh 9b0bf35125f827a8, sak-lvs.sh 3a52b3a2611c63c2)
+repository: /home/user/sg13cmos5l_cm_slot7, HEAD c215450fc0f6dcf69241a75dfa85641bcfcb6281
+
+input sha256:
+469f2327c4bc22b1d6fc1785fab2fd3830b6050e51989b361dc11b26be669c05  /home/user/sg13cmos5l_cm_slot7/final/gds/slot_7.gds
+a1e08178c24776c7c8958521259b20e5ae6c84eeef22562def7d970694e67c90  /home/user/sg13cmos5l_cm_slot7/netlist/slot_7_netgen.spice
+f4b0e07320821248872780b344d71845d08bc250a4bfc9bcf8633a39bdef0182  /home/user/sg13cmos5l_cm_slot7/pads/sg13cmos5l_IOPadSingle2Diff/sg13cmos5l_IOPadSingle2Diff.gds
+43eb31f535587d13531cb48a5c3a709cfbdf1c1815d6fc1d9b53fc043a3c3104  /home/user/sg13cmos5l_cm_slot7/pads/sg13cmos5l_IOPadSingle2Diff/sg13cmos5l_IOPadSingle2Diff.spice
+13e176ab106d0cb307a6ebc42acf647ce38b6abc52183a9f1d9ffead2f6c2b17  /home/user/sg13cmos5l_cm_slot7/pads/sg13cmos5l_IOPadDiff2Single/sg13cmos5l_IOPadDiff2Single.gds
+2e504bfd784c63efd200a8e1347d0c37b70480afa3d84377e37c3024ab9bc45a  /home/user/sg13cmos5l_cm_slot7/pads/sg13cmos5l_IOPadDiff2Single/sg13cmos5l_IOPadDiff2Single.spice
+af1e5f027f9f90c1d44d30faa886eb630bf789e194d9210e9ad2cf5a1b9028e8  /home/user/sg13cmos5l_cm_slot7/netlist/slot_7.cdl
+6cd4e7b48546d6c380bcabc2924da0ad74f73c910f86f2a2b4ea2c9a08c803f5  /home/user/sg13cmos5l_cm_slot7/netlist/netgen_check.sh
+
+slot_7.gds sha256 = README.md provenance table: OK (469f2327c4bc22b1d6fc1785fab2fd3830b6050e51989b361dc11b26be669c05)
+sg13cmos5l_IOPadSingle2Diff.gds sha256 = README.md provenance table: OK
+sg13cmos5l_IOPadDiff2Single.gds sha256 = README.md provenance table: OK

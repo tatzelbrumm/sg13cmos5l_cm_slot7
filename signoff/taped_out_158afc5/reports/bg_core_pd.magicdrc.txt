@@ -1,0 +1,7 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# written by summarize.py from the run directory of run_signoff.sh
+command: sh /foss/tools/sak/sak-drc.sh -m -w /tmp/claude-0/-home-user/468ace82-a4b3-592d-8838-6ea52a1be021/scratchpad/signoff/final/bg_core_pd/magic_drc /home/user/sg13cmos5l_cm_slot7/macros/bg_core_pd/layout/gds/bg_core_pd.gds
+exit code: 1, wall time: 0s
+report bg_core_pd/magic_drc/bg_core_pd.magic.drc/bg_core_pd.magic.drc.rpt: COUNT 48
+       48  Metal1 overlap of Via1 < 0.005um (V1.c - M2.c)

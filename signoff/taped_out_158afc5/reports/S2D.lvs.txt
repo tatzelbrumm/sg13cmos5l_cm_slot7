@@ -1,0 +1,11 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# written by summarize.py from the run directory of run_signoff.sh
+command: python3 /foss/pdks/ihp-sg13cmos5l/libs.tech/klayout/tech/lvs/run_lvs.py --layout=/home/user/sg13cmos5l_cm_slot7/pads/sg13cmos5l_IOPadSingle2Diff/sg13cmos5l_IOPadSingle2Diff.gds --netlist=/tmp/claude-0/-home-user/468ace82-a4b3-592d-8838-6ea52a1be021/scratchpad/signoff/final/S2D/netlist/sg13cmos5l_IOPadSingle2Diff.cdl --topcell=sg13cmos5l_IOPadSingle2Diff --run_dir=/tmp/claude-0/-home-user/468ace82-a4b3-592d-8838-6ea52a1be021/scratchpad/signoff/final/S2D/klayout_lvs --run_mode=deep --disable_tap_extraction
+exit code: 0, wall time: 4s
+log sg13cmos5l_IOPadSingle2Diff.log: 2026-11-25 03:56:09 +0000: Memory Usage (459708K) : Devices to compare: layout=225 schematic=79 (schematic counted before alignment, both per circuit definition)
+log sg13cmos5l_IOPadSingle2Diff.log: 2026-11-25 03:56:09 +0000: Memory Usage (459708K) : Starting SG13CMOS5L LVS Comparison in strict port mode.
+log sg13cmos5l_IOPadSingle2Diff.log: 2026-11-25 03:56:09 +0000: Memory Usage (459836K) : INFO : Congratulations! Netlists match.
+circuit sg13cmos5l_IOPadSingle2Diff / SG13CMOS5L_IOPADSINGLE2DIFF: Match; device pairs 76 (not matching 0), net pairs 37 (not matching 0, with warning 2), pin pairs 10 (not matching 0), subcircuit pairs 0 (not matching 0)
+layout netlist flattened: 76 devices
+log lines: 'exception' 0, 'Traceback' 0, 'ERROR' 0

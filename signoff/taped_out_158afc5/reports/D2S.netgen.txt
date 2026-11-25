@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# written by summarize.py from the run directory of run_signoff.sh
+command: sh /foss/tools/sak/sak-lvs.sh -m -s /home/user/sg13cmos5l_cm_slot7/pads/sg13cmos5l_IOPadDiff2Single/sg13cmos5l_IOPadDiff2Single.spice -l /home/user/sg13cmos5l_cm_slot7/pads/sg13cmos5l_IOPadDiff2Single/sg13cmos5l_IOPadDiff2Single.gds -c sg13cmos5l_IOPadDiff2Single -w /tmp/claude-0/-home-user/468ace82-a4b3-592d-8838-6ea52a1be021/scratchpad/signoff/final/D2S/magic_lvs
+exit code: 1, wall time: 0s
+report D2S/magic_lvs/sg13cmos5l_IOPadDiff2Single.magic.lvs/sg13cmos5l_IOPadDiff2Single.lvs.out
+      1 x  Netlists match with 7 symmetries with property errors.
+      1 x  Final result: Top level cell failed pin matching.
+    Final result: Top level cell failed pin matching.
+pin-table rows: 0 flagged '**Mismatch**' (same net, different pin names), 1 '(no matching pin)'
+    (no matching pin)                          |vss
+    Number of devices: 76                      |Number of devices: 76
+    Number of nets: 36                         |Number of nets: 36
+log D2S/magic_lvs/sg13cmos5l_IOPadDiff2Single.magic.lvs/sg13cmos5l_IOPadDiff2Single.lvs.log: 1 lines with error / unknown layer / context
+    The following cells had property errors:

@@ -1,0 +1,450 @@
+
+Circuit 1 cell sg13_hv_pmos and Circuit 2 cell sg13_hv_pmos are black boxes.
+Warning: Equate pins:  cell sg13_hv_pmos is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sg13_hv_pmos is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sg13_hv_pmos                    |Circuit 2: sg13_hv_pmos                    
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13_hv_pmos and sg13_hv_pmos are equivalent.
+
+Circuit 1 cell sg13_hv_nmos and Circuit 2 cell sg13_hv_nmos are black boxes.
+Warning: Equate pins:  cell sg13_hv_nmos is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sg13_hv_nmos is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sg13_hv_nmos                    |Circuit 2: sg13_hv_nmos                    
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13_hv_nmos and sg13_hv_nmos are equivalent.
+
+Circuit 1 cell pnpMPA and Circuit 2 cell pnpMPA are black boxes.
+Warning: Equate pins:  cell pnpMPA is a placeholder, treated as a black box.
+Warning: Equate pins:  cell pnpMPA is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: pnpMPA                          |Circuit 2: pnpMPA                          
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes pnpMPA and pnpMPA are equivalent.
+
+Circuit 1 cell rhigh and Circuit 2 cell rhigh are black boxes.
+Warning: Equate pins:  cell rhigh is a placeholder, treated as a black box.
+Warning: Equate pins:  cell rhigh is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: rhigh                           |Circuit 2: rhigh                           
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes rhigh and rhigh are equivalent.
+Flattening unmatched subcell bg_pnp_c in circuit bg_core_pd (0)(1 instance)
+Flattening unmatched subcell bgc_pnpMPA in circuit bg_core_pd (0)(9 instances)
+Flattening unmatched subcell bg_ms1 in circuit bg_core_pd (0)(1 instance)
+Flattening unmatched subcell pmosHV$13 in circuit bg_core_pd (0)(8 instances)
+Flattening unmatched subcell bg_pmir_pcas_c in circuit bg_core_pd (0)(1 instance)
+Flattening unmatched subcell pmosHV_w0p3_l1 in circuit bg_core_pd (0)(16 instances)
+Flattening unmatched subcell pmosHV$14 in circuit bg_core_pd (0)(32 instances)
+Flattening unmatched subcell bg_n4 in circuit bg_core_pd (0)(1 instance)
+Flattening unmatched subcell nmosHV$9 in circuit bg_core_pd (0)(1 instance)
+Flattening unmatched subcell nmosHV_w2_l1 in circuit bg_core_pd (0)(1 instance)
+Flattening unmatched subcell nmosHV$7 in circuit bg_core_pd (0)(1 instance)
+Flattening unmatched subcell nmosHV$11 in circuit bg_core_pd (0)(8 instances)
+Flattening unmatched subcell nmosHV$5 in circuit bg_core_pd (0)(1 instance)
+Flattening unmatched subcell nmosHV$10 in circuit bg_core_pd (0)(4 instances)
+Flattening unmatched subcell bg_res_c in circuit bg_core_pd (0)(1 instance)
+Flattening unmatched subcell rhigh$1 in circuit bg_core_pd (0)(41 instances)
+Flattening unmatched subcell bg_svpg in circuit bg_core_pd (0)(1 instance)
+Flattening unmatched subcell pmosHV$7 in circuit bg_core_pd (0)(1 instance)
+
+Class bg_core_pd (0):  Merged 58 parallel devices.
+Class bg_core_pd (0):  Merged 36 series devices.
+Class bg_core_pd (1):  Merged 2 parallel devices.
+Class bg_core_pd (1):  Merged 36 series devices.
+Subcircuit summary:
+Circuit 1: bg_core_pd                      |Circuit 2: bg_core_pd                      
+-------------------------------------------|-------------------------------------------
+pnpMPA (9->2)                              |pnpMPA (9->2)                              
+sg13_hv_pmos (57->17)                      |sg13_hv_pmos (17)                          
+sg13_hv_nmos (16->6)                       |sg13_hv_nmos (7->6)                        
+rhigh (41->4)                              |rhigh (41->4)                              
+Number of devices: 29                      |Number of devices: 29                      
+Number of nets: 21                         |Number of nets: 21                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: bg_core_pd                      |Circuit 2: bg_core_pd                      
+-------------------------------------------|-------------------------------------------
+iout                                       |iout                                       
+en_3v3                                     |en_3v3                                     
+en_3v3_b                                   |en_3v3_b                                   
+vdd                                        |vdd                                        
+vss                                        |vss                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes bg_core_pd and bg_core_pd are equivalent.
+Flattening unmatched subcell rb_cload in circuit pad_ref_rb (0)(1 instance)
+Flattening unmatched subcell prb_nmosHV_7 in circuit pad_ref_rb (0)(2 instances)
+Flattening unmatched subcell prb_nmosHV_3_1 in circuit pad_ref_rb (0)(2 instances)
+Flattening unmatched subcell rb_tree_p in circuit pad_ref_rb (0)(1 instance)
+Flattening unmatched subcell rb_pmosHV_w1_l0p45 in circuit pad_ref_rb (0)(1 instance)
+Flattening unmatched subcell rb_pmosHV_w2_l6 in circuit pad_ref_rb (0)(2 instances)
+Flattening unmatched subcell rb_pmosHV_w5_l6 in circuit pad_ref_rb (0)(1 instance)
+Flattening unmatched subcell rb_tree_n in circuit pad_ref_rb (0)(1 instance)
+Flattening unmatched subcell prb_nmosHV_4 in circuit pad_ref_rb (0)(4 instances)
+Flattening unmatched subcell prb_nmosHV_2_1 in circuit pad_ref_rb (0)(2 instances)
+Flattening unmatched subcell prb_nmosHV_1_1 in circuit pad_ref_rb (0)(2 instances)
+Flattening unmatched subcell prb_nmosHV_3_1 in circuit pad_ref_rb (0)(2 instances)
+Flattening unmatched subcell rb_tails in circuit pad_ref_rb (0)(1 instance)
+Flattening unmatched subcell rb_pmosHV_w5_l6 in circuit pad_ref_rb (0)(4 instances)
+Flattening unmatched subcell rb_avg in circuit pad_ref_rb (0)(1 instance)
+Flattening unmatched subcell rb_avg_l in circuit pad_ref_rb (0)(1 instance)
+Flattening unmatched subcell rb_pmosHV_w1_l4 in circuit pad_ref_rb (0)(4 instances)
+Flattening unmatched subcell rb_avg_u in circuit pad_ref_rb (0)(1 instance)
+Flattening unmatched subcell rb_pmosHV_w1_l4 in circuit pad_ref_rb (0)(3 instances)
+Flattening unmatched subcell rb_casc in circuit pad_ref_rb (0)(1 instance)
+Flattening unmatched subcell prb_nmosHV_6 in circuit pad_ref_rb (0)(1 instance)
+Flattening unmatched subcell prb_nmosHV_4_1 in circuit pad_ref_rb (0)(4 instances)
+Flattening unmatched subcell prb_nmosHV_5 in circuit pad_ref_rb (0)(8 instances)
+Flattening unmatched subcell prb_capm in circuit pad_ref_rb (0)(1 instance)
+Flattening unmatched subcell prb_nmosHV_1 in circuit pad_ref_rb (0)(2 instances)
+Flattening unmatched subcell rb_mirror in circuit pad_ref_rb (0)(1 instance)
+Flattening unmatched subcell prb_nmosHV_2_1 in circuit pad_ref_rb (0)(2 instances)
+Flattening unmatched subcell prb_nmosHV_1_1 in circuit pad_ref_rb (0)(2 instances)
+Flattening unmatched subcell prb_capv in circuit pad_ref_rb (0)(1 instance)
+Flattening unmatched subcell prb_nmosHV_3 in circuit pad_ref_rb (0)(2 instances)
+Flattening unmatched subcell rb_tubs in circuit pad_ref_rb (0)(1 instance)
+Flattening unmatched subcell rb_tub_p20x1 in circuit pad_ref_rb (0)(5 instances)
+Flattening unmatched subcell rb_pmosHV_w20_l1_ng2 in circuit pad_ref_rb (0)(5 instances)
+Flattening unmatched subcell prb_capt in circuit pad_ref_rb (0)(1 instance)
+Flattening unmatched subcell prb_nmosHV_2 in circuit pad_ref_rb (0)(1 instance)
+Flattening unmatched subcell prb_capr in circuit pad_ref_rb (0)(1 instance)
+Flattening unmatched subcell prb_nmosHV in circuit pad_ref_rb (0)(2 instances)
+
+Class pad_ref_rb (0):  Merged 30 parallel devices.
+Class pad_ref_rb (1):  Merged 25 parallel devices.
+Subcircuit summary:
+Circuit 1: pad_ref_rb                      |Circuit 2: pad_ref_rb                      
+-------------------------------------------|-------------------------------------------
+sg13_hv_nmos (38->19)                      |sg13_hv_nmos (38->19)                      
+sg13_hv_pmos (25->14)                      |sg13_hv_pmos (20->14)                      
+Number of devices: 33                      |Number of devices: 33                      
+Number of nets: 16                         |Number of nets: 16                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: pad_ref_rb                      |Circuit 2: pad_ref_rb                      
+-------------------------------------------|-------------------------------------------
+en_3v3                                     |en_3v3                                     
+iref                                       |iref                                       
+vddh                                       |vddh                                       
+vssh                                       |vssh                                       
+en_3v3_b                                   |en_3v3_b                                   
+vref                                       |vref                                       
+vcm                                        |vcm                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes pad_ref_rb and pad_ref_rb are equivalent.
+Flattening unmatched subcell bdp_inv_hv in circuit s7_ctrl (0)(12 instances)
+Flattening unmatched subcell bdp_nmosHV_w1_l0p45 in circuit s7_ctrl (0)(12 instances)
+Flattening unmatched subcell bdp_pmosHV_w1_l0p45 in circuit s7_ctrl (0)(12 instances)
+Flattening unmatched subcell bdp_nand2_hv in circuit s7_ctrl (0)(13 instances)
+Flattening unmatched subcell bdp_pmosHV_w2_l0p45_ng2 in circuit s7_ctrl (0)(13 instances)
+Flattening unmatched subcell bdp_nmosHV_w2_l0p45_ng2 in circuit s7_ctrl (0)(13 instances)
+Flattening unmatched subcell bdp_tg_hv in circuit s7_ctrl (0)(10 instances)
+Flattening unmatched subcell bdp_nmosHV_w1_l0p45 in circuit s7_ctrl (0)(10 instances)
+Flattening unmatched subcell bdp_pmosHV_w1_l0p45 in circuit s7_ctrl (0)(10 instances)
+Flattening unmatched subcell efs_ls_core in circuit s7_ctrl (0)(7 instances)
+Flattening unmatched subcell efs_inv_hv in circuit s7_ctrl (0)(21 instances)
+Flattening unmatched subcell efs_pmosHV_w1_l0p45 in circuit s7_ctrl (0)(21 instances)
+Flattening unmatched subcell efs_nmosHV_w1_l0p45 in circuit s7_ctrl (0)(21 instances)
+Flattening unmatched subcell efs_pmosHV_w0p3_l20 in circuit s7_ctrl (0)(70 instances)
+Flattening unmatched subcell efs_xn1 in circuit s7_ctrl (0)(7 instances)
+Flattening unmatched subcell efs_nmosHV_w1_l0p45 in circuit s7_ctrl (0)(7 instances)
+Flattening unmatched subcell efs_pmosHV_w0p3_l5 in circuit s7_ctrl (0)(7 instances)
+Flattening unmatched subcell ls_up_fs in circuit s7_ctrl (1)(7 instances)
+Flattening unmatched subcell inv_hv in circuit s7_ctrl (1)(33 instances)
+Flattening unmatched subcell nand2_hv in circuit s7_ctrl (1)(13 instances)
+Flattening unmatched subcell tg_hv in circuit s7_ctrl (1)(10 instances)
+
+Subcircuit summary:
+Circuit 1: s7_ctrl                         |Circuit 2: s7_ctrl                         
+-------------------------------------------|-------------------------------------------
+sg13_hv_nmos (76)                          |sg13_hv_nmos (76)                          
+sg13_hv_pmos (146)                         |sg13_hv_pmos (146)                         
+Number of devices: 222                     |Number of devices: 222                     
+Number of nets: 148                        |Number of nets: 148                        
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: s7_ctrl                         |Circuit 2: s7_ctrl                         
+-------------------------------------------|-------------------------------------------
+outp                                       |outp                                       
+outn                                       |outn                                       
+vinp                                       |vinp                                       
+vinn                                       |vinn                                       
+vcm_pad                                    |vcm_pad                                    
+vcm_rb                                     |vcm_rb                                     
+vref_pad                                   |vref_pad                                   
+vref_rb                                    |vref_rb                                    
+d4                                         |d4                                         
+d0                                         |d0                                         
+d2                                         |d2                                         
+d1                                         |d1                                         
+d3                                         |d3                                         
+d5                                         |d5                                         
+enable                                     |enable                                     
+en                                         |en                                         
+vss                                        |vss                                        
+vddh                                       |vddh                                       
+en_b                                       |en_b                                       
+bus0                                       |bus0                                       
+bus1                                       |bus1                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes s7_ctrl and s7_ctrl are equivalent.
+Flattening unmatched subcell dop_nmosHV_w0p5_l0p45 in circuit s7_doutpd (0)(12 instances)
+
+Subcircuit summary:
+Circuit 1: s7_doutpd                       |Circuit 2: s7_doutpd                       
+-------------------------------------------|-------------------------------------------
+sg13_hv_nmos (12)                          |sg13_hv_nmos (12)                          
+Number of devices: 12                      |Number of devices: 12                      
+Number of nets: 15                         |Number of nets: 15                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: s7_doutpd                       |Circuit 2: s7_doutpd                       
+-------------------------------------------|-------------------------------------------
+d2                                         |d2                                         
+d3                                         |d3                                         
+d4                                         |d4                                         
+d6                                         |d6                                         
+d5                                         |d5                                         
+d7                                         |d7                                         
+d8                                         |d8                                         
+d9                                         |d9                                         
+d10                                        |d10                                        
+d11                                        |d11                                        
+d0                                         |d0                                         
+d1                                         |d1                                         
+vdd_1v2                                    |vdd_1v2                                    
+vss_1v2                                    |vss_1v2                                    
+vss_3v3                                    |vss_3v3                                    
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes s7_doutpd and s7_doutpd are equivalent.
+Flattening unmatched subcell bdp_mirror_p in circuit bias_dist_pd (0)(1 instance)
+Flattening unmatched subcell bdp_pmosHV_w5_l6 in circuit bias_dist_pd (0)(7 instances)
+Flattening unmatched subcell bdp_mirror_n in circuit bias_dist_pd (0)(1 instance)
+Flattening unmatched subcell bdp_nmosHV_1 in circuit bias_dist_pd (0)(2 instances)
+Flattening unmatched subcell bdp_nmosHV in circuit bias_dist_pd (0)(2 instances)
+Flattening unmatched subcell bdp_slice in circuit bias_dist_pd (0)(8 instances)
+Flattening unmatched subcell bdp_inv_hv in circuit bias_dist_pd (0)(8 instances)
+Flattening unmatched subcell bdp_nmosHV_w1_l0p45 in circuit bias_dist_pd (0)(8 instances)
+Flattening unmatched subcell bdp_pmosHV_w1_l0p45 in circuit bias_dist_pd (0)(8 instances)
+Flattening unmatched subcell bdp_tg_hv in circuit bias_dist_pd (0)(8 instances)
+Flattening unmatched subcell bdp_nmosHV_w1_l0p45 in circuit bias_dist_pd (0)(8 instances)
+Flattening unmatched subcell bdp_pmosHV_w1_l0p45 in circuit bias_dist_pd (0)(8 instances)
+Flattening unmatched subcell bdp_nand2_hv in circuit bias_dist_pd (0)(8 instances)
+Flattening unmatched subcell bdp_pmosHV_w2_l0p45_ng2 in circuit bias_dist_pd (0)(8 instances)
+Flattening unmatched subcell bdp_nmosHV_w2_l0p45_ng2 in circuit bias_dist_pd (0)(8 instances)
+Flattening unmatched subcell bdp_svpd in circuit bias_dist_pd (0)(1 instance)
+Flattening unmatched subcell bdp_pmosHV_w1_l0p45 in circuit bias_dist_pd (0)(1 instance)
+Flattening unmatched subcell bdp_tdn in circuit bias_dist_pd (0)(1 instance)
+Flattening unmatched subcell bdp_nmosHV_w1_l0p45 in circuit bias_dist_pd (0)(1 instance)
+
+Class bias_dist_pd (0):  Merged 2 parallel devices.
+Class bias_dist_pd (1):  Merged 2 parallel devices.
+Subcircuit summary:
+Circuit 1: bias_dist_pd                    |Circuit 2: bias_dist_pd                    
+-------------------------------------------|-------------------------------------------
+sg13_hv_pmos (40->39)                      |sg13_hv_pmos (40->39)                      
+sg13_hv_nmos (37->36)                      |sg13_hv_nmos (37->36)                      
+Number of devices: 75                      |Number of devices: 75                      
+Number of nets: 50                         |Number of nets: 50                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: bias_dist_pd                    |Circuit 2: bias_dist_pd                    
+-------------------------------------------|-------------------------------------------
+en_3v3_b                                   |en_3v3_b                                   
+iin0                                       |iin0                                       
+iin1                                       |iin1                                       
+iin2                                       |iin2                                       
+iin3                                       |iin3                                       
+en_in0                                     |en_in0                                     
+en_in1                                     |en_in1                                     
+en_in2                                     |en_in2                                     
+en_in3                                     |en_in3                                     
+en_out3                                    |en_out3                                    
+en_out2                                    |en_out2                                    
+en_out0                                    |en_out0                                    
+en_out1                                    |en_out1                                    
+iout3                                      |iout3                                      
+iout2                                      |iout2                                      
+iout0                                      |iout0                                      
+iout1                                      |iout1                                      
+en_3v3                                     |en_3v3                                     
+vssh                                       |vssh                                       
+vddh                                       |vddh                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes bias_dist_pd and bias_dist_pd are equivalent.
+
+Cell slot_7 (0) disconnected node: vbias
+Cell slot_7 (0) disconnected node: dig_in[23]
+Cell slot_7 (0) disconnected node: dig_in[22]
+Cell slot_7 (0) disconnected node: dig_in[21]
+Cell slot_7 (0) disconnected node: dig_in[20]
+Cell slot_7 (0) disconnected node: dig_in[19]
+Cell slot_7 (0) disconnected node: dig_in[18]
+Cell slot_7 (0) disconnected node: dig_in[17]
+Cell slot_7 (0) disconnected node: dig_in[16]
+Cell slot_7 (0) disconnected node: dig_in[15]
+Cell slot_7 (0) disconnected node: dig_in[14]
+Cell slot_7 (0) disconnected node: dig_in[13]
+Cell slot_7 (0) disconnected node: dig_in[12]
+Cell slot_7 (0) disconnected node: dig_in[11]
+Cell slot_7 (0) disconnected node: dig_in[10]
+Cell slot_7 (0) disconnected node: dig_in[9]
+Cell slot_7 (0) disconnected node: dig_in[8]
+Cell slot_7 (0) disconnected node: dig_in[7]
+Cell slot_7 (0) disconnected node: dig_in[6]
+Cell slot_7 (0) disconnected node: ibias0
+Cell slot_7 (0) disconnected node: ibias1
+Cell slot_7 (0) disconnected node: clk
+Cell slot_7 (0) disconnected node: reset
+Cell slot_7 (0) disconnected node: vss_1v2_uq0
+Cell slot_7 (1) disconnected node: clk
+Cell slot_7 (1) disconnected node: reset
+Cell slot_7 (1) disconnected node: ibias0
+Cell slot_7 (1) disconnected node: ibias1
+Cell slot_7 (1) disconnected node: vbias
+Cell slot_7 (1) disconnected node: dig_in[6]
+Cell slot_7 (1) disconnected node: dig_in[7]
+Cell slot_7 (1) disconnected node: dig_in[8]
+Cell slot_7 (1) disconnected node: dig_in[9]
+Cell slot_7 (1) disconnected node: dig_in[10]
+Cell slot_7 (1) disconnected node: dig_in[11]
+Cell slot_7 (1) disconnected node: dig_in[12]
+Cell slot_7 (1) disconnected node: dig_in[13]
+Cell slot_7 (1) disconnected node: dig_in[14]
+Cell slot_7 (1) disconnected node: dig_in[15]
+Cell slot_7 (1) disconnected node: dig_in[16]
+Cell slot_7 (1) disconnected node: dig_in[17]
+Cell slot_7 (1) disconnected node: dig_in[18]
+Cell slot_7 (1) disconnected node: dig_in[19]
+Cell slot_7 (1) disconnected node: dig_in[20]
+Cell slot_7 (1) disconnected node: dig_in[21]
+Cell slot_7 (1) disconnected node: dig_in[22]
+Cell slot_7 (1) disconnected node: dig_in[23]
+Subcircuit summary:
+Circuit 1: slot_7                          |Circuit 2: slot_7                          
+-------------------------------------------|-------------------------------------------
+bg_core_pd (1)                             |bg_core_pd (1)                             
+pad_ref_rb (1)                             |pad_ref_rb (1)                             
+s7_ctrl (1)                                |s7_ctrl (1)                                
+s7_doutpd (1)                              |s7_doutpd (1)                              
+bias_dist_pd (1)                           |bias_dist_pd (1)                           
+Number of devices: 5                       |Number of devices: 5                       
+Number of nets: 40                         |Number of nets: 40                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely with port errors.
+
+Subcircuit pins:
+Circuit 1: slot_7                          |Circuit 2: slot_7                          
+-------------------------------------------|-------------------------------------------
+enable                                     |enable                                     
+dig_in[0]                                  |dig_in[0]                                  
+dig_in[1]                                  |dig_in[1]                                  
+dig_in[2]                                  |dig_in[2]                                  
+dig_in[3]                                  |dig_in[3]                                  
+dig_in[4]                                  |dig_in[4]                                  
+dig_in[5]                                  |dig_in[5]                                  
+s7_an_0_outp                               |s7_an_0_outp                               
+s7_an_0_outn                               |s7_an_0_outn                               
+s7_an_1_vinp                               |s7_an_1_vinp                               
+s7_an_1_vinn                               |s7_an_1_vinn                               
+analog_bus0                                |analog_bus0                                
+analog_bus1                                |analog_bus1                                
+s7_an_0_vcm                                |analog_bus2,s7_an_0_vcm,s7_an_1_vref **Mis 
+analog_bus3                                |analog_bus3,s7_an_0_vref **Mismatch**      
+s7_an_0_iref                               |s7_an_0_iref                               
+s7_an_1_iref                               |s7_an_1_iref                               
+dig_out[0]                                 |dig_out[0]                                 
+dig_out[1]                                 |dig_out[1]                                 
+dig_out[2]                                 |dig_out[2]                                 
+dig_out[3]                                 |dig_out[3]                                 
+dig_out[4]                                 |dig_out[4]                                 
+dig_out[5]                                 |dig_out[5]                                 
+dig_out[6]                                 |dig_out[6]                                 
+dig_out[7]                                 |dig_out[7]                                 
+dig_out[8]                                 |dig_out[8]                                 
+dig_out[9]                                 |dig_out[9]                                 
+dig_out[10]                                |dig_out[10]                                
+dig_out[11]                                |dig_out[11]                                
+vdd_1v2                                    |vdd_1v2                                    
+vss_1v2                                    |vss_1v2                                    
+vss_3v3                                    |vss_3v3                                    
+vdd_3v3                                    |vdd_3v3                                    
+s7_an_1_en_3v3                             |s7_an_0_en_3v3,s7_an_1_en_3v3 **Mismatch** 
+s7_an_1_en_3v3_b                           |s7_an_0_en_3v3_b,s7_an_1_en_3v3_b **Mismat 
+vbias                                      |vbias                                      
+dig_in[23]                                 |dig_in[23]                                 
+dig_in[22]                                 |dig_in[22]                                 
+dig_in[21]                                 |dig_in[21]                                 
+dig_in[20]                                 |dig_in[20]                                 
+dig_in[19]                                 |dig_in[19]                                 
+dig_in[18]                                 |dig_in[18]                                 
+dig_in[17]                                 |dig_in[17]                                 
+dig_in[16]                                 |dig_in[16]                                 
+dig_in[15]                                 |dig_in[15]                                 
+dig_in[14]                                 |dig_in[14]                                 
+dig_in[13]                                 |dig_in[13]                                 
+dig_in[12]                                 |dig_in[12]                                 
+dig_in[11]                                 |dig_in[11]                                 
+dig_in[10]                                 |dig_in[10]                                 
+dig_in[9]                                  |dig_in[9]                                  
+dig_in[8]                                  |dig_in[8]                                  
+dig_in[7]                                  |dig_in[7]                                  
+dig_in[6]                                  |dig_in[6]                                  
+ibias0                                     |ibias0                                     
+ibias1                                     |ibias1                                     
+clk                                        |clk                                        
+reset                                      |reset                                      
+vss_1v2_uq0                                |(no matching pin)                          
+---------------------------------------------------------------------------------------
+Cell pin lists for slot_7 and slot_7 altered to match.
+Device classes slot_7 and slot_7 are equivalent.
+
+Final result: Top level cell failed pin matching.

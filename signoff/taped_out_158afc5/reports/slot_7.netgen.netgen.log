@@ -1,0 +1,246 @@
+Netgen 1.5.324 compiled on Fri Oct 30 17:15:29 UTC 2026
+Warning: netgen command 'format' use fully-qualified name '::netgen::format'
+Warning: netgen command 'global' use fully-qualified name '::netgen::global'
+Reading netlist file slot_7_layout.spice for slot_7_layout.spice slot_7
+Call to undefined subcircuit pnpMPA
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13_hv_pmos
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13_hv_nmos
+Creating placeholder cell definition.
+Call to undefined subcircuit rhigh
+Creating placeholder cell definition.
+Reading netlist file slot_7_netgen.spice for slot_7_netgen.spice slot_7
+Call to undefined subcircuit sg13_hv_nmos
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13_hv_pmos
+Creating placeholder cell definition.
+Call to undefined subcircuit pnpMPA
+Creating placeholder cell definition.
+Call to undefined subcircuit rhigh
+Creating placeholder cell definition.
+Call to undefined subcircuit ls_up_fs
+Creating placeholder cell definition.
+Call to undefined subcircuit nand2_hv
+Creating placeholder cell definition.
+Call to undefined subcircuit inv_hv
+Creating placeholder cell definition.
+Call to undefined subcircuit tg_hv
+Creating placeholder cell definition.
+
+Reading setup file /foss/pdks/ihp-sg13cmos5l/libs.tech/netgen/ihp-sg13cmos5l_setup.tcl
+
+Model rhigh pin 1 == 2
+No property b found for device rhigh
+Model rhigh pin 1 == 2
+No property b found for device rhigh
+Model sg13_hv_nmos pin 1 == 3
+No property ng found for device sg13_hv_nmos
+No property trise found for device sg13_hv_nmos
+No property z1 found for device sg13_hv_nmos
+No property z2 found for device sg13_hv_nmos
+No property wmin found for device sg13_hv_nmos
+No property rfmode found for device sg13_hv_nmos
+No property pre_layout found for device sg13_hv_nmos
+Model sg13_hv_nmos pin 1 == 3
+No property as found for device sg13_hv_nmos
+No property ad found for device sg13_hv_nmos
+No property pd found for device sg13_hv_nmos
+No property ps found for device sg13_hv_nmos
+No property trise found for device sg13_hv_nmos
+No property z1 found for device sg13_hv_nmos
+No property z2 found for device sg13_hv_nmos
+No property wmin found for device sg13_hv_nmos
+No property rfmode found for device sg13_hv_nmos
+No property pre_layout found for device sg13_hv_nmos
+Model sg13_hv_pmos pin 1 == 3
+No property ng found for device sg13_hv_pmos
+No property trise found for device sg13_hv_pmos
+No property z1 found for device sg13_hv_pmos
+No property z2 found for device sg13_hv_pmos
+No property wmin found for device sg13_hv_pmos
+No property rfmode found for device sg13_hv_pmos
+No property pre_layout found for device sg13_hv_pmos
+Model sg13_hv_pmos pin 1 == 3
+No property as found for device sg13_hv_pmos
+No property ad found for device sg13_hv_pmos
+No property pd found for device sg13_hv_pmos
+No property ps found for device sg13_hv_pmos
+No property trise found for device sg13_hv_pmos
+No property z1 found for device sg13_hv_pmos
+No property z2 found for device sg13_hv_pmos
+No property wmin found for device sg13_hv_pmos
+No property rfmode found for device sg13_hv_pmos
+No property pre_layout found for device sg13_hv_pmos
+No property le found for device pnpMPA
+No property we found for device pnpMPA
+No property we found for device pnpMPA
+No property le found for device pnpMPA
+No property Nx found for device pnpMPA
+No property Ny found for device pnpMPA
+No property le found for device pnpMPA
+No property we found for device pnpMPA
+No property we found for device pnpMPA
+No property le found for device pnpMPA
+No property Nx found for device pnpMPA
+No property Ny found for device pnpMPA
+Comparison output logged to file comp_slot_7.out
+Logging to file "comp_slot_7.out" enabled
+Circuit sg13_hv_pmos contains no devices.
+Circuit sg13_hv_nmos contains no devices.
+Circuit pnpMPA contains no devices.
+Circuit rhigh contains no devices.
+
+Contents of circuit 1:  Circuit: 'bg_core_pd'
+Circuit bg_core_pd contains 123 device instances.
+  Class: sg13_hv_nmos          instances:  16
+  Class: rhigh                 instances:  41
+  Class: pnpMPA                instances:   9
+  Class: sg13_hv_pmos          instances:  57
+Circuit contains 57 nets.
+Contents of circuit 2:  Circuit: 'bg_core_pd'
+Circuit bg_core_pd contains 67 device instances.
+  Class: sg13_hv_nmos          instances:   7
+  Class: rhigh                 instances:  41
+  Class: pnpMPA                instances:   2
+  Class: sg13_hv_pmos          instances:  17
+Circuit contains 57 nets.
+
+Circuit was modified by parallel/series device merging.
+New circuit summary:
+
+Contents of circuit 1:  Circuit: 'bg_core_pd'
+Circuit bg_core_pd contains 29 device instances.
+  Class: sg13_hv_nmos          instances:   6
+  Class: rhigh                 instances:   4
+  Class: pnpMPA                instances:   2
+  Class: sg13_hv_pmos          instances:  17
+Circuit contains 21 nets.
+Contents of circuit 2:  Circuit: 'bg_core_pd'
+Circuit bg_core_pd contains 29 device instances.
+  Class: sg13_hv_nmos          instances:   6
+  Class: rhigh                 instances:   4
+  Class: pnpMPA                instances:   2
+  Class: sg13_hv_pmos          instances:  17
+Circuit contains 21 nets.
+
+Circuit 1 contains 29 devices, Circuit 2 contains 29 devices.
+Circuit 1 contains 21 nets,    Circuit 2 contains 21 nets.
+
+No more changes can be made to series/parallel networks.
+
+Contents of circuit 1:  Circuit: 'pad_ref_rb'
+Circuit pad_ref_rb contains 63 device instances.
+  Class: sg13_hv_nmos          instances:  38
+  Class: sg13_hv_pmos          instances:  25
+Circuit contains 16 nets.
+Contents of circuit 2:  Circuit: 'pad_ref_rb'
+Circuit pad_ref_rb contains 58 device instances.
+  Class: sg13_hv_nmos          instances:  38
+  Class: sg13_hv_pmos          instances:  20
+Circuit contains 16 nets.
+
+Circuit was modified by parallel/series device merging.
+New circuit summary:
+
+Contents of circuit 1:  Circuit: 'pad_ref_rb'
+Circuit pad_ref_rb contains 33 device instances.
+  Class: sg13_hv_nmos          instances:  19
+  Class: sg13_hv_pmos          instances:  14
+Circuit contains 16 nets.
+Contents of circuit 2:  Circuit: 'pad_ref_rb'
+Circuit pad_ref_rb contains 33 device instances.
+  Class: sg13_hv_nmos          instances:  19
+  Class: sg13_hv_pmos          instances:  14
+Circuit contains 16 nets.
+
+Circuit 1 contains 33 devices, Circuit 2 contains 33 devices.
+Circuit 1 contains 16 nets,    Circuit 2 contains 16 nets.
+
+No more changes can be made to series/parallel networks.
+No more changes can be made to series/parallel networks.
+No more changes can be made to series/parallel networks.
+
+Contents of circuit 1:  Circuit: 's7_ctrl'
+Circuit s7_ctrl contains 222 device instances.
+  Class: sg13_hv_nmos          instances:  76
+  Class: sg13_hv_pmos          instances: 146
+Circuit contains 148 nets.
+Contents of circuit 2:  Circuit: 's7_ctrl'
+Circuit s7_ctrl contains 222 device instances.
+  Class: sg13_hv_nmos          instances:  76
+  Class: sg13_hv_pmos          instances: 146
+Circuit contains 148 nets.
+
+Circuit 1 contains 222 devices, Circuit 2 contains 222 devices.
+Circuit 1 contains 148 nets,    Circuit 2 contains 148 nets.
+
+
+Contents of circuit 1:  Circuit: 's7_doutpd'
+Circuit s7_doutpd contains 12 device instances.
+  Class: sg13_hv_nmos          instances:  12
+Circuit contains 15 nets.
+Contents of circuit 2:  Circuit: 's7_doutpd'
+Circuit s7_doutpd contains 12 device instances.
+  Class: sg13_hv_nmos          instances:  12
+Circuit contains 15 nets.
+
+Circuit 1 contains 12 devices, Circuit 2 contains 12 devices.
+Circuit 1 contains 15 nets,    Circuit 2 contains 15 nets.
+
+
+Contents of circuit 1:  Circuit: 'bias_dist_pd'
+Circuit bias_dist_pd contains 77 device instances.
+  Class: sg13_hv_nmos          instances:  37
+  Class: sg13_hv_pmos          instances:  40
+Circuit contains 50 nets.
+Contents of circuit 2:  Circuit: 'bias_dist_pd'
+Circuit bias_dist_pd contains 77 device instances.
+  Class: sg13_hv_nmos          instances:  37
+  Class: sg13_hv_pmos          instances:  40
+Circuit contains 50 nets.
+
+Circuit was modified by parallel/series device merging.
+New circuit summary:
+
+Contents of circuit 1:  Circuit: 'bias_dist_pd'
+Circuit bias_dist_pd contains 75 device instances.
+  Class: sg13_hv_nmos          instances:  36
+  Class: sg13_hv_pmos          instances:  39
+Circuit contains 50 nets.
+Contents of circuit 2:  Circuit: 'bias_dist_pd'
+Circuit bias_dist_pd contains 75 device instances.
+  Class: sg13_hv_nmos          instances:  36
+  Class: sg13_hv_pmos          instances:  39
+Circuit contains 50 nets.
+
+Circuit 1 contains 75 devices, Circuit 2 contains 75 devices.
+Circuit 1 contains 50 nets,    Circuit 2 contains 50 nets.
+
+
+Contents of circuit 1:  Circuit: 'slot_7'
+Circuit slot_7 contains 5 device instances.
+  Class: s7_doutpd             instances:   1
+  Class: bias_dist_pd          instances:   1
+  Class: s7_ctrl               instances:   1
+  Class: bg_core_pd            instances:   1
+  Class: pad_ref_rb            instances:   1
+Circuit contains 40 nets, and 24 disconnected pins.
+Contents of circuit 2:  Circuit: 'slot_7'
+Circuit slot_7 contains 5 device instances.
+  Class: s7_doutpd             instances:   1
+  Class: bias_dist_pd          instances:   1
+  Class: s7_ctrl               instances:   1
+  Class: bg_core_pd            instances:   1
+  Class: pad_ref_rb            instances:   1
+Circuit contains 40 nets, and 23 disconnected pins.
+
+Circuit 1 contains 5 devices, Circuit 2 contains 5 devices.
+Circuit 1 contains 40 nets,    Circuit 2 contains 40 nets.
+
+
+Final result: 
+Top level cell failed pin matching.
+
+Logging to file "comp_slot_7.out" disabled
+LVS Done.
