@@ -1,0 +1,106 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# netgen 1.5.324 LVS of the magic extractions (extract.sh; lvs_collapse.py: C dropped, parasitic R shorted)
+
+== slot_7, extraction c
+Subcircuit summary:
+Circuit 1: slot_7                          |Circuit 2: slot_7                          
+-------------------------------------------|-------------------------------------------
+sg13_hv_nmos (179->149)                    |sg13_hv_nmos (170->149)                    
+sg13_hv_pmos (268->216)                    |sg13_hv_pmos (223->216)                    
+rhigh (41->4)                              |rhigh (41->4)                              
+pnpMPA (9->2)                              |pnpMPA (9->2)                              
+Number of devices: 371                     |Number of devices: 371                     
+Number of nets: 222                        |Number of nets: 222                        
+Final result: Top level cell failed pin matching.
+Netlists match with 11 symmetries.
+analog_bus3                                |analog_bus3,s7_an_0_vref **Mismatch**      
+s7_an_1_en_3v3                             |s7_an_0_en_3v3,s7_an_1_en_3v3 **Mismatch** 
+vss_1v2_uq0                                |(no matching pin)                          
+property errors: 0
+
+== slot_7, extraction rc
+Subcircuit summary:
+Circuit 1: slot_7                          |Circuit 2: slot_7                          
+-------------------------------------------|-------------------------------------------
+sg13_hv_nmos (179->149)                    |sg13_hv_nmos (170->149)                    
+sg13_hv_pmos (268->216)                    |sg13_hv_pmos (223->216)                    
+rhigh (41->4)                              |rhigh (41->4)                              
+pnpMPA (9->2)                              |pnpMPA (9->2)                              
+Number of devices: 371                     |Number of devices: 371                     
+Number of nets: 222                        |Number of nets: 222                        
+Final result: Top level cell failed pin matching.
+Netlists match with 11 symmetries.
+analog_bus3                                |analog_bus3,s7_an_0_vref **Mismatch**      
+s7_an_0_en_3v3                             |s7_an_0_en_3v3,s7_an_1_en_3v3 **Mismatch** 
+s7_an_0_vcm                                |(no matching pin)                          
+s7_an_0_vref                               |(no matching pin)                          
+s7_an_1_en_3v3                             |(no matching pin)                          
+s7_an_1_en_3v3_b                           |(no matching pin)                          
+s7_an_1_vref                               |(no matching pin)                          
+vss_1v2_uq0                                |(no matching pin)                          
+property errors: 0
+
+== sg13cmos5l_IOPadSingle2Diff, extraction c
+Subcircuit summary:
+Circuit 1: sg13cmos5l_IOPadSingle2Diff     |Circuit 2: sg13cmos5l_IOPadSingle2Diff     
+-------------------------------------------|-------------------------------------------
+sg13_hv_pmos (120->42)                     |sg13_hv_pmos (53->42)                      
+rhigh (26->7)                              |rhigh (26->7)                              
+sg13_hv_nmos (73->23)                      |sg13_hv_nmos (34->23)                      
+rppd (2)                                   |rppd (2)                                   
+dpantenna (2->1)                           |dpantenna (2->1)                           
+dantenna (2->1)                            |dantenna (2->1)                            
+Number of devices: 76                      |Number of devices: 76                      
+Number of nets: 37                         |Number of nets: 37                         
+Final result: Circuits match uniquely.
+Netlists match with 7 symmetries with property errors.
+property errors: 118
+
+== sg13cmos5l_IOPadSingle2Diff, extraction rc
+Subcircuit summary:
+Circuit 1: sg13cmos5l_IOPadSingle2Diff     |Circuit 2: sg13cmos5l_IOPadSingle2Diff     
+-------------------------------------------|-------------------------------------------
+sg13_hv_pmos (120->42)                     |sg13_hv_pmos (53->42)                      
+rhigh (26->7)                              |rhigh (26->7)                              
+sg13_hv_nmos (73->23)                      |sg13_hv_nmos (34->23)                      
+rppd (2)                                   |rppd (2)                                   
+dpantenna (2->1)                           |dpantenna (2->1)                           
+dantenna (2->1)                            |dantenna (2->1)                            
+Number of devices: 76                      |Number of devices: 76                      
+Number of nets: 37                         |Number of nets: 37                         
+Final result: Circuits match uniquely.
+Netlists match with 7 symmetries with property errors.
+property errors: 118
+
+== sg13cmos5l_IOPadDiff2Single, extraction c
+Subcircuit summary:
+Circuit 1: sg13cmos5l_IOPadDiff2Single     |Circuit 2: sg13cmos5l_IOPadDiff2Single     
+-------------------------------------------|-------------------------------------------
+sg13_hv_pmos (154->40)                     |sg13_hv_pmos (51->40)                      
+sg13_hv_nmos (111->23)                     |sg13_hv_nmos (31->23)                      
+dantenna (4->3)                            |dantenna (4->3)                            
+rppd (2)                                   |rppd (2)                                   
+dpantenna (4->3)                           |dpantenna (4->3)                           
+rhigh (18->5)                              |rhigh (18->5)                              
+Number of devices: 76                      |Number of devices: 76                      
+Number of nets: 36                         |Number of nets: 36                         
+Final result: Circuits match uniquely.
+Netlists match with 7 symmetries with property errors.
+property errors: 118
+
+== sg13cmos5l_IOPadDiff2Single, extraction rc
+Subcircuit summary:
+Circuit 1: sg13cmos5l_IOPadDiff2Single     |Circuit 2: sg13cmos5l_IOPadDiff2Single     
+-------------------------------------------|-------------------------------------------
+sg13_hv_pmos (154->40)                     |sg13_hv_pmos (51->40)                      
+sg13_hv_nmos (111->23)                     |sg13_hv_nmos (31->23)                      
+dantenna (4->3)                            |dantenna (4->3)                            
+rppd (2)                                   |rppd (2)                                   
+dpantenna (4->3)                           |dpantenna (4->3)                           
+rhigh (18->5)                              |rhigh (18->5)                              
+Number of devices: 76                      |Number of devices: 76                      
+Number of nets: 36                         |Number of nets: 36                         
+Final result: Circuits match uniquely.
+Netlists match with 7 symmetries with property errors.
+property errors: 118

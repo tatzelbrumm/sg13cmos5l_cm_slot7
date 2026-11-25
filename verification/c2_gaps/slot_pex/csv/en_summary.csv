@@ -1,0 +1,11 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# IHP sg13cmos5l simulation, slot 7 default mode, round trip pad_s2d → pad_d2s; evaluate.py; from the disabled op, enable at 2 us; times after enable, values at 19.9 us
+view,point,vcm_end_V,t_vcm98_us_en,vref_end_V,t_vref98_us_en,padout_end_V,t_out1mV_us_en,I_slot_end_uA,I_ring_end_uA,I_ring_peak_enable_uA,I_ring_before_enable_nA
+prev,tt 27 C 3.3 V,1.2566,1.59239,0.492253,1.57225,1.2644,1.86468,49.7505,419.997,1031.67,6.38269
+prev,ss -40 C 3.0 V,1.11474,1.3414,0.447477,1.47867,1.16723,1.96477,48.3889,398.356,931.826,5.45321
+prev,ff 125 C 3.6 V,1.29908,1.96914,0.570925,1.92953,1.22997,2.22738,49.4196,423.157,942.448,50.7349
+c,tt 27 C 3.3 V,1.26153,1.68288,0.494061,1.74407,1.26753,2.2063,49.6277,420.037,967.184,6.3827
+c,ss -40 C 3.0 V,1.11955,1.60319,0.449331,2.08034,1.17018,2.58987,48.2608,398.389,734.11,5.45322
+c,ff 125 C 3.6 V,1.32336,2.05929,0.572697,2.04863,1.25249,2.31164,49.3114,423.315,921.811,50.7344
+rc,tt 27 C 3.3 V,1.26155,1.75156,0.494851,1.7274,1.26681,2.01978,49.6117,419.951,1032.69,18.6658

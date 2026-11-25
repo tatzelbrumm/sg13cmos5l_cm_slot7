@@ -1,0 +1,12 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# IHP sg13cmos5l simulation, slot 7 default mode, round trip pad_s2d → pad_d2s; evaluate.py; current from the slot into the pads iref pins (0 V sources), op enabled
+view,point,I_iref_s2d_uA,I_iref_d2s_uA
+prev,tt 27 C 3.3 V,5.01958,5.01958
+prev,ss -40 C 3.0 V,4.89662,4.89662
+prev,ff 125 C 3.6 V,4.97124,4.97124
+c,tt 27 C 3.3 V,5.01983,5.01983
+c,ss -40 C 3.0 V,4.89678,4.89678
+c,ff 125 C 3.6 V,4.97163,4.97163
+cc,tt 27 C 3.3 V,5.01983,5.01983
+rc,tt 27 C 3.3 V,5.01774,5.01779

@@ -1,0 +1,12 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# IHP sg13cmos5l simulation, slot 7 default mode, round trip pad_s2d → pad_d2s; evaluate.py; tt 27 C, designer run_modes.py definitions
+view,point,mode,err_max_mV
+prev,tt 27 C 3.3 V,swap,0.980275
+prev,tt 27 C 3.3 V,mon,0.917715
+prev,tt 27 C 3.3 V,feed,0.040828
+prev,tt 27 C 3.3 V,ext,0.882617
+c,tt 27 C 3.3 V,swap,0.98614
+c,tt 27 C 3.3 V,mon,0.920176
+c,tt 27 C 3.3 V,feed,0.037423
+c,tt 27 C 3.3 V,ext,0.882664

@@ -1,0 +1,131 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# sim.py jobs, <view>:<mos>:<temp>:<vdd>:<analysis>[:<load>], priority order; run.sh runs them one at a time
+# PVT = the five points of the designer's tier-1 deck (run_tier1.py POINTS). Transients from enable (en) and power-up
+# (pu) come last
+c:tt:27:3.3:op
+c:tt:27:3.3:ac
+c:tt:27:3.3:dc
+c:tt:27:3.3:step:open
+c:tt:27:3.3:step:10p
+c:tt:27:3.3:step:100p
+prev:tt:27:3.3:op
+prev:tt:27:3.3:ac
+prev:tt:27:3.3:dc
+prev:tt:27:3.3:step:open
+prev:tt:27:3.3:step:10p
+prev:tt:27:3.3:step:100p
+rc:tt:27:3.3:op
+rc:tt:27:3.3:ac
+rc:tt:27:3.3:dc
+rc:tt:27:3.3:step:open
+rc:tt:27:3.3:step:10p
+rc:tt:27:3.3:step:100p
+cc:tt:27:3.3:op
+cc:tt:27:3.3:ac
+cc:tt:27:3.3:dc
+cc:tt:27:3.3:step:100p
+# solver check: c with SPARSE instead of KLU
+cs:tt:27:3.3:op
+cs:tt:27:3.3:ac
+# hybrid: the earlier deck with only pad_ref_rb as its magic extraction (cause of the vcm / vref shift)
+hyb:tt:27:3.3:op
+hyb:ff:125:3.6:op
+hyb:ss:-40:3.0:op
+# bias currents into the pads (iref lines)
+prev:tt:27:3.3:opi
+c:tt:27:3.3:opi
+cc:tt:27:3.3:opi
+rc:tt:27:3.3:opi
+prev:ff:125:3.6:opi
+c:ff:125:3.6:opi
+prev:ss:-40:3.0:opi
+c:ss:-40:3.0:opi
+c:ss:-40:3.0:op
+c:ss:-40:3.0:ac
+c:ss:-40:3.0:dc
+c:ss:-40:3.0:step:open
+c:ss:-40:3.0:step:100p
+prev:ss:-40:3.0:op
+prev:ss:-40:3.0:ac
+prev:ss:-40:3.0:dc
+prev:ss:-40:3.0:step:open
+prev:ss:-40:3.0:step:100p
+rc:ss:-40:3.0:op
+rc:ss:-40:3.0:ac
+rc:ss:-40:3.0:dc
+rc:ss:-40:3.0:step:open
+rc:ss:-40:3.0:step:100p
+c:ff:125:3.6:op
+c:ff:125:3.6:ac
+c:ff:125:3.6:dc
+c:ff:125:3.6:step:open
+c:ff:125:3.6:step:100p
+prev:ff:125:3.6:op
+prev:ff:125:3.6:ac
+prev:ff:125:3.6:dc
+prev:ff:125:3.6:step:open
+prev:ff:125:3.6:step:100p
+rc:ff:125:3.6:op
+rc:ff:125:3.6:ac
+rc:ff:125:3.6:dc
+rc:ff:125:3.6:step:open
+rc:ff:125:3.6:step:100p
+c:fs:125:3.6:op
+c:fs:125:3.6:ac
+c:fs:125:3.6:dc
+c:fs:125:3.6:step:open
+c:fs:125:3.6:step:100p
+prev:fs:125:3.6:op
+prev:fs:125:3.6:ac
+prev:fs:125:3.6:dc
+prev:fs:125:3.6:step:open
+prev:fs:125:3.6:step:100p
+rc:fs:125:3.6:op
+rc:fs:125:3.6:ac
+rc:fs:125:3.6:dc
+rc:fs:125:3.6:step:open
+rc:fs:125:3.6:step:100p
+c:sf:-40:3.0:op
+c:sf:-40:3.0:ac
+c:sf:-40:3.0:dc
+c:sf:-40:3.0:step:open
+c:sf:-40:3.0:step:100p
+prev:sf:-40:3.0:op
+prev:sf:-40:3.0:ac
+prev:sf:-40:3.0:dc
+prev:sf:-40:3.0:step:open
+prev:sf:-40:3.0:step:100p
+rc:sf:-40:3.0:op
+rc:sf:-40:3.0:ac
+rc:sf:-40:3.0:dc
+rc:sf:-40:3.0:step:open
+rc:sf:-40:3.0:step:100p
+# modes at tt 27 C (task 4); full-RC swap was tried and stopped (no operating point after 796 s with KLU and 618 s with SPARSE, stopped by hand)
+c:tt:27:3.3:mode_swap
+prev:tt:27:3.3:mode_swap
+c:tt:27:3.3:mode_mon
+prev:tt:27:3.3:mode_mon
+c:tt:27:3.3:mode_feed
+prev:tt:27:3.3:mode_feed
+c:tt:27:3.3:mode_ext
+prev:tt:27:3.3:mode_ext
+# corrected pads at the other PVT points (AC and 100 pF step)
+cc:ss:-40:3.0:ac
+cc:ss:-40:3.0:step:100p
+cc:ff:125:3.6:ac
+cc:ff:125:3.6:step:100p
+cc:fs:125:3.6:ac
+cc:fs:125:3.6:step:100p
+cc:sf:-40:3.0:ac
+cc:sf:-40:3.0:step:100p
+# enable transient from the disabled operating point
+c:tt:27:3.3:en
+prev:tt:27:3.3:en
+rc:tt:27:3.3:en
+c:ss:-40:3.0:en
+prev:ss:-40:3.0:en
+c:ff:125:3.6:en
+prev:ff:125:3.6:en
+# power-up from 0 V (supply ramp, uic): the extracted slot stalls (c tt 27 C: at 2.778 us after 60 min); prev only
+prev:tt:27:3.3:pu
