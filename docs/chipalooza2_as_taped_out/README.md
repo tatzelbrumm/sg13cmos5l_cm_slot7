@@ -109,7 +109,7 @@ For reuse in a system. All simulation, no silicon; "limits" are the designer's w
 | What was verified, and what is open? | [§3](#3-readiness-of-the-blocks-that-were-kicked-off), [§5](#5-verification-state), [§5a](#5a-gap-simulations-of-2026-11-23), [signoff](../../signoff/README.md) |
 | How to measure the chip | [TEST_PLAN.md](TEST_PLAN.md) |
 | Earlier test platforms (not taped out) | [test_platforms.md](test_platforms.md) |
-| Everything as PDF | [data book](pdf/slot7_databook.pdf) (summary, contents, all chapters, data sheets, figures, appendices; about 250 pages), [slot 7 in two pages](pdf/slot7_digest.pdf) ([source](DIGEST.md)) and the [rules checklist](pdf/slot7_rules_checklist.pdf) ([source](RULES_CHECKLIST.md)); all three made by [book/build_book.py](book/build_book.py) from the Markdown files |
+| Everything as PDF | [data book](pdf/slot7_databook.pdf) (summary, contents, all chapters, data sheets, figures, appendices; about 250 pages) and [slot 7 in two pages](pdf/slot7_digest.pdf) ([source](DIGEST.md)); both made by [book/build_book.py](book/build_book.py) from the Markdown files |
 | How this set was made; AI assistance | [§8](#8-about-this-document-set), [log.md](log.md), [../AI_ASSISTANCE.md](../AI_ASSISTANCE.md) |
 
 ## 1. Which version was taped out
