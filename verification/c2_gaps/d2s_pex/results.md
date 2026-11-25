@@ -2,6 +2,9 @@
 <!-- SPDX-License-Identifier: Apache-2.0 -->
 # sg13cmos5l_IOPadDiff2Single: schematic vs post-layout (magic PEX) CACE results
 
+> **Note added 2026-11-25:** the "schematic" columns below are the committed CACE results of 2026-10-21, which predate the final D2S schematic (changed until 2026-11-03); the schematic-vs-PEX changes therefore mix layout effects with schematic changes. The PEX columns are runs of the taped-out cell and current. See `../ac_tran/results.md` (cross-check, "stale ref").
+
+
 **IHP sg13cmos5l post-layout (magic PEX) simulation** of the taped-out cell
 (`pads/sg13cmos5l_IOPadDiff2Single/sg13cmos5l_IOPadDiff2Single.gds`), magic C-coupled extraction, compared with the
 committed schematic results. Method and caveats: [README.md](README.md).

@@ -13,6 +13,8 @@ SPDX-License-Identifier: Apache-2.0
 **Source:** [`macros/sg13cmos5l_IOPadDiff2Single/verification/cace/sg13cmos5l_IOPadDiff2Single.yaml`](https://github.com/tatzelbrumm/sg13cmos5l_cm_ip__single2diff2single/blob/91a7da8b67ac56a26c605501146667a1fde28c32/macros/sg13cmos5l_IOPadDiff2Single/verification/cace/sg13cmos5l_IOPadDiff2Single.yaml) at design-repository commit `91a7da8b`; results [`verification/cace/results/`](https://github.com/tatzelbrumm/sg13cmos5l_cm_ip__single2diff2single/tree/91a7da8b67ac56a26c605501146667a1fde28c32/macros/sg13cmos5l_IOPadDiff2Single/verification/cace/results)  
 **Generated:** by `datasheets/tools/make_datasheet.py` from the committed CACE files; **no simulation was run for this sheet** and nothing was re-checked against the taped-out netlist.
 
+> **Warning (found 2026-11-25):** the *schematic* CACE results this sheet was generated from (committed 2026-10-21 at `91a7da8b`) predate the final D2S schematic (changed until 2026-11-03), so the schematic tables below describe an earlier circuit: re-running the same templates on the taped-out schematic differs by more than 2 % in 24 values (e.g. output impedance at 1 kHz down to −14 %, turn-on time up to +53 %; [AC / transient cross-check](../../../verification/c2_gaps/ac_tran/results.md)). The post-layout results of the taped-out cell ([D2S post-layout](../../../verification/c2_gaps/d2s_pex/results.md)) and the DC curves are fresh runs and current. A schematic re-run to regenerate this sheet is in progress.
+
 ## Pins
 
 | pin | type | direction | description | limits |
