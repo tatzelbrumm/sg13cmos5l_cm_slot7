@@ -47,6 +47,32 @@ SPDX-License-Identifier: Apache-2.0
 | `vterm` | 1.65 | V | Load termination voltage |
 | `cload` | 1e-10 | F | Load capacitance, pad to ground |
 
+## Figures
+
+<!-- Figures section added by hand on 2026-11-25, not produced by tools/make_datasheet.py: keep it when regenerating. -->
+
+![Output and error vs the ideal ½ (vinp − vinn) at the slot's operating point (vicm = vref = 1.26 V, 1 kΩ + 100 pF), 5 corners × 3 temperatures, 3.3 V (schematic; extracted layout within 0.7 mV)](../../../verification/c2_gaps/dc_curves/plots/d2s_corners_slot_schematic.png)
+
+*Output and error vs the ideal ½ (vinp − vinn) at the slot's operating point (vicm = vref = 1.26 V, 1 kΩ + 100 pF), 5 corners × 3 temperatures, 3.3 V (schematic; extracted layout within 0.7 mV)*
+
+![The same at iovdd 3.0 V](../../../verification/c2_gaps/dc_curves/plots/d2s_corners_slot_3v0_schematic.png)
+
+*The same at iovdd 3.0 V: INL over ±1 V stays ≤ 1.38 mV at this operating point*
+
+![Linear output range (error < 10 mV) per corner and supply at the slot's operating point](../../../verification/c2_gaps/dc_curves/plots/d2s_range_slot.png)
+
+*Linear output range (error < 10 mV) per corner and supply at the slot's operating point*
+
+![For comparison](../../../verification/c2_gaps/dc_curves/plots/d2s_corners_3v0_schematic.png)
+
+*For comparison: the CACE test condition vicm = vref = 1.65 V at 3.0 V, where the 87 mV INL of the CACE table comes from (headroom at this common mode, not at the slot's)*
+
+![Closed-loop −3 dB bandwidth per corner, schematic vs extracted layout](../../../verification/c2_gaps/d2s_pex/plots/f3dB_per_corner.png)
+
+*Closed-loop −3 dB bandwidth per corner, schematic vs extracted layout*
+
+Schematics: [pad top](../pix/schematics/sg13cmos5l_IOPadDiff2Single.svg), [driver d2s_mpdda_pd](../pix/schematics/d2s_mpdda_pd.svg), [output stage P](../pix/schematics/d2s_out_p.svg), [output stage N](../pix/schematics/d2s_out_n.svg), [bias tree](../pix/schematics/bias_tree_pd.svg). Layout: [all layers](../pix/layout/IOPadDiff2Single.png), [Metal2 and below](../pix/layout/IOPadDiff2Single_frontend.png). Post-layout CACE of all groups: [D2S post-layout](../../../verification/c2_gaps/d2s_pex/results.md) (this sheet's tables are schematic only).
+
 ## Specification (ex post facto, as characterized)
 
 The design is a proof of concept and had **no specification** before it was characterized. The limits and verdicts in the CACE files (section 'CACE run summaries') are the designer's *working limits*, in part set from earlier measured bands, so *Pass* means "inside the designer's working limit", not "meets a specification". This section instead states, **ex post facto**, the interval each characterized quantity covered: the minimum and maximum over every run of the group's characterization grid (corners, temperature, supply, … as listed), the value at typical conditions (default conditions of the CACE file: tt, 27 °C, 3.3 V, typical resistor / PNP corners) where such a run exists, and the median over the group (CACE's own *typ* value). It is a description of what was simulated, **not a guarantee**; Monte Carlo rows are the observed range of the sampled iterations, not ±3σ; no silicon was measured.

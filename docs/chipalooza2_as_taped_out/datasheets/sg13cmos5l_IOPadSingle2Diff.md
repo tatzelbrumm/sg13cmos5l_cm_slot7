@@ -47,6 +47,28 @@ SPDX-License-Identifier: Apache-2.0
 | `rsrc` | 50 | Ω | Source resistance into the pad |
 | `cload` | 0.5 | pF | External load per output, to ground (next stage, routing) |
 
+## Figures
+
+<!-- Figures section added by hand on 2026-11-25, not produced by tools/make_datasheet.py: keep it when regenerating. -->
+
+![DC transfer, extracted layout, tt 27 °C 3.3 V](../../../verification/c2_gaps/dc_curves/plots/s2d_transfer_tt27_pex.png)
+
+*DC transfer, extracted layout, tt 27 °C 3.3 V: outp, outn, difference and common mode vs pad; shaded: linear input range (error < 1 mV input-referred)*
+
+![Difference and error vs the ideal 2 (pad − vref) over 5 corners × 3 temperatures, extracted layout](../../../verification/c2_gaps/dc_curves/plots/s2d_corners_pex.png)
+
+*Difference and error vs the ideal 2 (pad − vref) over 5 corners × 3 temperatures, extracted layout*
+
+![Linear input range per corner and supply at the slot's vref 0.49 V / vcm 1.26 V (schematic)](../../../verification/c2_gaps/dc_curves/plots/s2d_range_slot.png)
+
+*Linear input range per corner and supply at the slot's vref 0.49 V / vcm 1.26 V (schematic)*
+
+![Linear input range vs the vref and vcm settings (schematic)](../../../verification/c2_gaps/dc_curves/plots/s2d_vrefvcm_range.png)
+
+*Linear input range vs the vref and vcm settings (schematic)*
+
+Schematics: [pad top](../pix/schematics/sg13cmos5l_IOPadSingle2Diff.svg), [core amplifier s2d_mpdda](../pix/schematics/s2d_mpdda.svg), [with power-down s2d_mpdda_pd](../pix/schematics/s2d_mpdda_pd.svg), [matched unit unit_r2](../pix/schematics/unit_r2.svg), [bias tree](../pix/schematics/bias_tree_noab_pd.svg), [ESD](../pix/schematics/s2d_pad_esd.svg). Layout: [all layers](../pix/layout/IOPadSingle2Diff.png), [Metal2 and below](../pix/layout/IOPadSingle2Diff_frontend.png). More figures and the range tables: [DC curves](../../../verification/c2_gaps/dc_curves/README.md).
+
 ## Specification (ex post facto, as characterized)
 
 The design is a proof of concept and had **no specification** before it was characterized. The limits and verdicts in the CACE files (section 'CACE run summaries') are the designer's *working limits*, in part set from earlier measured bands, so *Pass* means "inside the designer's working limit", not "meets a specification". This section instead states, **ex post facto**, the interval each characterized quantity covered: the minimum and maximum over every run of the group's characterization grid (corners, temperature, supply, … as listed), the value at typical conditions (default conditions of the CACE file: tt, 27 °C, 3.3 V, typical resistor / PNP corners) where such a run exists, and the median over the group (CACE's own *typ* value). It is a description of what was simulated, **not a guarantee**; Monte Carlo rows are the observed range of the sampled iterations, not ±3σ; no silicon was measured.

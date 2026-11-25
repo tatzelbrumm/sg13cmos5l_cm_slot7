@@ -39,6 +39,20 @@ SPDX-License-Identifier: Apache-2.0
 | `ibias` | 5e-06 | A | Harness bias current |
 | `en` | 1.2 | V | en_1v2 (1.2 V enabled, 0 disabled) |
 
+## Figures
+
+<!-- Figures section added by hand on 2026-11-25, not produced by tools/make_datasheet.py: keep it when regenerating. -->
+
+![vcm and vref, 100-run mismatch Monte Carlo, tt 27 °C 3.3 V (schematic)](../../../verification/c2_gaps/replica_bias/results/pad_ref_rb_mc_hist.png)
+
+*vcm and vref, 100-run mismatch Monte Carlo, tt 27 °C 3.3 V (schematic): σ 5.4 mV / 3.8 mV*
+
+![bias_dist_pd](../../../verification/c2_gaps/replica_bias/results/bias_dist_copy_error.png)
+
+*bias_dist_pd: copy error of the 5 µA reference per output over corners, temperatures and output voltage*
+
+Schematics: [pad_ref_rb](../pix/schematics/pad_ref_rb.svg), [bias_tree_rb](../pix/schematics/bias_tree_rb.svg), [vcm_rb](../pix/schematics/vcm_rb.svg), [vref_s2d_rb](../pix/schematics/vref_s2d_rb.svg), [bypass_rb](../pix/schematics/bypass_rb.svg), [bias_dist_pd](../pix/schematics/bias_dist_pd.svg). Layout: [pad_ref_rb](../pix/layout/slot_7_pad_ref_rb.png). Post-layout (C-coupled PEX) equals the schematic in DC to 0.1 mV: [replica bias](../../../verification/c2_gaps/replica_bias/results.md).
+
 ## Specification (ex post facto, as characterized)
 
 The design is a proof of concept and had **no specification** before it was characterized. The limits and verdicts in the CACE files (section 'CACE run summaries') are the designer's *working limits*, in part set from earlier measured bands, so *Pass* means "inside the designer's working limit", not "meets a specification". This section instead states, **ex post facto**, the interval each characterized quantity covered: the minimum and maximum over every run of the group's characterization grid (corners, temperature, supply, … as listed), the value at typical conditions (default conditions of the CACE file: tt, 27 °C, 3.3 V, typical resistor / PNP corners) where such a run exists, and the median over the group (CACE's own *typ* value). It is a description of what was simulated, **not a guarantee**; Monte Carlo rows are the observed range of the sampled iterations, not ±3σ; no silicon was measured.

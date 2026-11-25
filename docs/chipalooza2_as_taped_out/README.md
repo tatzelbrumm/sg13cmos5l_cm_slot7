@@ -4,35 +4,79 @@ SPDX-License-Identifier: Apache-2.0
 -->
 # Slot 7: custom S2D / D2S pad pair with a bandgap-referenced replica bias (as taped out, November 2026)
 
-> **Where this set comes from.** Copied on 2026-11-23 from
-> [`tatzelbrumm/sg13cmos5l_ocd_chipalooza`](https://github.com/tatzelbrumm/sg13cmos5l_ocd_chipalooza/tree/da4557a5b2ac84c6e05c5a683a019df4895b67e9/sudelbuecher/slots/slot_7),
-> branch `sudel_buecher` (commit `da4557a5b2ac84c6e05c5a683a019df4895b67e9`), directory `sudelbuecher/slots/slot_7/`
-> (README.md, glue_logic.md, test_platforms.md, characterization_candidates.md, log.md, datasheets/ with tools/, pix/).
-> It describes slot 7 **as taped out**, i.e. this repository at commit `158afc5afab0056bd6d216a4db3833e34a364949`
-> (`s7_version` in `config.txt` of the harness branch `tapeout_nov_2026`).
->
-> **The Oguey–Aebischer core `oa_core_pd` is not in the taped-out slot 7.** It was built and verified (cloud sessions C0 and
-> C1: DRC, LVS, PEX; section 3) and used in the stage A / B test platforms ([test_platforms.md](test_platforms.md)), but the
-> taped-out `final/gds/slot_7.gds` contains only the bandgap core `bg_core_pd` (section 4.3; re-checked on 2026-11-23 with
-> KLayout 0.30.12: none of the 88 cells of `final/gds/slot_7.gds` is `oa_core_pd` or one of its own sub-cells `oa_svpg`, `oa_pcas_c`, `oa_pmir_c`,
-> `oa_mcs_c`, `oa_ms1`, `oa_n10`, as listed in `macros/oa_core_pd/layout/gds/oa_core_pd.gds`). `macros/oa_core_pd/`
-> in this repository is a copy of the macro that no harness script reads; the statement in this repository's top-level
-> README that both cores are placed in `slot_7.gds` describes the test platform, not `158afc5`.
->
-> Adaptations made while copying (nothing else was changed): links to files of this repository that are unchanged since `158afc5`
-> are relative (`../FOR_TIM.md`, `../slot_7.md`, `../PROGRESS.md`, `../slot_7.png`, `../../netlist/slot_7.spice`,
-> `../../art/tughra_art.gds`); links to other repositories stay absolute with commits (the harness's `magic/custom_io/` now
-> points to the tapeout commit `7eeb3cb`); "in this session" / "checked in this session" became "on 2026-11-22" / "checked on
-> 2026-11-22" (the date of that work); the link from `datasheets/slot_7_system.md` to `glue_logic.md` was corrected to
-> `../glue_logic.md`; the chat-log link in `log.md` was replaced by a path citation (chat logs are not copied); in
-> `characterization_candidates.md` the cross-reference "README's section 6" was corrected to section 2.5. The measurement plan for
-> the fabricated chip is [TEST_PLAN.md](TEST_PLAN.md); sign-off reports are in [`../../signoff/`](../../signoff/README.md).
+Designer: Christoph Maier. Chipalooza Challenge #2 (IHP sg13cmos5l), slot 7, taped out on 2026-11-09 as commit `158afc5` of
+this repository. No silicon results exist yet: every number below is a **simulation** (IHP sg13cmos5l; schematic or extracted
+layout as stated), and the design had no specification before it was characterized (proof of concept).
 
-Designer: Christoph Maier. Slot 7 turns a single-ended pad signal into a differential pair and back: two custom analog pads, a bandgap, a
-bias distribution and replica-bias block that give the pads their reference currents and common-mode / reference voltages, and a small
-3.3 V control block with fail-safe enables. Sections 2 and 3 are the electrical documentation and the state of readiness of each block (the glue logic, which is as important as the circuits, has its own page: [glue_logic.md](glue_logic.md));
-the pins, layout hierarchy and verification follow; the tughra art is an aside at the end. Running log of how this page was assembled:
-[log.md](log.md). Data for characterizing the blocks: [characterization_candidates.md](characterization_candidates.md); first data sheets built from the existing characterization: [datasheets/](datasheets/README.md); the earlier test platforms (not taped out): [test_platforms.md](test_platforms.md).
+## Slot 7 at a glance
+
+**What it is.** Two custom analog I/O pads that turn a single-ended pad voltage into a differential pair inside the chip
+(**S2D**, input pad `s7_an[0]`) and a differential pair back into a pad voltage (**D2S**, output pad `s7_an[1]`), with the gain
+set by matched devices (2 and ½), not by resistors. A small on-slot bandgap, a bias distribution and a replica-bias block give
+both pads their 5 µA references and their common-mode / reference voltages; 3.3 V glue with fail-safe enables selects the modes.
+In the default mode the D2S pad reproduces the S2D pad voltage, shifted by `vcm − vref` ≈ 0.77 V.
+
+![Signal and current flow of slot 7](pix/slot7_signal_flow.svg)
+
+*Figure 1: blocks, references and signal path (details in [§2.1](#21-signal-and-current-flow) and [glue_logic.md](glue_logic.md)).*
+
+![Round trip S2D → D2S, DC transfer at tt 27 °C](../../verification/c2_gaps/dc_curves/plots/rt_transfer_tt27.png)
+
+*Figure 2: what the slot does, end to end: D2S pad output vs S2D pad input in the default mode, tt 27 °C 3.3 V, with the
+slot's own replica `vcm` / `vref`. The shaded band is the input range where the output is within 1 mV of the straight line:
+−0.171 … 1.281 V in → 0.595 … 2.044 V out. Schematic, extracted (magic PEX) and KLayout-extracted pads lie on top of each
+other. Above about 1.5 V input the S2D outputs saturate and the output stops at about 2.25 V.*
+
+![Round trip error over corners](../../verification/c2_gaps/dc_curves/plots/rt_error_corners.png)
+
+*Figure 3: the same as an error (pad out − expected), at the corner extremes of the slot simulation. Over the intended input
+range 0 … 1 V the error is at most 0.86 mV at tt 27 °C and 6.1 mV at ff 125 °C 3.6 V.*
+
+![S2D pad DC transfer](../../verification/c2_gaps/dc_curves/plots/s2d_transfer_tt27_pex.png)
+
+*Figure 4: the input pad alone (S2D, extracted layout): `outp`, `outn`, their difference (= 2 (pad − vref)) and their common
+mode vs pad voltage; shaded: linear input range (error < 1 mV input-referred).*
+
+![D2S pad over corners at the slot operating point](../../verification/c2_gaps/dc_curves/plots/d2s_corners_slot_schematic.png)
+
+*Figure 5: the output pad alone (D2S) at the slot's operating point (input common mode = vref = 1.26 V, 1 kΩ + 100 pF load),
+5 process corners × 3 temperatures: output (top) and error from the ideal ½ (vinp − vinn) (bottom, shaded ±10 mV).*
+
+### Key numbers (simulation)
+
+| quantity | value | conditions | source |
+|---|---|---|---|
+| S2D gain (outp − outn)/(pad − vref) | 1.9985 … 1.9993 | 5 corners × 3 T × 3.0 … 3.6 V; schematic = extracted | [S2D data sheet](datasheets/sg13cmos5l_IOPadSingle2Diff.md) |
+| S2D linear input range (1 mV) | −0.157 … 1.296 V at tt 27 °C 3.3 V; high end ≥ 0.980 V at every corner | vref 0.49 V, vcm 1.26 V | [DC curves](../../verification/c2_gaps/dc_curves/results.md) §1b |
+| S2D −3 dB bandwidth | 1.24 … 1.67 MHz | extracted layout, 5 corners × 3 T | [S2D data sheet](datasheets/sg13cmos5l_IOPadSingle2Diff.md) |
+| D2S gain pad / (vinp − vinn) | 0.4983 … 0.5000 | schematic and extracted | [DC curves](../../verification/c2_gaps/dc_curves/results.md) §2b |
+| D2S INL over ±1 V differential | ≤ 0.56 mV at 3.3 V, ≤ 1.38 mV at 3.0 V | slot operating point (vicm 1.26 V), 1 kΩ | [DC curves](../../verification/c2_gaps/dc_curves/results.md) §2b |
+| D2S linear output range (10 mV) | 0.211 … 2.317 V at tt 27 °C; worst 0.328 … 2.258 V | 3.3 V, slot operating point, 1 kΩ | [DC curves](../../verification/c2_gaps/dc_curves/results.md) §2b |
+| D2S bandwidth, slew rate | 1.43 … 2.71 MHz, 1.59 … 2.79 V/µs | extracted layout, 10 … 300 pF | [D2S post-layout](../../verification/c2_gaps/d2s_pex/results.md) |
+| round-trip error, pad in 0 … 1 V | ≤ 0.86 mV (tt 27 °C); ≤ 6.5 mV (ff 125 °C 3.6 V) | default mode, replica bias | [slot data sheet](datasheets/slot_7_system.md), Figure 3 |
+| `vcm` / `vref` from the replica | 1.115 … 1.395 V / 0.436 … 0.596 V; mismatch σ 5.4 / 3.8 mV | corners × −40 … 125 °C × 3.0 … 3.6 V | [replica data sheet](datasheets/pad_ref_rb.md), [replica bias](../../verification/c2_gaps/replica_bias/results.md) |
+| bandgap reference current | 3.83 … 6.37 µA (typ. 4.96 µA) | set by the resistor corner (−21 % / +28 %) | [bandgap](../../verification/c2_gaps/slot_modes_bg/results.md) |
+| supply current, enabled | slot 48.4 … 49.7 µA; pad ring 365 … 396 µA | 5 corners | [slot data sheet](datasheets/slot_7_system.md) |
+| supply current, disabled / pad leakage unpowered | slot 25 … 56 nA, ring 9 … 58 nA / ≤ 67 nA at 125 °C | | [slot data sheet](datasheets/slot_7_system.md), §2.2 |
+
+**Verification status.** Slot layout: KLayout DRC clean, LVS match (497 devices); both pads DRC clean and KLayout LVS match
+(magic LVS: only the accepted `vss` / `iovss` substrate merge); the chip GDS contains `158afc5` unchanged (XOR 0). Not done:
+PEX of the whole slot, ESD / latch-up simulation of the pads, silicon measurement. The Oguey–Aebischer core `oa_core_pd` is
+**not** in the taped-out slot (see [§8](#8-about-this-document-set)). Details: [§5](#5-verification-state), [signoff](../../signoff/README.md).
+
+## Where to find what
+
+| question | go to |
+|---|---|
+| How is the slot built, block by block? | [§2](#2-electrical-function); schematics: [pix/schematics/](pix/schematics/README.md); layout: [pix/layout/](pix/layout/README.md) |
+| What do the modes and the `dig_in` bits do? | [§2.4](#24-modes), [glue_logic.md](glue_logic.md) |
+| Which pins, where? | [§4](#4-physical-interface-and-layout-hierarchy) |
+| What does each pad do, in numbers? | data sheets: [S2D](datasheets/sg13cmos5l_IOPadSingle2Diff.md), [D2S](datasheets/sg13cmos5l_IOPadDiff2Single.md), [replica bias](datasheets/pad_ref_rb.md), [whole slot](datasheets/slot_7_system.md) ([how the data sheets were made](datasheets/README.md)) |
+| DC transfer, input / output range, linearity | [DC curves](../../verification/c2_gaps/dc_curves/README.md) (36 figures; read `results.md` first) |
+| What was verified, and what is open? | [§3](#3-readiness-of-the-blocks-that-were-kicked-off), [§5](#5-verification-state), [§5a](#5a-gap-simulations-of-2026-11-23), [signoff](../../signoff/README.md) |
+| How to measure the chip | [TEST_PLAN.md](TEST_PLAN.md) |
+| Earlier test platforms (not taped out) | [test_platforms.md](test_platforms.md) |
+| How this set was made; AI assistance | [§8](#8-about-this-document-set), [log.md](log.md), [../AI_ASSISTANCE.md](../AI_ASSISTANCE.md) |
 
 ## 1. Which version was taped out
 
@@ -315,3 +359,34 @@ coordinates. Made on 2026-11-22 with KLayout and matplotlib from the chip data, 
 The art is why `slot_7.gds` differs from v3 (`7394d092…`) by one instance; `art/check_art_only.py` in the delivery proves it (86 sub-cells and slot_7's own shapes
 and labels identical; flat XOR of the result against v3 + art = 0 on every layer, and 0 against the design repository's `art/slot7_with_art.gds`).
 
+## 8. About this document set
+
+> **Where this set comes from.** Copied on 2026-11-23 from
+> [`tatzelbrumm/sg13cmos5l_ocd_chipalooza`](https://github.com/tatzelbrumm/sg13cmos5l_ocd_chipalooza/tree/da4557a5b2ac84c6e05c5a683a019df4895b67e9/sudelbuecher/slots/slot_7),
+> branch `sudel_buecher` (commit `da4557a5b2ac84c6e05c5a683a019df4895b67e9`), directory `sudelbuecher/slots/slot_7/`
+> (README.md, glue_logic.md, test_platforms.md, characterization_candidates.md, log.md, datasheets/ with tools/, pix/).
+> It describes slot 7 **as taped out**, i.e. this repository at commit `158afc5afab0056bd6d216a4db3833e34a364949`
+> (`s7_version` in `config.txt` of the harness branch `tapeout_nov_2026`).
+>
+> **The Oguey–Aebischer core `oa_core_pd` is not in the taped-out slot 7.** It was built and verified (cloud sessions C0 and
+> C1: DRC, LVS, PEX; section 3) and used in the stage A / B test platforms ([test_platforms.md](test_platforms.md)), but the
+> taped-out `final/gds/slot_7.gds` contains only the bandgap core `bg_core_pd` (section 4.3; re-checked on 2026-11-23 with
+> KLayout 0.30.12: none of the 88 cells of `final/gds/slot_7.gds` is `oa_core_pd` or one of its own sub-cells `oa_svpg`, `oa_pcas_c`, `oa_pmir_c`,
+> `oa_mcs_c`, `oa_ms1`, `oa_n10`, as listed in `macros/oa_core_pd/layout/gds/oa_core_pd.gds`). `macros/oa_core_pd/`
+> in this repository is a copy of the macro that no harness script reads; the statement in this repository's top-level
+> README that both cores are placed in `slot_7.gds` describes the test platform, not `158afc5`.
+>
+> Adaptations made while copying (nothing else was changed): links to files of this repository that are unchanged since `158afc5`
+> are relative (`../FOR_TIM.md`, `../slot_7.md`, `../PROGRESS.md`, `../slot_7.png`, `../../netlist/slot_7.spice`,
+> `../../art/tughra_art.gds`); links to other repositories stay absolute with commits (the harness's `magic/custom_io/` now
+> points to the tapeout commit `7eeb3cb`); "in this session" / "checked in this session" became "on 2026-11-22" / "checked on
+> 2026-11-22" (the date of that work); the link from `datasheets/slot_7_system.md` to `glue_logic.md` was corrected to
+> `../glue_logic.md`; the chat-log link in `log.md` was replaced by a path citation (chat logs are not copied); in
+> `characterization_candidates.md` the cross-reference "README's section 6" was corrected to section 2.5. The measurement plan for
+> the fabricated chip is [TEST_PLAN.md](TEST_PLAN.md); sign-off reports are in [`../../signoff/`](../../signoff/README.md).
+
+Original introduction: Slot 7 turns a single-ended pad signal into a differential pair and back: two custom analog pads, a bandgap, a
+bias distribution and replica-bias block that give the pads their reference currents and common-mode / reference voltages, and a small
+3.3 V control block with fail-safe enables. Sections 2 and 3 are the electrical documentation and the state of readiness of each block (the glue logic, which is as important as the circuits, has its own page: [glue_logic.md](glue_logic.md));
+the pins, layout hierarchy and verification follow; the tughra art is an aside at the end. Running log of how this page was assembled:
+[log.md](log.md). Data for characterizing the blocks: [characterization_candidates.md](characterization_candidates.md); first data sheets built from the existing characterization: [datasheets/](datasheets/README.md); the earlier test platforms (not taped out): [test_platforms.md](test_platforms.md).

@@ -12,6 +12,28 @@ SPDX-License-Identifier: Apache-2.0
 > expected D2S out = `vcm` + (in − `vref`). Source files: [`docs/slot7_hookup/tier1/results.txt`](https://github.com/tatzelbrumm/sg13cmos5l_cm_ip__single2diff2single/blob/9052bd35928c6d40344e8e686c9abbe736bfadb9/docs/slot7_hookup/tier1/results.txt), [`modes.txt`](https://github.com/tatzelbrumm/sg13cmos5l_cm_ip__single2diff2single/blob/9052bd35928c6d40344e8e686c9abbe736bfadb9/docs/slot7_hookup/tier1/modes.txt), scripts `run_tier1.py`, `run_modes.py` in the same folder.
 > **No simulation was run for this page;** the two files are copied verbatim below.
 
+## Figures
+
+<!-- Figures section added by hand on 2026-11-25, not produced by tools/make_datasheet.py: keep it when regenerating. -->
+
+![Round trip S2D → D2S in the default mode, tt 27 °C 3.3 V, replica vcm / vref; pads schematic, magic PEX and KLayout-extracted](../../../verification/c2_gaps/dc_curves/plots/rt_transfer_tt27.png)
+
+*Round trip S2D → D2S in the default mode, tt 27 °C 3.3 V, replica vcm / vref; pads schematic, magic PEX and KLayout-extracted*
+
+![Round-trip error vs expected at the corner extremes of this sheet's table](../../../verification/c2_gaps/dc_curves/plots/rt_error_corners.png)
+
+*Round-trip error vs expected at the corner extremes of this sheet's table*
+
+![Power-up from 0 V at ss −40 °C 3.0 V](../../../verification/c2_gaps/slot_modes_bg/slot_powerup_ss_m40.png)
+
+*Power-up from 0 V at ss −40 °C 3.0 V: every mode settles (the DC failures in the mode table below are a simulator artefact)*
+
+![bg_core_pd start-up for 1 µs and 1 ms supply ramps](../../../verification/c2_gaps/slot_modes_bg/bg_core_ramp.png)
+
+*bg_core_pd start-up for 1 µs and 1 ms supply ramps*
+
+Schematic: [slot_7](../pix/schematics/slot_7.svg), [s7_ctrl](../pix/schematics/s7_ctrl.svg), [bg_core_pd](../pix/schematics/bg_core_pd.svg). Layout: [slot_7](../pix/layout/slot_7.png). Analysis of the mode failures: [slot modes and bandgap](../../../verification/c2_gaps/slot_modes_bg/results.md).
+
 ## 1. Corner table (`results.txt`)
 
 Columns: corner, temperature [°C], supply [V]; `vcm` and `vref` [V]; maximum round-trip error over pad input 0 … 1 V [mV]; `I(slot vdd_3v3)` and `I(ring iovdd)` enabled [µA]; the same two currents [nA] 150–170 µs after the enable falls (transient).

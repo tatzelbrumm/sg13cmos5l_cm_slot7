@@ -200,6 +200,9 @@ Solderpad Hardware License v2.1, see `LICENSE`.
 
 Added after the tapeout; the files above are unchanged.
 
+**Start here: [`docs/chipalooza2_as_taped_out/README.md`](docs/chipalooza2_as_taped_out/README.md)** — slot 7 at a glance
+(what it does, five figures, key numbers, verification status) and a table of where to find what.
+
 - [`docs/chipalooza2_as_taped_out/README.md`](docs/chipalooza2_as_taped_out/README.md): slot 7 as taped out (`158afc5`): electrical
   function, blocks and their readiness, glue logic, layout hierarchy, verification state, data sheets, the earlier test platforms.
   Note: `oa_core_pd` (`macros/oa_core_pd/`) is not in the taped-out `final/gds/slot_7.gds`; only `bg_core_pd` is.
