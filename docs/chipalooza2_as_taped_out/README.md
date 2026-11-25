@@ -92,6 +92,7 @@ For reuse in a system. All simulation, no silicon; "limits" are the designer's w
 - **Not verified:** ESD and latch-up simulation of the pads (the slot's latch-up DRC rules report 0, a rule check), PEX of the whole slot, full-RC extraction of the pads and `pad_ref_rb` (C-coupled only), silicon ([§5](#5-verification-state), [HOW_IT_WORKS.md §7](HOW_IT_WORKS.md#7-what-the-sources-do-not-say), [replica bias](../../verification/c2_gaps/replica_bias/results.md)). Sign-off of the taped-out GDS, re-run 2026-11-25: KLayout DRC 0 (also with latch-up rules), LVS match (497 devices), magic + netgen as recorded; magic DRC shows 48 "Metal1 overlap of Via1" markers in `bg_core_pd` that the committed stand-alone report did not have (same cell, XOR 0: tool / PDK version, KLayout passes the same rules); antenna rules not run ([signoff/taped_out_158afc5/](../../signoff/taped_out_158afc5/README.md)).
 - **Simulation-only items:** the extracted D2S (and the schematic D2S drive_params) needs ngspice `rshunt` = 1e12 to converge, ≤ 0.006 % effect on the schematic ([AC / transient](../../verification/c2_gaps/ac_tran/results.md) §4, [D2S re-run](../../verification/c2_gaps/d2s_schematic_rerun/results.md) §1); the designer's netlist converter for the KLayout-extracted pads (`run_starve.convert()`, design repo 9052bd35) simulates all pad antenna diodes at the PDK default size, 0.7 … 1.7 % of their area; this made the 10 kHz round-trip sine through those pads abort, and with the size fixed it runs and matches the schematic pads within 0.07 mV ([KLayout pad diodes](../../verification/c2_gaps/klayout_pad_diodes/README.md)); still open: the KLayout view's up-to-55 mV range-end shift (an S2D output common mode 33 mV low, not the diodes) and some ss / sf −40 °C mode and power-up runs that abort in the simulator ([§5a](#5a-gap-simulations-of-2026-11-23)).
 - **CACE unit labels:** S2D `Vcm_dev` and D2S `Glitch_max` / `Glitch_min` are labelled mV but computed in V, so CACE compared them with 50 / 400 as if in V; the physical values (≤ 16.0 mV; +228 / −225 mV) are inside 50 / 400 mV ([AC / transient](../../verification/c2_gaps/ac_tran/results.md) §4).
+- **Supply voltage:** characterized at 3.0 … 3.6 V; the PDK process specification gives VGS ≤ 3.3 V (maximum, 27 °C, hot-carrier lifetime) for HV devices with L ≥ 0.5 / 0.6 µm, and no maximum for the 0.45 µm switches and logic of the slot ([§2.2](#22-supplies-enable-and-fail-safe)).
 - **`oa_core_pd` is not in the slot:** the only reference is `bg_core_pd` ([§8](#8-about-this-document-set)).
 
 ## Where to find what
@@ -109,7 +110,7 @@ For reuse in a system. All simulation, no silicon; "limits" are the designer's w
 | What was verified, and what is open? | [§3](#3-readiness-of-the-blocks-that-were-kicked-off), [§5](#5-verification-state), [§5a](#5a-gap-simulations-of-2026-11-23), [signoff](../../signoff/README.md) |
 | How to measure the chip | [TEST_PLAN.md](TEST_PLAN.md) |
 | Earlier test platforms (not taped out) | [test_platforms.md](test_platforms.md) |
-| Everything as PDF | [data book](pdf/slot7_databook.pdf) (summary, contents, all chapters, data sheets, figures, appendices; about 250 pages) and [slot 7 in two pages](pdf/slot7_digest.pdf) ([source](DIGEST.md)); both made by [book/build_book.py](book/build_book.py) from the Markdown files |
+| Everything as PDF | [data book](pdf/slot7_databook.pdf) (summary, contents, all chapters, data sheets, figures, appendices; about 250 pages) and [data sheet in three pages](pdf/slot7_digest.pdf) ([source](DIGEST.md)); both made by [book/build_book.py](book/build_book.py) from the Markdown files |
 | How this set was made; AI assistance | [§8](#8-about-this-document-set), [log.md](log.md), [../AI_ASSISTANCE.md](../AI_ASSISTANCE.md) |
 
 ## 1. Which version was taped out
@@ -173,6 +174,12 @@ The point of the slot is to show the two pad buffers working together with on-sl
   pads draw ≤ 67 nA at 125 °C from the pad ring while the slot's supplies are off (designer's simulation, `en_ctrl_3v3` starvation test: S2D ≤ 0.4 nA at −40 / 27 °C,
   ≤ 25 nA at 125 °C; D2S ≤ 4.3 nA / ≤ 67 nA; mostly output and ESD-device leakage, nearly independent of the enable levels).
 - **Enabled current (tt 27 °C, simulation):** slot `vdd_3v3` ≈ 49 µA; pad ring ≈ 365–396 µA, mostly the D2S output stage.
+- **Voltage limits (PDK):** the IHP process specification (`libs.doc/doc/SG13CMOS5L_os_process_spec.pdf` of the PDK, Rev. 0.2,
+  §2.1.4–2.1.6) states VGS ≤ 3.3 V (maximum) at 27 °C for the HV NMOS and HV iNMOS with L ≥ 0.6 µm and the HV PMOS with
+  L ≥ 0.5 µm (footnote: 1 FIT in 10 years for hot-carrier injection), and a drain–source breakdown of at least 5.2 V. The slot
+  runs from 3.3 V nominal; the characterization extends to 3.6 V as a supply-tolerance corner, above that maximum. The
+  switches and the 3.3 V logic of the slot are HV devices of 1 / 0.45 µm ([HOW_IT_WORKS.md](HOW_IT_WORKS.md) sizing tables), a
+  gate length for which the specification states no maximum. Not assessed further here.
 
 ### 2.3 The blocks
 
