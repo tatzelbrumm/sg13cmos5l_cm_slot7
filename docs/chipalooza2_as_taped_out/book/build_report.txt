@@ -1,3 +1,1 @@
-# build_book.py report, source commit 7727182d1701153d987ec8b516088953bc29a685
-note: link to docs/chipalooza2_as_taped_out/pdf/slot7_databook.pdf: not in 7727182, linked to branch chipalooza2-documentation
-note: link to docs/chipalooza2_as_taped_out/pdf/slot7_digest.pdf: not in 7727182, linked to branch chipalooza2-documentation
+# build_book.py report, source commit 454d5844447ecc367c89953b8b9365b8e5023b99
