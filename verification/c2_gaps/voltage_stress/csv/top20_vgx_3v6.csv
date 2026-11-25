@@ -1,0 +1,23 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+rank,inst,block,type,W_um,L_um,meets_spec_LG,abs_vgx_V,where,held_100ns_V,dc_enabled_V,runs_27C_V,runs_3v3_V
+1,xs.xbg.xms1_0,bg_core_pd,HV-PMOS,0.5,12.5,yes,7.888,"en ff 125 C 3.6 V, t = 22.01 us",3.600,3.600,7.196,7.278
+2,xs.xbg.xms1_1,bg_core_pd,HV-PMOS,0.5,12.5,yes,7.888,"en ff 125 C 3.6 V, t = 22.01 us",3.466,3.466,7.196,7.278
+3,xs.xc.xl4.xpl2,s7_ctrl ls_up_fs,HV-PMOS,0.3,20,yes,5.851,"pu fast sf -40 C 3.6 V, t = 0.82 us",3.600,3.600,5.444,5.490
+4,xs.xc.xl4.xpl1,s7_ctrl ls_up_fs,HV-PMOS,0.3,20,yes,5.851,"pu fast sf -40 C 3.6 V, t = 0.82 us",3.600,3.600,5.444,5.490
+5,xs.xc.xl0.xpl2,s7_ctrl ls_up_fs,HV-PMOS,0.3,20,yes,5.851,"pu fast sf -40 C 3.6 V, t = 0.82 us",3.600,3.600,5.444,5.491
+6,xs.xc.xl0.xpl1,s7_ctrl ls_up_fs,HV-PMOS,0.3,20,yes,5.851,"pu fast sf -40 C 3.6 V, t = 0.82 us",3.600,3.600,5.444,5.491
+7,xs.xc.xl1.xpl2,s7_ctrl ls_up_fs,HV-PMOS,0.3,20,yes,5.851,"pu fast sf -40 C 3.6 V, t = 0.82 us",3.600,3.600,5.444,5.491
+8,xs.xc.xl1.xpl1,s7_ctrl ls_up_fs,HV-PMOS,0.3,20,yes,5.851,"pu fast sf -40 C 3.6 V, t = 0.82 us",3.600,3.600,5.444,5.491
+9,xs.xc.xl2.xpl2,s7_ctrl ls_up_fs,HV-PMOS,0.3,20,yes,5.851,"pu fast sf -40 C 3.6 V, t = 0.82 us",3.600,3.600,5.444,5.491
+10,xs.xc.xl2.xpl1,s7_ctrl ls_up_fs,HV-PMOS,0.3,20,yes,5.851,"pu fast sf -40 C 3.6 V, t = 0.82 us",3.600,3.600,5.444,5.491
+11,xs.xc.xl3.xpl2,s7_ctrl ls_up_fs,HV-PMOS,0.3,20,yes,5.851,"pu fast sf -40 C 3.6 V, t = 0.82 us",3.600,3.600,5.444,5.491
+12,xs.xc.xl3.xpl1,s7_ctrl ls_up_fs,HV-PMOS,0.3,20,yes,5.851,"pu fast sf -40 C 3.6 V, t = 0.82 us",3.600,3.600,5.444,5.491
+13,xs.xc.xl5.xpl2,s7_ctrl ls_up_fs,HV-PMOS,0.3,20,yes,5.851,"pu fast sf -40 C 3.6 V, t = 0.82 us",3.600,3.600,5.444,5.491
+14,xs.xc.xl5.xpl1,s7_ctrl ls_up_fs,HV-PMOS,0.3,20,yes,5.851,"pu fast sf -40 C 3.6 V, t = 0.82 us",3.600,3.600,5.444,5.491
+15,xs.xd.xlay.x_8.x_7,bias_dist_pd,HV-NMOS,1,0.45,no,4.182,"en ff -40 C 3.6 V, t = 2.11 us",4.065,3.600,4.156,3.875
+16,xs.xc.xt10.xp,s7_ctrl tg_hv switches,HV-PMOS,1,0.45,no,4.094,"en ss -40 C 3.6 V, t = 2.43 us",4.082,0.591,3.995,3.698
+17,xs.xd.xlay.x_5.x_7,bias_dist_pd,HV-NMOS,1,0.45,no,4.085,"en ss -40 C 3.6 V, t = 2.12 us",3.974,2.773,4.043,3.762
+18,xs.xd.xlay.x_6.x_7,bias_dist_pd,HV-NMOS,1,0.45,no,4.085,"en ss -40 C 3.6 V, t = 2.12 us",3.974,2.773,4.029,3.750
+19,xs.xd.xlay.x_7.x_7,bias_dist_pd,HV-NMOS,1,0.45,no,4.085,"en ss -40 C 3.6 V, t = 2.12 us",3.974,2.773,4.037,3.756
+20,xs.xc.xt4.xp,s7_ctrl tg_hv switches,HV-PMOS,1,0.45,no,3.974,"en ss -40 C 3.6 V, t = 22.01 us",3.962,3.353,3.861,3.565

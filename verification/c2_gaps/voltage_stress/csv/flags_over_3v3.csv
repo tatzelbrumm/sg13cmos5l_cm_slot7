@@ -1,0 +1,813 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+runs,inst,block,type,W_um,L_um,meets_spec_LG,vgs_V,run_vgs,x_vgs,vgd_V,run_vgd,x_vgd,vgx_held_V
+3.3,xs.xc.xle.xpf,s7_ctrl ls_up_fs,HV-PMOS,0.3,5.0,1,-3.4183,en_tt_27_3.3,2.2005e-05,3.3378,en_ss_125_3.3,2.01e-06,3.3000
+3.3,xs.xc.xl0.xpl2,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.3000,dc_ff_-40_3.3_1k,3.3,5.4907,pu_ss_125_3.3_fast,8.84132e-07,3.3000
+3.3,xs.xc.xl0.xpl1,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.3000,dc_ff_-40_3.3_1k,3.3,5.4907,pu_ss_125_3.3_fast,8.84132e-07,3.3000
+3.3,xs.xc.xl0.xpf,s7_ctrl ls_up_fs,HV-PMOS,0.3,5.0,1,-3.4471,mode_ss_125_3.3,4.20047e-05,3.3434,mode_ss_125_3.3,1.201e-05,3.3000
+3.3,xs.xc.xl1.xpl2,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.3000,dc_ff_-40_3.3_1k,0.95,5.4907,pu_ss_125_3.3_fast,8.84132e-07,3.3000
+3.3,xs.xc.xl1.xpl1,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.3000,dc_ff_-40_3.3_1k,0.95,5.4907,pu_ss_125_3.3_fast,8.84132e-07,3.3000
+3.3,xs.xc.xl1.xpf,s7_ctrl ls_up_fs,HV-PMOS,0.3,5.0,1,-3.4471,mode_ss_125_3.3,4.20047e-05,3.3396,mode_ss_125_3.3,2.201e-05,3.3000
+3.3,xs.xc.xl2.xpl2,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.3000,dc_ff_-40_3.3_1k,2.45,5.4907,pu_ss_125_3.3_fast,8.84132e-07,3.3000
+3.3,xs.xc.xl2.xpl1,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.3000,dc_ff_-40_3.3_1k,2.45,5.4907,pu_ss_125_3.3_fast,8.84132e-07,3.3000
+3.3,xs.xc.xl2.xpf,s7_ctrl ls_up_fs,HV-PMOS,0.3,5.0,1,-3.4471,mode_ss_125_3.3,2.20047e-05,3.3396,mode_ss_125_3.3,3.201e-05,3.3000
+3.3,xs.xc.xl3.xpl2,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.3000,dc_ff_-40_3.3_1k,1.7,5.4907,pu_ss_125_3.3_fast,8.84132e-07,3.3000
+3.3,xs.xc.xl3.xpl1,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.3000,dc_ff_-40_3.3_1k,1.7,5.4907,pu_ss_125_3.3_fast,8.84132e-07,3.3000
+3.3,xs.xc.xl3.xpf,s7_ctrl ls_up_fs,HV-PMOS,0.3,5.0,1,-3.4183,mode_tt_27_3.3,2.005e-06,3.3378,mode_ss_125_3.3,5.201e-05,3.3000
+3.3,xs.xc.xl4.xpl2,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.3000,dc_ff_-40_3.3_1k,1.1,5.4903,pu_ss_125_3.3_fast,8.84132e-07,3.3000
+3.3,xs.xc.xl4.xpl1,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.3001,mode_ss_125_3.3,2.00955e-06,5.4903,pu_ss_125_3.3_fast,8.84132e-07,3.3000
+3.3,xs.xc.xl4.xpf,s7_ctrl ls_up_fs,HV-PMOS,0.3,5.0,1,-3.4471,mode_ss_125_3.3,4.20047e-05,3.3378,mode_ss_125_3.3,5.201e-05,3.3000
+3.3,xs.xc.xl5.xpl2,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.3000,dc_ff_-40_3.3_1k,2.15,5.4907,pu_ss_125_3.3_fast,8.84132e-07,3.3000
+3.3,xs.xc.xl5.xpl1,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.3000,dc_ff_-40_3.3_1k,2.15,5.4907,pu_ss_125_3.3_fast,8.84132e-07,3.3000
+3.3,xs.xc.xl5.xpf,s7_ctrl ls_up_fs,HV-PMOS,0.3,5.0,1,-3.4471,mode_ss_125_3.3,3.20047e-05,3.3378,mode_ss_125_3.3,5.201e-05,3.3000
+3.3,xs.xbg.xms1_0,bg_core_pd,HV-PMOS,0.5,12.5,1,-3.3119,pu_tt_27_3.3_late,2.00707e-05,7.2780,en_ff_-40_3.3,2.20084e-05,3.3000
+3.3,xs.xbg.xms1_1,bg_core_pd,HV-PMOS,0.5,12.5,1,-3.1815,dc_ss_-40_3.3_1k,-0.2,7.2780,en_ff_-40_3.3,2.20084e-05,3.1815
+3.3,xs.xd.xlay.x_11,bias_dist_pd,HV-NMOS,6.0,6.0,1,1.2989,pu_ff_-40_3.3_fast,9.6385e-07,-3.3163,en_ff_-40_3.3,2.20087e-05,3.3000
+3.3,xs.xr.xlay.x_18,pad_ref_rb,HV-PMOS,5.0,6.0,1,-1.3792,en_ss_125_3.3,2.24323e-06,3.3448,en_ss_125_3.3,2.2639e-05,3.0155
+3.3,x2s.xlay.x_3,S2D pad,HV-PMOS,266.4,0.6,1,-0.8121,fs0_ss_-40_3.3,3.3,3.5011,step_ss_125_3.3_open,1.20283e-05,3.5000
+3.3,x2d.xlay.x_171,D2S pad,HV-NMOS,4.4,1.0,1,-1.1130,fs_sf_125_3.3,3.3,-3.4154,pu_tt_27_3.3_late,2.00707e-05,3.4062
+3.3,x2d.xlay.x_209,D2S pad,HV-NMOS,6.0,6.0,1,0.9875,dc_ss_-40_3.3_1k,-0.2,-3.3180,en_ff_-40_3.3,2.20084e-05,3.3000
+3.3,x2d.xlay.x_232,D2S pad,HV-PMOS,6.66,0.6,1,-1.2745,dc_ss_-40_3.3_1k,-0.2,3.4190,pu_tt_27_3.3_late,2.04847e-05,3.3984
+3.3,x2d.xlay.x_234,D2S pad,HV-PMOS,6.66,0.6,1,-1.5050,pu_tt_27_3.3_fast,1.21596e-06,3.4202,pu_tt_27_3.3_late,2.04847e-05,3.3955
+3.3,xs.xc.xle.xi1.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.3379,en_ss_125_3.3,2.01e-06,3.4183,en_tt_27_3.3,2.2005e-05,3.3000
+3.3,xs.xc.xle.xi1.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.4183,en_tt_27_3.3,2.2005e-05,3.4182,en_tt_27_3.3,2.2005e-05,3.3000
+3.3,xs.xc.xle.xi2.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.3033,en_tt_27_3.3,2.2007e-05,3.3205,pu_tt_27_3.3_late,2.00707e-05,3.3000
+3.3,xs.xc.xle.xi2.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.3205,pu_tt_27_3.3_late,2.00707e-05,3.3086,pu_tt_27_3.3_late,2.00707e-05,3.3000
+3.3,xs.xc.xle.xi3.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.3808,mode_ss_125_3.3,2.20101e-05,-3.3075,pu_tt_27_3.3_late,2.00707e-05,3.3000
+3.3,xs.xc.xle.xi3.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.3002,en_tt_27_3.3,2.20079e-05,-3.3808,mode_ss_125_3.3,2.20101e-05,3.3000
+3.3,xs.xc.xl0.xi1.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.3435,mode_ss_125_3.3,1.201e-05,3.4471,mode_ss_125_3.3,4.20047e-05,3.3000
+3.3,xs.xc.xl0.xi1.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.4472,mode_ss_125_3.3,4.20047e-05,3.4471,mode_ss_125_3.3,4.20047e-05,3.3000
+3.3,xs.xc.xl0.xi2.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.3046,mode_ss_125_3.3,4.20081e-05,3.3197,mode_tt_27_3.3,4.2009e-05,3.3000
+3.3,xs.xc.xl0.xi2.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.3197,mode_tt_27_3.3,4.2009e-05,3.3185,mode_tt_27_3.3,2.00911e-06,3.3000
+3.3,xs.xc.xl0.xi3.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.4388,mode_ss_125_3.3,4.20098e-05,3.3146,mode_ss_125_3.3,5.22424e-05,3.3000
+3.3,xs.xc.xl0.xi3.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.3146,mode_ss_125_3.3,5.22424e-05,-3.4388,mode_ss_125_3.3,4.20098e-05,3.3000
+3.3,xs.xc.xl1.xi1.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.3397,mode_ss_125_3.3,2.201e-05,3.4471,mode_ss_125_3.3,4.20047e-05,3.3000
+3.3,xs.xc.xl1.xi1.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.4472,mode_ss_125_3.3,4.20047e-05,3.4471,mode_ss_125_3.3,4.20047e-05,3.3000
+3.3,xs.xc.xl1.xi2.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.3046,mode_ss_125_3.3,4.20081e-05,3.3266,mode_ss_125_3.3,1.201e-05,3.3000
+3.3,xs.xc.xl1.xi2.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.3266,mode_ss_125_3.3,1.201e-05,3.3246,mode_ss_125_3.3,1.201e-05,3.3000
+3.3,xs.xc.xl1.xi3.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.4780,mode_ss_125_3.3,4.20098e-05,3.3165,mode_ss_125_3.3,2.22354e-05,3.3000
+3.3,xs.xc.xl1.xi3.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.3165,mode_ss_125_3.3,2.22354e-05,-3.4780,mode_ss_125_3.3,4.20098e-05,3.3000
+3.3,xs.xc.xl2.xi1.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.3397,mode_ss_125_3.3,3.201e-05,3.4471,mode_ss_125_3.3,2.20047e-05,3.3000
+3.3,xs.xc.xl2.xi1.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.4472,mode_ss_125_3.3,2.20047e-05,3.4471,mode_ss_125_3.3,2.20047e-05,3.3000
+3.3,xs.xc.xl2.xi2.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.3046,mode_ss_125_3.3,4.20081e-05,3.3197,mode_tt_27_3.3,4.2009e-05,3.3000
+3.3,xs.xc.xl2.xi2.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.3197,mode_tt_27_3.3,4.2009e-05,3.3172,mode_tt_27_3.3,4.20092e-05,3.3000
+3.3,xs.xc.xl2.xi3.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.3798,mode_ss_125_3.3,4.20098e-05,3.3146,mode_ss_125_3.3,5.22424e-05,3.3000
+3.3,xs.xc.xl2.xi3.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.3146,mode_ss_125_3.3,5.22424e-05,-3.3798,mode_ss_125_3.3,4.20098e-05,3.3000
+3.3,xs.xc.xl3.xi1.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.3379,mode_ss_125_3.3,5.201e-05,3.4183,mode_tt_27_3.3,2.005e-06,3.3000
+3.3,xs.xc.xl3.xi1.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.4183,mode_tt_27_3.3,2.005e-06,3.4182,mode_tt_27_3.3,2.005e-06,3.3000
+3.3,xs.xc.xl3.xi2.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.3033,mode_tt_27_3.3,2.007e-06,3.3195,mode_tt_27_3.3,2.00911e-06,3.3000
+3.3,xs.xc.xl3.xi2.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.3195,mode_tt_27_3.3,2.00911e-06,3.3185,mode_tt_27_3.3,2.00911e-06,3.3000
+3.3,xs.xc.xl3.xi3.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.4614,mode_ss_125_3.3,4.20095e-05,3.3142,mode_ss_125_3.3,5.22424e-05,3.3000
+3.3,xs.xc.xl3.xi3.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.3142,mode_ss_125_3.3,5.22424e-05,-3.4614,mode_ss_125_3.3,4.20095e-05,3.3000
+3.3,xs.xc.xl4.xi1.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.3379,mode_ss_125_3.3,5.201e-05,3.4471,mode_ss_125_3.3,4.20047e-05,3.3000
+3.3,xs.xc.xl4.xi1.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.4472,mode_ss_125_3.3,4.20047e-05,3.4471,mode_ss_125_3.3,4.20047e-05,3.3000
+3.3,xs.xc.xl4.xi2.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.3080,mode_ss_125_3.3,2.00927e-06,3.3235,mode_tt_27_3.3,4.2009e-05,3.3000
+3.3,xs.xc.xl4.xi2.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.3235,mode_tt_27_3.3,4.2009e-05,3.3176,mode_tt_27_3.3,4.20092e-05,3.3000
+3.3,xs.xc.xl4.xi3.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.3220,mode_tt_27_3.3,4.20089e-05,3.3200,mode_ss_125_3.3,5.22424e-05,3.3000
+3.3,xs.xc.xl4.xi3.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.3200,mode_ss_125_3.3,5.22424e-05,-3.3220,mode_tt_27_3.3,4.20089e-05,3.3000
+3.3,xs.xc.xl5.xi1.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.3379,mode_ss_125_3.3,5.201e-05,3.4471,mode_ss_125_3.3,3.20047e-05,3.3000
+3.3,xs.xc.xl5.xi1.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.4472,mode_ss_125_3.3,3.20047e-05,3.4471,mode_ss_125_3.3,3.20047e-05,3.3000
+3.3,xs.xc.xl5.xi2.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.3046,mode_ss_125_3.3,3.20081e-05,3.3197,mode_tt_27_3.3,3.2009e-05,3.3000
+3.3,xs.xc.xl5.xi2.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.3197,mode_tt_27_3.3,3.2009e-05,3.3172,mode_tt_27_3.3,3.20092e-05,3.3000
+3.3,xs.xc.xl5.xi3.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.4831,mode_ss_125_3.3,4.20098e-05,3.3143,mode_ss_125_3.3,5.22424e-05,3.3000
+3.3,xs.xc.xl5.xi3.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.3143,mode_ss_125_3.3,5.22424e-05,-3.4831,mode_ss_125_3.3,4.20098e-05,3.3000
+3.3,xs.xc.xnv.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3337,mode_tt_27_3.3,5.21761e-05,3.3189,mode_ss_125_3.3,2.00964e-06,3.3000
+3.3,xs.xc.xnv.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3337,mode_tt_27_3.3,4.2009e-05,3.3101,mode_ss_125_3.3,4.20089e-05,3.3000
+3.3,xs.xc.xnv.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3189,mode_ss_125_3.3,2.00964e-06,-3.3337,mode_tt_27_3.3,5.21761e-05,3.3000
+3.3,xs.xc.xnv.xnb,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3192,mode_ss_125_3.3,5.22424e-05,3.3183,mode_ss_125_3.3,5.22424e-05,3.3000
+3.3,xs.xc.xiv.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3192,mode_tt_27_3.3,2.00911e-06,3.3390,mode_tt_27_3.3,4.2009e-05,3.3000
+3.3,xs.xc.xiv.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3390,mode_tt_27_3.3,4.2009e-05,3.3265,mode_tt_27_3.3,4.2009e-05,3.3000
+3.3,xs.xc.xns.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3127,mode_ss_125_3.3,2.20098e-05,3.3221,mode_tt_27_3.3,2.00895e-06,3.3000
+3.3,xs.xc.xns.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3511,mode_ss_125_3.3,2.00927e-06,3.3278,mode_ss_125_3.3,1.22417e-05,3.3000
+3.3,xs.xc.xns.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3221,mode_tt_27_3.3,2.00895e-06,3.3173,mode_tt_27_3.3,2.00895e-06,3.3000
+3.3,xs.xc.xns.xnb,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3330,mode_ss_125_3.3,4.20093e-05,3.3175,mode_tt_27_3.3,2.00911e-06,3.3000
+3.3,xs.xc.xis.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3285,mode_ss_125_3.3,1.22417e-05,3.3357,mode_ss_125_3.3,2.00927e-06,3.3000
+3.3,xs.xc.xis.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3359,mode_ss_125_3.3,2.00927e-06,3.3357,mode_ss_125_3.3,2.00927e-06,3.3000
+3.3,xs.xc.xnf.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3732,mode_ss_125_3.3,2.00989e-06,3.3353,mode_tt_27_3.3,2.2009e-05,3.3000
+3.3,xs.xc.xnf.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3151,mode_ss_125_3.3,2.00927e-06,3.3241,mode_tt_27_3.3,3.21762e-05,3.3000
+3.3,xs.xc.xnf.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3353,mode_tt_27_3.3,2.2009e-05,-3.3732,mode_ss_125_3.3,2.00989e-06,3.3000
+3.3,xs.xc.xnf.xnb,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3330,mode_ss_125_3.3,4.20093e-05,3.3175,mode_tt_27_3.3,2.00911e-06,3.3000
+3.3,xs.xc.xif.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3424,mode_tt_27_3.3,2.2009e-05,3.3733,mode_ss_125_3.3,2.00989e-06,3.3000
+3.3,xs.xc.xif.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3745,mode_ss_125_3.3,2.00989e-06,3.3733,mode_ss_125_3.3,2.00989e-06,3.3000
+3.3,xs.xc.xnm.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3581,mode_tt_27_3.3,2.21765e-05,3.3261,mode_ss_125_3.3,1.20097e-05,3.3000
+3.3,xs.xc.xnm.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3151,mode_ss_125_3.3,2.00927e-06,-3.3144,mode_ss_125_3.3,2.00927e-06,3.3000
+3.3,xs.xc.xnm.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3261,mode_ss_125_3.3,1.20097e-05,-3.3581,mode_tt_27_3.3,2.21765e-05,3.3000
+3.3,xs.xc.xnm.xnb,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3330,mode_ss_125_3.3,4.20093e-05,3.3175,mode_tt_27_3.3,2.00911e-06,3.3000
+3.3,xs.xc.xim.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.4573,mode_ss_125_3.3,2.20098e-05,3.3567,mode_tt_27_3.3,2.21765e-05,3.3000
+3.3,xs.xc.xim.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3567,mode_tt_27_3.3,2.21765e-05,-3.4573,mode_ss_125_3.3,2.20098e-05,3.3000
+3.3,xs.xc.xn1.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3441,mode_tt_27_3.3,2.2009e-05,3.3422,mode_ss_125_3.3,2.00964e-06,3.3000
+3.3,xs.xc.xn1.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3285,mode_ss_125_3.3,1.22417e-05,3.3488,mode_ss_125_3.3,2.20094e-05,3.3000
+3.3,xs.xc.xn1.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3439,mode_tt_27_3.3,1.21764e-05,-3.3441,mode_tt_27_3.3,2.2009e-05,3.3000
+3.3,xs.xc.xn1.xnb,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3359,mode_ss_125_3.3,2.00927e-06,3.3357,mode_ss_125_3.3,2.00927e-06,3.3000
+3.3,xs.xc.xi1.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3626,mode_ss_125_3.3,4.20094e-05,-3.3584,mode_ss_125_3.3,4.20094e-05,3.3000
+3.3,xs.xc.xi1.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3500,mode_tt_27_3.3,1.21761e-05,-3.3584,mode_ss_125_3.3,4.20094e-05,3.3000
+3.3,xs.xc.xnld.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3132,off_ss_125_3.3,1.24478e-06,3.3425,mode_ss_125_3.3,2.01003e-06,3.3001
+3.3,xs.xc.xnld.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3386,mode_ss_125_3.3,1.2242e-05,-3.3362,mode_ss_125_3.3,1.2242e-05,3.3000
+3.3,xs.xc.xnld.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3610,mode_ss_125_3.3,2.01003e-06,3.3425,mode_ss_125_3.3,2.01003e-06,3.3001
+3.3,xs.xc.xnld.xnb,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3321,mode_ss_125_3.3,2.20096e-05,3.3314,mode_ss_125_3.3,2.20096e-05,3.3000
+3.3,xs.xc.xild.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3569,mode_ss_125_3.3,4.20107e-05,3.3740,mode_tt_27_3.3,1.21763e-05,3.3002
+3.3,xs.xc.xild.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3764,mode_tt_27_3.3,1.21763e-05,3.3740,mode_tt_27_3.3,1.21763e-05,3.3002
+3.3,xs.xc.xn2.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3247,mode_tt_27_3.3,3.21762e-05,-3.3241,mode_tt_27_3.3,3.21762e-05,3.3000
+3.3,xs.xc.xn2.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3377,mode_ss_125_3.3,3.22416e-05,3.3385,mode_ss_125_3.3,1.22418e-05,3.3000
+3.3,xs.xc.xn2.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3191,mode_tt_27_3.3,2.00878e-06,-3.3241,mode_tt_27_3.3,3.21762e-05,3.3000
+3.3,xs.xc.xn2.xnb,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3395,mode_ss_125_3.3,1.22418e-05,3.3385,mode_ss_125_3.3,1.22418e-05,3.3000
+3.3,xs.xc.xi2.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3322,mode_tt_27_3.3,1.21761e-05,3.3448,mode_ss_125_3.3,4.20096e-05,3.3000
+3.3,xs.xc.xi2.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3470,mode_ss_125_3.3,4.20096e-05,3.3448,mode_ss_125_3.3,4.20096e-05,3.3000
+3.3,xs.xc.xnlx.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3114,off_ss_125_3.3,1.24478e-06,3.3148,mode_tt_27_3.3,2.00878e-06,3.3000
+3.3,xs.xc.xnlx.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3598,mode_ss_125_3.3,2.01e-06,3.3571,mode_tt_27_3.3,1.21762e-05,3.3000
+3.3,xs.xc.xnlx.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3229,mode_tt_27_3.3,1.21763e-05,-3.3114,off_ss_125_3.3,1.24478e-06,3.3000
+3.3,xs.xc.xnlx.xnb,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3588,mode_tt_27_3.3,1.21762e-05,3.3570,mode_tt_27_3.3,1.21762e-05,3.3000
+3.3,xs.xc.xilx.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3463,mode_ss_125_3.3,2.01072e-06,3.3823,mode_ss_125_3.3,2.01011e-06,3.3000
+3.3,xs.xc.xilx.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3862,mode_ss_125_3.3,2.01011e-06,3.3823,mode_ss_125_3.3,2.01011e-06,3.3000
+3.3,xs.xc.xn3.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3381,mode_ss_125_3.3,3.22414e-05,3.3285,mode_ss_125_3.3,1.20094e-05,3.3000
+3.3,xs.xc.xn3.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3520,mode_tt_27_3.3,2.2009e-05,3.3555,mode_tt_27_3.3,1.21764e-05,3.3000
+3.3,xs.xc.xn3.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3285,mode_ss_125_3.3,1.20094e-05,-3.3381,mode_ss_125_3.3,3.22414e-05,3.3000
+3.3,xs.xc.xn3.xnb,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3745,mode_ss_125_3.3,2.00989e-06,3.3733,mode_ss_125_3.3,2.00989e-06,3.3000
+3.3,xs.xc.xi3.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3318,mode_ss_125_3.3,1.20094e-05,3.3337,mode_tt_27_3.3,2.2009e-05,3.3000
+3.3,xs.xc.xi3.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3337,mode_tt_27_3.3,2.2009e-05,-3.3318,mode_ss_125_3.3,1.20094e-05,3.3000
+3.3,xs.xc.xnsb.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3114,off_ss_125_3.3,1.24478e-06,3.3126,mode_tt_27_3.3,1.21766e-05,3.3000
+3.3,xs.xc.xnsb.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3304,mode_tt_27_3.3,2.2009e-05,3.3473,mode_ss_125_3.3,2.20096e-05,3.3000
+3.3,xs.xc.xnsb.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3128,mode_tt_27_3.3,1.21766e-05,3.3126,mode_tt_27_3.3,1.21766e-05,3.3000
+3.3,xs.xc.xnsb.xnb,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3485,mode_ss_125_3.3,2.20096e-05,3.3473,mode_ss_125_3.3,2.20096e-05,3.3000
+3.3,xs.xc.xisb.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3321,mode_ss_125_3.3,2.20098e-05,3.3282,mode_tt_27_3.3,2.2009e-05,3.3000
+3.3,xs.xc.xisb.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3282,mode_tt_27_3.3,2.2009e-05,-3.3279,mode_ss_125_3.3,2.20098e-05,3.3000
+3.3,xs.xc.xnbd.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3114,off_ss_125_3.3,1.24478e-06,3.3684,mode_ss_125_3.3,3.20097e-05,3.3000
+3.3,xs.xc.xnbd.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3242,mode_ss_125_3.3,2.20094e-05,3.3389,mode_ss_125_3.3,3.22413e-05,3.3000
+3.3,xs.xc.xnbd.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3719,mode_ss_125_3.3,2.20101e-05,3.3684,mode_ss_125_3.3,3.20097e-05,3.3000
+3.3,xs.xc.xnbd.xnb,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3397,mode_ss_125_3.3,3.22413e-05,3.3388,mode_ss_125_3.3,3.22413e-05,3.3000
+3.3,xs.xc.xibd.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3292,mode_tt_27_3.3,2.20089e-05,3.3561,mode_ss_125_3.3,2.20096e-05,3.3000
+3.3,xs.xc.xibd.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3580,mode_ss_125_3.3,2.20096e-05,3.3561,mode_ss_125_3.3,2.20096e-05,3.3000
+3.3,xs.xc.xne.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3321,mode_ss_125_3.3,2.00955e-06,3.3299,mode_tt_27_3.3,3.20089e-05,3.3000
+3.3,xs.xc.xne.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3403,mode_tt_27_3.3,4.2009e-05,3.3324,mode_ss_125_3.3,4.20093e-05,3.3000
+3.3,xs.xc.xne.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3299,mode_tt_27_3.3,3.20089e-05,-3.3321,mode_ss_125_3.3,2.00955e-06,3.3000
+3.3,xs.xc.xne.xnb,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3330,mode_ss_125_3.3,4.20093e-05,3.3324,mode_ss_125_3.3,4.20093e-05,3.3000
+3.3,xs.xc.xnrc.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3130,off_ss_125_3.3,1.24478e-06,3.3801,mode_ss_125_3.3,2.20101e-05,3.3001
+3.3,xs.xc.xnrc.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3351,mode_tt_27_3.3,3.2009e-05,3.3420,mode_tt_27_3.3,4.2009e-05,3.3000
+3.3,xs.xc.xnrc.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3807,mode_ss_125_3.3,2.20101e-05,3.3801,mode_ss_125_3.3,2.20101e-05,3.3001
+3.3,xs.xc.xnrc.xnb,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3362,mode_tt_27_3.3,4.2009e-05,3.3311,mode_ss_125_3.3,2.00955e-06,3.3000
+3.3,xs.xc.xirc.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.3336,en_ss_125_3.3,2.20113e-05,3.3614,mode_ss_125_3.3,4.20097e-05,3.3001
+3.3,xs.xc.xirc.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.3632,mode_ss_125_3.3,4.20097e-05,3.3614,mode_ss_125_3.3,4.20097e-05,3.3001
+3.3,xs.xc.xt1.xp,s7_ctrl tg_hv switches,HV-PMOS,1.0,0.45,0,3.2899,en_ff_-40_3.3,2.20084e-05,3.5653,en_tt_27_3.3,4.41288e-06,3.5651
+3.3,xs.xc.xt2.xn,s7_ctrl tg_hv switches,HV-NMOS,1.0,0.45,0,3.3010,en_ff_-40_3.3,2.20091e-05,3.3007,en_ff_-40_3.3,2.20091e-05,3.2760
+3.3,xs.xc.xt2.xp,s7_ctrl tg_hv switches,HV-PMOS,1.0,0.45,0,3.2899,en_ff_-40_3.3,2.20084e-05,3.5836,en_ff_-40_3.3,4.85137e-06,3.5835
+3.3,xs.xc.xt3.xp,s7_ctrl tg_hv switches,HV-PMOS,1.0,0.45,0,3.2950,en_ff_-40_3.3,2.20089e-05,3.5836,en_ff_-40_3.3,4.85137e-06,3.5835
+3.3,xs.xc.xt4.xp,s7_ctrl tg_hv switches,HV-PMOS,1.0,0.45,0,3.2954,en_ff_-40_3.3,2.20089e-05,3.5653,en_tt_27_3.3,4.41288e-06,3.5651
+3.3,xs.xc.xt5.xp,s7_ctrl tg_hv switches,HV-PMOS,1.0,0.45,0,3.2932,en_ff_-40_3.3,2.20089e-05,3.4646,en_ss_125_3.3,3.93088e-06,3.4644
+3.3,xs.xc.xt6.xp,s7_ctrl tg_hv switches,HV-PMOS,1.0,0.45,0,3.2936,en_ff_-40_3.3,2.20089e-05,3.4343,en_tt_27_3.3,6.93088e-06,3.4343
+3.3,xs.xc.xt7.xp,s7_ctrl tg_hv switches,HV-PMOS,1.0,0.45,0,3.4646,en_ss_125_3.3,3.93088e-06,3.5653,en_tt_27_3.3,4.41288e-06,3.5651
+3.3,xs.xc.xt8.xp,s7_ctrl tg_hv switches,HV-PMOS,1.0,0.45,0,3.4343,en_tt_27_3.3,6.93088e-06,3.5836,en_ff_-40_3.3,4.85137e-06,3.5835
+3.3,xs.xc.xt9.xn,s7_ctrl tg_hv switches,HV-NMOS,1.0,0.45,0,3.3374,en_ss_125_3.3,2.2673e-05,3.3366,en_ss_125_3.3,2.2673e-05,3.3026
+3.3,xs.xc.xt9.xp,s7_ctrl tg_hv switches,HV-PMOS,1.0,0.45,0,3.3049,en_ff_-40_3.3,2.20084e-05,3.3168,en_ff_-40_3.3,2.20084e-05,3.3000
+3.3,xs.xc.xt10.xn,s7_ctrl tg_hv switches,HV-NMOS,1.0,0.45,0,3.3437,en_ss_125_3.3,2.20113e-05,3.3429,en_ss_125_3.3,2.20113e-05,3.2881
+3.3,xs.xc.xt10.xp,s7_ctrl tg_hv switches,HV-PMOS,1.0,0.45,0,3.3151,en_ff_-40_3.3,2.20084e-05,3.6981,off_ff_-40_3.3,1.35e-06,3.6822
+3.3,xs.xbg.xsvpg,bg_core_pd,HV-PMOS,1.0,0.45,0,-3.3109,off_ss_125_3.3,1.24478e-06,-3.3027,en_tt_27_3.3,2.20085e-05,3.3000
+3.3,xs.xd.xlay.x_1.x_1,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.3808,mode_ss_125_3.3,2.20101e-05,3.3804,mode_ss_125_3.3,2.20101e-05,3.3001
+3.3,xs.xd.xlay.x_1.x_2,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.3064,en_tt_27_3.3,2.17682e-06,3.3000,dc_ff_-40_3.3_1k,-0.2,3.3000
+3.3,xs.xd.xlay.x_1.x_3,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.3140,en_ff_-40_3.3,2.20084e-05,3.3139,en_ff_-40_3.3,2.20084e-05,3.3000
+3.3,xs.xd.xlay.x_1.x_4,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.3117,off_ss_125_3.3,1.24478e-06,3.3804,mode_ss_125_3.3,2.20101e-05,3.3001
+3.3,xs.xd.xlay.x_1.x_5,bias_dist_pd,HV-PMOS,1.0,0.45,0,-0.0372,fst_ff_-40_3.3,1e-06,3.3098,en_tt_27_3.3,2.17682e-06,3.3000
+3.3,xs.xd.xlay.x_1.x_6,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.3102,pu_tt_27_3.3_late,2.00707e-05,3.3139,en_ff_-40_3.3,2.20084e-05,3.3000
+3.3,xs.xd.xlay.x_1.x_8,bias_dist_pd,HV-PMOS,1.0,0.45,0,3.0667,off_ff_-40_3.3,1.13212e-06,3.3260,en_ff_-40_3.3,2.20084e-05,3.3000
+3.3,xs.xd.xlay.x_2.x_1,bias_dist_pd,HV-NMOS,1.0,0.45,0,-2.1161,off_ss_125_3.3,1.24478e-06,-3.3114,off_ss_125_3.3,1.24478e-06,3.3000
+3.3,xs.xd.xlay.x_2.x_3,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.3112,en_ff_-40_3.3,2.20089e-05,3.3109,en_ff_-40_3.3,2.20091e-05,3.3000
+3.3,xs.xd.xlay.x_2.x_4,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.3114,off_ss_125_3.3,1.24478e-06,-3.3109,off_ss_125_3.3,1.24478e-06,3.3000
+3.3,xs.xd.xlay.x_2.x_5,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.3112,en_ff_-40_3.3,2.20089e-05,-3.3000,dc_ff_-40_3.3_1k,-0.2,3.3000
+3.3,xs.xd.xlay.x_2.x_6,bias_dist_pd,HV-PMOS,1.0,0.45,0,-0.2869,pu_ff_-40_3.3_fast,1.57e-07,3.3109,en_ff_-40_3.3,2.20091e-05,3.3000
+3.3,xs.xd.xlay.x_2.x_8,bias_dist_pd,HV-PMOS,1.0,0.45,0,3.3103,en_tt_27_3.3,2.20097e-05,3.3249,en_ff_-40_3.3,2.20088e-05,3.3000
+3.3,xs.xd.xlay.x_3.x_1,bias_dist_pd,HV-NMOS,1.0,0.45,0,-2.1161,off_ss_125_3.3,1.24478e-06,-3.3114,off_ss_125_3.3,1.24478e-06,3.3000
+3.3,xs.xd.xlay.x_3.x_3,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.3112,en_ff_-40_3.3,2.20089e-05,3.3109,en_ff_-40_3.3,2.20091e-05,3.3000
+3.3,xs.xd.xlay.x_3.x_4,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.3114,off_ss_125_3.3,1.24478e-06,-3.3109,off_ss_125_3.3,1.24478e-06,3.3000
+3.3,xs.xd.xlay.x_3.x_5,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.3112,en_ff_-40_3.3,2.20089e-05,-3.3000,dc_ff_-40_3.3_1k,-0.2,3.3000
+3.3,xs.xd.xlay.x_3.x_6,bias_dist_pd,HV-PMOS,1.0,0.45,0,-0.2869,pu_ff_-40_3.3_fast,1.57e-07,3.3109,en_ff_-40_3.3,2.20091e-05,3.3000
+3.3,xs.xd.xlay.x_3.x_8,bias_dist_pd,HV-PMOS,1.0,0.45,0,3.3103,en_tt_27_3.3,2.20097e-05,3.3249,en_ff_-40_3.3,2.20088e-05,3.3000
+3.3,xs.xd.xlay.x_4.x_1,bias_dist_pd,HV-NMOS,1.0,0.45,0,-2.1161,off_ss_125_3.3,1.24478e-06,-3.3114,off_ss_125_3.3,1.24478e-06,3.3000
+3.3,xs.xd.xlay.x_4.x_3,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.3112,en_ff_-40_3.3,2.20089e-05,3.3109,en_ff_-40_3.3,2.20091e-05,3.3000
+3.3,xs.xd.xlay.x_4.x_4,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.3114,off_ss_125_3.3,1.24478e-06,-3.3109,off_ss_125_3.3,1.24478e-06,3.3000
+3.3,xs.xd.xlay.x_4.x_5,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.3112,en_ff_-40_3.3,2.20089e-05,-3.3000,dc_ff_-40_3.3_1k,-0.2,3.3000
+3.3,xs.xd.xlay.x_4.x_6,bias_dist_pd,HV-PMOS,1.0,0.45,0,-0.2869,pu_ff_-40_3.3_fast,1.57e-07,3.3109,en_ff_-40_3.3,2.20091e-05,3.3000
+3.3,xs.xd.xlay.x_4.x_8,bias_dist_pd,HV-PMOS,1.0,0.45,0,3.3103,en_tt_27_3.3,2.20097e-05,3.3249,en_ff_-40_3.3,2.20088e-05,3.3000
+3.3,xs.xd.xlay.x_5.x_1,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.3808,mode_ss_125_3.3,2.20101e-05,3.3804,mode_ss_125_3.3,2.20101e-05,3.3001
+3.3,xs.xd.xlay.x_5.x_2,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.3063,en_tt_27_3.3,2.17682e-06,3.3000,dc_ff_-40_3.3_1k,-0.2,3.3000
+3.3,xs.xd.xlay.x_5.x_3,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.3156,en_ss_125_3.3,2.24354e-06,3.3150,en_ss_125_3.3,2.24354e-06,3.3001
+3.3,xs.xd.xlay.x_5.x_4,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.3136,off_ss_125_3.3,1.24478e-06,3.3804,mode_ss_125_3.3,2.20101e-05,3.3001
+3.3,xs.xd.xlay.x_5.x_5,bias_dist_pd,HV-PMOS,1.0,0.45,0,-0.0392,fst_ff_-40_3.3,1e-06,3.3096,en_tt_27_3.3,2.17682e-06,3.3000
+3.3,xs.xd.xlay.x_5.x_6,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.3131,en_ss_125_3.3,2.20113e-05,3.3150,en_ss_125_3.3,2.24354e-06,3.3001
+3.3,xs.xd.xlay.x_5.x_7,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.2113,en_ss_125_3.3,2.20113e-05,-3.7620,en_ff_-40_3.3,2.13855e-06,3.5890
+3.3,xs.xd.xlay.x_6.x_1,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.3808,mode_ss_125_3.3,2.20101e-05,3.3804,mode_ss_125_3.3,2.20101e-05,3.3001
+3.3,xs.xd.xlay.x_6.x_2,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.3064,en_tt_27_3.3,2.17682e-06,3.3000,dc_ff_-40_3.3_1k,-0.2,3.3000
+3.3,xs.xd.xlay.x_6.x_3,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.3157,en_ss_125_3.3,2.24354e-06,3.3151,en_ss_125_3.3,2.24354e-06,3.3000
+3.3,xs.xd.xlay.x_6.x_4,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.3137,off_ss_125_3.3,1.24478e-06,3.3804,mode_ss_125_3.3,2.20101e-05,3.3001
+3.3,xs.xd.xlay.x_6.x_5,bias_dist_pd,HV-PMOS,1.0,0.45,0,-0.0501,fst_ff_-40_3.3,1e-06,3.3098,en_tt_27_3.3,2.17682e-06,3.3000
+3.3,xs.xd.xlay.x_6.x_6,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.3127,en_ss_125_3.3,2.20113e-05,3.3151,en_ss_125_3.3,2.24354e-06,3.3000
+3.3,xs.xd.xlay.x_6.x_7,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.1575,en_ff_-40_3.3,2.20091e-05,-3.7499,en_ff_-40_3.3,2.13855e-06,3.5882
+3.3,xs.xd.xlay.x_6.x_8,bias_dist_pd,HV-PMOS,1.0,0.45,0,3.0149,off_ff_-40_3.3,1.13207e-06,3.4638,off_ff_-40_3.3,1.1322e-06,2.2187
+3.3,xs.xd.xlay.x_7.x_1,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.3808,mode_ss_125_3.3,2.20101e-05,3.3804,mode_ss_125_3.3,2.20101e-05,3.3001
+3.3,xs.xd.xlay.x_7.x_2,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.3064,en_tt_27_3.3,2.17682e-06,3.3000,dc_ff_-40_3.3_1k,-0.2,3.3000
+3.3,xs.xd.xlay.x_7.x_3,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.3156,en_ss_125_3.3,2.24354e-06,3.3151,en_ss_125_3.3,2.24354e-06,3.3000
+3.3,xs.xd.xlay.x_7.x_4,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.3137,off_ss_125_3.3,1.24478e-06,3.3804,mode_ss_125_3.3,2.20101e-05,3.3001
+3.3,xs.xd.xlay.x_7.x_5,bias_dist_pd,HV-PMOS,1.0,0.45,0,-0.0501,fst_ff_-40_3.3,1e-06,3.3097,en_tt_27_3.3,2.17682e-06,3.3000
+3.3,xs.xd.xlay.x_7.x_6,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.3130,en_ss_125_3.3,2.20113e-05,3.3151,en_ss_125_3.3,2.24354e-06,3.3000
+3.3,xs.xd.xlay.x_7.x_7,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.1976,en_ff_-40_3.3,2.20091e-05,-3.7562,en_ff_-40_3.3,2.13855e-06,3.5884
+3.3,xs.xd.xlay.x_7.x_8,bias_dist_pd,HV-PMOS,1.0,0.45,0,2.8006,off_ff_-40_3.3,1.13207e-06,3.3902,off_ff_-40_3.3,1.1322e-06,1.9646
+3.3,xs.xd.xlay.x_8.x_1,bias_dist_pd,HV-NMOS,1.0,0.45,0,-2.1161,off_ss_125_3.3,1.24478e-06,-3.3115,off_ss_125_3.3,1.24478e-06,3.3000
+3.3,xs.xd.xlay.x_8.x_3,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.3109,en_ff_-40_3.3,2.20091e-05,3.3109,en_ff_-40_3.3,2.20091e-05,3.3000
+3.3,xs.xd.xlay.x_8.x_4,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.3115,off_ss_125_3.3,1.24478e-06,-3.3109,off_ss_125_3.3,1.24478e-06,3.3000
+3.3,xs.xd.xlay.x_8.x_5,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.3109,en_ff_-40_3.3,2.20091e-05,-3.3000,dc_ff_-40_3.3_1k,-0.2,3.3000
+3.3,xs.xd.xlay.x_8.x_6,bias_dist_pd,HV-PMOS,1.0,0.45,0,-0.2678,pu_ff_-40_3.3_fast,1.55e-07,3.3109,en_ff_-40_3.3,2.20091e-05,3.3000
+3.3,xs.xd.xlay.x_8.x_7,bias_dist_pd,HV-NMOS,1.0,0.45,0,-3.8751,off_ff_-40_3.3,1.13818e-06,-3.8751,en_ff_-40_3.3,2.13855e-06,3.7138
+3.3,xs.xd.xlay.x_1,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.3109,off_ss_125_3.3,1.24478e-06,-3.3027,en_tt_27_3.3,2.20085e-05,3.3000
+3.3,x2s.xlay.x_172,S2D pad,HV-PMOS,1.0,0.45,0,3.2508,en_ff_-40_3.3,2.13716e-06,3.3390,off_ff_-40_3.3,1.13592e-06,3.3000
+3.3,x2s.xlay.x_192,S2D pad,HV-PMOS,1.0,0.45,0,3.2848,en_ff_-40_3.3,2.201e-05,3.3366,en_ss_125_3.3,2.2673e-05,3.3018
+3.3,x2s.xlay.x_193,S2D pad,HV-PMOS,1.0,0.45,0,3.2852,en_ff_-40_3.3,2.201e-05,3.3366,en_ss_125_3.3,2.2673e-05,3.3018
+3.3,x2d.xlay.x_229,D2S pad,HV-PMOS,1.0,0.45,0,-3.3109,off_ss_125_3.3,1.24478e-06,-3.3026,en_tt_27_3.3,2.20085e-05,3.3010
+3.3,x2d.xlay.x_230,D2S pad,HV-PMOS,1.0,0.45,0,-3.3168,off_ff_-40_3.3,1.13261e-06,-3.3105,en_ss_125_3.3,2.24437e-06,3.3000
+3.3_dc,x2s.xlay.x_3,S2D pad,HV-PMOS,266.4,0.6,1,0.0000,dc_ff_-40_3.3_1k,-0.2,3.5000,dc_ff_-40_3.3_1k,-0.2,3.5000
+3.6,xs.xc.xle.xpl10,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,en_ff_-40_3.6,2.01e-06,-3.6000,en_ff_-40_3.6,1.12071e-05,3.6000
+3.6,xs.xc.xle.xpl9,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,en_ff_-40_3.6,1.12071e-05,-3.6000,en_ff_-40_3.6,1.10271e-05,3.6000
+3.6,xs.xc.xle.xpl8,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,en_ff_-40_3.6,1.10271e-05,-3.6000,en_ff_-40_3.6,1.10591e-05,3.6000
+3.6,xs.xc.xle.xpl7,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,en_ff_-40_3.6,1.10591e-05,-3.6000,en_ff_-40_3.6,1.10511e-05,3.6000
+3.6,xs.xc.xle.xpl6,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,en_ff_-40_3.6,1.10511e-05,-3.6000,en_ff_-40_3.6,1.09031e-05,3.6000
+3.6,xs.xc.xle.xpl5,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,en_ff_-40_3.6,1.09031e-05,-3.6000,en_ff_-40_3.6,1.00011e-05,3.6000
+3.6,xs.xc.xle.xpl4,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,en_ff_-40_3.6,1.00011e-05,-3.6000,en_ff_-40_3.6,9.99109e-06,3.6000
+3.6,xs.xc.xle.xpl3,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,en_ff_-40_3.6,9.99109e-06,-3.6000,en_ff_-40_3.6,9.96909e-06,3.6000
+3.6,xs.xc.xle.xpl2,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,en_ff_-40_3.6,9.96909e-06,-3.6000,en_ff_-40_3.6,2.2e-05,3.6000
+3.6,xs.xc.xle.xpl1,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,en_ff_-40_3.6,2.2e-05,-3.6000,en_ff_-40_3.6,8.25109e-06,3.6000
+3.6,xs.xc.xle.xpf,s7_ctrl ls_up_fs,HV-PMOS,0.3,5.0,1,-3.7124,en_ss_125_3.6,2.2003e-05,3.6246,en_ss_125_3.6,2.01e-06,3.6000
+3.6,xs.xc.xl0.xpl10,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xc.xl0.xpl9,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xc.xl0.xpl8,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xc.xl0.xpl7,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xc.xl0.xpl6,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xc.xl0.xpl5,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xc.xl0.xpl4,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xc.xl0.xpl3,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xc.xl0.xpl2,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,5.8510,pu_sf_-40_3.6_fast,8.16388e-07,3.6000
+3.6,xs.xc.xl0.xpl1,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,5.8510,pu_sf_-40_3.6_fast,8.16388e-07,3.6000
+3.6,xs.xc.xl0.xpf,s7_ctrl ls_up_fs,HV-PMOS,0.3,5.0,1,-3.7427,mode_ss_125_3.6,4.20047e-05,3.6301,mode_ss_125_3.6,1.201e-05,3.6000
+3.6,xs.xc.xl1.xpl10,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,3.45,3.6000
+3.6,xs.xc.xl1.xpl9,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,3.45,-3.6000,dc_ff_-40_3.6_1k,3.45,3.6000
+3.6,xs.xc.xl1.xpl8,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,3.45,-3.6000,dc_ff_-40_3.6_1k,3.45,3.6000
+3.6,xs.xc.xl1.xpl7,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,3.45,-3.6000,dc_ff_-40_3.6_1k,3.45,3.6000
+3.6,xs.xc.xl1.xpl6,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,3.45,-3.6000,dc_ff_-40_3.6_1k,3.45,3.6000
+3.6,xs.xc.xl1.xpl5,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,3.45,-3.6000,dc_ff_-40_3.6_1k,3.45,3.6000
+3.6,xs.xc.xl1.xpl4,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,3.45,-3.6000,dc_ff_-40_3.6_1k,3.45,3.6000
+3.6,xs.xc.xl1.xpl3,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,3.45,-3.6000,dc_ff_-40_3.6_1k,3.45,3.6000
+3.6,xs.xc.xl1.xpl2,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,3.45,5.8510,pu_sf_-40_3.6_fast,8.16388e-07,3.6000
+3.6,xs.xc.xl1.xpl1,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,3.45,5.8510,pu_sf_-40_3.6_fast,8.16388e-07,3.6000
+3.6,xs.xc.xl1.xpf,s7_ctrl ls_up_fs,HV-PMOS,0.3,5.0,1,-3.7427,mode_ss_125_3.6,4.20047e-05,3.6279,mode_tt_27_3.6,1.20093e-05,3.6000
+3.6,xs.xc.xl2.xpl10,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.05,3.6000
+3.6,xs.xc.xl2.xpl9,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.05,-3.6000,dc_ff_-40_3.6_1k,-0.05,3.6000
+3.6,xs.xc.xl2.xpl8,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.05,-3.6000,dc_ff_-40_3.6_1k,-0.05,3.6000
+3.6,xs.xc.xl2.xpl7,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.05,-3.6000,dc_ff_-40_3.6_1k,-0.05,3.6000
+3.6,xs.xc.xl2.xpl6,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.05,-3.6000,dc_ff_-40_3.6_1k,-0.05,3.6000
+3.6,xs.xc.xl2.xpl5,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.05,-3.6000,dc_ff_-40_3.6_1k,-0.05,3.6000
+3.6,xs.xc.xl2.xpl4,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.05,-3.6000,dc_ff_-40_3.6_1k,-0.05,3.6000
+3.6,xs.xc.xl2.xpl3,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.05,-3.6000,dc_ff_-40_3.6_1k,-0.05,3.6000
+3.6,xs.xc.xl2.xpl2,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.05,5.8510,pu_sf_-40_3.6_fast,8.16388e-07,3.6000
+3.6,xs.xc.xl2.xpl1,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.05,5.8510,pu_sf_-40_3.6_fast,8.16388e-07,3.6000
+3.6,xs.xc.xl2.xpf,s7_ctrl ls_up_fs,HV-PMOS,0.3,5.0,1,-3.7427,mode_ss_125_3.6,4.20047e-05,3.6263,mode_ss_125_3.6,3.201e-05,3.6000
+3.6,xs.xc.xl3.xpl10,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xc.xl3.xpl9,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xc.xl3.xpl8,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xc.xl3.xpl7,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xc.xl3.xpl6,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xc.xl3.xpl5,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xc.xl3.xpl4,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xc.xl3.xpl3,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xc.xl3.xpl2,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,5.8510,pu_sf_-40_3.6_fast,8.16388e-07,3.6000
+3.6,xs.xc.xl3.xpl1,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,5.8510,pu_sf_-40_3.6_fast,8.16388e-07,3.6000
+3.6,xs.xc.xl3.xpf,s7_ctrl ls_up_fs,HV-PMOS,0.3,5.0,1,-3.7124,mode_ss_125_3.6,2.003e-06,3.6275,mode_tt_27_3.6,2.00926e-06,3.6000
+3.6,xs.xc.xl4.xpl10,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6,xs.xc.xl4.xpl9,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,0.15,-3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6,xs.xc.xl4.xpl8,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,0.15,-3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6,xs.xc.xl4.xpl7,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,0.15,-3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6,xs.xc.xl4.xpl6,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,0.15,-3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6,xs.xc.xl4.xpl5,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,0.15,-3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6,xs.xc.xl4.xpl4,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,0.15,-3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6,xs.xc.xl4.xpl3,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,0.15,-3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6,xs.xc.xl4.xpl2,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,0.15,5.8512,pu_sf_-40_3.6_fast,8.16388e-07,3.6000
+3.6,xs.xc.xl4.xpl1,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6002,mode_ff_125_3.6,2.00849e-06,5.8512,pu_sf_-40_3.6_fast,8.16388e-07,3.6000
+3.6,xs.xc.xl4.xpf,s7_ctrl ls_up_fs,HV-PMOS,0.3,5.0,1,-3.7427,mode_ss_125_3.6,4.20047e-05,3.6246,mode_ss_125_3.6,5.201e-05,3.6000
+3.6,xs.xc.xl5.xpl10,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xc.xl5.xpl9,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xc.xl5.xpl8,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xc.xl5.xpl7,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xc.xl5.xpl6,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xc.xl5.xpl5,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xc.xl5.xpl4,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xc.xl5.xpl3,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xc.xl5.xpl2,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,5.8510,pu_sf_-40_3.6_fast,8.16388e-07,3.6000
+3.6,xs.xc.xl5.xpl1,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,5.8510,pu_sf_-40_3.6_fast,8.16388e-07,3.6000
+3.6,xs.xc.xl5.xpf,s7_ctrl ls_up_fs,HV-PMOS,0.3,5.0,1,-3.7427,mode_ss_125_3.6,3.20047e-05,3.6246,mode_ss_125_3.6,5.201e-05,3.6000
+3.6,xs.xbg.xms3,bg_core_pd,HV-NMOS,0.5,2.0,1,2.0019,en_ss_-40_3.6,2.22677e-05,-3.6021,en_ff_125_3.6,2.20094e-05,3.5503
+3.6,xs.xbg.xnb,bg_core_pd,HV-NMOS,20.0,4.0,1,0.9688,pu_ss_-40_3.6,8.54207e-06,-3.4484,off_fs_125_3.6,7e-05,3.4483
+3.6,xs.xbg.xpac,bg_core_pd,HV-PMOS,40.0,1.0,1,-1.3051,pu_ss_-40_3.6_fast,9.60967e-07,3.4484,off_fs_125_3.6,7e-05,3.4483
+3.6,xs.xbg.xms1_0,bg_core_pd,HV-PMOS,0.5,12.5,1,-3.6178,pu_tt_27_3.6_late,2.00709e-05,7.8885,en_ff_125_3.6,2.20088e-05,3.6000
+3.6,xs.xbg.xms1_1,bg_core_pd,HV-PMOS,0.5,12.5,1,-3.4661,mode_ss_-40_3.6,4.20099e-05,7.8885,en_ff_125_3.6,2.20088e-05,3.4660
+3.6,xs.xbg.xms1_2,bg_core_pd,HV-PMOS,0.5,12.5,1,-3.3223,mode_ss_-40_3.6,4.20098e-05,-3.1661,mode_ss_-40_3.6,4.20099e-05,3.3221
+3.6,xs.xbg.xms1_7,bg_core_pd,HV-PMOS,0.5,12.5,1,-2.2699,mode_ss_-40_3.6,4.20098e-05,3.6021,en_ss_125_3.6,2.20089e-05,3.6000
+3.6,xs.xd.xlay.x_6,bias_dist_pd,HV-PMOS,5.0,6.0,1,-1.3966,en_ss_125_3.6,2.18804e-06,3.4723,en_ff_125_3.6,2.20098e-05,3.4548
+3.6,xs.xd.xlay.x_7,bias_dist_pd,HV-PMOS,5.0,6.0,1,-1.3966,en_ss_125_3.6,2.18804e-06,3.4315,en_sf_-40_3.6,2.20097e-05,3.4117
+3.6,xs.xd.xlay.x_8,bias_dist_pd,HV-PMOS,5.0,6.0,1,-1.3966,en_ss_125_3.6,2.18804e-06,3.4876,en_ff_125_3.6,2.20098e-05,3.4694
+3.6,xs.xd.xlay.x_11,bias_dist_pd,HV-NMOS,6.0,6.0,1,1.4676,pu_ss_-40_3.6_fast,9.64143e-07,-3.6182,en_ff_125_3.6,2.20094e-05,3.6000
+3.6,xs.xr.xlay.x_13,pad_ref_rb,HV-PMOS,2.0,6.0,1,-1.3805,en_ss_125_3.6,2.18902e-06,3.3972,pu_ss_125_3.6_fast,1.22952e-06,3.3967
+3.6,xs.xr.xlay.x_18,pad_ref_rb,HV-PMOS,5.0,6.0,1,-1.3805,en_ss_125_3.6,2.18902e-06,3.7768,en_ff_125_3.6,2.25425e-05,3.4652
+3.6,xs.xr.xlay.x_19,pad_ref_rb,HV-PMOS,5.0,6.0,1,-1.3805,en_ss_125_3.6,2.18902e-06,3.3659,pu_ff_125_3.6_fast,1.22458e-06,3.1237
+3.6,xs.xr.xlay.x_28,pad_ref_rb,HV-NMOS,4.8,6.0,1,0.9910,pu_ss_-40_3.6_fast,1.59285e-06,-3.5555,off_ff_125_3.6,7e-05,3.5555
+3.6,xs.xr.xlay.x_31,pad_ref_rb,HV-NMOS,2.4,6.0,1,0.9910,pu_ss_-40_3.6_fast,1.59285e-06,-3.4406,pu_ss_125_3.6_fast,1.17671e-06,3.4259
+3.6,xs.xr.xlay.x_36,pad_ref_rb,HV-NMOS,60.0,3.0,1,1.0271,en_ss_-40_3.6,2.15331e-06,-3.4463,pu_ss_125_3.6_fast,1.38106e-06,3.4457
+3.6,xs.xr.xlay.x_39,pad_ref_rb,HV-NMOS,15.0,3.0,1,-2.9243,off_ff_125_3.6,7e-05,-3.4463,pu_ss_125_3.6_fast,1.38106e-06,3.4457
+3.6,x2s.xlay.x_3,S2D pad,HV-PMOS,266.4,0.6,1,-0.8284,fs0_ss_-40_3.6,3.6,3.8011,step_ff_125_3.6_100p,1.20293e-05,3.8000
+3.6,x2s.xlay.x_43,S2D pad,HV-NMOS,88.0,0.6,1,0.2006,step_fs_125_3.6_open,1.20114e-05,-3.6003,step_ff_-40_3.6_100p,2.01126e-06,3.6000
+3.6,x2s.xlay.x_102,S2D pad,HV-NMOS,30.0,3.0,1,-2.7532,pu_fs_125_3.6_fast,1.60183e-06,-3.3780,fs_ff_125_3.6,0,3.3780
+3.6,x2s.xlay.x_104,S2D pad,HV-NMOS,30.0,3.0,1,-2.9245,pu_fs_125_3.6_fast,1.64183e-06,-3.4547,fs_fs_125_3.6,0.65,3.4547
+3.6,x2s.xlay.x_138,S2D pad,HV-NMOS,2.4,6.0,1,0.9957,pu_ss_-40_3.6_fast,1.04622e-06,-3.4585,fs_ff_125_3.6,1.4,3.4585
+3.6,x2s.xlay.x_148,S2D pad,HV-NMOS,6.0,6.0,1,0.9957,pu_ss_-40_3.6_fast,1.04622e-06,-3.4722,fst_ss_-40_3.6,5.2e-05,3.4722
+3.6,x2s.xlay.x_173,S2D pad,HV-PMOS,2.0,6.0,1,-1.4191,pu_ss_125_3.6_fast,2.08097e-06,3.3986,pu_ss_125_3.6_fast,1e-06,3.3979
+3.6,x2s.xlay.x_177,S2D pad,HV-PMOS,5.0,6.0,1,-1.4191,pu_ss_125_3.6_fast,2.08097e-06,3.3528,fs_ff_125_3.6,1.2,3.3528
+3.6,x2s.xlay.x_178,S2D pad,HV-PMOS,5.0,6.0,1,-1.4191,pu_ss_125_3.6_fast,2.08097e-06,3.3528,fs_ff_125_3.6,1.2,3.3528
+3.6,x2s.xlay.x_179,S2D pad,HV-PMOS,5.0,6.0,1,-1.4191,pu_ss_125_3.6_fast,2.08097e-06,3.5192,off_ff_125_3.6,6.8835e-05,3.5192
+3.6,x2s.xlay.x_180,S2D pad,HV-PMOS,5.0,6.0,1,-1.4191,pu_ss_125_3.6_fast,2.08097e-06,3.3837,fs_ff_125_3.6,0.95,3.3837
+3.6,x2s.xlay.x_181,S2D pad,HV-PMOS,5.0,6.0,1,-1.4191,pu_ss_125_3.6_fast,2.08097e-06,3.3753,fs_ff_125_3.6,0,3.3753
+3.6,x2s.xlay.x_182,S2D pad,HV-PMOS,5.0,6.0,1,-1.4191,pu_ss_125_3.6_fast,2.08097e-06,3.5192,off_ff_125_3.6,6.8835e-05,3.5192
+3.6,x2s.xlay.x_185,S2D pad,HV-PMOS,5.0,6.0,1,-1.4191,pu_ss_125_3.6_fast,2.08097e-06,3.3528,fs_ff_125_3.6,1.2,3.3528
+3.6,x2s.xlay.x_186,S2D pad,HV-PMOS,5.0,6.0,1,-1.4191,pu_ss_125_3.6_fast,2.08097e-06,3.3528,fs_ff_125_3.6,1.2,3.3528
+3.6,x2s.xlay.x_187,S2D pad,HV-PMOS,5.0,6.0,1,-1.4191,pu_ss_125_3.6_fast,2.08097e-06,3.5168,off_ff_125_3.6,6.8885e-05,3.5167
+3.6,x2s.xlay.x_188,S2D pad,HV-PMOS,5.0,6.0,1,-1.4191,pu_ss_125_3.6_fast,2.08097e-06,3.3753,fs_ff_125_3.6,0,3.3753
+3.6,x2s.xlay.x_189,S2D pad,HV-PMOS,5.0,6.0,1,-1.4191,pu_ss_125_3.6_fast,2.08097e-06,3.3837,fs_ff_125_3.6,0.95,3.3837
+3.6,x2s.xlay.x_190,S2D pad,HV-PMOS,5.0,6.0,1,-1.4191,pu_ss_125_3.6_fast,2.08097e-06,3.5168,off_ff_125_3.6,6.8885e-05,3.5167
+3.6,x2s.xlay.x_191,S2D pad,HV-PMOS,5.0,6.0,1,-1.4191,pu_ss_125_3.6_fast,2.08097e-06,3.5349,pu_ss_-40_3.6_fast,1e-06,3.5336
+3.6,x2s.xlay.x_202,S2D pad,HV-PMOS,20.0,1.0,1,3.4886,fs_fs_125_3.6,3.6,3.5775,fs_ff_-40_3.6,3.6,3.5775
+3.6,x2s.xlay.x_208,S2D pad,HV-PMOS,20.0,1.0,1,3.4886,fs_fs_125_3.6,3.6,3.5775,fs_ff_-40_3.6,3.6,3.5775
+3.6,x2s.xlay.x_218,S2D pad,HV-PMOS,20.0,1.0,1,-3.4704,pu_ss_-40_3.6_fast,1.50908e-06,-3.4702,pu_ss_-40_3.6_fast,1.50908e-06,3.4428
+3.6,x2s.xlay.x_224,S2D pad,HV-PMOS,20.0,1.0,1,-3.4704,pu_ss_-40_3.6_fast,1.50908e-06,-3.4702,pu_ss_-40_3.6_fast,1.50908e-06,3.4428
+3.6,x2d.xlay.x_1,D2S pad,HV-PMOS,7.96,32.16,1,3.4893,fs_fs_125_3.6,3.6,3.4893,fs_fs_125_3.6,3.6,3.4893
+3.6,x2d.xlay.x_2,D2S pad,HV-PMOS,7.96,32.16,1,3.6000,fs_ff_-40_3.6,0,3.6000,fs_ff_-40_3.6,0,3.6000
+3.6,x2d.xlay.x_7,D2S pad,HV-NMOS,299.2,1.0,1,1.3879,fs_sf_125_3.6,3.6,-3.4893,fs_fs_125_3.6,3.6,3.4893
+3.6,x2d.xlay.x_77,D2S pad,HV-PMOS,546.12,0.6,1,-1.1320,dc_ss_-40_3.6_1kgnd,1.75,3.6000,fs_ff_-40_3.6,0,3.6000
+3.6,x2d.xlay.x_169,D2S pad,HV-NMOS,4.4,1.0,1,-3.1442,pu_tt_27_3.6_late,2.04966e-05,-3.5871,pu_tt_27_3.6_late,2.00709e-05,3.5778
+3.6,x2d.xlay.x_171,D2S pad,HV-NMOS,4.4,1.0,1,-1.1381,fs_sf_125_3.6,3.6,-3.7280,pu_tt_27_3.6_late,2.00709e-05,3.7189
+3.6,x2d.xlay.x_174,D2S pad,HV-NMOS,2.4,6.0,1,0.9920,pu_ss_-40_3.6_fast,1.06268e-06,-3.4739,fst_sf_-40_3.6,2.495e-06,3.4739
+3.6,x2d.xlay.x_208,D2S pad,HV-NMOS,6.0,6.0,1,0.9920,pu_ss_-40_3.6_fast,1.06268e-06,-3.4712,fs_ff_125_3.6,1.95,3.4712
+3.6,x2d.xlay.x_209,D2S pad,HV-NMOS,6.0,6.0,1,0.9920,pu_ss_-40_3.6_fast,1.06268e-06,-3.6184,en_tt_27_3.6,2.20092e-05,3.6000
+3.6,x2d.xlay.x_232,D2S pad,HV-PMOS,6.66,0.6,1,-1.4508,en_ss_-40_3.6,2.23964e-05,3.7252,pu_tt_27_3.6_late,2.04438e-05,3.7068
+3.6,x2d.xlay.x_234,D2S pad,HV-PMOS,6.66,0.6,1,-1.7857,pu_ss_-40_3.6_fast,1.04622e-06,3.7255,pu_tt_27_3.6_late,2.04438e-05,3.7030
+3.6,x2d.xlay.x_236,D2S pad,HV-PMOS,2.0,6.0,1,-1.4016,en_ss_125_3.6,2.18887e-06,3.5065,fst_sf_-40_3.6,1.01332e-06,3.5062
+3.6,x2d.xlay.x_256,D2S pad,HV-PMOS,5.0,6.0,1,-1.4016,en_ss_125_3.6,2.18887e-06,3.5286,fst_fs_-40_3.6,2e-06,3.5286
+3.6,x2d.xlay.x_257,D2S pad,HV-PMOS,5.0,6.0,1,-1.4016,en_ss_125_3.6,2.18887e-06,3.3714,off_ff_125_3.6,7e-05,3.3713
+3.6,x2d.xlay.x_258,D2S pad,HV-PMOS,5.0,6.0,1,-1.4016,en_ss_125_3.6,2.18887e-06,3.3935,fs_ff_125_3.6,0,3.3935
+3.6,x2d.xlay.x_259,D2S pad,HV-PMOS,5.0,6.0,1,-1.4016,en_ss_125_3.6,2.18887e-06,3.4025,fs_ff_125_3.6,0,3.4025
+3.6,x2d.xlay.x_260,D2S pad,HV-PMOS,5.0,6.0,1,-1.4016,en_ss_125_3.6,2.18887e-06,3.4025,fs_ff_125_3.6,0,3.4025
+3.6,x2d.xlay.x_261,D2S pad,HV-PMOS,5.0,6.0,1,-1.4016,en_ss_125_3.6,2.18887e-06,3.4065,fs_ff_125_3.6,3.6,3.4065
+3.6,x2d.xlay.x_265,D2S pad,HV-PMOS,5.0,6.0,1,-1.4016,en_ss_125_3.6,2.18887e-06,3.4025,fs_ff_125_3.6,0,3.4025
+3.6,x2d.xlay.x_266,D2S pad,HV-PMOS,5.0,6.0,1,-1.4016,en_ss_125_3.6,2.18887e-06,3.4065,fs_ff_125_3.6,3.6,3.4065
+3.6,x2d.xlay.x_268,D2S pad,HV-PMOS,5.0,6.0,1,-1.4016,en_ss_125_3.6,2.18887e-06,3.3936,fs_ff_125_3.6,0,3.3936
+3.6,x2d.xlay.x_269,D2S pad,HV-PMOS,5.0,6.0,1,-1.4016,en_ss_125_3.6,2.18887e-06,3.4025,fs_ff_125_3.6,0,3.4025
+3.6,x2d.xlay.x_276,D2S pad,HV-PMOS,20.0,1.0,1,3.4899,fs_fs_125_3.6,3.6,3.5631,fs_fs_125_3.6,3.6,3.5631
+3.6,x2d.xlay.x_278,D2S pad,HV-PMOS,20.0,1.0,1,3.4899,fs_fs_125_3.6,3.6,3.5631,fs_fs_125_3.6,3.6,3.5631
+3.6,xs.xc.xle.xn1,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,1.2018,pu_ss_125_3.6_fast,3.11268e-10,-3.6000,en_ff_-40_3.6,8.25109e-06,3.6000
+3.6,xs.xc.xle.xi1.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.6246,en_ss_125_3.6,2.01e-06,3.7124,en_ss_125_3.6,2.2003e-05,3.6000
+3.6,xs.xc.xle.xi1.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.7127,en_ss_125_3.6,2.2003e-05,3.7124,en_ss_125_3.6,2.2003e-05,3.6000
+3.6,xs.xc.xle.xi2.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.6025,en_ff_-40_3.6,2.20067e-05,3.6222,pu_tt_27_3.6_late,2.00709e-05,3.6000
+3.6,xs.xc.xle.xi2.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.6222,pu_tt_27_3.6_late,2.00709e-05,3.6044,pu_tt_27_3.6_late,2.00709e-05,3.6000
+3.6,xs.xc.xle.xi3.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.6950,mode_fs_125_3.6,2.20093e-05,-3.6178,pu_tt_27_3.6_late,2.00709e-05,3.6000
+3.6,xs.xc.xle.xi3.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.6021,en_ss_125_3.6,2.20089e-05,-3.6950,mode_fs_125_3.6,2.20093e-05,3.6000
+3.6,xs.xc.xl0.xn1,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,1.2000,mode_ff_125_3.6,2.01e-06,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xc.xl0.xi1.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.6302,mode_ss_125_3.6,1.201e-05,3.7427,mode_ss_125_3.6,4.20047e-05,3.6000
+3.6,xs.xc.xl0.xi1.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.7427,mode_ss_125_3.6,4.20047e-05,3.7427,mode_ss_125_3.6,4.20047e-05,3.6000
+3.6,xs.xc.xl0.xi2.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.6113,mode_ss_-40_3.6,5.21155e-05,3.6316,mode_tt_27_3.6,2.00926e-06,3.6000
+3.6,xs.xc.xl0.xi2.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.6316,mode_tt_27_3.6,2.00926e-06,3.6256,mode_tt_27_3.6,2.00926e-06,3.6000
+3.6,xs.xc.xl0.xi3.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.7666,mode_ss_-40_3.6,4.20096e-05,3.6133,mode_ss_-40_3.6,2.009e-06,3.6000
+3.6,xs.xc.xl0.xi3.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.6133,mode_ss_-40_3.6,2.009e-06,-3.7666,mode_ss_-40_3.6,4.20096e-05,3.6000
+3.6,xs.xc.xl1.xn1,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,1.2000,mode_ff_125_3.6,1.201e-05,-3.6000,dc_ff_-40_3.6_1k,3.45,3.6000
+3.6,xs.xc.xl1.xi1.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.6279,mode_tt_27_3.6,1.20093e-05,3.7427,mode_ss_125_3.6,4.20047e-05,3.6000
+3.6,xs.xc.xl1.xi1.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.7427,mode_ss_125_3.6,4.20047e-05,3.7427,mode_ss_125_3.6,4.20047e-05,3.6000
+3.6,xs.xc.xl1.xi2.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.6113,mode_ss_-40_3.6,5.21155e-05,3.6320,mode_tt_27_3.6,1.20093e-05,3.6000
+3.6,xs.xc.xl1.xi2.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.6320,mode_tt_27_3.6,1.20093e-05,3.6270,mode_fs_125_3.6,1.20091e-05,3.6000
+3.6,xs.xc.xl1.xi3.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.8101,mode_ss_-40_3.6,4.20096e-05,3.6136,mode_ss_-40_3.6,2.21154e-05,3.6000
+3.6,xs.xc.xl1.xi3.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.6136,mode_ss_-40_3.6,2.21154e-05,-3.8101,mode_ss_-40_3.6,4.20096e-05,3.6000
+3.6,xs.xc.xl2.xn1,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,1.2000,mode_ff_125_3.6,2.201e-05,-3.6000,dc_ff_-40_3.6_1k,-0.05,3.6000
+3.6,xs.xc.xl2.xi1.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.6264,mode_ss_125_3.6,3.201e-05,3.7427,mode_ss_125_3.6,4.20047e-05,3.6000
+3.6,xs.xc.xl2.xi1.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.7427,mode_ss_125_3.6,4.20047e-05,3.7427,mode_ss_125_3.6,4.20047e-05,3.6000
+3.6,xs.xc.xl2.xi2.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.6113,mode_ss_-40_3.6,5.21155e-05,-3.6047,mode_ss_125_3.6,2.20078e-05,3.6000
+3.6,xs.xc.xl2.xi2.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.6006,mode_fs_125_3.6,4.20092e-05,-3.6113,mode_ss_-40_3.6,5.21155e-05,3.6000
+3.6,xs.xc.xl2.xi3.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.6928,mode_ss_-40_3.6,4.20095e-05,3.6142,mode_ss_125_3.6,2.2009e-05,3.6000
+3.6,xs.xc.xl2.xi3.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.6144,mode_ss_125_3.6,2.2009e-05,-3.6928,mode_ss_-40_3.6,4.20095e-05,3.6000
+3.6,xs.xc.xl3.xn1,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,1.2000,mode_ff_125_3.6,2.01e-06,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xc.xl3.xi1.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.6275,mode_tt_27_3.6,2.00926e-06,3.7124,mode_ss_125_3.6,2.003e-06,3.6000
+3.6,xs.xc.xl3.xi1.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.7127,mode_ss_125_3.6,2.003e-06,3.7124,mode_ss_125_3.6,2.003e-06,3.6000
+3.6,xs.xc.xl3.xi2.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.6113,mode_ss_-40_3.6,5.21155e-05,3.6318,mode_tt_27_3.6,2.00926e-06,3.6000
+3.6,xs.xc.xl3.xi2.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.6318,mode_tt_27_3.6,2.00926e-06,3.6256,mode_tt_27_3.6,2.00926e-06,3.6000
+3.6,xs.xc.xl3.xi3.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.8066,mode_ss_-40_3.6,4.20093e-05,3.6133,mode_ss_-40_3.6,2.009e-06,3.6000
+3.6,xs.xc.xl3.xi3.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.6133,mode_ss_-40_3.6,2.009e-06,-3.8066,mode_ss_-40_3.6,4.20093e-05,3.6000
+3.6,xs.xc.xl4.xn1,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,1.2000,mode_ff_125_3.6,4.201e-05,-3.6002,mode_ff_125_3.6,2.00849e-06,3.6000
+3.6,xs.xc.xl4.xi1.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.6246,mode_ss_125_3.6,5.201e-05,3.7427,mode_ss_125_3.6,4.20047e-05,3.6000
+3.6,xs.xc.xl4.xi1.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.7427,mode_ss_125_3.6,4.20047e-05,3.7427,mode_ss_125_3.6,4.20047e-05,3.6000
+3.6,xs.xc.xl4.xi2.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.6159,mode_ss_-40_3.6,5.21155e-05,-3.6037,mode_ss_125_3.6,4.2008e-05,3.6000
+3.6,xs.xc.xl4.xi2.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.6001,mode_ff_125_3.6,5.20106e-05,-3.6159,mode_ss_-40_3.6,5.21155e-05,3.6000
+3.6,xs.xc.xl4.xi3.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.6200,mode_ss_-40_3.6,4.20094e-05,3.6222,mode_fs_125_3.6,5.2175e-05,3.6000
+3.6,xs.xc.xl4.xi3.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.6222,mode_fs_125_3.6,5.2175e-05,3.6211,mode_fs_125_3.6,5.2175e-05,3.6000
+3.6,xs.xc.xl5.xn1,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,1.2000,mode_ff_125_3.6,3.201e-05,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xc.xl5.xi1.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.6246,mode_ss_125_3.6,5.201e-05,3.7427,mode_ss_125_3.6,3.20047e-05,3.6000
+3.6,xs.xc.xl5.xi1.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.7427,mode_ss_125_3.6,3.20047e-05,3.7427,mode_ss_125_3.6,3.20047e-05,3.6000
+3.6,xs.xc.xl5.xi2.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.6113,mode_ss_-40_3.6,5.21155e-05,3.6044,mode_ff_125_3.6,4.20088e-05,3.6000
+3.6,xs.xc.xl5.xi2.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.6044,mode_ff_125_3.6,4.20088e-05,-3.6113,mode_ss_-40_3.6,5.21155e-05,3.6000
+3.6,xs.xc.xl5.xi3.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.8165,mode_ss_-40_3.6,4.20096e-05,3.6131,mode_ss_-40_3.6,5.21155e-05,3.6000
+3.6,xs.xc.xl5.xi3.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.6131,mode_ss_-40_3.6,5.21155e-05,-3.8165,mode_ss_-40_3.6,4.20096e-05,3.6000
+3.6,xs.xc.xnv.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6351,mode_tt_27_3.6,5.21358e-05,3.6454,mode_tt_27_3.6,2.00926e-06,3.6000
+3.6,xs.xc.xnv.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6021,mode_tt_27_3.6,4.20091e-05,3.6147,mode_tt_27_3.6,2.00926e-06,3.6000
+3.6,xs.xc.xnv.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6454,mode_tt_27_3.6,2.00926e-06,3.6395,mode_tt_27_3.6,2.00926e-06,3.6000
+3.6,xs.xc.xnv.xnb,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6219,mode_fs_125_3.6,5.2175e-05,3.6211,mode_fs_125_3.6,5.2175e-05,3.6000
+3.6,xs.xc.xiv.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6484,mode_tt_27_3.6,2.00948e-06,3.6293,mode_tt_27_3.6,5.21358e-05,3.6000
+3.6,xs.xc.xiv.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6316,mode_tt_27_3.6,5.21358e-05,-3.6484,mode_tt_27_3.6,2.00948e-06,3.6000
+3.6,xs.xc.xns.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6242,mode_fs_125_3.6,4.20085e-05,3.6598,mode_tt_27_3.6,2.00926e-06,3.6000
+3.6,xs.xc.xns.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6632,mode_ss_-40_3.6,2.00929e-06,3.6582,mode_tt_27_3.6,2.00948e-06,3.6000
+3.6,xs.xc.xns.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6598,mode_tt_27_3.6,2.00926e-06,3.6454,mode_tt_27_3.6,2.00926e-06,3.6000
+3.6,xs.xc.xns.xnb,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6570,mode_ss_-40_3.6,4.20092e-05,3.6423,mode_tt_27_3.6,2.00948e-06,3.6000
+3.6,xs.xc.xis.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6622,mode_tt_27_3.6,2.00926e-06,3.6536,mode_ss_-40_3.6,2.00924e-06,3.6000
+3.6,xs.xc.xis.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6554,mode_ss_-40_3.6,2.00924e-06,-3.6622,mode_tt_27_3.6,2.00926e-06,3.6000
+3.6,xs.xc.xnf.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6821,mode_ss_125_3.6,2.00996e-06,-3.6231,mode_fs_125_3.6,4.20085e-05,3.6000
+3.6,xs.xc.xnf.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6220,mode_fs_125_3.6,2.00861e-06,-3.6211,mode_fs_125_3.6,2.00861e-06,3.6000
+3.6,xs.xc.xnf.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6042,mode_fs_125_3.6,2.21745e-05,-3.6821,mode_ss_125_3.6,2.00996e-06,3.6000
+3.6,xs.xc.xnf.xnb,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6570,mode_ss_-40_3.6,4.20092e-05,3.6423,mode_tt_27_3.6,2.00948e-06,3.6000
+3.6,xs.xc.xif.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6179,mode_ss_125_3.6,3.21866e-05,3.6821,mode_ss_125_3.6,2.00996e-06,3.6000
+3.6,xs.xc.xif.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6836,mode_ss_125_3.6,2.00996e-06,3.6821,mode_ss_125_3.6,2.00996e-06,3.6000
+3.6,xs.xc.xnm.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6489,mode_ss_125_3.6,2.21872e-05,3.6560,mode_ff_125_3.6,1.20087e-05,3.6000
+3.6,xs.xc.xnm.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6220,mode_fs_125_3.6,2.00861e-06,3.6238,mode_ff_125_3.6,1.20087e-05,3.6000
+3.6,xs.xc.xnm.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6560,mode_ff_125_3.6,1.20087e-05,-3.6489,mode_ss_125_3.6,2.21872e-05,3.6000
+3.6,xs.xc.xnm.xnb,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6570,mode_ss_-40_3.6,4.20092e-05,3.6423,mode_tt_27_3.6,2.00948e-06,3.6000
+3.6,xs.xc.xim.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.7911,mode_ss_-40_3.6,2.20095e-05,3.6524,mode_ss_125_3.6,2.21872e-05,3.6000
+3.6,xs.xc.xim.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6524,mode_ss_125_3.6,2.21872e-05,-3.7911,mode_ss_-40_3.6,2.20095e-05,3.6000
+3.6,xs.xc.xn1.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6179,mode_ss_125_3.6,3.21866e-05,3.6527,mode_fs_125_3.6,2.0089e-06,3.6000
+3.6,xs.xc.xn1.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6673,mode_tt_27_3.6,2.00926e-06,3.6714,mode_ff_125_3.6,2.20084e-05,3.6000
+3.6,xs.xc.xn1.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6587,mode_ss_-40_3.6,1.21197e-05,3.6527,mode_fs_125_3.6,2.0089e-06,3.6000
+3.6,xs.xc.xn1.xnb,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6554,mode_ss_-40_3.6,2.00924e-06,3.6538,mode_ss_-40_3.6,2.00924e-06,3.6000
+3.6,xs.xc.xi1.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.7096,mode_fs_125_3.6,4.20087e-05,-3.7020,mode_fs_125_3.6,4.20087e-05,3.6000
+3.6,xs.xc.xi1.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6586,mode_ss_-40_3.6,1.21194e-05,-3.7020,mode_fs_125_3.6,4.20087e-05,3.6000
+3.6,xs.xc.xnld.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6231,en_ss_-40_3.6,2.11521e-06,3.6366,en_fs_125_3.6,2.20119e-05,3.6001
+3.6,xs.xc.xnld.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6457,mode_tt_27_3.6,2.00926e-06,3.6754,mode_ss_-40_3.6,4.20094e-05,3.6000
+3.6,xs.xc.xnld.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6730,mode_fs_125_3.6,4.20089e-05,3.6363,en_fs_125_3.6,2.20119e-05,3.6001
+3.6,xs.xc.xnld.xnb,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6782,mode_ss_-40_3.6,4.20094e-05,3.6752,mode_ss_-40_3.6,4.20094e-05,3.6000
+3.6,xs.xc.xild.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6620,mode_ss_125_3.6,4.20107e-05,3.6775,mode_tt_27_3.6,1.21364e-05,3.6002
+3.6,xs.xc.xild.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6807,mode_ff_125_3.6,1.21629e-05,3.6775,mode_tt_27_3.6,1.21364e-05,3.6002
+3.6,xs.xc.xn2.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6179,mode_ss_125_3.6,3.21866e-05,3.6257,mode_tt_27_3.6,2.00926e-06,3.6000
+3.6,xs.xc.xn2.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6426,mode_fs_125_3.6,4.20087e-05,3.6530,mode_tt_27_3.6,2.00926e-06,3.6000
+3.6,xs.xc.xn2.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6257,mode_tt_27_3.6,2.00926e-06,-3.6175,mode_ss_125_3.6,3.21866e-05,3.6000
+3.6,xs.xc.xn2.xnb,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6439,mode_tt_27_3.6,2.00926e-06,3.6369,mode_ss_125_3.6,1.21876e-05,3.6000
+3.6,xs.xc.xi2.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6541,mode_tt_27_3.6,2.00926e-06,3.6568,mode_ss_-40_3.6,2.00966e-06,3.6000
+3.6,xs.xc.xi2.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6586,mode_ss_-40_3.6,2.00966e-06,3.6568,mode_ss_-40_3.6,2.00966e-06,3.6000
+3.6,xs.xc.xnlx.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6126,en_sf_-40_3.6,2.10522e-06,3.6272,mode_tt_27_3.6,2.00926e-06,3.6000
+3.6,xs.xc.xnlx.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6770,mode_ss_125_3.6,2.01007e-06,-3.6718,mode_ss_125_3.6,2.01007e-06,3.6000
+3.6,xs.xc.xnlx.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6274,mode_ff_125_3.6,1.21629e-05,3.6163,mode_tt_27_3.6,2.00926e-06,3.6000
+3.6,xs.xc.xnlx.xnb,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6634,mode_ss_-40_3.6,1.21195e-05,3.6611,mode_ss_-40_3.6,1.21195e-05,3.6000
+3.6,xs.xc.xilx.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6519,mode_tt_27_3.6,2.00926e-06,3.6937,mode_ss_125_3.6,2.0102e-06,3.6000
+3.6,xs.xc.xilx.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6962,mode_ss_125_3.6,2.0102e-06,3.6937,mode_ss_125_3.6,2.0102e-06,3.6000
+3.6,xs.xc.xn3.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6530,mode_ff_125_3.6,4.20084e-05,3.6555,mode_ff_125_3.6,1.20087e-05,3.6000
+3.6,xs.xc.xn3.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6179,mode_ss_125_3.6,3.21866e-05,3.6673,mode_ss_-40_3.6,1.21197e-05,3.6000
+3.6,xs.xc.xn3.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6555,mode_ff_125_3.6,1.20087e-05,3.6445,mode_ff_125_3.6,1.20087e-05,3.6000
+3.6,xs.xc.xn3.xnb,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6836,mode_ss_125_3.6,2.00996e-06,3.6822,mode_ss_125_3.6,2.00996e-06,3.6000
+3.6,xs.xc.xi3.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6559,mode_ff_125_3.6,1.20087e-05,3.6312,mode_ss_125_3.6,3.21871e-05,3.6000
+3.6,xs.xc.xi3.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6312,mode_ss_125_3.6,3.21871e-05,-3.6559,mode_ff_125_3.6,1.20087e-05,3.6000
+3.6,xs.xc.xnsb.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6127,en_sf_-40_3.6,2.10522e-06,3.6149,mode_ss_-40_3.6,1.21199e-05,3.6000
+3.6,xs.xc.xnsb.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6253,mode_ff_125_3.6,4.20086e-05,3.6611,mode_ff_125_3.6,1.20087e-05,3.6000
+3.6,xs.xc.xnsb.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6150,mode_ss_-40_3.6,1.21199e-05,3.6149,mode_ss_-40_3.6,1.21199e-05,3.6000
+3.6,xs.xc.xnsb.xnb,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6569,mode_ss_-40_3.6,2.20094e-05,3.6554,mode_ss_-40_3.6,2.20094e-05,3.6000
+3.6,xs.xc.xisb.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6553,mode_ff_125_3.6,1.20087e-05,-3.6304,mode_ff_125_3.6,1.20087e-05,3.6000
+3.6,xs.xc.xisb.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6221,mode_fs_125_3.6,2.20096e-05,-3.6553,mode_ff_125_3.6,1.20087e-05,3.6000
+3.6,xs.xc.xnbd.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6126,en_sf_-40_3.6,2.10522e-06,3.6870,mode_ss_-40_3.6,2.20098e-05,3.6000
+3.6,xs.xc.xnbd.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6382,mode_fs_125_3.6,4.20087e-05,-3.6363,mode_fs_125_3.6,4.20087e-05,3.6000
+3.6,xs.xc.xnbd.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6911,mode_ss_-40_3.6,2.20098e-05,3.6870,mode_ss_-40_3.6,2.20098e-05,3.6000
+3.6,xs.xc.xnbd.xnb,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6026,mode_fs_125_3.6,3.21743e-05,3.6025,mode_fs_125_3.6,3.21743e-05,3.6000
+3.6,xs.xc.xibd.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6169,mode_ss_125_3.6,3.2187e-05,3.6584,mode_ss_-40_3.6,2.20094e-05,3.6000
+3.6,xs.xc.xibd.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6604,mode_ss_-40_3.6,2.20094e-05,3.6584,mode_ss_-40_3.6,2.20094e-05,3.6000
+3.6,xs.xc.xne.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6359,mode_ss_-40_3.6,2.00945e-06,3.6267,mode_ff_125_3.6,4.20085e-05,3.6000
+3.6,xs.xc.xne.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6220,mode_fs_125_3.6,2.00861e-06,3.6555,mode_ss_-40_3.6,4.20092e-05,3.6000
+3.6,xs.xc.xne.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6354,mode_fs_125_3.6,4.20088e-05,-3.6359,mode_ss_-40_3.6,2.00945e-06,3.6000
+3.6,xs.xc.xne.xnb,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6570,mode_ss_-40_3.6,4.20092e-05,3.6555,mode_ss_-40_3.6,4.20092e-05,3.6000
+3.6,xs.xc.xnrc.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6229,en_ss_-40_3.6,2.11521e-06,3.6945,mode_fs_125_3.6,2.20093e-05,3.6001
+3.6,xs.xc.xnrc.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6321,mode_ff_125_3.6,4.20085e-05,3.6570,mode_tt_27_3.6,3.20087e-05,3.6000
+3.6,xs.xc.xnrc.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6950,mode_fs_125_3.6,2.20093e-05,3.6945,mode_fs_125_3.6,2.20093e-05,3.6001
+3.6,xs.xc.xnrc.xnb,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6589,mode_tt_27_3.6,3.20087e-05,3.6568,mode_tt_27_3.6,3.20087e-05,3.6000
+3.6,xs.xc.xirc.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6302,mode_tt_27_3.6,3.20088e-05,3.6772,mode_ss_125_3.6,4.20098e-05,3.6001
+3.6,xs.xc.xirc.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6789,mode_ss_125_3.6,4.20098e-05,3.6772,mode_ss_125_3.6,4.20098e-05,3.6001
+3.6,xs.xc.xt1.xn,s7_ctrl tg_hv switches,HV-NMOS,1.0,0.45,0,3.5999,en_ff_-40_3.6,2.20091e-05,3.5985,en_ff_-40_3.6,2.20091e-05,3.5783
+3.6,xs.xc.xt1.xp,s7_ctrl tg_hv switches,HV-PMOS,1.0,0.45,0,3.5852,en_ff_-40_3.6,2.20083e-05,3.9635,off_ss_-40_3.6,7e-05,3.9622
+3.6,xs.xc.xt2.xn,s7_ctrl tg_hv switches,HV-NMOS,1.0,0.45,0,3.6003,en_ff_-40_3.6,2.20091e-05,3.5990,en_ff_-40_3.6,2.20091e-05,3.5821
+3.6,xs.xc.xt2.xp,s7_ctrl tg_hv switches,HV-PMOS,1.0,0.45,0,3.5852,en_ff_-40_3.6,2.20083e-05,3.9722,en_ss_-40_3.6,7.75644e-06,3.9722
+3.6,xs.xc.xt3.xp,s7_ctrl tg_hv switches,HV-PMOS,1.0,0.45,0,3.5966,en_ss_-40_3.6,2.20099e-05,3.9725,en_ss_-40_3.6,2.20097e-05,3.9722
+3.6,xs.xc.xt4.xp,s7_ctrl tg_hv switches,HV-PMOS,1.0,0.45,0,3.5974,en_ss_-40_3.6,2.20099e-05,3.9739,en_ss_-40_3.6,2.20097e-05,3.9622
+3.6,xs.xc.xt5.xp,s7_ctrl tg_hv switches,HV-PMOS,1.0,0.45,0,3.5938,en_ss_-40_3.6,2.20099e-05,3.7572,en_ss_125_3.6,4.12342e-06,3.7570
+3.6,xs.xc.xt6.xp,s7_ctrl tg_hv switches,HV-PMOS,1.0,0.45,0,3.5946,en_ss_-40_3.6,2.20099e-05,3.7196,en_tt_27_3.6,7.37525e-06,3.7196
+3.6,xs.xc.xt7.xp,s7_ctrl tg_hv switches,HV-PMOS,1.0,0.45,0,3.7572,en_ss_125_3.6,4.12342e-06,3.9739,en_ss_-40_3.6,2.20097e-05,3.9622
+3.6,xs.xc.xt8.xp,s7_ctrl tg_hv switches,HV-PMOS,1.0,0.45,0,3.7196,en_tt_27_3.6,7.37525e-06,3.9725,en_ss_-40_3.6,2.20097e-05,3.9722
+3.6,xs.xc.xt9.xn,s7_ctrl tg_hv switches,HV-NMOS,1.0,0.45,0,3.6817,en_ff_125_3.6,2.25769e-05,3.6805,en_ff_125_3.6,2.25769e-05,3.6220
+3.6,xs.xc.xt9.xp,s7_ctrl tg_hv switches,HV-PMOS,1.0,0.45,0,3.5961,en_ff_-40_3.6,2.20083e-05,3.6182,en_ss_125_3.6,2.20101e-05,3.6000
+3.6,xs.xc.xt10.xn,s7_ctrl tg_hv switches,HV-NMOS,1.0,0.45,0,3.6344,en_ss_125_3.6,2.20114e-05,3.6342,en_ss_125_3.6,2.20114e-05,3.5888
+3.6,xs.xc.xt10.xp,s7_ctrl tg_hv switches,HV-PMOS,1.0,0.45,0,3.6160,en_ss_125_3.6,2.20101e-05,4.0944,en_ss_-40_3.6,2.42644e-06,4.0822
+3.6,xs.xbg.xsks,bg_core_pd,HV-NMOS,1.0,0.45,0,3.6021,en_ss_125_3.6,2.20089e-05,3.6021,en_ss_125_3.6,2.20089e-05,3.6000
+3.6,xs.xbg.xsvpg,bg_core_pd,HV-PMOS,1.0,0.45,0,-3.6124,en_sf_-40_3.6,2.10522e-06,-3.6026,en_fs_125_3.6,2.20084e-05,3.6000
+3.6,xs.xd.xlay.x_1.x_1,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.6952,mode_fs_125_3.6,2.20093e-05,3.6948,mode_fs_125_3.6,2.20093e-05,3.6001
+3.6,xs.xd.xlay.x_1.x_2,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.6056,off_ff_-40_3.6,1.10338e-06,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xd.xlay.x_1.x_3,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.6159,en_ss_125_3.6,2.20101e-05,3.6158,en_ss_125_3.6,2.20101e-05,3.6000
+3.6,xs.xd.xlay.x_1.x_4,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.6224,en_ss_-40_3.6,2.11521e-06,3.6948,mode_fs_125_3.6,2.20093e-05,3.6001
+3.6,xs.xd.xlay.x_1.x_5,bias_dist_pd,HV-PMOS,1.0,0.45,0,-0.0394,fst_fs_-40_3.6,1.0132e-06,3.6089,off_ff_-40_3.6,1.10338e-06,3.6000
+3.6,xs.xd.xlay.x_1.x_6,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.6121,pu_tt_27_3.6_late,2.00709e-05,3.6158,en_ss_125_3.6,2.20101e-05,3.6000
+3.6,xs.xd.xlay.x_1.x_7,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.4900,en_ff_-40_3.6,2.22416e-05,-3.5892,off_ff_125_3.6,7e-05,3.5892
+3.6,xs.xd.xlay.x_1.x_8,bias_dist_pd,HV-PMOS,1.0,0.45,0,3.4388,en_ff_-40_3.6,2.10372e-06,3.6278,en_ss_125_3.6,2.20101e-05,3.6000
+3.6,xs.xd.xlay.x_2.x_1,bias_dist_pd,HV-NMOS,1.0,0.45,0,-2.3433,en_ff_125_3.6,2.14621e-06,-3.6127,en_sf_-40_3.6,2.10522e-06,3.6000
+3.6,xs.xd.xlay.x_2.x_3,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.6127,en_ss_-40_3.6,2.20101e-05,3.6127,en_ss_-40_3.6,2.20101e-05,3.6000
+3.6,xs.xd.xlay.x_2.x_4,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.6127,en_sf_-40_3.6,2.10522e-06,-3.6124,en_sf_-40_3.6,2.10522e-06,3.6000
+3.6,xs.xd.xlay.x_2.x_5,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.6127,en_ss_-40_3.6,2.20101e-05,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xd.xlay.x_2.x_6,bias_dist_pd,HV-PMOS,1.0,0.45,0,-0.3574,pu_ss_-40_3.6_fast,1.83501e-07,3.6127,en_ss_-40_3.6,2.20101e-05,3.6000
+3.6,xs.xd.xlay.x_2.x_8,bias_dist_pd,HV-PMOS,1.0,0.45,0,3.6115,en_ss_125_3.6,2.20109e-05,3.6272,en_fs_125_3.6,2.20098e-05,3.6000
+3.6,xs.xd.xlay.x_3.x_1,bias_dist_pd,HV-NMOS,1.0,0.45,0,-2.3433,en_ff_125_3.6,2.14621e-06,-3.6127,en_sf_-40_3.6,2.10522e-06,3.6000
+3.6,xs.xd.xlay.x_3.x_3,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.6127,en_ss_-40_3.6,2.20101e-05,3.6127,en_ss_-40_3.6,2.20101e-05,3.6000
+3.6,xs.xd.xlay.x_3.x_4,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.6127,en_sf_-40_3.6,2.10522e-06,-3.6124,en_sf_-40_3.6,2.10522e-06,3.6000
+3.6,xs.xd.xlay.x_3.x_5,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.6127,en_ss_-40_3.6,2.20101e-05,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xd.xlay.x_3.x_6,bias_dist_pd,HV-PMOS,1.0,0.45,0,-0.3574,pu_ss_-40_3.6_fast,1.83501e-07,3.6127,en_ss_-40_3.6,2.20101e-05,3.6000
+3.6,xs.xd.xlay.x_3.x_8,bias_dist_pd,HV-PMOS,1.0,0.45,0,3.6115,en_ss_125_3.6,2.20109e-05,3.6272,en_fs_125_3.6,2.20098e-05,3.6000
+3.6,xs.xd.xlay.x_4.x_1,bias_dist_pd,HV-NMOS,1.0,0.45,0,-2.3433,en_ff_125_3.6,2.14621e-06,-3.6127,en_sf_-40_3.6,2.10522e-06,3.6000
+3.6,xs.xd.xlay.x_4.x_3,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.6127,en_ss_-40_3.6,2.20101e-05,3.6127,en_ss_-40_3.6,2.20101e-05,3.6000
+3.6,xs.xd.xlay.x_4.x_4,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.6127,en_sf_-40_3.6,2.10522e-06,-3.6124,en_sf_-40_3.6,2.10522e-06,3.6000
+3.6,xs.xd.xlay.x_4.x_5,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.6127,en_ss_-40_3.6,2.20101e-05,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xd.xlay.x_4.x_6,bias_dist_pd,HV-PMOS,1.0,0.45,0,-0.3574,pu_ss_-40_3.6_fast,1.83501e-07,3.6127,en_ss_-40_3.6,2.20101e-05,3.6000
+3.6,xs.xd.xlay.x_4.x_8,bias_dist_pd,HV-PMOS,1.0,0.45,0,3.6115,en_ss_125_3.6,2.20109e-05,3.6272,en_fs_125_3.6,2.20098e-05,3.6000
+3.6,xs.xd.xlay.x_5.x_1,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.6952,mode_fs_125_3.6,2.20093e-05,3.6949,mode_fs_125_3.6,2.20093e-05,3.6001
+3.6,xs.xd.xlay.x_5.x_2,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.6056,off_ff_-40_3.6,1.10338e-06,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xd.xlay.x_5.x_3,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.6154,off_ss_125_3.6,1.18942e-06,3.6146,off_ss_125_3.6,1.18942e-06,3.6000
+3.6,xs.xd.xlay.x_5.x_4,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.6224,en_ss_-40_3.6,2.11521e-06,3.6949,mode_fs_125_3.6,2.20093e-05,3.6001
+3.6,xs.xd.xlay.x_5.x_5,bias_dist_pd,HV-PMOS,1.0,0.45,0,-0.0414,fst_fs_-40_3.6,1e-06,3.6087,off_ff_-40_3.6,1.10338e-06,3.6000
+3.6,xs.xd.xlay.x_5.x_6,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.6126,en_sf_-40_3.6,2.20098e-05,3.6151,en_ss_125_3.6,2.20101e-05,3.6000
+3.6,xs.xd.xlay.x_5.x_7,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.5210,en_ff_-40_3.6,2.2009e-05,-4.0851,en_ss_-40_3.6,2.12259e-06,3.9738
+3.6,xs.xd.xlay.x_5.x_8,bias_dist_pd,HV-PMOS,1.0,0.45,0,3.0812,en_ff_-40_3.6,2.10368e-06,3.9609,en_sf_-40_3.6,2.10522e-06,3.2998
+3.6,xs.xd.xlay.x_6.x_1,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.6952,mode_fs_125_3.6,2.20093e-05,3.6949,mode_fs_125_3.6,2.20093e-05,3.6001
+3.6,xs.xd.xlay.x_6.x_2,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.6057,off_ff_-40_3.6,1.10338e-06,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xd.xlay.x_6.x_3,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.6156,en_ss_125_3.6,2.20101e-05,3.6153,en_ss_125_3.6,2.20101e-05,3.6000
+3.6,xs.xd.xlay.x_6.x_4,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.6224,en_ss_-40_3.6,2.11521e-06,3.6949,mode_fs_125_3.6,2.20093e-05,3.6001
+3.6,xs.xd.xlay.x_6.x_5,bias_dist_pd,HV-PMOS,1.0,0.45,0,-0.0538,fst_fs_-40_3.6,1e-06,3.6089,off_ff_-40_3.6,1.10338e-06,3.6000
+3.6,xs.xd.xlay.x_6.x_6,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.6126,en_sf_-40_3.6,2.20098e-05,3.6156,en_ss_125_3.6,2.20101e-05,3.6000
+3.6,xs.xd.xlay.x_6.x_7,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.4655,en_ff_-40_3.6,2.2009e-05,-4.0851,en_ss_-40_3.6,2.12259e-06,3.9738
+3.6,xs.xd.xlay.x_6.x_8,bias_dist_pd,HV-PMOS,1.0,0.45,0,3.4543,en_ff_-40_3.6,2.10368e-06,3.9610,en_sf_-40_3.6,2.10522e-06,3.2998
+3.6,xs.xd.xlay.x_7.x_1,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.6952,mode_fs_125_3.6,2.20093e-05,3.6949,mode_fs_125_3.6,2.20093e-05,3.6001
+3.6,xs.xd.xlay.x_7.x_2,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.6056,off_ff_-40_3.6,1.10338e-06,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xd.xlay.x_7.x_3,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.6154,off_ss_125_3.6,1.18942e-06,3.6147,en_ss_125_3.6,2.20101e-05,3.6000
+3.6,xs.xd.xlay.x_7.x_4,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.6224,en_ss_-40_3.6,2.11521e-06,3.6949,mode_fs_125_3.6,2.20093e-05,3.6001
+3.6,xs.xd.xlay.x_7.x_5,bias_dist_pd,HV-PMOS,1.0,0.45,0,-0.0538,fst_fs_-40_3.6,1e-06,3.6088,off_ff_-40_3.6,1.10338e-06,3.6000
+3.6,xs.xd.xlay.x_7.x_6,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.6126,en_sf_-40_3.6,2.20098e-05,3.6153,en_ss_125_3.6,2.20101e-05,3.6000
+3.6,xs.xd.xlay.x_7.x_7,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.5089,en_ff_-40_3.6,2.2009e-05,-4.0851,en_ss_-40_3.6,2.12259e-06,3.9738
+3.6,xs.xd.xlay.x_7.x_8,bias_dist_pd,HV-PMOS,1.0,0.45,0,3.3187,en_ff_-40_3.6,2.10368e-06,3.9610,en_sf_-40_3.6,2.10522e-06,3.2998
+3.6,xs.xd.xlay.x_8.x_1,bias_dist_pd,HV-NMOS,1.0,0.45,0,-2.3433,en_ff_125_3.6,2.14621e-06,-3.6130,en_sf_-40_3.6,2.10522e-06,3.6000
+3.6,xs.xd.xlay.x_8.x_3,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.6127,en_ss_-40_3.6,2.20101e-05,3.6127,en_ss_-40_3.6,2.20101e-05,3.6000
+3.6,xs.xd.xlay.x_8.x_4,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.6130,en_sf_-40_3.6,2.10522e-06,-3.6124,en_sf_-40_3.6,2.10522e-06,3.6000
+3.6,xs.xd.xlay.x_8.x_5,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.6127,en_ss_-40_3.6,2.20101e-05,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6,xs.xd.xlay.x_8.x_6,bias_dist_pd,HV-PMOS,1.0,0.45,0,-0.3338,pu_ss_-40_3.6_fast,1.83501e-07,3.6127,en_ss_-40_3.6,2.20101e-05,3.6000
+3.6,xs.xd.xlay.x_8.x_7,bias_dist_pd,HV-NMOS,1.0,0.45,0,-4.1823,en_ff_-40_3.6,2.10937e-06,-4.1824,en_ff_-40_3.6,2.10937e-06,4.0650
+3.6,xs.xd.xlay.x_1,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.6124,en_sf_-40_3.6,2.10522e-06,-3.6026,en_fs_125_3.6,2.20084e-05,3.6000
+3.6,xs.xd.xlay.x_2,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.6021,en_ss_125_3.6,2.20089e-05,3.6021,en_ss_125_3.6,2.20089e-05,3.6000
+3.6,xs.xr.xlay.x_1,pad_ref_rb,HV-NMOS,1.0,0.45,0,3.6021,en_ss_125_3.6,2.20089e-05,3.6021,en_ss_125_3.6,2.20089e-05,3.6000
+3.6,xs.xr.xlay.x_2,pad_ref_rb,HV-NMOS,1.0,0.45,0,3.6021,en_ss_125_3.6,2.20089e-05,3.6011,en_ss_125_3.6,2.20089e-05,3.6000
+3.6,xs.xr.xlay.x_3,pad_ref_rb,HV-NMOS,1.0,0.45,0,3.6021,en_ss_125_3.6,2.20089e-05,3.6021,en_ss_125_3.6,2.20089e-05,3.6000
+3.6,xs.xr.xlay.x_4,pad_ref_rb,HV-NMOS,1.0,0.45,0,3.5050,en_fs_125_3.6,2.20119e-05,3.5048,en_fs_125_3.6,2.20119e-05,3.4822
+3.6,xs.xr.xlay.x_12,pad_ref_rb,HV-PMOS,1.0,0.45,0,3.5879,en_ss_-40_3.6,2.12453e-06,3.8314,en_sf_-40_3.6,2.10593e-06,3.6000
+3.6,x2s.xlay.x_67,S2D pad,HV-NMOS,1.0,0.45,0,3.5698,off_ff_-40_3.6,3e-05,3.5698,off_ff_-40_3.6,3e-05,3.5697
+3.6,x2s.xlay.x_68,S2D pad,HV-NMOS,1.0,0.45,0,3.5698,off_ff_-40_3.6,3e-05,3.5698,off_ff_-40_3.6,3e-05,3.5697
+3.6,x2s.xlay.x_69,S2D pad,HV-NMOS,1.0,0.45,0,3.6021,en_ss_125_3.6,2.20089e-05,3.6021,en_ss_125_3.6,2.20089e-05,3.6000
+3.6,x2s.xlay.x_70,S2D pad,HV-NMOS,1.0,0.45,0,3.4458,en_sf_-40_3.6,2.228e-05,3.4458,en_sf_-40_3.6,2.228e-05,3.4244
+3.6,x2s.xlay.x_172,S2D pad,HV-PMOS,1.0,0.45,0,3.5880,en_ss_-40_3.6,2.12453e-06,3.8316,en_sf_-40_3.6,2.10593e-06,3.6000
+3.6,x2s.xlay.x_192,S2D pad,HV-PMOS,1.0,0.45,0,3.6067,en_ss_-40_3.6,2.20119e-05,3.6805,en_ff_125_3.6,2.25769e-05,3.6176
+3.6,x2s.xlay.x_193,S2D pad,HV-PMOS,1.0,0.45,0,3.6072,en_ss_-40_3.6,2.20119e-05,3.6805,en_ff_125_3.6,2.25769e-05,3.6176
+3.6,x2d.xlay.x_176,D2S pad,HV-NMOS,1.0,0.45,0,3.6021,en_ss_125_3.6,2.20089e-05,3.6021,en_ss_125_3.6,2.20089e-05,3.6000
+3.6,x2d.xlay.x_177,D2S pad,HV-NMOS,1.0,0.45,0,3.6021,en_ss_125_3.6,2.20089e-05,3.6021,en_ss_125_3.6,2.20089e-05,3.6000
+3.6,x2d.xlay.x_178,D2S pad,HV-NMOS,1.0,0.45,0,3.6021,en_ss_125_3.6,2.20089e-05,3.6021,en_ss_125_3.6,2.20089e-05,3.6000
+3.6,x2d.xlay.x_179,D2S pad,HV-NMOS,1.0,0.45,0,3.4883,en_fs_125_3.6,2.20119e-05,3.4881,en_fs_125_3.6,2.20119e-05,3.4676
+3.6,x2d.xlay.x_180,D2S pad,HV-PMOS,1.0,0.45,0,3.5880,en_ss_-40_3.6,2.12453e-06,3.8315,en_sf_-40_3.6,2.10593e-06,3.6000
+3.6,x2d.xlay.x_229,D2S pad,HV-PMOS,1.0,0.45,0,-3.6124,en_sf_-40_3.6,2.10522e-06,-3.6024,en_fs_125_3.6,2.20084e-05,3.6009
+3.6,x2d.xlay.x_230,D2S pad,HV-PMOS,1.0,0.45,0,-3.6201,en_sf_-40_3.6,2.10522e-06,-3.6124,en_sf_-40_3.6,2.10522e-06,3.6000
+3.6_dc,xs.xc.xle.xpf,s7_ctrl ls_up_fs,HV-PMOS,0.3,5.0,1,-0.0000,dc_ff_125_3.6_1k,1.65,3.5997,dc_ff_-40_3.6_1k,1.2,3.5997
+3.6_dc,xs.xc.xl0.xpl10,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl0.xpl9,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl0.xpl8,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl0.xpl7,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl0.xpl6,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl0.xpl5,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl0.xpl4,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl0.xpl3,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl0.xpl2,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl0.xpl1,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl0.xpf,s7_ctrl ls_up_fs,HV-PMOS,0.3,5.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl1.xpl10,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,3.45,3.6000
+3.6_dc,xs.xc.xl1.xpl9,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,3.45,-3.6000,dc_ff_-40_3.6_1k,3.45,3.6000
+3.6_dc,xs.xc.xl1.xpl8,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,3.45,-3.6000,dc_ff_-40_3.6_1k,3.45,3.6000
+3.6_dc,xs.xc.xl1.xpl7,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,3.45,-3.6000,dc_ff_-40_3.6_1k,3.45,3.6000
+3.6_dc,xs.xc.xl1.xpl6,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,3.45,-3.6000,dc_ff_-40_3.6_1k,3.45,3.6000
+3.6_dc,xs.xc.xl1.xpl5,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,3.45,-3.6000,dc_ff_-40_3.6_1k,3.45,3.6000
+3.6_dc,xs.xc.xl1.xpl4,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,3.45,-3.6000,dc_ff_-40_3.6_1k,3.45,3.6000
+3.6_dc,xs.xc.xl1.xpl3,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,3.45,-3.6000,dc_ff_-40_3.6_1k,3.45,3.6000
+3.6_dc,xs.xc.xl1.xpl2,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,3.45,-3.6000,dc_ff_-40_3.6_1k,3.45,3.6000
+3.6_dc,xs.xc.xl1.xpl1,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,3.45,-3.6000,dc_ff_-40_3.6_1k,3.45,3.6000
+3.6_dc,xs.xc.xl1.xpf,s7_ctrl ls_up_fs,HV-PMOS,0.3,5.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,3.45,3.6000
+3.6_dc,xs.xc.xl2.xpl10,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.05,3.6000
+3.6_dc,xs.xc.xl2.xpl9,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.05,-3.6000,dc_ff_-40_3.6_1k,-0.05,3.6000
+3.6_dc,xs.xc.xl2.xpl8,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.05,-3.6000,dc_ff_-40_3.6_1k,-0.05,3.6000
+3.6_dc,xs.xc.xl2.xpl7,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.05,-3.6000,dc_ff_-40_3.6_1k,-0.05,3.6000
+3.6_dc,xs.xc.xl2.xpl6,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.05,-3.6000,dc_ff_-40_3.6_1k,-0.05,3.6000
+3.6_dc,xs.xc.xl2.xpl5,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.05,-3.6000,dc_ff_-40_3.6_1k,-0.05,3.6000
+3.6_dc,xs.xc.xl2.xpl4,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.05,-3.6000,dc_ff_-40_3.6_1k,-0.05,3.6000
+3.6_dc,xs.xc.xl2.xpl3,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.05,-3.6000,dc_ff_-40_3.6_1k,-0.05,3.6000
+3.6_dc,xs.xc.xl2.xpl2,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.05,-3.6000,dc_ff_-40_3.6_1k,-0.05,3.6000
+3.6_dc,xs.xc.xl2.xpl1,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.05,-3.6000,dc_ff_-40_3.6_1k,-0.05,3.6000
+3.6_dc,xs.xc.xl2.xpf,s7_ctrl ls_up_fs,HV-PMOS,0.3,5.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.05,3.6000
+3.6_dc,xs.xc.xl3.xpl10,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl3.xpl9,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl3.xpl8,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl3.xpl7,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl3.xpl6,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl3.xpl5,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl3.xpl4,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl3.xpl3,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl3.xpl2,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl3.xpl1,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl3.xpf,s7_ctrl ls_up_fs,HV-PMOS,0.3,5.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl4.xpl10,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6_dc,xs.xc.xl4.xpl9,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,0.15,-3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6_dc,xs.xc.xl4.xpl8,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,0.15,-3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6_dc,xs.xc.xl4.xpl7,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,0.15,-3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6_dc,xs.xc.xl4.xpl6,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,0.15,-3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6_dc,xs.xc.xl4.xpl5,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,0.15,-3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6_dc,xs.xc.xl4.xpl4,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,0.15,-3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6_dc,xs.xc.xl4.xpl3,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,0.15,-3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6_dc,xs.xc.xl4.xpl2,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,0.15,-3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6_dc,xs.xc.xl4.xpl1,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,0.15,-3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6_dc,xs.xc.xl4.xpf,s7_ctrl ls_up_fs,HV-PMOS,0.3,5.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6_dc,xs.xc.xl5.xpl10,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl5.xpl9,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl5.xpl8,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl5.xpl7,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl5.xpl6,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl5.xpl5,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl5.xpl4,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl5.xpl3,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl5.xpl2,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl5.xpl1,s7_ctrl ls_up_fs,HV-PMOS,0.3,20.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl5.xpf,s7_ctrl ls_up_fs,HV-PMOS,0.3,5.0,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xbg.xms1_0,bg_core_pd,HV-PMOS,0.5,12.5,1,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.4660,dc_ss_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xbg.xms1_1,bg_core_pd,HV-PMOS,0.5,12.5,1,-3.4660,dc_ss_-40_3.6_1k,-0.2,-3.3221,dc_ss_-40_3.6_1k,-0.2,3.4660
+3.6_dc,xs.xbg.xms1_2,bg_core_pd,HV-PMOS,0.5,12.5,1,-3.3221,dc_ss_-40_3.6_1k,-0.2,-3.1659,dc_ss_-40_3.6_1k,-0.2,3.3221
+3.6_dc,x2s.xlay.x_3,S2D pad,HV-PMOS,266.4,0.6,1,0.0000,dc_ff_-40_3.6_1k,-0.15,3.8000,dc_ff_-40_3.6_1k,-0.2,3.8000
+3.6_dc,x2s.xlay.x_43,S2D pad,HV-NMOS,88.0,0.6,1,0.2000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,3.6,3.6000
+3.6_dc,x2s.xlay.x_202,S2D pad,HV-PMOS,20.0,1.0,1,1.7740,dc_ff_125_3.6_1k,3.6,3.3797,dc_ff_-40_3.6_1k,3.6,3.3797
+3.6_dc,x2s.xlay.x_208,S2D pad,HV-PMOS,20.0,1.0,1,1.7740,dc_ff_125_3.6_1k,3.6,3.3797,dc_ff_-40_3.6_1k,3.6,3.3797
+3.6_dc,xs.xc.xle.xi1.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.5997,dc_ff_-40_3.6_1k,-0.2,-3.5997,dc_ff_-40_3.6_1k,1.2,3.5997
+3.6_dc,xs.xc.xle.xi1.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,0.0004,dc_sf_125_3.6_1k,0.7,-3.5997,dc_ff_-40_3.6_1k,1.2,3.5997
+3.6_dc,xs.xc.xle.xi2.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,1.65,3.6000,dc_ff_-40_3.6_1k,1.2,3.6000
+3.6_dc,xs.xc.xle.xi2.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,1.2,3.6000,dc_ff_-40_3.6_1k,1.2,3.6000
+3.6_dc,xs.xc.xle.xi3.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,1.05,3.6000
+3.6_dc,xs.xc.xle.xi3.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,0.0000,dc_ff_125_3.6_1k,1.35,-3.6000,dc_ff_-40_3.6_1k,1.05,3.6000
+3.6_dc,xs.xc.xl0.xn1,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,0.0000,,,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl0.xi1.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,3.35,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl0.xi1.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl0.xi2.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6_dc,xs.xc.xl0.xi2.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,0.0000,dc_ff_125_3.6_1k,2,-3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6_dc,xs.xc.xl0.xi3.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,0.3,3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6_dc,xs.xc.xl0.xi3.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,0.15,3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6_dc,xs.xc.xl1.xn1,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,0.0000,,,-3.6000,dc_ff_-40_3.6_1k,3.45,3.6000
+3.6_dc,xs.xc.xl1.xi1.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,1.95,3.6000,dc_ff_-40_3.6_1k,3.45,3.6000
+3.6_dc,xs.xc.xl1.xi1.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,3.45,3.6000,dc_ff_-40_3.6_1k,3.45,3.6000
+3.6_dc,xs.xc.xl1.xi2.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,0.85,3.6000
+3.6_dc,xs.xc.xl1.xi2.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,0.0000,dc_ff_125_3.6_1k,1.8,-3.6000,dc_ff_-40_3.6_1k,0.85,3.6000
+3.6_dc,xs.xc.xl1.xi3.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,3.6,3.6000,dc_ff_-40_3.6_1k,0.85,3.6000
+3.6_dc,xs.xc.xl1.xi3.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,0.85,3.6000,dc_ff_-40_3.6_1k,0.85,3.6000
+3.6_dc,xs.xc.xl2.xn1,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,0.0000,,,-3.6000,dc_ff_-40_3.6_1k,-0.05,3.6000
+3.6_dc,xs.xc.xl2.xi1.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,3.3,3.6000,dc_ff_-40_3.6_1k,-0.05,3.6000
+3.6_dc,xs.xc.xl2.xi1.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,-0.05,3.6000,dc_ff_-40_3.6_1k,-0.05,3.6000
+3.6_dc,xs.xc.xl2.xi2.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,0.85,3.6000
+3.6_dc,xs.xc.xl2.xi2.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,0.0000,dc_ff_125_3.6_1k,2.75,-3.6000,dc_ff_-40_3.6_1k,0.85,3.6000
+3.6_dc,xs.xc.xl2.xi3.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,0.15,3.6000,dc_ff_-40_3.6_1k,0.85,3.6000
+3.6_dc,xs.xc.xl2.xi3.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,0.85,3.6000,dc_ff_-40_3.6_1k,0.85,3.6000
+3.6_dc,xs.xc.xl3.xn1,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,0.0000,,,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl3.xi1.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,1.3,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl3.xi1.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl3.xi2.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,0.85,3.6000
+3.6_dc,xs.xc.xl3.xi2.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,0.0000,dc_ff_125_3.6_1k,1.85,-3.6000,dc_ff_-40_3.6_1k,0.85,3.6000
+3.6_dc,xs.xc.xl3.xi3.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,0.25,3.6000,dc_ff_-40_3.6_1k,0.85,3.6000
+3.6_dc,xs.xc.xl3.xi3.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,0.85,3.6000,dc_ff_-40_3.6_1k,0.85,3.6000
+3.6_dc,xs.xc.xl4.xn1,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,0.0000,,,-3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6_dc,xs.xc.xl4.xi1.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,1.4,3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6_dc,xs.xc.xl4.xi1.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,0.15,3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6_dc,xs.xc.xl4.xi2.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,0.4,3.6000
+3.6_dc,xs.xc.xl4.xi2.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,0.0000,dc_ff_125_3.6_1k,2.55,-3.6000,dc_ff_-40_3.6_1k,0.4,3.6000
+3.6_dc,xs.xc.xl4.xi3.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,3.05,3.6000,dc_ff_-40_3.6_1k,0.4,3.6000
+3.6_dc,xs.xc.xl4.xi3.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,0.4,3.6000,dc_ff_-40_3.6_1k,0.4,3.6000
+3.6_dc,xs.xc.xl5.xn1,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,0.0000,,,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl5.xi1.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,0.75,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl5.xi1.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xl5.xi2.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,1.15,3.6000
+3.6_dc,xs.xc.xl5.xi2.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,0.0000,dc_ff_125_3.6_1k,-0.15,-3.6000,dc_ff_-40_3.6_1k,1.15,3.6000
+3.6_dc,xs.xc.xl5.xi3.xp,s7_ctrl ls_up_fs,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,1.6,3.6000,dc_ff_-40_3.6_1k,1.15,3.6000
+3.6_dc,xs.xc.xl5.xi3.xn,s7_ctrl ls_up_fs,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,1.15,3.6000,dc_ff_-40_3.6_1k,1.15,3.6000
+3.6_dc,xs.xc.xnv.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6_dc,xs.xc.xnv.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,0.0000,dc_sf_125_3.6_1k,-0.15,-3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6_dc,xs.xc.xnv.xnb,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,0.4,3.6000,dc_ff_-40_3.6_1k,0.4,3.6000
+3.6_dc,xs.xc.xiv.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,-0.2,3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6_dc,xs.xc.xiv.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,0.15,3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6_dc,xs.xc.xns.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,0.5,3.6000
+3.6_dc,xs.xc.xns.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,0.5,3.6000
+3.6_dc,xs.xc.xns.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,-0.0560,dc_ff_125_3.6_1k,1,-3.6000,dc_ff_-40_3.6_1k,0.5,3.6000
+3.6_dc,xs.xc.xis.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,-0.2,3.6000,dc_ff_-40_3.6_1k,0.5,3.6000
+3.6_dc,xs.xc.xis.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,0.5,3.6000,dc_ff_-40_3.6_1k,0.5,3.6000
+3.6_dc,xs.xc.xnf.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,0.45,3.6000
+3.6_dc,xs.xc.xnf.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,0.45,3.6000
+3.6_dc,xs.xc.xnf.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,-0.0560,dc_ff_125_3.6_1k,2.25,-3.6000,dc_ff_-40_3.6_1k,0.45,3.6000
+3.6_dc,xs.xc.xif.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,0.6,3.6000,dc_ff_-40_3.6_1k,0.45,3.6000
+3.6_dc,xs.xc.xif.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,0.45,3.6000,dc_ff_-40_3.6_1k,0.45,3.6000
+3.6_dc,xs.xc.xnm.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,2.95,3.6000
+3.6_dc,xs.xc.xnm.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,2.95,3.6000
+3.6_dc,xs.xc.xnm.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,-0.0560,dc_ff_125_3.6_1k,1.15,-3.6000,dc_ff_-40_3.6_1k,2.95,3.6000
+3.6_dc,xs.xc.xim.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,0.1,3.6000,dc_ff_-40_3.6_1k,2.95,3.6000
+3.6_dc,xs.xc.xim.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,2.95,3.6000,dc_ff_-40_3.6_1k,2.95,3.6000
+3.6_dc,xs.xc.xn1.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,0.6,3.6000,dc_ff_-40_3.6_1k,0.45,3.6000
+3.6_dc,xs.xc.xn1.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,-0.2,3.6000,dc_ff_-40_3.6_1k,0.5,3.6000
+3.6_dc,xs.xc.xn1.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,0.45,3.6000,dc_ff_-40_3.6_1k,0.45,3.6000
+3.6_dc,xs.xc.xn1.xnb,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,0.5,3.6000,dc_ff_-40_3.6_1k,0.5,3.6000
+3.6_dc,xs.xc.xi1.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6000,dc_ff_-40_3.6_1k,-0.15,-3.6000,dc_ff_-40_3.6_1k,-0.1,3.6000
+3.6_dc,xs.xc.xi1.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,0.0000,dc_ff_125_3.6_1k,0.65,-3.6000,dc_ff_-40_3.6_1k,-0.1,3.6000
+3.6_dc,xs.xc.xnld.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,0.1,3.6000,dc_ff_-40_3.6_1k,1.05,3.6000
+3.6_dc,xs.xc.xnld.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,1,3.6000,dc_ff_-40_3.6_1k,-0.1,3.6000
+3.6_dc,xs.xc.xnld.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,1.05,3.6000,dc_ff_-40_3.6_1k,1.05,3.6000
+3.6_dc,xs.xc.xnld.xnb,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,-0.1,3.6000,dc_ff_-40_3.6_1k,-0.1,3.6000
+3.6_dc,xs.xc.xild.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6_dc,xs.xc.xild.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,0.0000,dc_ff_125_3.6_1k,1.3,-3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6_dc,xs.xc.xn2.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xi2.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,3,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xi2.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xnlx.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xilx.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,0.15,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xilx.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xn3.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,0.1,3.6000
+3.6_dc,xs.xc.xn3.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,0.0000,dc_sf_125_3.6_1k,0.75,-3.6000,dc_ff_-40_3.6_1k,0.1,3.6000
+3.6_dc,xs.xc.xn3.xnb,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,0.45,3.6000,dc_ff_-40_3.6_1k,0.45,3.6000
+3.6_dc,xs.xc.xi3.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,-0.2,3.6000,dc_ff_-40_3.6_1k,0.1,3.6000
+3.6_dc,xs.xc.xi3.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,0.1,3.6000,dc_ff_-40_3.6_1k,0.1,3.6000
+3.6_dc,xs.xc.xnsb.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xisb.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,1.9,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xisb.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xnbd.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xibd.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,2.45,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xibd.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xc.xne.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.15,3.6000
+3.6_dc,xs.xc.xne.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.15,3.6000
+3.6_dc,xs.xc.xne.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,-0.0560,dc_ff_125_3.6_1k,2.35,-3.6000,dc_ff_-40_3.6_1k,-0.15,3.6000
+3.6_dc,xs.xc.xnrc.xpa,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,0.1,3.6000,dc_ff_-40_3.6_1k,2.95,3.6000
+3.6_dc,xs.xc.xnrc.xpb,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,-0.05,3.6000,dc_ff_-40_3.6_1k,-0.15,3.6000
+3.6_dc,xs.xc.xnrc.xna,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,2.95,3.6000,dc_ff_-40_3.6_1k,2.95,3.6000
+3.6_dc,xs.xc.xnrc.xnb,s7_ctrl logic,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,-0.15,3.6000,dc_ff_-40_3.6_1k,-0.15,3.6000
+3.6_dc,xs.xc.xirc.xp,s7_ctrl logic,HV-PMOS,1.0,0.45,0,-3.6000,dc_ff_-40_3.6_1k,-0.1,-3.6000,dc_ff_-40_3.6_1k,0.65,3.6000
+3.6_dc,xs.xc.xirc.xn,s7_ctrl logic,HV-NMOS,1.0,0.45,0,0.0000,dc_ff_125_3.6_1k,1.6,-3.6000,dc_ff_-40_3.6_1k,0.65,3.6000
+3.6_dc,xs.xc.xt2.xn,s7_ctrl tg_hv switches,HV-NMOS,1.0,0.45,0,3.3525,dc_ff_-40_3.6_1k,1.7,3.3525,dc_ff_-40_3.6_1k,1.7,3.3525
+3.6_dc,xs.xc.xt3.xp,s7_ctrl tg_hv switches,HV-PMOS,1.0,0.45,0,2.3390,dc_ff_-40_3.6_1k,0.45,3.3525,dc_ff_-40_3.6_1k,1.7,3.3525
+3.6_dc,xs.xc.xt4.xp,s7_ctrl tg_hv switches,HV-PMOS,1.0,0.45,0,2.3390,dc_ff_-40_3.6_1k,0.45,3.3525,dc_ff_-40_3.6_1k,1.7,3.3525
+3.6_dc,xs.xc.xt5.xp,s7_ctrl tg_hv switches,HV-PMOS,1.0,0.45,0,3.0295,dc_ff_125_3.6_1k,-0.2,3.5928,dc_fs_-40_3.6_1k,-0.2,3.5928
+3.6_dc,xs.xc.xt6.xp,s7_ctrl tg_hv switches,HV-PMOS,1.0,0.45,0,3.3525,dc_ff_-40_3.6_1k,1.7,3.5928,dc_fs_-40_3.6_1k,1.75,3.5928
+3.6_dc,xs.xc.xt7.xp,s7_ctrl tg_hv switches,HV-PMOS,1.0,0.45,0,3.0295,dc_ff_125_3.6_1k,-0.2,3.5928,dc_fs_-40_3.6_1k,-0.2,3.5928
+3.6_dc,xs.xc.xt8.xp,s7_ctrl tg_hv switches,HV-PMOS,1.0,0.45,0,3.3525,dc_ff_-40_3.6_1k,1.7,3.5928,dc_fs_-40_3.6_1k,1.75,3.5928
+3.6_dc,xs.xd.xlay.x_1.x_1,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,1.05,3.6000,dc_ff_-40_3.6_1k,1.05,3.6000
+3.6_dc,xs.xd.xlay.x_1.x_2,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xd.xlay.x_1.x_3,bias_dist_pd,HV-NMOS,1.0,0.45,0,0.0000,dc_ff_125_3.6_1k,1.6,-3.6000,dc_ff_-40_3.6_1k,-0.1,3.6000
+3.6_dc,xs.xd.xlay.x_1.x_4,bias_dist_pd,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,0.1,3.6000,dc_ff_-40_3.6_1k,1.05,3.6000
+3.6_dc,xs.xd.xlay.x_1.x_5,bias_dist_pd,HV-PMOS,1.0,0.45,0,0.0000,,,3.6000,dc_ff_-40_3.6_1k,-1.38778e-17,3.6000
+3.6_dc,xs.xd.xlay.x_1.x_6,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.6000,dc_ff_-40_3.6_1k,-1.38778e-17,-3.6000,dc_ff_-40_3.6_1k,-0.1,3.6000
+3.6_dc,xs.xd.xlay.x_2.x_3,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xd.xlay.x_2.x_5,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xd.xlay.x_2.x_6,bias_dist_pd,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,1.75,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xd.xlay.x_2.x_8,bias_dist_pd,HV-PMOS,1.0,0.45,0,2.7879,dc_ff_125_3.6_1k,2.1,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xd.xlay.x_3.x_3,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xd.xlay.x_3.x_5,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xd.xlay.x_3.x_6,bias_dist_pd,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,0.65,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xd.xlay.x_3.x_8,bias_dist_pd,HV-PMOS,1.0,0.45,0,2.7879,dc_ff_125_3.6_1k,2.1,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xd.xlay.x_4.x_3,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xd.xlay.x_4.x_5,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xd.xlay.x_4.x_6,bias_dist_pd,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,2.95,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xd.xlay.x_4.x_8,bias_dist_pd,HV-PMOS,1.0,0.45,0,2.7879,dc_ff_125_3.6_1k,2.1,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xd.xlay.x_5.x_1,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,1.05,3.6000,dc_ff_-40_3.6_1k,1.05,3.6000
+3.6_dc,xs.xd.xlay.x_5.x_2,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xd.xlay.x_5.x_3,bias_dist_pd,HV-NMOS,1.0,0.45,0,0.0000,dc_ff_125_3.6_1k,3.2,-3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6_dc,xs.xd.xlay.x_5.x_4,bias_dist_pd,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,0.1,3.6000,dc_ff_-40_3.6_1k,1.05,3.6000
+3.6_dc,xs.xd.xlay.x_5.x_5,bias_dist_pd,HV-PMOS,1.0,0.45,0,0.0000,,,3.6000,dc_ff_-40_3.6_1k,0.3,3.6000
+3.6_dc,xs.xd.xlay.x_5.x_6,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.6000,dc_ff_-40_3.6_1k,0.3,-3.6000,dc_ff_-40_3.6_1k,0.15,3.6000
+3.6_dc,xs.xd.xlay.x_6.x_1,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,1.05,3.6000,dc_ff_-40_3.6_1k,1.05,3.6000
+3.6_dc,xs.xd.xlay.x_6.x_2,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xd.xlay.x_6.x_3,bias_dist_pd,HV-NMOS,1.0,0.45,0,0.0000,dc_ff_125_3.6_1k,3.1,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xd.xlay.x_6.x_4,bias_dist_pd,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,0.1,3.6000,dc_ff_-40_3.6_1k,1.05,3.6000
+3.6_dc,xs.xd.xlay.x_6.x_5,bias_dist_pd,HV-PMOS,1.0,0.45,0,0.0000,,,3.6000,dc_ff_-40_3.6_1k,-0.15,3.6000
+3.6_dc,xs.xd.xlay.x_6.x_6,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.6000,dc_ff_-40_3.6_1k,-0.15,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xd.xlay.x_7.x_1,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,1.05,3.6000,dc_ff_-40_3.6_1k,1.05,3.6000
+3.6_dc,xs.xd.xlay.x_7.x_2,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xd.xlay.x_7.x_3,bias_dist_pd,HV-NMOS,1.0,0.45,0,0.0000,dc_ff_125_3.6_1k,2.5,-3.6000,dc_ff_-40_3.6_1k,-0.15,3.6000
+3.6_dc,xs.xd.xlay.x_7.x_4,bias_dist_pd,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,0.1,3.6000,dc_ff_-40_3.6_1k,1.05,3.6000
+3.6_dc,xs.xd.xlay.x_7.x_5,bias_dist_pd,HV-PMOS,1.0,0.45,0,0.0000,,,3.6000,dc_ff_-40_3.6_1k,0.05,3.6000
+3.6_dc,xs.xd.xlay.x_7.x_6,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.6000,dc_ff_-40_3.6_1k,0.05,-3.6000,dc_ff_-40_3.6_1k,-0.15,3.6000
+3.6_dc,xs.xd.xlay.x_8.x_3,bias_dist_pd,HV-NMOS,1.0,0.45,0,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xd.xlay.x_8.x_5,bias_dist_pd,HV-PMOS,1.0,0.45,0,-3.6000,dc_ff_-40_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xd.xlay.x_8.x_6,bias_dist_pd,HV-PMOS,1.0,0.45,0,-0.0000,dc_ff_125_3.6_1k,0.95,3.6000,dc_ff_-40_3.6_1k,-0.2,3.6000
+3.6_dc,xs.xd.xlay.x_8.x_7,bias_dist_pd,HV-NMOS,1.0,0.45,0,-3.5987,dc_ff_125_3.6_1k,-0.2,-3.6000,dc_ff_-40_3.6_1k,0.45,3.6000
+3.6_dc,x2s.xlay.x_193,S2D pad,HV-PMOS,1.0,0.45,0,2.3310,dc_ff_-40_3.6_1k,3.2,3.3525,dc_ff_-40_3.6_1k,1.7,3.3525

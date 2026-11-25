@@ -1,0 +1,23 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+rank,inst,block,type,W_um,L_um,meets_spec_LG,abs_vds_held_V,where,held_100ns_V,dc_enabled_V,runs_27C_V,runs_3v6_V
+1,xs.xbg.xms1_7,bg_core_pd,HV-PMOS,0.5,12.5,yes,3.955,en ff -40 C 3.3 V,3.955,2.120,3.901,4.283
+2,x2s.xlay.x_179,S2D pad,HV-PMOS,5,6,yes,3.719,off ff -40 C 3.3 V,3.719,2.790,3.110,4.044
+3,x2s.xlay.x_182,S2D pad,HV-PMOS,5,6,yes,3.719,off ff -40 C 3.3 V,3.719,2.790,3.110,4.044
+4,x2s.xlay.x_187,S2D pad,HV-PMOS,5,6,yes,3.716,off ff -40 C 3.3 V,3.716,2.294,3.110,4.041
+5,x2s.xlay.x_190,S2D pad,HV-PMOS,5,6,yes,3.716,off ff -40 C 3.3 V,3.716,2.294,3.110,4.041
+6,xs.xr.xlay.x_18,pad_ref_rb,HV-PMOS,5,6,yes,3.700,en ss 125 C 3.3 V,3.700,1.521,3.686,4.056
+7,x2s.xlay.x_3,S2D pad,HV-PMOS,266.4,0.6,yes,3.500,dc 1k ff -40 C 3.3 V,3.500,3.500,3.500,3.800
+8,x2d.xlay.x_257,D2S pad,HV-PMOS,5,6,yes,3.405,pu late tt 27 C 3.3 V,3.405,1.933,3.405,3.718
+9,x2d.xlay.x_209,D2S pad,HV-NMOS,6,6,yes,3.398,pu late tt 27 C 3.3 V,3.398,1.901,3.398,3.706
+10,x2d.xlay.x_171,D2S pad,HV-NMOS,4.4,1,yes,3.302,en ff -40 C 3.3 V,3.302,2.178,3.302,3.602
+11,x2d.xlay.x_232,D2S pad,HV-PMOS,6.66,0.6,yes,3.302,en ff -40 C 3.3 V,3.302,2.178,3.302,3.602
+12,xs.xc.xild.xn,s7_ctrl logic,HV-NMOS,1,0.45,no,3.300,en ss 125 C 3.3 V,3.300,3.300,3.300,3.600
+13,xs.xc.xle.xi3.xn,s7_ctrl ls_up_fs,HV-NMOS,1,0.45,no,3.300,en ss 125 C 3.3 V,3.300,3.300,3.300,3.600
+14,xs.xc.xirc.xn,s7_ctrl logic,HV-NMOS,1,0.45,no,3.300,en ss 125 C 3.3 V,3.300,3.300,3.300,3.600
+15,xs.xd.xlay.x_5.x_3,bias_dist_pd,HV-NMOS,1,0.45,no,3.300,en ss 125 C 3.3 V,3.300,3.300,3.300,3.600
+16,xs.xc.xle.xn1,s7_ctrl ls_up_fs,HV-NMOS,1,0.45,no,3.300,en ff -40 C 3.3 V,3.300,0.000,3.300,3.600
+17,xs.xc.xle.xpf,s7_ctrl ls_up_fs,HV-PMOS,0.3,5,yes,3.300,pu fast ff -40 C 3.3 V,3.300,3.300,3.300,3.600
+18,xs.xc.xle.xi1.xp,s7_ctrl ls_up_fs,HV-PMOS,1,0.45,no,3.300,en ff -40 C 3.3 V,3.300,0.000,3.300,3.600
+19,xs.xc.xle.xi1.xn,s7_ctrl ls_up_fs,HV-NMOS,1,0.45,no,3.300,dc 1k ff -40 C 3.3 V,3.300,3.300,3.300,3.600
+20,xs.xc.xle.xi2.xp,s7_ctrl ls_up_fs,HV-PMOS,1,0.45,no,3.300,dc 1k ff -40 C 3.3 V,3.300,3.300,3.300,3.600

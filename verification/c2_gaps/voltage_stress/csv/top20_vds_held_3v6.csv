@@ -1,0 +1,23 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+rank,inst,block,type,W_um,L_um,meets_spec_LG,abs_vds_held_V,where,held_100ns_V,dc_enabled_V,runs_27C_V,runs_3v3_V
+1,xs.xbg.xms1_7,bg_core_pd,HV-PMOS,0.5,12.5,yes,4.283,en ss -40 C 3.6 V,4.283,2.269,4.198,3.955
+2,xs.xr.xlay.x_18,pad_ref_rb,HV-PMOS,5,6,yes,4.056,en tt 27 C 3.6 V,4.056,1.790,4.056,3.700
+3,x2s.xlay.x_179,S2D pad,HV-PMOS,5,6,yes,4.044,off ff -40 C 3.6 V,4.044,3.089,3.916,3.719
+4,x2s.xlay.x_182,S2D pad,HV-PMOS,5,6,yes,4.044,off ff -40 C 3.6 V,4.044,3.089,3.916,3.719
+5,x2s.xlay.x_187,S2D pad,HV-PMOS,5,6,yes,4.041,off ff -40 C 3.6 V,4.041,2.591,3.914,3.716
+6,x2s.xlay.x_190,S2D pad,HV-PMOS,5,6,yes,4.041,off ff -40 C 3.6 V,4.041,2.591,3.914,3.716
+7,x2s.xlay.x_3,S2D pad,HV-PMOS,266.4,0.6,yes,3.800,dc 1k ff -40 C 3.6 V,3.800,3.800,3.800,3.500
+8,x2d.xlay.x_257,D2S pad,HV-PMOS,5,6,yes,3.718,pu late tt 27 C 3.6 V,3.718,2.231,3.718,3.405
+9,x2d.xlay.x_209,D2S pad,HV-NMOS,6,6,yes,3.706,pu late tt 27 C 3.6 V,3.706,2.200,3.706,3.398
+10,xs.xd.xlay.x_5.x_7,bias_dist_pd,HV-NMOS,1,0.45,no,3.674,en ss -40 C 3.6 V,3.674,0.014,2.128,1.931
+11,xs.xd.xlay.x_5.x_8,bias_dist_pd,HV-PMOS,1,0.45,no,3.674,en ss -40 C 3.6 V,3.674,0.014,2.128,1.931
+12,xs.xd.xlay.x_6.x_7,bias_dist_pd,HV-NMOS,1,0.45,no,3.674,en ss -40 C 3.6 V,3.674,0.014,2.659,2.507
+13,xs.xd.xlay.x_6.x_8,bias_dist_pd,HV-PMOS,1,0.45,no,3.674,en ss -40 C 3.6 V,3.674,0.014,2.659,2.507
+14,xs.xd.xlay.x_7.x_7,bias_dist_pd,HV-NMOS,1,0.45,no,3.674,en ss -40 C 3.6 V,3.674,0.014,2.403,2.253
+15,xs.xd.xlay.x_7.x_8,bias_dist_pd,HV-PMOS,1,0.45,no,3.674,en ss -40 C 3.6 V,3.674,0.014,2.403,2.253
+16,x2d.xlay.x_171,D2S pad,HV-NMOS,4.4,1,yes,3.602,en ff 125 C 3.6 V,3.602,2.474,3.602,3.302
+17,x2d.xlay.x_232,D2S pad,HV-PMOS,6.66,0.6,yes,3.602,en ff 125 C 3.6 V,3.602,2.474,3.602,3.302
+18,xs.xc.xild.xn,s7_ctrl logic,HV-NMOS,1,0.45,no,3.600,en fs 125 C 3.6 V,3.600,3.600,3.600,3.300
+19,xs.xc.xle.xi3.xn,s7_ctrl ls_up_fs,HV-NMOS,1,0.45,no,3.600,en ss 125 C 3.6 V,3.600,3.600,3.600,3.300
+20,xs.xc.xirc.xn,s7_ctrl logic,HV-NMOS,1,0.45,no,3.600,en ff 125 C 3.6 V,3.600,3.600,3.600,3.300

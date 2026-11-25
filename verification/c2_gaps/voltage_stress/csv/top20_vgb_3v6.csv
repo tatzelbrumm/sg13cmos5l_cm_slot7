@@ -1,0 +1,23 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+rank,inst,block,type,W_um,L_um,meets_spec_LG,abs_vgb_V,where,held_100ns_V,dc_enabled_V,runs_27C_V,runs_3v3_V
+1,xs.xc.xne.xna,s7_ctrl logic,HV-NMOS,1,0.45,no,3.816,"mode ss -40 C 3.6 V, t = 42.01 us",,0.000,3.789,3.485
+2,xs.xc.xnm.xna,s7_ctrl logic,HV-NMOS,1,0.45,no,3.810,"mode ss -40 C 3.6 V, t = 42.01 us",,0.000,3.782,3.480
+3,xs.xc.xnv.xna,s7_ctrl logic,HV-NMOS,1,0.45,no,3.807,"mode ss -40 C 3.6 V, t = 42.01 us",,0.000,3.736,3.462
+4,xs.xc.xn3.xna,s7_ctrl logic,HV-NMOS,1,0.45,no,3.793,"mode ss -40 C 3.6 V, t = 22.01 us",,0.000,3.751,3.459
+5,xs.xc.xns.xna,s7_ctrl logic,HV-NMOS,1,0.45,no,3.767,"mode ss -40 C 3.6 V, t = 42.01 us",,0.000,3.741,3.441
+6,xs.xc.xl0.xi1.xn,s7_ctrl ls_up_fs,HV-NMOS,1,0.45,no,3.743,"mode ss 125 C 3.6 V, t = 42.00 us",,3.600,3.733,3.447
+7,xs.xc.xl1.xi1.xn,s7_ctrl ls_up_fs,HV-NMOS,1,0.45,no,3.743,"mode ss 125 C 3.6 V, t = 42.00 us",,3.600,3.733,3.447
+8,xs.xc.xl2.xi1.xn,s7_ctrl ls_up_fs,HV-NMOS,1,0.45,no,3.743,"mode ss 125 C 3.6 V, t = 42.00 us",,3.600,3.733,3.447
+9,xs.xc.xl4.xi1.xn,s7_ctrl ls_up_fs,HV-NMOS,1,0.45,no,3.743,"mode ss 125 C 3.6 V, t = 42.00 us",,3.600,3.733,3.447
+10,xs.xc.xl5.xi1.xn,s7_ctrl ls_up_fs,HV-NMOS,1,0.45,no,3.743,"mode ss 125 C 3.6 V, t = 32.00 us",,3.600,3.733,3.447
+11,xs.xc.xle.xi1.xn,s7_ctrl ls_up_fs,HV-NMOS,1,0.45,no,3.713,"en ss 125 C 3.6 V, t = 22.00 us",,0.000,3.708,3.418
+12,xs.xc.xl3.xi1.xn,s7_ctrl ls_up_fs,HV-NMOS,1,0.45,no,3.713,"mode ss 125 C 3.6 V, t = 2.00 us",,3.600,3.708,3.418
+13,xs.xc.xi1.xp,s7_ctrl logic,HV-PMOS,1,0.45,no,3.710,"mode fs 125 C 3.6 V, t = 42.01 us",,3.600,3.607,3.363
+14,xs.xc.xilx.xn,s7_ctrl logic,HV-NMOS,1,0.45,no,3.696,"mode ss 125 C 3.6 V, t = 2.01 us",,3.600,3.620,3.386
+15,xs.xc.xnld.xna,s7_ctrl logic,HV-NMOS,1,0.45,no,3.696,"mode fs 125 C 3.6 V, t = 22.01 us",,3.600,3.694,3.381
+16,xs.xc.xnlx.xna,s7_ctrl logic,HV-NMOS,1,0.45,no,3.696,"mode fs 125 C 3.6 V, t = 22.01 us",,3.600,3.694,3.381
+17,xs.xc.xnsb.xna,s7_ctrl logic,HV-NMOS,1,0.45,no,3.696,"mode fs 125 C 3.6 V, t = 22.01 us",,3.600,3.694,3.381
+18,xs.xc.xnbd.xna,s7_ctrl logic,HV-NMOS,1,0.45,no,3.696,"mode fs 125 C 3.6 V, t = 22.01 us",,3.600,3.694,3.381
+19,xs.xc.xnrc.xna,s7_ctrl logic,HV-NMOS,1,0.45,no,3.696,"mode fs 125 C 3.6 V, t = 22.01 us",,3.600,3.694,3.381
+20,xs.xd.xlay.x_1.x_1,bias_dist_pd,HV-NMOS,1,0.45,no,3.696,"mode fs 125 C 3.6 V, t = 22.01 us",,3.600,3.694,3.381

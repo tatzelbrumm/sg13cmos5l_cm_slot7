@@ -1,0 +1,9 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+setting,what,time_points,net1_max_V,net1_min_V,isp_max_V,max_abs_vgs_V_device,max_abs_vds_V_device
+default,"gear, cshunt 1 fF, max step 10 ns (stress runs)",4345,5.308,-6.586,4.156,4.156 n.xs.xd.xlay.x_8.x_7.nsg13_hv_nmos,10.186 n.xs.xbg.xms1_0.nsg13_hv_pmos
+step2n,max step 2 ns,21073,5.316,-6.838,4.155,4.155 n.xs.xd.xlay.x_8.x_7.nsg13_hv_nmos,10.438 n.xs.xbg.xms1_0.nsg13_hv_pmos
+step05n,max step 0.5 ns,84047,5.314,-6.917,4.155,4.155 n.xs.xd.xlay.x_8.x_7.nsg13_hv_nmos,10.517 n.xs.xbg.xms1_0.nsg13_hv_pmos
+trap,trapezoidal,4250,4.912,-4.241,4.163,4.142 n.xs.xd.xlay.x_8.x_7.nsg13_hv_nmos,7.841 n.xs.xbg.xms1_0.nsg13_hv_pmos
+nqs,NQS model (rfmode=1) on bg_core_pd and ls_up_fs,FAILED,,,,,
+nqsbg,NQS model (rfmode=1) on bg_core_pd,FAILED,,,,,

@@ -1,0 +1,49 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+supply_V,type,L_um,meets_spec_LG,devices,max_abs_vgs_V,where_vgs,max_abs_vgd_V,max_abs_vds_V,where_vds,max_abs_vgx_held_V,max_abs_vds_held_V,max_abs_vgb_V,n_vgx_gt_3v3,n_vgx_held_gt_3v3,n_vgx_gt_3v3_27C
+3.3,HV-NMOS,0.45,0,134,3.875,"xs.xd.xlay.x_8.x_7 (off ff -40 C 3.3 V, t = 1.14 us)",3.875,3.813,"xs.xd.xlay.x_6.x_7 (off ff -40 C 3.3 V, t = 1.14 us)",3.714,3.300,3.485,86,5,85
+3.3,HV-NMOS,0.6,1,1,0.201,"x2s.xlay.x_43 (step open ss 125 C 3.3 V, t = 12.01 us)",3.300,3.300,"x2s.xlay.x_43 (dc 1k ff -40 C 3.3 V, pad 3.30 V)",3.300,3.300,0.089,0,0,0
+3.3,HV-NMOS,1.0,1,8,2.865,"x2d.xlay.x_169 (pu late tt 27 C 3.3 V, t = 20.54 us)",3.415,3.307,"x2d.xlay.x_171 (en ff -40 C 3.3 V, t = 22.01 us)",3.406,3.302,1.810,1,1,1
+3.3,HV-NMOS,2.0,1,1,1.879,"xs.xbg.xms3 (en ss 125 C 3.3 V, t = 22.48 us)",3.242,3.222,"xs.xbg.xms3 (off ss 125 C 3.3 V, t = 70.00 us)",3.221,3.221,1.879,0,0,0
+3.3,HV-NMOS,3.0,1,11,2.675,"x2s.xlay.x_104 (pu fast ss 125 C 3.3 V, t = 1.73 us)",3.163,3.308,"xs.xr.xlay.x_39 (en ss 125 C 3.3 V, t = 22.66 us)",3.163,3.300,1.371,0,0,0
+3.3,HV-NMOS,3.25,1,1,1.292,"xs.xr.xlay.x_10 (step 100p ss 125 C 3.3 V, t = 12.07 us)",1.292,0.000,,1.291,0.000,1.292,0,0,0
+3.3,HV-NMOS,4.0,1,3,0.968,"xs.xbg.xnb (dc 1k ss -40 C 3.3 V, pad -0.20 V)",3.086,3.221,"xs.xbg.xnb (off ss 125 C 3.3 V, t = 70.00 us)",3.086,3.221,1.773,0,0,0
+3.3,HV-NMOS,6.0,1,31,1.299,"xs.xd.xlay.x_10 (pu fast ff -40 C 3.3 V, t = 0.96 us)",3.318,3.422,"x2d.xlay.x_209 (pu late tt 27 C 3.3 V, t = 20.48 us)",3.300,3.398,1.299,2,0,2
+3.3,HV-NMOS,8.0,1,3,1.371,"x2s.xlay.x_109 (step 100p ss 125 C 3.3 V, t = 12.04 us)",0.000,1.371,"x2s.xlay.x_109 (step 100p ss 125 C 3.3 V, t = 12.04 us)",1.312,1.312,1.371,0,0,0
+3.3,HV-NMOS,12.0,1,4,2.912,"x2s.xlay.x_110 (dc 1k ss -40 C 3.3 V, pad 1.75 V)",2.912,0.000,,2.912,0.000,2.912,0,0,0
+3.3,HV-NMOS,12.4,1,1,1.292,"xs.xr.xlay.x_9 (step 100p ss 125 C 3.3 V, t = 12.07 us)",1.292,0.000,,1.291,0.000,1.292,0,0,0
+3.3,HV-NMOS,12.66,1,1,1.292,"xs.xr.xlay.x_7 (step 100p ss 125 C 3.3 V, t = 12.07 us)",1.292,0.000,,1.291,0.000,1.292,0,0,0
+3.3,HV-NMOS,16.9,1,1,0.611,"xs.xr.xlay.x_45 (step 100p ss 125 C 3.3 V, t = 2.02 us)",0.611,0.000,,0.591,0.000,0.611,0,0,0
+3.3,HV-PMOS,0.45,0,110,3.483,"xs.xc.xl5.xi3.xp (mode ss 125 C 3.3 V, t = 42.01 us)",3.698,3.813,"xs.xd.xlay.x_6.x_8 (off ff -40 C 3.3 V, t = 1.14 us)",3.682,3.300,3.363,106,12,104
+3.3,HV-PMOS,0.6,1,8,1.505,"x2d.xlay.x_234 (pu fast tt 27 C 3.3 V, t = 1.22 us)",3.501,3.500,"x2s.xlay.x_3 (dc 1k ff -40 C 3.3 V, pad -0.20 V)",3.500,3.500,2.050,3,3,3
+3.3,HV-PMOS,1.0,1,34,3.195,"x2d.xlay.x_276 (fs fs 125 C 3.3 V, pad 3.30 V)",3.279,3.113,"xs.xbg.xpac (off ss 125 C 3.3 V, t = 70.00 us)",3.279,3.113,3.195,0,0,0
+3.3,HV-PMOS,3.0,1,5,1.192,"x2d.xlay.x_238 (step 100p ss 125 C 3.3 V, t = 12.18 us)",2.996,3.265,"x2s.xlay.x_91 (en ff -40 C 3.3 V, t = 22.01 us)",2.996,3.258,1.597,0,0,0
+3.3,HV-PMOS,4.0,1,15,1.597,"x2d.xlay.x_242 (step 100p ss 125 C 3.3 V, t = 2.09 us)",1.597,1.597,"x2d.xlay.x_243 (step 100p ss 125 C 3.3 V, t = 2.09 us)",1.552,1.552,1.597,0,0,0
+3.3,HV-PMOS,5.0,1,7,3.447,"xs.xc.xl0.xpf (mode ss 125 C 3.3 V, t = 42.00 us)",3.343,3.344,"xs.xc.xl0.xpf (mode ss 125 C 3.3 V, t = 12.01 us)",3.300,3.300,3.305,7,0,7
+3.3,HV-PMOS,6.0,1,40,1.417,"x2s.xlay.x_173 (pu fast ss 125 C 3.3 V, t = 2.17 us)",3.345,3.845,"xs.xr.xlay.x_18 (en ss 125 C 3.3 V, t = 22.65 us)",3.239,3.719,1.417,1,0,0
+3.3,HV-PMOS,12.5,1,8,3.312,"xs.xbg.xms1_0 (pu late tt 27 C 3.3 V, t = 20.07 us)",7.278,10.013,"xs.xbg.xms1_0 (en ff -40 C 3.3 V, t = 22.01 us)",3.300,3.955,3.312,2,0,2
+3.3,HV-PMOS,20.0,1,70,3.300,"xs.xc.xl4.xpl1 (mode ss 125 C 3.3 V, t = 2.01 us)",5.491,7.815,"xs.xc.xl0.xpl1 (pu fast ss 125 C 3.3 V, t = 0.88 us)",3.300,3.272,3.300,12,0,12
+3.3,HV-PMOS,32.16,1,2,3.300,"x2d.xlay.x_2 (fs ff 125 C 3.3 V, pad 0.00 V)",3.300,0.000,,3.300,0.000,3.300,0,0,0
+3.6,HV-NMOS,0.45,0,134,4.182,"xs.xd.xlay.x_8.x_7 (en ff -40 C 3.6 V, t = 2.11 us)",4.182,4.346,"xs.xd.xlay.x_6.x_7 (en sf -40 C 3.6 V, t = 2.11 us)",4.065,3.674,3.816,109,109,109
+3.6,HV-NMOS,0.6,1,1,0.201,"x2s.xlay.x_43 (step open fs 125 C 3.6 V, t = 12.01 us)",3.600,3.600,"x2s.xlay.x_43 (dc 1k ff -40 C 3.6 V, pad 3.60 V)",3.600,3.600,0.089,1,1,1
+3.6,HV-NMOS,1.0,1,8,3.144,"x2d.xlay.x_169 (pu late tt 27 C 3.6 V, t = 20.50 us)",3.728,3.608,"x2d.xlay.x_171 (en ff -40 C 3.6 V, t = 22.01 us)",3.719,3.602,1.816,3,3,3
+3.6,HV-NMOS,2.0,1,1,2.002,"xs.xbg.xms3 (en ss -40 C 3.6 V, t = 22.27 us)",3.602,3.550,"xs.xbg.xms3 (off ff 125 C 3.6 V, t = 40.61 us)",3.550,3.550,2.002,1,1,1
+3.6,HV-NMOS,3.0,1,11,2.925,"x2s.xlay.x_104 (pu fast fs 125 C 3.6 V, t = 1.64 us)",3.455,3.610,"xs.xr.xlay.x_39 (en ss 125 C 3.6 V, t = 22.61 us)",3.455,3.600,1.363,4,4,4
+3.6,HV-NMOS,3.25,1,1,1.390,"xs.xr.xlay.x_10 (step 100p ss 125 C 3.6 V, t = 12.07 us)",1.390,0.000,,1.388,0.000,1.390,0,0,0
+3.6,HV-NMOS,4.0,1,3,0.969,"xs.xbg.xnb (pu ss -40 C 3.6 V, t = 8.54 us)",3.448,3.550,"xs.xbg.xnb (off ff 125 C 3.6 V, t = 40.62 us)",3.448,3.550,1.776,1,1,0
+3.6,HV-NMOS,6.0,1,31,1.468,"xs.xd.xlay.x_10 (pu fast ss -40 C 3.6 V, t = 0.96 us)",3.618,3.727,"x2d.xlay.x_209 (pu late tt 27 C 3.6 V, t = 20.44 us)",3.600,3.706,1.468,8,8,7
+3.6,HV-NMOS,8.0,1,3,1.363,"x2s.xlay.x_109 (step 100p ss 125 C 3.6 V, t = 12.04 us)",0.000,1.363,"x2s.xlay.x_109 (step 100p ss 125 C 3.6 V, t = 12.04 us)",1.309,1.309,1.363,0,0,0
+3.6,HV-NMOS,12.0,1,4,2.430,"x2s.xlay.x_110 (dc 1k ss -40 C 3.6 V, pad 1.75 V)",2.430,0.000,,2.430,0.000,2.430,0,0,0
+3.6,HV-NMOS,12.4,1,1,1.390,"xs.xr.xlay.x_9 (step 100p ss 125 C 3.6 V, t = 12.07 us)",1.390,0.000,,1.388,0.000,1.390,0,0,0
+3.6,HV-NMOS,12.66,1,1,1.390,"xs.xr.xlay.x_7 (step 100p ss 125 C 3.6 V, t = 12.07 us)",1.390,0.000,,1.388,0.000,1.390,0,0,0
+3.6,HV-NMOS,16.9,1,1,0.616,"xs.xr.xlay.x_45 (step 100p ss 125 C 3.6 V, t = 2.03 us)",0.616,0.000,,0.593,0.000,0.616,0,0,0
+3.6,HV-PMOS,0.45,0,110,3.817,"xs.xc.xl5.xi3.xp (mode ss -40 C 3.6 V, t = 42.01 us)",4.094,4.346,"xs.xd.xlay.x_6.x_8 (en sf -40 C 3.6 V, t = 2.11 us)",4.082,3.674,3.710,109,106,109
+3.6,HV-PMOS,0.6,1,8,1.786,"x2d.xlay.x_234 (pu fast ss -40 C 3.6 V, t = 1.05 us)",3.801,3.800,"x2s.xlay.x_3 (dc 1k ff -40 C 3.6 V, pad -0.20 V)",3.800,3.800,2.068,4,4,4
+3.6,HV-PMOS,1.0,1,34,3.490,"x2d.xlay.x_276 (fs fs 125 C 3.6 V, pad 3.60 V)",3.578,3.468,"xs.xbg.xpac (off fs 125 C 3.6 V, t = 70.00 us)",3.578,3.468,3.490,7,7,6
+3.6,HV-PMOS,3.0,1,5,1.206,"x2d.xlay.x_238 (step 100p ss -40 C 3.6 V, t = 12.16 us)",3.283,3.569,"x2s.xlay.x_91 (en ss -40 C 3.6 V, t = 22.02 us)",3.283,3.564,1.599,0,0,0
+3.6,HV-PMOS,4.0,1,15,1.599,"x2d.xlay.x_242 (step 100p ss 125 C 3.6 V, t = 2.09 us)",1.599,1.599,"x2d.xlay.x_243 (step 100p ss 125 C 3.6 V, t = 2.09 us)",1.554,1.554,1.599,0,0,0
+3.6,HV-PMOS,5.0,1,7,3.743,"xs.xc.xl0.xpf (mode ss 125 C 3.6 V, t = 42.00 us)",3.630,3.630,"xs.xc.xl0.xpf (mode ss 125 C 3.6 V, t = 12.01 us)",3.600,3.600,3.605,7,7,7
+3.6,HV-PMOS,6.0,1,40,1.419,"x2s.xlay.x_173 (pu fast ss 125 C 3.6 V, t = 2.08 us)",3.777,4.234,"xs.xr.xlay.x_18 (en tt 27 C 3.6 V, t = 22.48 us)",3.534,4.056,1.419,31,30,14
+3.6,HV-PMOS,12.5,1,8,3.618,"xs.xbg.xms1_0 (pu late tt 27 C 3.6 V, t = 20.07 us)",7.888,10.745,"xs.xbg.xms1_0 (en ff 125 C 3.6 V, t = 22.01 us)",3.600,4.283,3.618,4,4,4
+3.6,HV-PMOS,20.0,1,70,3.600,"xs.xc.xl4.xpl1 (mode ff 125 C 3.6 V, t = 2.01 us)",5.851,8.196,"xs.xc.xl4.xpl1 (pu fast sf -40 C 3.6 V, t = 0.82 us)",3.600,3.453,3.600,70,70,70
+3.6,HV-PMOS,32.16,1,2,3.600,"x2d.xlay.x_2 (fs ff -40 C 3.6 V, pad 0.00 V)",3.600,0.000,,3.600,0.000,3.600,2,2,2

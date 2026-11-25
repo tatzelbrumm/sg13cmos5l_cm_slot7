@@ -1,0 +1,23 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+rank,inst,block,type,W_um,L_um,meets_spec_LG,abs_vgx_held_V,where,held_100ns_V,dc_enabled_V,runs_27C_V,runs_3v6_V
+1,xs.xd.xlay.x_8.x_7,bias_dist_pd,HV-NMOS,1,0.45,no,3.714,en ff -40 C 3.3 V,3.714,3.300,3.680,4.065
+2,xs.xc.xt10.xp,s7_ctrl tg_hv switches,HV-PMOS,1,0.45,no,3.682,off ff -40 C 3.3 V,3.682,0.589,3.676,4.082
+3,xs.xd.xlay.x_5.x_7,bias_dist_pd,HV-NMOS,1,0.45,no,3.589,off ff -40 C 3.3 V,3.589,2.473,3.566,3.974
+4,xs.xd.xlay.x_7.x_7,bias_dist_pd,HV-NMOS,1,0.45,no,3.588,en ff -40 C 3.3 V,3.588,2.473,3.565,3.974
+5,xs.xd.xlay.x_6.x_7,bias_dist_pd,HV-NMOS,1,0.45,no,3.588,off ff -40 C 3.3 V,3.588,2.473,3.564,3.974
+6,xs.xc.xt2.xp,s7_ctrl tg_hv switches,HV-PMOS,1,0.45,no,3.583,en ff -40 C 3.3 V,3.583,2.028,3.567,3.972
+7,xs.xc.xt3.xp,s7_ctrl tg_hv switches,HV-PMOS,1,0.45,no,3.583,en ff -40 C 3.3 V,3.583,3.060,3.567,3.972
+8,xs.xc.xt8.xp,s7_ctrl tg_hv switches,HV-PMOS,1,0.45,no,3.583,en ff -40 C 3.3 V,3.583,3.293,3.567,3.972
+9,xs.xc.xt1.xp,s7_ctrl tg_hv switches,HV-PMOS,1,0.45,no,3.565,en tt 27 C 3.3 V,3.565,2.912,3.565,3.962
+10,xs.xc.xt4.xp,s7_ctrl tg_hv switches,HV-PMOS,1,0.45,no,3.565,en tt 27 C 3.3 V,3.565,3.060,3.565,3.962
+11,xs.xc.xt7.xp,s7_ctrl tg_hv switches,HV-PMOS,1,0.45,no,3.565,en tt 27 C 3.3 V,3.565,3.293,3.565,3.962
+12,x2s.xlay.x_3,S2D pad,HV-PMOS,266.4,0.6,yes,3.500,dc 1k ff -40 C 3.3 V,3.500,3.500,3.500,3.800
+13,xs.xc.xt5.xp,s7_ctrl tg_hv switches,HV-PMOS,1,0.45,no,3.464,en ss 125 C 3.3 V,3.464,3.293,3.429,3.757
+14,xs.xc.xt6.xp,s7_ctrl tg_hv switches,HV-PMOS,1,0.45,no,3.434,en tt 27 C 3.3 V,3.434,3.293,3.434,3.720
+15,x2d.xlay.x_171,D2S pad,HV-NMOS,4.4,1,yes,3.406,pu late tt 27 C 3.3 V,3.406,1.455,3.406,3.719
+16,x2d.xlay.x_232,D2S pad,HV-PMOS,6.66,0.6,yes,3.398,pu late tt 27 C 3.3 V,3.398,1.392,3.398,3.707
+17,x2d.xlay.x_234,D2S pad,HV-PMOS,6.66,0.6,yes,3.396,pu late tt 27 C 3.3 V,3.396,1.392,3.396,3.703
+18,xs.xc.xt9.xn,s7_ctrl tg_hv switches,HV-NMOS,1,0.45,no,3.303,en ss 125 C 3.3 V,3.303,2.064,3.288,3.622
+19,x2s.xlay.x_192,S2D pad,HV-PMOS,1,0.45,no,3.302,en ss 125 C 3.3 V,3.302,2.800,3.288,3.618
+20,x2s.xlay.x_193,S2D pad,HV-PMOS,1,0.45,no,3.302,en ss 125 C 3.3 V,3.302,3.060,3.288,3.618
