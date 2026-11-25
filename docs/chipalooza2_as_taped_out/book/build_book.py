@@ -76,6 +76,7 @@ BOOK = [
         ('docs/PROGRESS.md', None, False),
     ]),
     ('Appendix G — Chipalooza #2 rules', [
+        (f'{DOCS}/RULES_CHECKLIST.md', None, False),
         ('docs/RULES_COMPLIANCE_chipalooza2.md', None, False),
     ]),
     ('Appendix H — How this documentation was made', [
@@ -451,7 +452,7 @@ PART_INTRO = {
     'Appendix F — Harness integration':
         '<p>The repository README (files the harness reads, provenance, pin table) and the notes written for the harness '
         'owner at hand-over.</p>',
-    'Appendix G — Chipalooza #2 rules': '<p>Slot 7 against each item of the Chipalooza #2 rules.</p>',
+    'Appendix G — Chipalooza #2 rules': '<p>Slot 7 against each item of the Chipalooza #2 rules: the checklist (one line per item) and the full table with evidence.</p>',
     'Appendix H — How this documentation was made':
         '<p>AI assistance, the running log of the documentation session of 2026-11-22 and the inventory of '
         'characterization data it started from.</p>',
@@ -501,6 +502,31 @@ table.figs th { display: none; }
 '''
 
 
+CHECKLIST_SRC = f'{DOCS}/RULES_CHECKLIST.md'
+CHECKLIST_CSS = r'''
+table { font-size: 7.6pt; line-height: 1.25; }
+td:first-child { width: auto; white-space: nowrap; }
+table.head td:first-child { width: 20%; }
+table.list td:nth-child(3) { white-space: nowrap; font-weight: bold; }
+table.list td:nth-child(2) { width: 34%; }
+tr { break-inside: avoid; }
+'''
+
+
+def build_checklist(sha):
+    book = Book(sha)
+    book.files = {}
+    h, _ = book.convert(CHECKLIST_SRC)
+    h = h.replace('<table>', '<table class="head">', 1).replace('<table>', '<table class="list">', 1)
+    css = DIGEST_CSS.replace("SHORTSHA", sha[:7]) + CHECKLIST_CSS
+    doc = (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Slot 7: Chipalooza #2 rules checklist</title>'
+           f'<meta name="author" content="Christoph Maier"><style>{css}</style></head><body>{h}</body></html>')
+    import weasyprint
+    pdf = os.path.join(OUT_DIR, 'slot7_rules_checklist.pdf')
+    weasyprint.HTML(string=doc, base_url=ROOT).write_pdf(pdf)
+    print(f'wrote {os.path.relpath(pdf, ROOT)}')
+
+
 def build_digest(sha):
     book = Book(sha)
     book.files = {}                                   # the digest stands alone: every link goes to GitHub
@@ -532,6 +558,7 @@ def main():
         build_book(sha, a.check_only)
     if not a.check_only:
         build_digest(sha)
+        build_checklist(sha)
         if a.digest_only:
             for p in problems:
                 print('  ' + p)
