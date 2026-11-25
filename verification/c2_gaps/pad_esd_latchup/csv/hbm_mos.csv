@@ -1,0 +1,677 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# IHP sg13cmos5l simulation (ngspice, PDK models; not ESD-calibrated)
+# max over the run of |vg - vs|, |vg - vd|, |vg - vb|, |vd - vs| for the MOS devices on the pad path, and the device with the largest of these per pad (role column)
+run,diode_model,pad_zapped,config,v_hbm,pad,device,model,w,l,max_vgs,max_vgd,max_vgb,max_vox,max_vds,role
+hbm_esdproxy_s2d_gnd_vss_p500,esdproxy,s2d,gnd_vss,500,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,2.561,3.4614,2.561,3.4614,2.1776,input device of unit XA1 (gate = pad)
+hbm_esdproxy_s2d_gnd_vss_p500,esdproxy,s2d,gnd_vss,500,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,2.561,3.4614,2.561,3.4614,2.1776,input device of unit XA2 (gate = pad)
+hbm_esdproxy_s2d_gnd_vss_p500,esdproxy,s2d,gnd_vss,500,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,1.1122,2.1114,1.1122,2.1114,2.2545,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_s2d_gnd_vss_p500,esdproxy,s2d,gnd_vss,500,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.34566,3.932,0.34566,3.932,3.9319,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_s2d_gnd_vss_p500,esdproxy,s2d,gnd_vss,500,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.34566,3.932,0.34566,3.932,3.9319,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_gnd_vss_p500,esdproxy,s2d,gnd_vss,500,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,0.64606,0.89903,0.64606,0.89903,0.80657,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_s2d_gnd_vss_p500,esdproxy,s2d,gnd_vss,500,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,0.64606,0.89903,0.64606,0.89903,0.80657,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_s2d_gnd_vss_p500,esdproxy,s2d,gnd_vss,500,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,2.2082,2.2069,2.2082,2.2082,0.35442,disable switch SA (a to iovdd)
+hbm_esdproxy_s2d_gnd_vss_p500,esdproxy,s2d,gnd_vss,500,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,2.2082,2.2079,2.2082,2.2082,0.42091,disable switch SB (b to iovss)
+hbm_esdproxy_s2d_gnd_vss_p500,esdproxy,s2d,gnd_vss,500,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.35442,1.1096,0.35442,1.1096,1.111,output PMOS OP (drain = pad)
+hbm_esdproxy_s2d_gnd_vss_p500,esdproxy,s2d,gnd_vss,500,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.42091,1.0969,0.42091,1.0969,1.1343,output NMOS ON (drain = pad)
+hbm_esdproxy_s2d_gnd_vss_p500,esdproxy,s2d,gnd_vss,500,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,1.1093,1.1093,1.1093,1.1093,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_s2d_gnd_vss_p500,esdproxy,s2d,gnd_vss,500,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,1.0965,1.0965,1.0965,1.0965,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_s2d_gnd_vss_p500,esdproxy,s2d,gnd_vss,500,d2s,xd2s.xt.xtdn,sg13_hv_nmos,1u,0.45u,2.2082,2.2082,2.2082,2.2082,0.059829,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_gnd_vss_n500,esdproxy,s2d,gnd_vss,-500,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,1.4559,1.4557,1.4559,1.4559,0.45177,input device of unit XA1 (gate = pad)
+hbm_esdproxy_s2d_gnd_vss_n500,esdproxy,s2d,gnd_vss,-500,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,1.4559,1.4557,1.4559,1.4559,0.45177,input device of unit XA2 (gate = pad)
+hbm_esdproxy_s2d_gnd_vss_n500,esdproxy,s2d,gnd_vss,-500,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.33556,1.8618,0.33556,1.8618,1.8878,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_s2d_gnd_vss_n500,esdproxy,s2d,gnd_vss,-500,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.43293,1.9241,0.43293,1.9241,1.9244,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_s2d_gnd_vss_n500,esdproxy,s2d,gnd_vss,-500,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.43293,1.9241,0.43293,1.9241,1.9244,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_gnd_vss_n500,esdproxy,s2d,gnd_vss,-500,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,0.010686,0.018075,0.010686,0.018075,0.012701,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_s2d_gnd_vss_n500,esdproxy,s2d,gnd_vss,-500,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,0.010686,0.018075,0.010686,0.018075,0.012701,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_s2d_gnd_vss_n500,esdproxy,s2d,gnd_vss,-500,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,0.042675,0.032693,0.042675,0.042675,0.010049,disable switch SA (a to iovdd)
+hbm_esdproxy_s2d_gnd_vss_n500,esdproxy,s2d,gnd_vss,-500,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,0.042675,0.030243,0.042675,0.042675,0.012432,disable switch SB (b to iovss)
+hbm_esdproxy_s2d_gnd_vss_n500,esdproxy,s2d,gnd_vss,-500,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.010049,0.0099095,0.010049,0.010049,0.019126,output PMOS OP (drain = pad)
+hbm_esdproxy_s2d_gnd_vss_n500,esdproxy,s2d,gnd_vss,-500,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.012432,0.01228,0.012432,0.012432,0.023576,output NMOS ON (drain = pad)
+hbm_esdproxy_s2d_gnd_vss_n500,esdproxy,s2d,gnd_vss,-500,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,0.0090532,0.0090532,0.0090532,0.0090532,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_s2d_gnd_vss_n500,esdproxy,s2d,gnd_vss,-500,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,0.011092,0.011092,0.011092,0.011092,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_s2d_gnd_vss_n500,esdproxy,s2d,gnd_vss,-500,d2s,xd2s.xt.xtdn,sg13_hv_nmos,1u,0.45u,0.042675,0.040877,0.042675,0.042675,0.0029545,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_gnd_vss_p1000,esdproxy,s2d,gnd_vss,1000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,3.9318,5.2476,3.9318,5.2476,2.5944,input device of unit XA1 (gate = pad)
+hbm_esdproxy_s2d_gnd_vss_p1000,esdproxy,s2d,gnd_vss,1000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,3.9318,5.2476,3.9318,5.2476,2.5944,input device of unit XA2 (gate = pad)
+hbm_esdproxy_s2d_gnd_vss_p1000,esdproxy,s2d,gnd_vss,1000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,1.9262,3.2552,1.9262,3.2552,3.5348,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_s2d_gnd_vss_p1000,esdproxy,s2d,gnd_vss,1000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.46513,5.7824,0.46513,5.7824,5.7824,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_s2d_gnd_vss_p1000,esdproxy,s2d,gnd_vss,1000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.46513,5.7824,0.46513,5.7824,5.7824,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_gnd_vss_p1000,esdproxy,s2d,gnd_vss,1000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,0.76055,0.99289,0.76055,0.99289,0.91107,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_s2d_gnd_vss_p1000,esdproxy,s2d,gnd_vss,1000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,0.76055,0.99289,0.76055,0.99289,0.91107,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_s2d_gnd_vss_p1000,esdproxy,s2d,gnd_vss,1000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,2.4375,2.4303,2.4375,2.4375,0.45446,disable switch SA (a to iovdd)
+hbm_esdproxy_s2d_gnd_vss_p1000,esdproxy,s2d,gnd_vss,1000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,2.4375,2.436,2.4375,2.4375,0.46371,disable switch SB (b to iovss)
+hbm_esdproxy_s2d_gnd_vss_p1000,esdproxy,s2d,gnd_vss,1000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.45446,1.2217,0.45446,1.2217,1.2384,output PMOS OP (drain = pad)
+hbm_esdproxy_s2d_gnd_vss_p1000,esdproxy,s2d,gnd_vss,1000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.46371,1.2109,0.46371,1.2109,1.2734,output NMOS ON (drain = pad)
+hbm_esdproxy_s2d_gnd_vss_p1000,esdproxy,s2d,gnd_vss,1000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,1.2213,1.2213,1.2213,1.2213,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_s2d_gnd_vss_p1000,esdproxy,s2d,gnd_vss,1000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,1.2107,1.2107,1.2107,1.2107,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_s2d_gnd_vss_p1000,esdproxy,s2d,gnd_vss,1000,d2s,xd2s.xd.xsabp,sg13_hv_pmos,1u,0.45u,2.4375,2.4375,2.4375,2.4375,0.41483,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_gnd_vss_n1000,esdproxy,s2d,gnd_vss,-1000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,2.3104,2.31,2.3104,2.3104,0.47044,input device of unit XA1 (gate = pad)
+hbm_esdproxy_s2d_gnd_vss_n1000,esdproxy,s2d,gnd_vss,-1000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,2.3104,2.31,2.3104,2.3104,0.47044,input device of unit XA2 (gate = pad)
+hbm_esdproxy_s2d_gnd_vss_n1000,esdproxy,s2d,gnd_vss,-1000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.35254,2.7508,0.35254,2.7508,2.7956,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_s2d_gnd_vss_n1000,esdproxy,s2d,gnd_vss,-1000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.56131,2.8365,0.56131,2.8365,2.837,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_s2d_gnd_vss_n1000,esdproxy,s2d,gnd_vss,-1000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.56131,2.8365,0.56131,2.8365,2.837,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_gnd_vss_n1000,esdproxy,s2d,gnd_vss,-1000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,0.013486,0.022759,0.013486,0.022759,0.014556,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_s2d_gnd_vss_n1000,esdproxy,s2d,gnd_vss,-1000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,0.013486,0.022759,0.013486,0.022759,0.014556,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_s2d_gnd_vss_n1000,esdproxy,s2d,gnd_vss,-1000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,0.053625,0.040959,0.053625,0.053625,0.012756,disable switch SA (a to iovdd)
+hbm_esdproxy_s2d_gnd_vss_n1000,esdproxy,s2d,gnd_vss,-1000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,0.053625,0.037893,0.053625,0.053625,0.015736,disable switch SB (b to iovss)
+hbm_esdproxy_s2d_gnd_vss_n1000,esdproxy,s2d,gnd_vss,-1000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.012756,0.011184,0.012756,0.012756,0.023745,output PMOS OP (drain = pad)
+hbm_esdproxy_s2d_gnd_vss_n1000,esdproxy,s2d,gnd_vss,-1000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.015736,0.014635,0.015736,0.015736,0.029905,output NMOS ON (drain = pad)
+hbm_esdproxy_s2d_gnd_vss_n1000,esdproxy,s2d,gnd_vss,-1000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,0.010947,0.010947,0.010947,0.010947,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_s2d_gnd_vss_n1000,esdproxy,s2d,gnd_vss,-1000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,0.014093,0.014093,0.014093,0.014093,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_s2d_gnd_vss_n1000,esdproxy,s2d,gnd_vss,-1000,d2s,xd2s.xt.xtdn,sg13_hv_nmos,1u,0.45u,0.053625,0.051247,0.053625,0.053625,0.0035633,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_gnd_vss_p2000,esdproxy,s2d,gnd_vss,2000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,6.6564,8.6452,6.6564,8.6452,3.8188,input device of unit XA1 (gate = pad)
+hbm_esdproxy_s2d_gnd_vss_p2000,esdproxy,s2d,gnd_vss,2000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,6.6564,8.6452,6.6564,8.6452,3.8188,input device of unit XA2 (gate = pad)
+hbm_esdproxy_s2d_gnd_vss_p2000,esdproxy,s2d,gnd_vss,2000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,3.5347,5.4756,3.5347,5.4756,6.0205,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_s2d_gnd_vss_p2000,esdproxy,s2d,gnd_vss,2000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.58349,9.2975,0.58349,9.2975,9.2977,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_s2d_gnd_vss_p2000,esdproxy,s2d,gnd_vss,2000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.58349,9.2975,0.58349,9.2975,9.2977,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_gnd_vss_p2000,esdproxy,s2d,gnd_vss,2000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,0.9537,1.2621,0.9537,1.2621,1.0823,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_s2d_gnd_vss_p2000,esdproxy,s2d,gnd_vss,2000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,0.9537,1.2621,0.9537,1.2621,1.0823,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_s2d_gnd_vss_p2000,esdproxy,s2d,gnd_vss,2000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,3.2583,3.0026,3.2583,3.2583,0.60553,disable switch SA (a to iovdd)
+hbm_esdproxy_s2d_gnd_vss_p2000,esdproxy,s2d,gnd_vss,2000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,3.2583,3.1524,3.2583,3.2583,0.50128,disable switch SB (b to iovss)
+hbm_esdproxy_s2d_gnd_vss_p2000,esdproxy,s2d,gnd_vss,2000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.60553,1.464,0.60553,1.464,1.7379,output PMOS OP (drain = pad)
+hbm_esdproxy_s2d_gnd_vss_p2000,esdproxy,s2d,gnd_vss,2000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.50128,1.5348,0.50128,1.5348,1.5438,output NMOS ON (drain = pad)
+hbm_esdproxy_s2d_gnd_vss_p2000,esdproxy,s2d,gnd_vss,2000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,1.4615,1.4615,1.4615,1.4615,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_s2d_gnd_vss_p2000,esdproxy,s2d,gnd_vss,2000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,1.5319,1.5319,1.5319,1.5319,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_s2d_gnd_vss_p2000,esdproxy,s2d,gnd_vss,2000,d2s,xd2s.xd.xsabn,sg13_hv_nmos,1u,0.45u,3.2583,3.2583,3.2583,3.2583,0.38357,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_gnd_vss_n2000,esdproxy,s2d,gnd_vss,-2000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,4.0174,4.0167,4.0174,4.0174,0.52126,input device of unit XA1 (gate = pad)
+hbm_esdproxy_s2d_gnd_vss_n2000,esdproxy,s2d,gnd_vss,-2000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,4.0174,4.0167,4.0174,4.0174,0.52126,input device of unit XA2 (gate = pad)
+hbm_esdproxy_s2d_gnd_vss_n2000,esdproxy,s2d,gnd_vss,-2000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.36521,4.5029,0.36521,4.5029,4.5815,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_s2d_gnd_vss_n2000,esdproxy,s2d,gnd_vss,-2000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.94164,4.6248,0.94164,4.6248,4.6257,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_s2d_gnd_vss_n2000,esdproxy,s2d,gnd_vss,-2000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.94164,4.6248,0.94164,4.6248,4.6257,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_gnd_vss_n2000,esdproxy,s2d,gnd_vss,-2000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,0.01691,0.029049,0.01691,0.029049,0.018853,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_s2d_gnd_vss_n2000,esdproxy,s2d,gnd_vss,-2000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,0.01691,0.029049,0.01691,0.029049,0.018853,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_s2d_gnd_vss_n2000,esdproxy,s2d,gnd_vss,-2000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,0.06872,0.05269,0.06872,0.06872,0.016193,disable switch SA (a to iovdd)
+hbm_esdproxy_s2d_gnd_vss_n2000,esdproxy,s2d,gnd_vss,-2000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,0.06872,0.048744,0.06872,0.06872,0.020007,disable switch SB (b to iovss)
+hbm_esdproxy_s2d_gnd_vss_n2000,esdproxy,s2d,gnd_vss,-2000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.016193,0.014844,0.016193,0.016193,0.030728,output PMOS OP (drain = pad)
+hbm_esdproxy_s2d_gnd_vss_n2000,esdproxy,s2d,gnd_vss,-2000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.020007,0.018571,0.020007,0.020007,0.038015,output NMOS ON (drain = pad)
+hbm_esdproxy_s2d_gnd_vss_n2000,esdproxy,s2d,gnd_vss,-2000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,0.014449,0.014449,0.014449,0.014449,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_s2d_gnd_vss_n2000,esdproxy,s2d,gnd_vss,-2000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,0.01787,0.01787,0.01787,0.01787,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_s2d_gnd_vss_n2000,esdproxy,s2d,gnd_vss,-2000,d2s,xd2s.xt.xtdn,sg13_hv_nmos,1u,0.45u,0.06872,0.06579,0.06872,0.06872,0.0045349,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_gnd_vdd_p500,esdproxy,s2d,gnd_vdd,500,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,1.5951,1.9645,1.5951,1.9645,0.59192,input device of unit XA1 (gate = pad)
+hbm_esdproxy_s2d_gnd_vdd_p500,esdproxy,s2d,gnd_vdd,500,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,1.5951,1.9645,1.5951,1.9645,0.59192,input device of unit XA2 (gate = pad)
+hbm_esdproxy_s2d_gnd_vdd_p500,esdproxy,s2d,gnd_vdd,500,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,1.1247,2.115,1.1247,2.115,2.2601,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_s2d_gnd_vdd_p500,esdproxy,s2d,gnd_vdd,500,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.31081,2.2894,0.31081,2.2894,2.2892,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_s2d_gnd_vdd_p500,esdproxy,s2d,gnd_vdd,500,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.31081,2.2894,0.31081,2.2894,2.2892,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_gnd_vdd_p500,esdproxy,s2d,gnd_vdd,500,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,0.0057338,0.010311,0.0057338,0.010311,0.0082509,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_s2d_gnd_vdd_p500,esdproxy,s2d,gnd_vdd,500,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,0.0057338,0.010311,0.0057338,0.010311,0.0082509,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_s2d_gnd_vdd_p500,esdproxy,s2d,gnd_vdd,500,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,0.024981,0.019697,0.024981,0.024981,0.0054894,disable switch SA (a to iovdd)
+hbm_esdproxy_s2d_gnd_vdd_p500,esdproxy,s2d,gnd_vdd,500,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,0.024981,0.018234,0.024981,0.024981,0.0068759,disable switch SB (b to iovss)
+hbm_esdproxy_s2d_gnd_vdd_p500,esdproxy,s2d,gnd_vdd,500,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.0054894,0.0067926,0.0054894,0.0067926,0.012009,output PMOS OP (drain = pad)
+hbm_esdproxy_s2d_gnd_vdd_p500,esdproxy,s2d,gnd_vdd,500,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.0068759,0.0064191,0.0068759,0.0068759,0.012992,output NMOS ON (drain = pad)
+hbm_esdproxy_s2d_gnd_vdd_p500,esdproxy,s2d,gnd_vdd,500,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,0.0064143,0.0064143,0.0064143,0.0064143,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_s2d_gnd_vdd_p500,esdproxy,s2d,gnd_vdd,500,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,0.0059457,0.0059457,0.0059457,0.0059457,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_s2d_gnd_vdd_p500,esdproxy,s2d,gnd_vdd,500,d2s,xd2s.xt.xtdn,sg13_hv_nmos,1u,0.45u,0.024981,0.024261,0.024981,0.024981,0.0017081,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_gnd_vdd_n500,esdproxy,s2d,gnd_vdd,-500,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,1.4873,1.4872,1.4873,1.4873,0.44933,input device of unit XA1 (gate = pad)
+hbm_esdproxy_s2d_gnd_vdd_n500,esdproxy,s2d,gnd_vdd,-500,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,1.4873,1.4872,1.4873,1.4873,0.44933,input device of unit XA2 (gate = pad)
+hbm_esdproxy_s2d_gnd_vdd_n500,esdproxy,s2d,gnd_vdd,-500,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.50431,3.5304,0.50431,3.5304,3.575,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_s2d_gnd_vdd_n500,esdproxy,s2d,gnd_vdd,-500,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.4321,1.9204,0.4321,1.9204,1.9207,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_s2d_gnd_vdd_n500,esdproxy,s2d,gnd_vdd,-500,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.50431,3.5304,0.50431,3.5304,3.575,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_gnd_vdd_n500,esdproxy,s2d,gnd_vdd,-500,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,0.64366,0.89787,0.64366,0.89787,0.8053,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_s2d_gnd_vdd_n500,esdproxy,s2d,gnd_vdd,-500,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,0.64366,0.89787,0.64366,0.89787,0.8053,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_s2d_gnd_vdd_n500,esdproxy,s2d,gnd_vdd,-500,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,2.2049,2.2035,2.2049,2.2049,0.35012,disable switch SA (a to iovdd)
+hbm_esdproxy_s2d_gnd_vdd_n500,esdproxy,s2d,gnd_vdd,-500,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,2.2049,2.2045,2.2049,2.2049,0.42069,disable switch SB (b to iovss)
+hbm_esdproxy_s2d_gnd_vdd_n500,esdproxy,s2d,gnd_vdd,-500,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.35012,1.1087,0.35012,1.1087,1.1101,output PMOS OP (drain = pad)
+hbm_esdproxy_s2d_gnd_vdd_n500,esdproxy,s2d,gnd_vdd,-500,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.42069,1.0944,0.42069,1.0944,1.1299,output NMOS ON (drain = pad)
+hbm_esdproxy_s2d_gnd_vdd_n500,esdproxy,s2d,gnd_vdd,-500,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,1.1084,1.1084,1.1084,1.1084,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_s2d_gnd_vdd_n500,esdproxy,s2d,gnd_vdd,-500,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,1.0941,1.0941,1.0941,1.0941,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_s2d_gnd_vdd_n500,esdproxy,s2d,gnd_vdd,-500,d2s,xd2s.xt.xtdn,sg13_hv_nmos,1u,0.45u,2.2049,2.2048,2.2049,2.2049,0.0592,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_gnd_vdd_p1000,esdproxy,s2d,gnd_vdd,1000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,2.7896,3.2197,2.7896,3.2197,0.83402,input device of unit XA1 (gate = pad)
+hbm_esdproxy_s2d_gnd_vdd_p1000,esdproxy,s2d,gnd_vdd,1000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,2.7896,3.2197,2.7896,3.2197,0.83402,input device of unit XA2 (gate = pad)
+hbm_esdproxy_s2d_gnd_vdd_p1000,esdproxy,s2d,gnd_vdd,1000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,1.9408,3.2599,1.9408,3.2599,3.5437,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_s2d_gnd_vdd_p1000,esdproxy,s2d,gnd_vdd,1000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.34556,3.6299,0.34556,3.6299,3.6298,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_s2d_gnd_vdd_p1000,esdproxy,s2d,gnd_vdd,1000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.34556,3.6299,0.34556,3.6299,3.6298,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_gnd_vdd_p1000,esdproxy,s2d,gnd_vdd,1000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,0.01844,0.032566,0.01844,0.032566,0.022526,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_s2d_gnd_vdd_p1000,esdproxy,s2d,gnd_vdd,1000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,0.01844,0.032566,0.01844,0.032566,0.022526,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_s2d_gnd_vdd_p1000,esdproxy,s2d,gnd_vdd,1000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,0.078236,0.060939,0.078236,0.078236,0.017507,disable switch SA (a to iovdd)
+hbm_esdproxy_s2d_gnd_vdd_p1000,esdproxy,s2d,gnd_vdd,1000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,0.078236,0.056522,0.078236,0.078236,0.021754,disable switch SB (b to iovss)
+hbm_esdproxy_s2d_gnd_vdd_p1000,esdproxy,s2d,gnd_vdd,1000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.017507,0.020461,0.017507,0.020461,0.037655,output PMOS OP (drain = pad)
+hbm_esdproxy_s2d_gnd_vdd_p1000,esdproxy,s2d,gnd_vdd,1000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.021754,0.019425,0.021754,0.021754,0.040643,output NMOS ON (drain = pad)
+hbm_esdproxy_s2d_gnd_vdd_p1000,esdproxy,s2d,gnd_vdd,1000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,0.020115,0.020115,0.020115,0.020115,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_s2d_gnd_vdd_p1000,esdproxy,s2d,gnd_vdd,1000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,0.01877,0.01877,0.01877,0.01877,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_s2d_gnd_vdd_p1000,esdproxy,s2d,gnd_vdd,1000,d2s,xd2s.xt.xtdn,sg13_hv_nmos,1u,0.45u,0.078236,0.075937,0.078236,0.078236,0.0022993,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_gnd_vdd_n1000,esdproxy,s2d,gnd_vdd,-1000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,2.3571,2.3568,2.3571,2.3571,0.44876,input device of unit XA1 (gate = pad)
+hbm_esdproxy_s2d_gnd_vdd_n1000,esdproxy,s2d,gnd_vdd,-1000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,2.3571,2.3568,2.3571,2.3571,0.44876,input device of unit XA2 (gate = pad)
+hbm_esdproxy_s2d_gnd_vdd_n1000,esdproxy,s2d,gnd_vdd,-1000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.57181,4.962,0.57181,4.962,5.0361,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_s2d_gnd_vdd_n1000,esdproxy,s2d,gnd_vdd,-1000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.56282,2.8323,0.56282,2.8323,2.8327,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_s2d_gnd_vdd_n1000,esdproxy,s2d,gnd_vdd,-1000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.57181,4.962,0.57181,4.962,5.0361,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_gnd_vdd_n1000,esdproxy,s2d,gnd_vdd,-1000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,0.75727,0.99838,0.75727,0.99838,0.92337,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_s2d_gnd_vdd_n1000,esdproxy,s2d,gnd_vdd,-1000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,0.75727,0.99838,0.75727,0.99838,0.92337,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_s2d_gnd_vdd_n1000,esdproxy,s2d,gnd_vdd,-1000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,2.4392,2.4258,2.4392,2.4392,0.44736,disable switch SA (a to iovdd)
+hbm_esdproxy_s2d_gnd_vdd_n1000,esdproxy,s2d,gnd_vdd,-1000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,2.4392,2.4315,2.4392,2.4392,0.46115,disable switch SB (b to iovss)
+hbm_esdproxy_s2d_gnd_vdd_n1000,esdproxy,s2d,gnd_vdd,-1000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.44736,1.2207,0.44736,1.2207,1.2245,output PMOS OP (drain = pad)
+hbm_esdproxy_s2d_gnd_vdd_n1000,esdproxy,s2d,gnd_vdd,-1000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.46115,1.2075,0.46115,1.2075,1.2863,output NMOS ON (drain = pad)
+hbm_esdproxy_s2d_gnd_vdd_n1000,esdproxy,s2d,gnd_vdd,-1000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,1.2203,1.2203,1.2203,1.2203,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_s2d_gnd_vdd_n1000,esdproxy,s2d,gnd_vdd,-1000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,1.2072,1.2072,1.2072,1.2072,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_s2d_gnd_vdd_n1000,esdproxy,s2d,gnd_vdd,-1000,d2s,xd2s.xt.xtdn,sg13_hv_nmos,1u,0.45u,2.4392,2.4331,2.4392,2.4392,0.071617,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_gnd_vdd_p2000,esdproxy,s2d,gnd_vdd,2000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,5.2259,5.7647,5.2259,5.7647,1.3926,input device of unit XA1 (gate = pad)
+hbm_esdproxy_s2d_gnd_vdd_p2000,esdproxy,s2d,gnd_vdd,2000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,5.2259,5.7647,5.2259,5.7647,1.3926,input device of unit XA2 (gate = pad)
+hbm_esdproxy_s2d_gnd_vdd_p2000,esdproxy,s2d,gnd_vdd,2000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,3.5629,5.4821,3.5629,5.4821,6.0428,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_s2d_gnd_vdd_p2000,esdproxy,s2d,gnd_vdd,2000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.38134,6.2499,0.38134,6.2499,6.2494,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_s2d_gnd_vdd_p2000,esdproxy,s2d,gnd_vdd,2000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.38134,6.2499,0.38134,6.2499,6.2494,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_gnd_vdd_p2000,esdproxy,s2d,gnd_vdd,2000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,0.044757,0.079576,0.044757,0.079576,0.054355,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_s2d_gnd_vdd_p2000,esdproxy,s2d,gnd_vdd,2000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,0.044757,0.079576,0.044757,0.079576,0.054355,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_s2d_gnd_vdd_p2000,esdproxy,s2d,gnd_vdd,2000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,0.19105,0.14859,0.19105,0.19105,0.042915,disable switch SA (a to iovdd)
+hbm_esdproxy_s2d_gnd_vdd_p2000,esdproxy,s2d,gnd_vdd,2000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,0.19105,0.13776,0.19105,0.19105,0.05337,disable switch SB (b to iovss)
+hbm_esdproxy_s2d_gnd_vdd_p2000,esdproxy,s2d,gnd_vdd,2000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.042915,0.04946,0.042915,0.04946,0.091773,output PMOS OP (drain = pad)
+hbm_esdproxy_s2d_gnd_vdd_p2000,esdproxy,s2d,gnd_vdd,2000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.05337,0.047075,0.05337,0.05337,0.099382,output NMOS ON (drain = pad)
+hbm_esdproxy_s2d_gnd_vdd_p2000,esdproxy,s2d,gnd_vdd,2000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,0.048727,0.048727,0.048727,0.048727,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_s2d_gnd_vdd_p2000,esdproxy,s2d,gnd_vdd,2000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,0.045688,0.045688,0.045688,0.045688,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_s2d_gnd_vdd_p2000,esdproxy,s2d,gnd_vdd,2000,d2s,xd2s.xt.xtdn,sg13_hv_nmos,1u,0.45u,0.19105,0.18542,0.19105,0.19105,0.0056348,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_gnd_vdd_n2000,esdproxy,s2d,gnd_vdd,-2000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,4.1138,4.1135,4.1138,4.1138,0.47374,input device of unit XA1 (gate = pad)
+hbm_esdproxy_s2d_gnd_vdd_n2000,esdproxy,s2d,gnd_vdd,-2000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,4.1138,4.1135,4.1138,4.1138,0.47374,input device of unit XA2 (gate = pad)
+hbm_esdproxy_s2d_gnd_vdd_n2000,esdproxy,s2d,gnd_vdd,-2000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.65017,7.6856,0.65017,7.6856,7.8134,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_s2d_gnd_vdd_n2000,esdproxy,s2d,gnd_vdd,-2000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.93976,4.6204,0.93976,4.6204,4.6215,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_s2d_gnd_vdd_n2000,esdproxy,s2d,gnd_vdd,-2000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.65017,7.6856,0.65017,7.6856,7.8134,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_gnd_vdd_n2000,esdproxy,s2d,gnd_vdd,-2000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,0.94437,1.2234,0.94437,1.2234,1.0763,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_s2d_gnd_vdd_n2000,esdproxy,s2d,gnd_vdd,-2000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,0.94437,1.2234,0.94437,1.2234,1.0763,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_s2d_gnd_vdd_n2000,esdproxy,s2d,gnd_vdd,-2000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,3.1724,2.9201,3.1724,3.1724,0.59622,disable switch SA (a to iovdd)
+hbm_esdproxy_s2d_gnd_vdd_n2000,esdproxy,s2d,gnd_vdd,-2000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,3.1724,3.0666,3.1724,3.1724,0.49947,disable switch SB (b to iovss)
+hbm_esdproxy_s2d_gnd_vdd_n2000,esdproxy,s2d,gnd_vdd,-2000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.59622,1.4301,0.59622,1.4301,1.7021,output PMOS OP (drain = pad)
+hbm_esdproxy_s2d_gnd_vdd_n2000,esdproxy,s2d,gnd_vdd,-2000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.49947,1.4865,0.49947,1.4865,1.4955,output NMOS ON (drain = pad)
+hbm_esdproxy_s2d_gnd_vdd_n2000,esdproxy,s2d,gnd_vdd,-2000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,1.4277,1.4277,1.4277,1.4277,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_s2d_gnd_vdd_n2000,esdproxy,s2d,gnd_vdd,-2000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,1.4839,1.4839,1.4839,1.4839,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_s2d_gnd_vdd_n2000,esdproxy,s2d,gnd_vdd,-2000,d2s,xd2s.xd.xsabn,sg13_hv_nmos,1u,0.45u,3.1724,3.1725,3.1724,3.1725,0.3827,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_p2p_p500,esdproxy,s2d,p2p,500,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,2.6017,3.5198,2.6017,3.5198,2.1868,input device of unit XA1 (gate = pad)
+hbm_esdproxy_s2d_p2p_p500,esdproxy,s2d,p2p,500,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,2.6017,3.5198,2.6017,3.5198,2.1868,input device of unit XA2 (gate = pad)
+hbm_esdproxy_s2d_p2p_p500,esdproxy,s2d,p2p,500,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,1.1125,2.1081,1.1125,2.1081,2.2512,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_s2d_p2p_p500,esdproxy,s2d,p2p,500,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.3468,3.9931,0.3468,3.9931,3.9931,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_s2d_p2p_p500,esdproxy,s2d,p2p,500,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.3468,3.9931,0.3468,3.9931,3.9931,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_p2p_p500,esdproxy,s2d,p2p,500,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,0.95687,0.9567,0.95687,0.95687,0.43301,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_s2d_p2p_p500,esdproxy,s2d,p2p,500,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,0.95687,0.9567,0.95687,0.95687,0.43301,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_s2d_p2p_p500,esdproxy,s2d,p2p,500,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,2.2156,2.2158,2.2156,2.2158,1.2349,disable switch SA (a to iovdd)
+hbm_esdproxy_s2d_p2p_p500,esdproxy,s2d,p2p,500,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,2.2156,2.6735,2.2156,2.6735,0.59215,disable switch SB (b to iovss)
+hbm_esdproxy_s2d_p2p_p500,esdproxy,s2d,p2p,500,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,1.2349,2.9684,1.2349,2.9684,3.2014,output PMOS OP (drain = pad)
+hbm_esdproxy_s2d_p2p_p500,esdproxy,s2d,p2p,500,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.59215,1.312,0.59215,1.312,1.3658,output NMOS ON (drain = pad)
+hbm_esdproxy_s2d_p2p_p500,esdproxy,s2d,p2p,500,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,2.9266,2.9266,2.9266,2.9266,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_s2d_p2p_p500,esdproxy,s2d,p2p,500,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,0.90601,0.90601,0.90601,0.90601,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_s2d_p2p_p500,esdproxy,s2d,p2p,500,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,1.2349,2.9684,1.2349,2.9684,3.2014,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_p2p_n500,esdproxy,s2d,p2p,-500,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,1.4862,1.4861,1.4862,1.4862,0.45058,input device of unit XA1 (gate = pad)
+hbm_esdproxy_s2d_p2p_n500,esdproxy,s2d,p2p,-500,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,1.4862,1.4861,1.4862,1.4862,0.45058,input device of unit XA2 (gate = pad)
+hbm_esdproxy_s2d_p2p_n500,esdproxy,s2d,p2p,-500,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.50723,3.6201,0.50723,3.6201,3.6595,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_s2d_p2p_n500,esdproxy,s2d,p2p,-500,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.43232,1.9165,0.43232,1.9165,1.9169,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_s2d_p2p_n500,esdproxy,s2d,p2p,-500,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.50723,3.6201,0.50723,3.6201,3.6595,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_p2p_n500,esdproxy,s2d,p2p,-500,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,2.1302,2.8143,2.1302,2.8143,2.1587,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_s2d_p2p_n500,esdproxy,s2d,p2p,-500,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,2.1302,2.8143,2.1302,2.8143,2.1587,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_s2d_p2p_n500,esdproxy,s2d,p2p,-500,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,2.2146,2.7334,2.2146,2.7334,0.71023,disable switch SA (a to iovdd)
+hbm_esdproxy_s2d_p2p_n500,esdproxy,s2d,p2p,-500,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,2.2146,2.2145,2.2146,2.2146,1.2337,disable switch SB (b to iovss)
+hbm_esdproxy_s2d_p2p_n500,esdproxy,s2d,p2p,-500,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.71023,1.3324,0.71023,1.3324,1.5038,output PMOS OP (drain = pad)
+hbm_esdproxy_s2d_p2p_n500,esdproxy,s2d,p2p,-500,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,1.2337,3.0413,1.2337,3.0413,3.2491,output NMOS ON (drain = pad)
+hbm_esdproxy_s2d_p2p_n500,esdproxy,s2d,p2p,-500,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,0.9132,0.9132,0.9132,0.9132,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_s2d_p2p_n500,esdproxy,s2d,p2p,-500,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,2.9375,2.9375,2.9375,2.9375,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_s2d_p2p_n500,esdproxy,s2d,p2p,-500,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,1.2337,3.0413,1.2337,3.0413,3.2491,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_p2p_p1000,esdproxy,s2d,p2p,1000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,4.0121,5.3658,4.0121,5.3658,2.6999,input device of unit XA1 (gate = pad)
+hbm_esdproxy_s2d_p2p_p1000,esdproxy,s2d,p2p,1000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,4.0121,5.3658,4.0121,5.3658,2.6999,input device of unit XA2 (gate = pad)
+hbm_esdproxy_s2d_p2p_p1000,esdproxy,s2d,p2p,1000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,1.9207,3.251,1.9207,3.251,3.5269,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_s2d_p2p_p1000,esdproxy,s2d,p2p,1000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.46692,5.906,0.46692,5.906,5.9061,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_s2d_p2p_p1000,esdproxy,s2d,p2p,1000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.46692,5.906,0.46692,5.906,5.9061,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_p2p_p1000,esdproxy,s2d,p2p,1000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,1.283,1.2826,1.283,1.283,0.43622,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_s2d_p2p_p1000,esdproxy,s2d,p2p,1000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,1.283,1.2826,1.283,1.283,0.43622,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_s2d_p2p_p1000,esdproxy,s2d,p2p,1000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,2.4774,2.4338,2.4774,2.4774,1.5368,disable switch SA (a to iovdd)
+hbm_esdproxy_s2d_p2p_p1000,esdproxy,s2d,p2p,1000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,2.4774,3.0404,2.4774,3.0404,0.70833,disable switch SB (b to iovss)
+hbm_esdproxy_s2d_p2p_p1000,esdproxy,s2d,p2p,1000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,1.5368,3.5625,1.5368,3.5625,4.1341,output PMOS OP (drain = pad)
+hbm_esdproxy_s2d_p2p_p1000,esdproxy,s2d,p2p,1000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.70833,1.6942,0.70833,1.6942,1.7587,output NMOS ON (drain = pad)
+hbm_esdproxy_s2d_p2p_p1000,esdproxy,s2d,p2p,1000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,3.2498,3.2498,3.2498,3.2498,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_s2d_p2p_p1000,esdproxy,s2d,p2p,1000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,0.94778,0.94778,0.94778,0.94778,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_s2d_p2p_p1000,esdproxy,s2d,p2p,1000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,1.5368,3.5625,1.5368,3.5625,4.1341,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_p2p_n1000,esdproxy,s2d,p2p,-1000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,2.3556,2.3554,2.3556,2.3556,0.44983,input device of unit XA1 (gate = pad)
+hbm_esdproxy_s2d_p2p_n1000,esdproxy,s2d,p2p,-1000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,2.3556,2.3554,2.3556,2.3556,0.44983,input device of unit XA2 (gate = pad)
+hbm_esdproxy_s2d_p2p_n1000,esdproxy,s2d,p2p,-1000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.57935,5.1332,0.57935,5.1332,5.1892,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_s2d_p2p_n1000,esdproxy,s2d,p2p,-1000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.5625,2.8229,0.5625,2.8229,2.8239,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_s2d_p2p_n1000,esdproxy,s2d,p2p,-1000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.57935,5.1332,0.57935,5.1332,5.1892,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_p2p_n1000,esdproxy,s2d,p2p,-1000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,2.8676,3.9119,2.8676,3.9119,2.4413,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_s2d_p2p_n1000,esdproxy,s2d,p2p,-1000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,2.8676,3.9119,2.8676,3.9119,2.4413,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_s2d_p2p_n1000,esdproxy,s2d,p2p,-1000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,2.4583,3.0864,2.4583,3.0864,0.87778,disable switch SA (a to iovdd)
+hbm_esdproxy_s2d_p2p_n1000,esdproxy,s2d,p2p,-1000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,2.4583,2.435,2.4583,2.4583,1.546,disable switch SB (b to iovss)
+hbm_esdproxy_s2d_p2p_n1000,esdproxy,s2d,p2p,-1000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.87778,1.8295,0.87778,1.8295,2.0379,output PMOS OP (drain = pad)
+hbm_esdproxy_s2d_p2p_n1000,esdproxy,s2d,p2p,-1000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,1.546,4.1889,1.546,4.1889,4.4017,output NMOS ON (drain = pad)
+hbm_esdproxy_s2d_p2p_n1000,esdproxy,s2d,p2p,-1000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,0.96557,0.96557,0.96557,0.96557,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_s2d_p2p_n1000,esdproxy,s2d,p2p,-1000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,3.2645,3.2645,3.2645,3.2645,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_s2d_p2p_n1000,esdproxy,s2d,p2p,-1000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,1.546,4.1889,1.546,4.1889,4.4017,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_p2p_p2000,esdproxy,s2d,p2p,2000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,6.8058,8.825,6.8058,8.825,3.9848,input device of unit XA1 (gate = pad)
+hbm_esdproxy_s2d_p2p_p2000,esdproxy,s2d,p2p,2000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,6.8058,8.825,6.8058,8.825,3.9848,input device of unit XA2 (gate = pad)
+hbm_esdproxy_s2d_p2p_p2000,esdproxy,s2d,p2p,2000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,3.5168,5.4697,3.5168,5.4697,6.0082,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_s2d_p2p_p2000,esdproxy,s2d,p2p,2000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.58604,9.49,0.58604,9.49,9.4907,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_s2d_p2p_p2000,esdproxy,s2d,p2p,2000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.58604,9.49,0.58604,9.49,9.4907,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_p2p_p2000,esdproxy,s2d,p2p,2000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,1.9377,1.9376,1.9377,1.9377,0.43633,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_s2d_p2p_p2000,esdproxy,s2d,p2p,2000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,1.9377,1.9376,1.9377,1.9377,0.43633,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_s2d_p2p_p2000,esdproxy,s2d,p2p,2000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,3.4815,3.0746,3.4815,3.4815,2.0916,disable switch SA (a to iovdd)
+hbm_esdproxy_s2d_p2p_p2000,esdproxy,s2d,p2p,2000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,3.4815,4.0002,3.4815,4.0002,0.88963,disable switch SB (b to iovss)
+hbm_esdproxy_s2d_p2p_p2000,esdproxy,s2d,p2p,2000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,2.0916,5.3079,2.0916,5.3079,5.9466,output PMOS OP (drain = pad)
+hbm_esdproxy_s2d_p2p_p2000,esdproxy,s2d,p2p,2000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.88963,2.3947,0.88963,2.3947,2.4655,output NMOS ON (drain = pad)
+hbm_esdproxy_s2d_p2p_p2000,esdproxy,s2d,p2p,2000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,4.0614,4.0614,4.0614,4.0614,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_s2d_p2p_p2000,esdproxy,s2d,p2p,2000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,1.007,1.007,1.007,1.007,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_s2d_p2p_p2000,esdproxy,s2d,p2p,2000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,2.0916,5.3079,2.0916,5.3079,5.9466,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_p2p_n2000,esdproxy,s2d,p2p,-2000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,4.1104,4.11,4.1104,4.1104,0.47619,input device of unit XA1 (gate = pad)
+hbm_esdproxy_s2d_p2p_n2000,esdproxy,s2d,p2p,-2000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,4.1104,4.11,4.1104,4.1104,0.47619,input device of unit XA2 (gate = pad)
+hbm_esdproxy_s2d_p2p_n2000,esdproxy,s2d,p2p,-2000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.65489,8.025,0.65489,8.025,8.1014,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_s2d_p2p_n2000,esdproxy,s2d,p2p,-2000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.93903,4.606,0.93903,4.606,4.6084,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_s2d_p2p_n2000,esdproxy,s2d,p2p,-2000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.65489,8.025,0.65489,8.025,8.1014,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_s2d_p2p_n2000,esdproxy,s2d,p2p,-2000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,4.3608,5.977,4.3608,5.977,3.5478,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_s2d_p2p_n2000,esdproxy,s2d,p2p,-2000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,4.3608,5.977,4.3608,5.977,3.5478,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_s2d_p2p_n2000,esdproxy,s2d,p2p,-2000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,3.5139,4.1884,3.5139,4.1884,1.0734,disable switch SA (a to iovdd)
+hbm_esdproxy_s2d_p2p_n2000,esdproxy,s2d,p2p,-2000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,3.5139,3.3912,3.5139,3.5139,2.0745,disable switch SB (b to iovss)
+hbm_esdproxy_s2d_p2p_n2000,esdproxy,s2d,p2p,-2000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,1.0734,2.8262,1.0734,2.8262,3.0681,output PMOS OP (drain = pad)
+hbm_esdproxy_s2d_p2p_n2000,esdproxy,s2d,p2p,-2000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,2.0745,6.3554,2.0745,6.3554,6.5813,output NMOS ON (drain = pad)
+hbm_esdproxy_s2d_p2p_n2000,esdproxy,s2d,p2p,-2000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,1.0458,1.0458,1.0458,1.0458,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_s2d_p2p_n2000,esdproxy,s2d,p2p,-2000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,4.4002,4.4002,4.4002,4.4002,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_s2d_p2p_n2000,esdproxy,s2d,p2p,-2000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,2.0745,6.3554,2.0745,6.3554,6.5813,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_gnd_vss_p500,esdproxy,d2s,gnd_vss,500,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,0.62326,0.9382,0.62326,0.9382,0.851,input device of unit XA1 (gate = pad)
+hbm_esdproxy_d2s_gnd_vss_p500,esdproxy,d2s,gnd_vss,500,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,0.62326,0.9382,0.62326,0.9382,0.851,input device of unit XA2 (gate = pad)
+hbm_esdproxy_d2s_gnd_vss_p500,esdproxy,d2s,gnd_vss,500,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.16817,1.1384,0.16817,1.1384,1.1384,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_d2s_gnd_vss_p500,esdproxy,d2s,gnd_vss,500,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.16734,1.0984,0.16734,1.0984,1.2271,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_d2s_gnd_vss_p500,esdproxy,d2s,gnd_vss,500,s2d,xs2d.xt.xtdn,sg13_hv_nmos,1u,0.45u,2.2058,2.2058,2.2058,2.2058,0.053727,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_gnd_vss_p500,esdproxy,d2s,gnd_vss,500,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,2.1296,2.7458,2.1296,2.7458,2.1385,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_d2s_gnd_vss_p500,esdproxy,d2s,gnd_vss,500,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,2.1296,2.7458,2.1296,2.7458,2.1385,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_d2s_gnd_vss_p500,esdproxy,d2s,gnd_vss,500,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,2.2058,2.7101,2.2058,2.7101,0.71189,disable switch SA (a to iovdd)
+hbm_esdproxy_d2s_gnd_vss_p500,esdproxy,d2s,gnd_vss,500,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,2.2058,2.2059,2.2058,2.2059,1.215,disable switch SB (b to iovss)
+hbm_esdproxy_d2s_gnd_vss_p500,esdproxy,d2s,gnd_vss,500,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.71189,1.3296,0.71189,1.3296,1.5066,output PMOS OP (drain = pad)
+hbm_esdproxy_d2s_gnd_vss_p500,esdproxy,d2s,gnd_vss,500,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,1.215,2.9758,1.215,2.9758,3.2249,output NMOS ON (drain = pad)
+hbm_esdproxy_d2s_gnd_vss_p500,esdproxy,d2s,gnd_vss,500,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,0.91361,0.91361,0.91361,0.91361,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_d2s_gnd_vss_p500,esdproxy,d2s,gnd_vss,500,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,2.9368,2.9368,2.9368,2.9368,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_d2s_gnd_vss_p500,esdproxy,d2s,gnd_vss,500,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,1.215,2.9758,1.215,2.9758,3.2249,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_gnd_vss_n500,esdproxy,d2s,gnd_vss,-500,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,0.026976,0.044815,0.026976,0.044815,0.032528,input device of unit XA1 (gate = pad)
+hbm_esdproxy_d2s_gnd_vss_n500,esdproxy,d2s,gnd_vss,-500,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,0.026969,0.044815,0.026969,0.044815,0.032534,input device of unit XA2 (gate = pad)
+hbm_esdproxy_d2s_gnd_vss_n500,esdproxy,d2s,gnd_vss,-500,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.010402,0.049767,0.010402,0.049767,0.049845,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_d2s_gnd_vss_n500,esdproxy,d2s,gnd_vss,-500,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.011206,0.05834,0.011206,0.05834,0.058347,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_d2s_gnd_vss_n500,esdproxy,d2s,gnd_vss,-500,s2d,xs2d.xt.xtdn,sg13_hv_nmos,1u,0.45u,0.10687,0.10316,0.10687,0.10687,0.0042979,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_gnd_vss_n500,esdproxy,d2s,gnd_vss,-500,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,0.91646,0.91653,0.91646,0.91653,0.43779,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_d2s_gnd_vss_n500,esdproxy,d2s,gnd_vss,-500,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,0.91646,0.91653,0.91646,0.91653,0.43779,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_d2s_gnd_vss_n500,esdproxy,d2s,gnd_vss,-500,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,0.10579,0.58738,0.10579,0.58738,0.48208,disable switch SA (a to iovdd)
+hbm_esdproxy_d2s_gnd_vss_n500,esdproxy,d2s,gnd_vss,-500,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,0.10579,0.62924,0.10579,0.62924,0.73222,disable switch SB (b to iovss)
+hbm_esdproxy_d2s_gnd_vss_n500,esdproxy,d2s,gnd_vss,-500,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.48208,0.81893,0.48208,0.81893,1.2785,output PMOS OP (drain = pad)
+hbm_esdproxy_d2s_gnd_vss_n500,esdproxy,d2s,gnd_vss,-500,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.73222,0.77899,0.73222,0.77899,1.3838,output NMOS ON (drain = pad)
+hbm_esdproxy_d2s_gnd_vss_n500,esdproxy,d2s,gnd_vss,-500,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,0.41566,0.41566,0.41566,0.41566,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_d2s_gnd_vss_n500,esdproxy,d2s,gnd_vss,-500,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,0.59885,0.59885,0.59885,0.59885,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_d2s_gnd_vss_n500,esdproxy,d2s,gnd_vss,-500,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,0.91646,0.91653,0.91646,0.91653,0.43779,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_gnd_vss_p1000,esdproxy,d2s,gnd_vss,1000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,0.71725,1.0614,0.71725,1.0614,0.97121,input device of unit XA1 (gate = pad)
+hbm_esdproxy_d2s_gnd_vss_p1000,esdproxy,d2s,gnd_vss,1000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,0.71725,1.0614,0.71725,1.0614,0.97121,input device of unit XA2 (gate = pad)
+hbm_esdproxy_d2s_gnd_vss_p1000,esdproxy,d2s,gnd_vss,1000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.22242,1.2731,0.22242,1.2731,1.2731,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_d2s_gnd_vss_p1000,esdproxy,d2s,gnd_vss,1000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.22461,1.2225,0.22461,1.2225,1.3946,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_d2s_gnd_vss_p1000,esdproxy,d2s,gnd_vss,1000,s2d,xs2d.xt.xtdn,sg13_hv_nmos,1u,0.45u,2.4364,2.4364,2.4364,2.4364,0.065425,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_gnd_vss_p1000,esdproxy,d2s,gnd_vss,1000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,2.7792,3.7758,2.7792,3.7758,2.4196,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_d2s_gnd_vss_p1000,esdproxy,d2s,gnd_vss,1000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,2.7792,3.7758,2.7792,3.7758,2.4196,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_d2s_gnd_vss_p1000,esdproxy,d2s,gnd_vss,1000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,2.4366,3.0635,2.4366,3.0635,0.88018,disable switch SA (a to iovdd)
+hbm_esdproxy_d2s_gnd_vss_p1000,esdproxy,d2s,gnd_vss,1000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,2.4366,2.4343,2.4366,2.4366,1.4976,disable switch SB (b to iovss)
+hbm_esdproxy_d2s_gnd_vss_p1000,esdproxy,d2s,gnd_vss,1000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.88018,1.8256,0.88018,1.8256,2.0428,output PMOS OP (drain = pad)
+hbm_esdproxy_d2s_gnd_vss_p1000,esdproxy,d2s,gnd_vss,1000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,1.4976,4.0365,1.4976,4.0365,4.2576,output NMOS ON (drain = pad)
+hbm_esdproxy_d2s_gnd_vss_p1000,esdproxy,d2s,gnd_vss,1000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,0.96679,0.96679,0.96679,0.96679,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_d2s_gnd_vss_p1000,esdproxy,d2s,gnd_vss,1000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,3.264,3.264,3.264,3.264,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_d2s_gnd_vss_p1000,esdproxy,d2s,gnd_vss,1000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,1.4976,4.0365,1.4976,4.0365,4.2576,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_gnd_vss_n1000,esdproxy,d2s,gnd_vss,-1000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,0.034592,0.056308,0.034592,0.056308,0.035461,input device of unit XA1 (gate = pad)
+hbm_esdproxy_d2s_gnd_vss_n1000,esdproxy,d2s,gnd_vss,-1000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,0.034592,0.056308,0.034592,0.056308,0.035461,input device of unit XA2 (gate = pad)
+hbm_esdproxy_d2s_gnd_vss_n1000,esdproxy,d2s,gnd_vss,-1000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.011415,0.061876,0.011415,0.061876,0.061909,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_d2s_gnd_vss_n1000,esdproxy,d2s,gnd_vss,-1000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.012298,0.072129,0.012298,0.072129,0.072129,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_d2s_gnd_vss_n1000,esdproxy,d2s,gnd_vss,-1000,s2d,xs2d.xt.xtdn,sg13_hv_nmos,1u,0.45u,0.13403,0.12897,0.13403,0.13403,0.005706,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_gnd_vss_n1000,esdproxy,d2s,gnd_vss,-1000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,1.2447,1.2444,1.2447,1.2447,0.44259,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_d2s_gnd_vss_n1000,esdproxy,d2s,gnd_vss,-1000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,1.2447,1.2444,1.2447,1.2447,0.44259,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_d2s_gnd_vss_n1000,esdproxy,d2s,gnd_vss,-1000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,0.13201,0.67136,0.13201,0.67136,0.54458,disable switch SA (a to iovdd)
+hbm_esdproxy_d2s_gnd_vss_n1000,esdproxy,d2s,gnd_vss,-1000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,0.13201,0.75276,0.13201,0.75276,0.86425,disable switch SB (b to iovss)
+hbm_esdproxy_d2s_gnd_vss_n1000,esdproxy,d2s,gnd_vss,-1000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.54458,1.1456,0.54458,1.1456,1.6728,output PMOS OP (drain = pad)
+hbm_esdproxy_d2s_gnd_vss_n1000,esdproxy,d2s,gnd_vss,-1000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.86425,1.1109,0.86425,1.1109,1.7927,output NMOS ON (drain = pad)
+hbm_esdproxy_d2s_gnd_vss_n1000,esdproxy,d2s,gnd_vss,-1000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,0.44587,0.44587,0.44587,0.44587,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_d2s_gnd_vss_n1000,esdproxy,d2s,gnd_vss,-1000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,0.75582,0.75582,0.75582,0.75582,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_d2s_gnd_vss_n1000,esdproxy,d2s,gnd_vss,-1000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,1.2447,1.2444,1.2447,1.2447,0.44259,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_gnd_vss_p2000,esdproxy,d2s,gnd_vss,2000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,0.85545,1.341,0.85545,1.341,1.14,input device of unit XA1 (gate = pad)
+hbm_esdproxy_d2s_gnd_vss_p2000,esdproxy,d2s,gnd_vss,2000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,0.85545,1.341,0.85545,1.341,1.14,input device of unit XA2 (gate = pad)
+hbm_esdproxy_d2s_gnd_vss_p2000,esdproxy,d2s,gnd_vss,2000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.29648,1.6068,0.29648,1.6068,1.6082,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_d2s_gnd_vss_p2000,esdproxy,d2s,gnd_vss,2000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.30579,1.6803,0.30579,1.6803,1.6803,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_d2s_gnd_vss_p2000,esdproxy,d2s,gnd_vss,2000,s2d,xs2d.xt.xtdn,sg13_hv_nmos,1u,0.45u,3.2028,3.2028,3.2028,3.2028,0.08282,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_gnd_vss_p2000,esdproxy,d2s,gnd_vss,2000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,4.1926,5.7172,4.1926,5.7172,3.3089,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_d2s_gnd_vss_p2000,esdproxy,d2s,gnd_vss,2000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,4.1926,5.7172,4.1926,5.7172,3.3089,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_d2s_gnd_vss_p2000,esdproxy,d2s,gnd_vss,2000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,3.2152,3.9293,3.2152,3.9293,1.0786,disable switch SA (a to iovdd)
+hbm_esdproxy_d2s_gnd_vss_p2000,esdproxy,d2s,gnd_vss,2000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,3.2152,3.0965,3.2152,3.2152,1.9677,disable switch SB (b to iovss)
+hbm_esdproxy_d2s_gnd_vss_p2000,esdproxy,d2s,gnd_vss,2000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,1.0786,2.8227,1.0786,2.8227,3.0783,output PMOS OP (drain = pad)
+hbm_esdproxy_d2s_gnd_vss_p2000,esdproxy,d2s,gnd_vss,2000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,1.9677,6.0555,1.9677,6.0555,6.2921,output NMOS ON (drain = pad)
+hbm_esdproxy_d2s_gnd_vss_p2000,esdproxy,d2s,gnd_vss,2000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,1.0484,1.0484,1.0484,1.0484,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_d2s_gnd_vss_p2000,esdproxy,d2s,gnd_vss,2000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,4.1052,4.1052,4.1052,4.1052,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_d2s_gnd_vss_p2000,esdproxy,d2s,gnd_vss,2000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,1.9677,6.0555,1.9677,6.0555,6.2921,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_gnd_vss_n2000,esdproxy,d2s,gnd_vss,-2000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,0.04704,0.076761,0.04704,0.076761,0.039379,input device of unit XA1 (gate = pad)
+hbm_esdproxy_d2s_gnd_vss_n2000,esdproxy,d2s,gnd_vss,-2000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,0.04704,0.076761,0.04704,0.076761,0.039379,input device of unit XA2 (gate = pad)
+hbm_esdproxy_d2s_gnd_vss_n2000,esdproxy,d2s,gnd_vss,-2000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.012729,0.083679,0.012729,0.083679,0.083809,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_d2s_gnd_vss_n2000,esdproxy,d2s,gnd_vss,-2000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.013815,0.098678,0.013815,0.098678,0.098678,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_d2s_gnd_vss_n2000,esdproxy,d2s,gnd_vss,-2000,s2d,xs2d.xt.xtdn,sg13_hv_nmos,1u,0.45u,0.18244,0.17536,0.18244,0.18244,0.007113,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_gnd_vss_n2000,esdproxy,d2s,gnd_vss,-2000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,1.9321,1.9318,1.9321,1.9321,0.45331,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_d2s_gnd_vss_n2000,esdproxy,d2s,gnd_vss,-2000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,1.9321,1.9318,1.9321,1.9321,0.45331,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_d2s_gnd_vss_n2000,esdproxy,d2s,gnd_vss,-2000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,0.17829,0.76173,0.17829,0.76173,0.60731,disable switch SA (a to iovdd)
+hbm_esdproxy_d2s_gnd_vss_n2000,esdproxy,d2s,gnd_vss,-2000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,0.17829,0.91612,0.17829,0.91612,1.0372,disable switch SB (b to iovss)
+hbm_esdproxy_d2s_gnd_vss_n2000,esdproxy,d2s,gnd_vss,-2000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.60731,1.809,0.60731,1.809,2.4157,output PMOS OP (drain = pad)
+hbm_esdproxy_d2s_gnd_vss_n2000,esdproxy,d2s,gnd_vss,-2000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,1.0372,1.8117,1.0372,1.8117,2.563,output NMOS ON (drain = pad)
+hbm_esdproxy_d2s_gnd_vss_n2000,esdproxy,d2s,gnd_vss,-2000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,0.65019,0.65019,0.65019,0.65019,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_d2s_gnd_vss_n2000,esdproxy,d2s,gnd_vss,-2000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,1.071,1.071,1.071,1.071,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_d2s_gnd_vss_n2000,esdproxy,d2s,gnd_vss,-2000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,1.9321,1.9318,1.9321,1.9321,0.45331,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_gnd_vdd_p500,esdproxy,d2s,gnd_vdd,500,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,0.031077,0.0522,0.031077,0.0522,0.022822,input device of unit XA1 (gate = pad)
+hbm_esdproxy_d2s_gnd_vdd_p500,esdproxy,d2s,gnd_vdd,500,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,0.031077,0.0522,0.031077,0.0522,0.022822,input device of unit XA2 (gate = pad)
+hbm_esdproxy_d2s_gnd_vdd_p500,esdproxy,d2s,gnd_vdd,500,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.009207,0.060636,0.009207,0.060636,0.060683,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_d2s_gnd_vdd_p500,esdproxy,d2s,gnd_vdd,500,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.0099193,0.065669,0.0099193,0.065669,0.06567,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_d2s_gnd_vdd_p500,esdproxy,d2s,gnd_vdd,500,s2d,xs2d.xt.xtdn,sg13_hv_nmos,1u,0.45u,0.12634,0.12266,0.12634,0.12634,0.0036798,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_gnd_vdd_p500,esdproxy,d2s,gnd_vdd,500,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,0.96957,1.2426,0.96957,1.2426,0.43682,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_d2s_gnd_vdd_p500,esdproxy,d2s,gnd_vdd,500,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,0.96957,1.2426,0.96957,1.2426,0.43682,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_d2s_gnd_vdd_p500,esdproxy,d2s,gnd_vdd,500,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,0.12226,0.74837,0.12226,0.74837,0.79203,disable switch SA (a to iovdd)
+hbm_esdproxy_d2s_gnd_vdd_p500,esdproxy,d2s,gnd_vdd,500,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,0.12226,0.70148,0.12226,0.70148,0.61884,disable switch SB (b to iovss)
+hbm_esdproxy_d2s_gnd_vdd_p500,esdproxy,d2s,gnd_vdd,500,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.79203,0.82897,0.79203,0.82897,1.5224,output PMOS OP (drain = pad)
+hbm_esdproxy_d2s_gnd_vdd_p500,esdproxy,d2s,gnd_vdd,500,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.61884,0.86449,0.61884,0.86449,1.4668,output NMOS ON (drain = pad)
+hbm_esdproxy_d2s_gnd_vdd_p500,esdproxy,d2s,gnd_vdd,500,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,0.59136,0.59136,0.59136,0.59136,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_d2s_gnd_vdd_p500,esdproxy,d2s,gnd_vdd,500,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,0.47958,0.47958,0.47958,0.47958,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_d2s_gnd_vdd_p500,esdproxy,d2s,gnd_vdd,500,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,0.96957,1.2426,0.96957,1.2426,0.43682,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_gnd_vdd_n500,esdproxy,d2s,gnd_vdd,-500,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,0.62087,0.92729,0.62087,0.92729,0.83971,input device of unit XA1 (gate = pad)
+hbm_esdproxy_d2s_gnd_vdd_n500,esdproxy,d2s,gnd_vdd,-500,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,0.62087,0.92729,0.62087,0.92729,0.83971,input device of unit XA2 (gate = pad)
+hbm_esdproxy_d2s_gnd_vdd_n500,esdproxy,d2s,gnd_vdd,-500,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.16961,1.1383,0.16961,1.1383,1.1384,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_d2s_gnd_vdd_n500,esdproxy,d2s,gnd_vdd,-500,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.16802,1.1009,0.16802,1.1009,1.208,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_d2s_gnd_vdd_n500,esdproxy,d2s,gnd_vdd,-500,s2d,xs2d.xt.xtdn,sg13_hv_nmos,1u,0.45u,2.2035,2.2035,2.2035,2.2035,0.053607,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_gnd_vdd_n500,esdproxy,d2s,gnd_vdd,-500,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,0.95718,0.95699,0.95718,0.95718,0.43018,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_d2s_gnd_vdd_n500,esdproxy,d2s,gnd_vdd,-500,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,0.95718,0.95699,0.95718,0.95718,0.43018,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_d2s_gnd_vdd_n500,esdproxy,d2s,gnd_vdd,-500,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,2.2036,2.2042,2.2036,2.2042,1.1982,disable switch SA (a to iovdd)
+hbm_esdproxy_d2s_gnd_vdd_n500,esdproxy,d2s,gnd_vdd,-500,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,2.2036,2.6308,2.2036,2.6308,0.59561,disable switch SB (b to iovss)
+hbm_esdproxy_d2s_gnd_vdd_n500,esdproxy,d2s,gnd_vdd,-500,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,1.1982,2.9646,1.1982,2.9646,3.1644,output PMOS OP (drain = pad)
+hbm_esdproxy_d2s_gnd_vdd_n500,esdproxy,d2s,gnd_vdd,-500,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.59561,1.3108,0.59561,1.3108,1.369,output NMOS ON (drain = pad)
+hbm_esdproxy_d2s_gnd_vdd_n500,esdproxy,d2s,gnd_vdd,-500,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,2.9227,2.9227,2.9227,2.9227,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_d2s_gnd_vdd_n500,esdproxy,d2s,gnd_vdd,-500,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,0.90608,0.90608,0.90608,0.90608,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_d2s_gnd_vdd_n500,esdproxy,d2s,gnd_vdd,-500,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,1.1982,2.9646,1.1982,2.9646,3.1644,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_gnd_vdd_p1000,esdproxy,d2s,gnd_vdd,1000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,0.045636,0.077206,0.045636,0.077206,0.039349,input device of unit XA1 (gate = pad)
+hbm_esdproxy_d2s_gnd_vdd_p1000,esdproxy,d2s,gnd_vdd,1000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,0.045636,0.077206,0.045636,0.077206,0.039349,input device of unit XA2 (gate = pad)
+hbm_esdproxy_d2s_gnd_vdd_p1000,esdproxy,d2s,gnd_vdd,1000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.010257,0.089104,0.010257,0.089104,0.089288,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_d2s_gnd_vdd_p1000,esdproxy,d2s,gnd_vdd,1000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.011064,0.097404,0.011064,0.097404,0.097405,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_d2s_gnd_vdd_p1000,esdproxy,d2s,gnd_vdd,1000,s2d,xs2d.xa.xtpp,sg13_hv_pmos,1u,0.45u,6.2739e-13,0.011825,0.18656,0.18656,0.011825,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_gnd_vdd_p1000,esdproxy,d2s,gnd_vdd,1000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,1.4478,1.7199,1.4478,1.7199,0.53876,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_d2s_gnd_vdd_p1000,esdproxy,d2s,gnd_vdd,1000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,1.4478,1.7199,1.4478,1.7199,0.53876,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_d2s_gnd_vdd_p1000,esdproxy,d2s,gnd_vdd,1000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,0.178,0.92005,0.178,0.92005,0.93813,disable switch SA (a to iovdd)
+hbm_esdproxy_d2s_gnd_vdd_p1000,esdproxy,d2s,gnd_vdd,1000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,0.178,0.79242,0.178,0.79242,0.69362,disable switch SB (b to iovss)
+hbm_esdproxy_d2s_gnd_vdd_p1000,esdproxy,d2s,gnd_vdd,1000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.93813,1.3191,0.93813,1.3191,2.0854,output PMOS OP (drain = pad)
+hbm_esdproxy_d2s_gnd_vdd_p1000,esdproxy,d2s,gnd_vdd,1000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.69362,1.3205,0.69362,1.3205,2.0141,output NMOS ON (drain = pad)
+hbm_esdproxy_d2s_gnd_vdd_p1000,esdproxy,d2s,gnd_vdd,1000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,0.82729,0.82729,0.82729,0.82729,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_d2s_gnd_vdd_p1000,esdproxy,d2s,gnd_vdd,1000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,0.51689,0.51689,0.51689,0.51689,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_d2s_gnd_vdd_p1000,esdproxy,d2s,gnd_vdd,1000,d2s,xd2s.xd.xpcr,sg13_hv_pmos,30u,3u,1.7643,0.69204,0.2503,1.7643,2.4273,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_gnd_vdd_n1000,esdproxy,d2s,gnd_vdd,-1000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,0.71308,1.0506,0.71308,1.0506,0.96484,input device of unit XA1 (gate = pad)
+hbm_esdproxy_d2s_gnd_vdd_n1000,esdproxy,d2s,gnd_vdd,-1000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,0.71308,1.0506,0.71308,1.0506,0.96484,input device of unit XA2 (gate = pad)
+hbm_esdproxy_d2s_gnd_vdd_n1000,esdproxy,d2s,gnd_vdd,-1000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.22268,1.2731,0.22268,1.2731,1.2732,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_d2s_gnd_vdd_n1000,esdproxy,d2s,gnd_vdd,-1000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.22573,1.2216,0.22573,1.2216,1.3816,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_d2s_gnd_vdd_n1000,esdproxy,d2s,gnd_vdd,-1000,s2d,xs2d.xa.xtpp,sg13_hv_pmos,1u,0.45u,2.0802e-10,0.15917,2.4313,2.4313,0.15917,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_gnd_vdd_n1000,esdproxy,d2s,gnd_vdd,-1000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,1.2839,1.2835,1.2839,1.2839,0.43376,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_d2s_gnd_vdd_n1000,esdproxy,d2s,gnd_vdd,-1000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,1.2839,1.2835,1.2839,1.2839,0.43376,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_d2s_gnd_vdd_n1000,esdproxy,d2s,gnd_vdd,-1000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,2.4315,2.4259,2.4315,2.4315,1.4633,disable switch SA (a to iovdd)
+hbm_esdproxy_d2s_gnd_vdd_n1000,esdproxy,d2s,gnd_vdd,-1000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,2.4315,2.977,2.4315,2.977,0.71443,disable switch SB (b to iovss)
+hbm_esdproxy_d2s_gnd_vdd_n1000,esdproxy,d2s,gnd_vdd,-1000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,1.4633,3.3693,1.4633,3.3693,3.9463,output PMOS OP (drain = pad)
+hbm_esdproxy_d2s_gnd_vdd_n1000,esdproxy,d2s,gnd_vdd,-1000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.71443,1.6927,0.71443,1.6927,1.7653,output NMOS ON (drain = pad)
+hbm_esdproxy_d2s_gnd_vdd_n1000,esdproxy,d2s,gnd_vdd,-1000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,3.2444,3.2444,3.2444,3.2444,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_d2s_gnd_vdd_n1000,esdproxy,d2s,gnd_vdd,-1000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,0.94802,0.94802,0.94802,0.94802,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_d2s_gnd_vdd_n1000,esdproxy,d2s,gnd_vdd,-1000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,1.4633,3.3693,1.4633,3.3693,3.9463,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_gnd_vdd_p2000,esdproxy,d2s,gnd_vdd,2000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,0.040616,0.076138,0.040616,0.076138,0.050592,input device of unit XA1 (gate = pad)
+hbm_esdproxy_d2s_gnd_vdd_p2000,esdproxy,d2s,gnd_vdd,2000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,0.040616,0.076138,0.040616,0.076138,0.050592,input device of unit XA2 (gate = pad)
+hbm_esdproxy_d2s_gnd_vdd_p2000,esdproxy,d2s,gnd_vdd,2000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.011389,0.082147,0.011389,0.082147,0.084224,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_d2s_gnd_vdd_p2000,esdproxy,d2s,gnd_vdd,2000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.012375,0.098361,0.012375,0.098361,0.098363,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_d2s_gnd_vdd_p2000,esdproxy,d2s,gnd_vdd,2000,s2d,xs2d.xt.xtdn,sg13_hv_nmos,1u,0.45u,0.18199,0.17658,0.18199,0.18199,0.0054146,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_gnd_vdd_p2000,esdproxy,d2s,gnd_vdd,2000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,2.4631,2.6644,2.4631,2.6644,0.73839,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_d2s_gnd_vdd_p2000,esdproxy,d2s,gnd_vdd,2000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,2.4631,2.6644,2.4631,2.6644,0.73839,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_d2s_gnd_vdd_p2000,esdproxy,d2s,gnd_vdd,2000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,0.16374,1.1656,0.16374,1.1656,1.1455,disable switch SA (a to iovdd)
+hbm_esdproxy_d2s_gnd_vdd_p2000,esdproxy,d2s,gnd_vdd,2000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,0.16374,0.86705,0.16374,0.86705,0.77938,disable switch SB (b to iovss)
+hbm_esdproxy_d2s_gnd_vdd_p2000,esdproxy,d2s,gnd_vdd,2000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,1.1455,2.3687,1.1455,2.3687,3.168,output PMOS OP (drain = pad)
+hbm_esdproxy_d2s_gnd_vdd_p2000,esdproxy,d2s,gnd_vdd,2000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.77938,2.3324,0.77938,2.3324,3.0356,output NMOS ON (drain = pad)
+hbm_esdproxy_d2s_gnd_vdd_p2000,esdproxy,d2s,gnd_vdd,2000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,1.2445,1.2445,1.2445,1.2445,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_d2s_gnd_vdd_p2000,esdproxy,d2s,gnd_vdd,2000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,0.92028,0.92028,0.92028,0.92028,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_d2s_gnd_vdd_p2000,esdproxy,d2s,gnd_vdd,2000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,2.4631,2.6644,2.4631,2.6644,0.73839,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_gnd_vdd_n2000,esdproxy,d2s,gnd_vdd,-2000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,0.8457,1.3029,0.8457,1.3029,1.1361,input device of unit XA1 (gate = pad)
+hbm_esdproxy_d2s_gnd_vdd_n2000,esdproxy,d2s,gnd_vdd,-2000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,0.8457,1.3029,0.8457,1.3029,1.1361,input device of unit XA2 (gate = pad)
+hbm_esdproxy_d2s_gnd_vdd_n2000,esdproxy,d2s,gnd_vdd,-2000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.29657,1.5453,0.29657,1.5453,1.5457,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_d2s_gnd_vdd_n2000,esdproxy,d2s,gnd_vdd,-2000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.30552,1.6335,0.30552,1.6335,1.6336,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_d2s_gnd_vdd_n2000,esdproxy,d2s,gnd_vdd,-2000,s2d,xs2d.xa.xtpp,sg13_hv_pmos,1u,0.45u,5.5067e-14,0.20347,3.0924,3.0924,0.20347,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_gnd_vdd_n2000,esdproxy,d2s,gnd_vdd,-2000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,1.9442,1.944,1.9442,1.9442,0.43267,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_d2s_gnd_vdd_n2000,esdproxy,d2s,gnd_vdd,-2000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,1.9442,1.944,1.9442,1.9442,0.43267,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_d2s_gnd_vdd_n2000,esdproxy,d2s,gnd_vdd,-2000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,3.1025,2.8767,3.1025,3.1025,1.9511,disable switch SA (a to iovdd)
+hbm_esdproxy_d2s_gnd_vdd_n2000,esdproxy,d2s,gnd_vdd,-2000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,3.1025,3.6764,3.1025,3.6764,0.89771,disable switch SB (b to iovss)
+hbm_esdproxy_d2s_gnd_vdd_n2000,esdproxy,d2s,gnd_vdd,-2000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,1.9511,4.923,1.9511,4.923,5.5845,output PMOS OP (drain = pad)
+hbm_esdproxy_d2s_gnd_vdd_n2000,esdproxy,d2s,gnd_vdd,-2000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.89771,2.3994,0.89771,2.3994,2.483,output NMOS ON (drain = pad)
+hbm_esdproxy_d2s_gnd_vdd_n2000,esdproxy,d2s,gnd_vdd,-2000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,3.7163,3.7163,3.7163,3.7163,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_d2s_gnd_vdd_n2000,esdproxy,d2s,gnd_vdd,-2000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,1.0089,1.0089,1.0089,1.0089,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_d2s_gnd_vdd_n2000,esdproxy,d2s,gnd_vdd,-2000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,1.9511,4.923,1.9511,4.923,5.5845,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_p2p_p500,esdproxy,d2s,p2p,500,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,1.4862,1.4861,1.4862,1.4862,0.45077,input device of unit XA1 (gate = pad)
+hbm_esdproxy_d2s_p2p_p500,esdproxy,d2s,p2p,500,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,1.4862,1.4861,1.4862,1.4862,0.45077,input device of unit XA2 (gate = pad)
+hbm_esdproxy_d2s_p2p_p500,esdproxy,d2s,p2p,500,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.50725,3.6201,0.50725,3.6201,3.6595,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_d2s_p2p_p500,esdproxy,d2s,p2p,500,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.43237,1.9165,0.43237,1.9165,1.9169,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_d2s_p2p_p500,esdproxy,d2s,p2p,500,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.50725,3.6201,0.50725,3.6201,3.6595,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_p2p_p500,esdproxy,d2s,p2p,500,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,2.1302,2.8143,2.1302,2.8143,2.1586,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_d2s_p2p_p500,esdproxy,d2s,p2p,500,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,2.1302,2.8143,2.1302,2.8143,2.1586,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_d2s_p2p_p500,esdproxy,d2s,p2p,500,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,2.2146,2.7334,2.2146,2.7334,0.71022,disable switch SA (a to iovdd)
+hbm_esdproxy_d2s_p2p_p500,esdproxy,d2s,p2p,500,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,2.2146,2.2145,2.2146,2.2146,1.2337,disable switch SB (b to iovss)
+hbm_esdproxy_d2s_p2p_p500,esdproxy,d2s,p2p,500,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.71022,1.3324,0.71022,1.3324,1.5038,output PMOS OP (drain = pad)
+hbm_esdproxy_d2s_p2p_p500,esdproxy,d2s,p2p,500,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,1.2337,3.0413,1.2337,3.0413,3.2491,output NMOS ON (drain = pad)
+hbm_esdproxy_d2s_p2p_p500,esdproxy,d2s,p2p,500,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,0.9132,0.9132,0.9132,0.9132,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_d2s_p2p_p500,esdproxy,d2s,p2p,500,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,2.9375,2.9375,2.9375,2.9375,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_d2s_p2p_p500,esdproxy,d2s,p2p,500,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,1.2337,3.0413,1.2337,3.0413,3.2491,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_p2p_n500,esdproxy,d2s,p2p,-500,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,2.6017,3.5198,2.6017,3.5198,2.1868,input device of unit XA1 (gate = pad)
+hbm_esdproxy_d2s_p2p_n500,esdproxy,d2s,p2p,-500,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,2.6017,3.5198,2.6017,3.5198,2.1868,input device of unit XA2 (gate = pad)
+hbm_esdproxy_d2s_p2p_n500,esdproxy,d2s,p2p,-500,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,1.1125,2.1081,1.1125,2.1081,2.2512,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_d2s_p2p_n500,esdproxy,d2s,p2p,-500,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.34681,3.9931,0.34681,3.9931,3.9931,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_d2s_p2p_n500,esdproxy,d2s,p2p,-500,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.34681,3.9931,0.34681,3.9931,3.9931,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_p2p_n500,esdproxy,d2s,p2p,-500,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,0.95687,0.9567,0.95687,0.95687,0.43297,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_d2s_p2p_n500,esdproxy,d2s,p2p,-500,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,0.95687,0.9567,0.95687,0.95687,0.43297,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_d2s_p2p_n500,esdproxy,d2s,p2p,-500,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,2.2156,2.2158,2.2156,2.2158,1.2349,disable switch SA (a to iovdd)
+hbm_esdproxy_d2s_p2p_n500,esdproxy,d2s,p2p,-500,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,2.2156,2.6734,2.2156,2.6734,0.59214,disable switch SB (b to iovss)
+hbm_esdproxy_d2s_p2p_n500,esdproxy,d2s,p2p,-500,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,1.2349,2.9684,1.2349,2.9684,3.2014,output PMOS OP (drain = pad)
+hbm_esdproxy_d2s_p2p_n500,esdproxy,d2s,p2p,-500,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.59214,1.312,0.59214,1.312,1.3658,output NMOS ON (drain = pad)
+hbm_esdproxy_d2s_p2p_n500,esdproxy,d2s,p2p,-500,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,2.9265,2.9265,2.9265,2.9265,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_d2s_p2p_n500,esdproxy,d2s,p2p,-500,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,0.90601,0.90601,0.90601,0.90601,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_d2s_p2p_n500,esdproxy,d2s,p2p,-500,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,1.2349,2.9684,1.2349,2.9684,3.2014,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_p2p_p1000,esdproxy,d2s,p2p,1000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,2.3556,2.3554,2.3556,2.3556,0.45027,input device of unit XA1 (gate = pad)
+hbm_esdproxy_d2s_p2p_p1000,esdproxy,d2s,p2p,1000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,2.3556,2.3554,2.3556,2.3556,0.45027,input device of unit XA2 (gate = pad)
+hbm_esdproxy_d2s_p2p_p1000,esdproxy,d2s,p2p,1000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.57941,5.1332,0.57941,5.1332,5.1892,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_d2s_p2p_p1000,esdproxy,d2s,p2p,1000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.56254,2.8229,0.56254,2.8229,2.8239,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_d2s_p2p_p1000,esdproxy,d2s,p2p,1000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.57941,5.1332,0.57941,5.1332,5.1892,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_p2p_p1000,esdproxy,d2s,p2p,1000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,2.8676,3.9119,2.8676,3.9119,2.4411,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_d2s_p2p_p1000,esdproxy,d2s,p2p,1000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,2.8676,3.9119,2.8676,3.9119,2.4411,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_d2s_p2p_p1000,esdproxy,d2s,p2p,1000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,2.4582,3.0862,2.4582,3.0862,0.87778,disable switch SA (a to iovdd)
+hbm_esdproxy_d2s_p2p_p1000,esdproxy,d2s,p2p,1000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,2.4582,2.435,2.4582,2.4582,1.546,disable switch SB (b to iovss)
+hbm_esdproxy_d2s_p2p_p1000,esdproxy,d2s,p2p,1000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.87778,1.8295,0.87778,1.8295,2.0379,output PMOS OP (drain = pad)
+hbm_esdproxy_d2s_p2p_p1000,esdproxy,d2s,p2p,1000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,1.546,4.1889,1.546,4.1889,4.4017,output NMOS ON (drain = pad)
+hbm_esdproxy_d2s_p2p_p1000,esdproxy,d2s,p2p,1000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,0.96557,0.96557,0.96557,0.96557,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_d2s_p2p_p1000,esdproxy,d2s,p2p,1000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,3.2644,3.2644,3.2644,3.2644,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_d2s_p2p_p1000,esdproxy,d2s,p2p,1000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,1.546,4.1889,1.546,4.1889,4.4017,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_p2p_n1000,esdproxy,d2s,p2p,-1000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,4.0121,5.3658,4.0121,5.3658,2.6999,input device of unit XA1 (gate = pad)
+hbm_esdproxy_d2s_p2p_n1000,esdproxy,d2s,p2p,-1000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,4.0121,5.3658,4.0121,5.3658,2.6999,input device of unit XA2 (gate = pad)
+hbm_esdproxy_d2s_p2p_n1000,esdproxy,d2s,p2p,-1000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,1.9207,3.251,1.9207,3.251,3.5269,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_d2s_p2p_n1000,esdproxy,d2s,p2p,-1000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.46693,5.906,0.46693,5.906,5.9061,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_d2s_p2p_n1000,esdproxy,d2s,p2p,-1000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.46693,5.906,0.46693,5.906,5.9061,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_p2p_n1000,esdproxy,d2s,p2p,-1000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,1.283,1.2826,1.283,1.283,0.43615,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_d2s_p2p_n1000,esdproxy,d2s,p2p,-1000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,1.283,1.2826,1.283,1.283,0.43615,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_d2s_p2p_n1000,esdproxy,d2s,p2p,-1000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,2.4774,2.4338,2.4774,2.4774,1.5368,disable switch SA (a to iovdd)
+hbm_esdproxy_d2s_p2p_n1000,esdproxy,d2s,p2p,-1000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,2.4774,3.0404,2.4774,3.0404,0.70831,disable switch SB (b to iovss)
+hbm_esdproxy_d2s_p2p_n1000,esdproxy,d2s,p2p,-1000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,1.5368,3.5625,1.5368,3.5625,4.1341,output PMOS OP (drain = pad)
+hbm_esdproxy_d2s_p2p_n1000,esdproxy,d2s,p2p,-1000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.70831,1.6942,0.70831,1.6942,1.7587,output NMOS ON (drain = pad)
+hbm_esdproxy_d2s_p2p_n1000,esdproxy,d2s,p2p,-1000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,3.2497,3.2497,3.2497,3.2497,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_d2s_p2p_n1000,esdproxy,d2s,p2p,-1000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,0.94778,0.94778,0.94778,0.94778,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_d2s_p2p_n1000,esdproxy,d2s,p2p,-1000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,1.5368,3.5625,1.5368,3.5625,4.1341,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_p2p_p2000,esdproxy,d2s,p2p,2000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,4.1104,4.11,4.1104,4.1104,0.47643,input device of unit XA1 (gate = pad)
+hbm_esdproxy_d2s_p2p_p2000,esdproxy,d2s,p2p,2000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,4.1104,4.11,4.1104,4.1104,0.47643,input device of unit XA2 (gate = pad)
+hbm_esdproxy_d2s_p2p_p2000,esdproxy,d2s,p2p,2000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.65493,8.025,0.65493,8.025,8.1014,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_d2s_p2p_p2000,esdproxy,d2s,p2p,2000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.93905,4.606,0.93905,4.606,4.6084,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_d2s_p2p_p2000,esdproxy,d2s,p2p,2000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.65493,8.025,0.65493,8.025,8.1014,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_p2p_p2000,esdproxy,d2s,p2p,2000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,4.3608,5.977,4.3608,5.977,3.5478,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_d2s_p2p_p2000,esdproxy,d2s,p2p,2000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,4.3608,5.977,4.3608,5.977,3.5478,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_d2s_p2p_p2000,esdproxy,d2s,p2p,2000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,3.5139,4.1884,3.5139,4.1884,1.0734,disable switch SA (a to iovdd)
+hbm_esdproxy_d2s_p2p_p2000,esdproxy,d2s,p2p,2000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,3.5139,3.3912,3.5139,3.5139,2.0744,disable switch SB (b to iovss)
+hbm_esdproxy_d2s_p2p_p2000,esdproxy,d2s,p2p,2000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,1.0734,2.8262,1.0734,2.8262,3.0681,output PMOS OP (drain = pad)
+hbm_esdproxy_d2s_p2p_p2000,esdproxy,d2s,p2p,2000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,2.0744,6.3554,2.0744,6.3554,6.5813,output NMOS ON (drain = pad)
+hbm_esdproxy_d2s_p2p_p2000,esdproxy,d2s,p2p,2000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,1.0458,1.0458,1.0458,1.0458,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_d2s_p2p_p2000,esdproxy,d2s,p2p,2000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,4.4002,4.4002,4.4002,4.4002,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_d2s_p2p_p2000,esdproxy,d2s,p2p,2000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,2.0744,6.3554,2.0744,6.3554,6.5813,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_p2p_n2000,esdproxy,d2s,p2p,-2000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,6.8058,8.825,6.8058,8.825,3.9847,input device of unit XA1 (gate = pad)
+hbm_esdproxy_d2s_p2p_n2000,esdproxy,d2s,p2p,-2000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,6.8058,8.825,6.8058,8.825,3.9847,input device of unit XA2 (gate = pad)
+hbm_esdproxy_d2s_p2p_n2000,esdproxy,d2s,p2p,-2000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,3.5168,5.4697,3.5168,5.4697,6.0082,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_esdproxy_d2s_p2p_n2000,esdproxy,d2s,p2p,-2000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.58605,9.4901,0.58605,9.4901,9.4907,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_esdproxy_d2s_p2p_n2000,esdproxy,d2s,p2p,-2000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.58605,9.4901,0.58605,9.4901,9.4907,largest max_vox of all MOS devices of this pad
+hbm_esdproxy_d2s_p2p_n2000,esdproxy,d2s,p2p,-2000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,1.9378,1.9376,1.9378,1.9378,0.4362,feedback input of unit C1 (gate = vfb = pad)
+hbm_esdproxy_d2s_p2p_n2000,esdproxy,d2s,p2p,-2000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,1.9378,1.9376,1.9378,1.9378,0.4362,feedback input of unit C2 (gate = vfb = pad)
+hbm_esdproxy_d2s_p2p_n2000,esdproxy,d2s,p2p,-2000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,3.4815,3.0746,3.4815,3.4815,2.0915,disable switch SA (a to iovdd)
+hbm_esdproxy_d2s_p2p_n2000,esdproxy,d2s,p2p,-2000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,3.4815,4.0002,3.4815,4.0002,0.88956,disable switch SB (b to iovss)
+hbm_esdproxy_d2s_p2p_n2000,esdproxy,d2s,p2p,-2000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,2.0915,5.3079,2.0915,5.3079,5.9466,output PMOS OP (drain = pad)
+hbm_esdproxy_d2s_p2p_n2000,esdproxy,d2s,p2p,-2000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.88956,2.3947,0.88956,2.3947,2.4655,output NMOS ON (drain = pad)
+hbm_esdproxy_d2s_p2p_n2000,esdproxy,d2s,p2p,-2000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,4.0614,4.0614,4.0614,4.0614,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_esdproxy_d2s_p2p_n2000,esdproxy,d2s,p2p,-2000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,1.007,1.007,1.007,1.007,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_esdproxy_d2s_p2p_n2000,esdproxy,d2s,p2p,-2000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,2.0915,5.3079,2.0915,5.3079,5.9466,largest max_vox of all MOS devices of this pad
+hbmls_esdproxy_s2d_gnd_vss_p2000,esdproxy,s2d,gnd_vss,2000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,6.3371,7.8642,6.3371,7.8642,3.0541,input device of unit XA1 (gate = pad)
+hbmls_esdproxy_s2d_gnd_vss_p2000,esdproxy,s2d,gnd_vss,2000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,6.3371,7.8642,6.3371,7.8642,3.0541,input device of unit XA2 (gate = pad)
+hbmls_esdproxy_s2d_gnd_vss_p2000,esdproxy,s2d,gnd_vss,2000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,1.8976,5.4467,1.8976,5.4467,5.568,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbmls_esdproxy_s2d_gnd_vss_p2000,esdproxy,s2d,gnd_vss,2000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.32618,8.7345,0.32618,8.7345,8.7345,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbmls_esdproxy_s2d_gnd_vss_p2000,esdproxy,s2d,gnd_vss,2000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.32618,8.7345,0.32618,8.7345,8.7345,largest max_vox of all MOS devices of this pad
+hbmls_esdproxy_s2d_gnd_vss_p2000,esdproxy,s2d,gnd_vss,2000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,0.91843,1.2406,0.91843,1.2406,0.79071,feedback input of unit C1 (gate = vfb = pad)
+hbmls_esdproxy_s2d_gnd_vss_p2000,esdproxy,s2d,gnd_vss,2000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,0.91843,1.2406,0.91843,1.2406,0.79071,feedback input of unit C2 (gate = vfb = pad)
+hbmls_esdproxy_s2d_gnd_vss_p2000,esdproxy,s2d,gnd_vss,2000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,3.1467,3.0203,3.1467,3.1467,0.49941,disable switch SA (a to iovdd)
+hbmls_esdproxy_s2d_gnd_vss_p2000,esdproxy,s2d,gnd_vss,2000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,3.1467,3.1144,3.1467,3.1467,0.41849,disable switch SB (b to iovss)
+hbmls_esdproxy_s2d_gnd_vss_p2000,esdproxy,s2d,gnd_vss,2000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.49941,1.5064,0.49941,1.5064,1.6684,output PMOS OP (drain = pad)
+hbmls_esdproxy_s2d_gnd_vss_p2000,esdproxy,s2d,gnd_vss,2000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.41849,1.5097,0.41849,1.5097,1.5185,output NMOS ON (drain = pad)
+hbmls_esdproxy_s2d_gnd_vss_p2000,esdproxy,s2d,gnd_vss,2000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,1.5038,1.5038,1.5038,1.5038,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbmls_esdproxy_s2d_gnd_vss_p2000,esdproxy,s2d,gnd_vss,2000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,1.5069,1.5069,1.5069,1.5069,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbmls_esdproxy_s2d_gnd_vss_p2000,esdproxy,s2d,gnd_vss,2000,d2s,xd2s.xd.xsabp,sg13_hv_pmos,1u,0.45u,3.1467,3.1468,3.1467,3.1468,0.34913,largest max_vox of all MOS devices of this pad
+hbmls_esdproxy_s2d_gnd_vss_n2000,esdproxy,s2d,gnd_vss,-2000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,3.8716,3.8716,3.8716,3.8716,0.40952,input device of unit XA1 (gate = pad)
+hbmls_esdproxy_s2d_gnd_vss_n2000,esdproxy,s2d,gnd_vss,-2000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,3.8716,3.8716,3.8716,3.8716,0.40952,input device of unit XA2 (gate = pad)
+hbmls_esdproxy_s2d_gnd_vss_n2000,esdproxy,s2d,gnd_vss,-2000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.30817,4.3719,0.30817,4.3719,4.3778,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbmls_esdproxy_s2d_gnd_vss_n2000,esdproxy,s2d,gnd_vss,-2000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.41392,4.417,0.41392,4.417,4.4175,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbmls_esdproxy_s2d_gnd_vss_n2000,esdproxy,s2d,gnd_vss,-2000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.41392,4.417,0.41392,4.417,4.4175,largest max_vox of all MOS devices of this pad
+hbmls_esdproxy_s2d_gnd_vss_n2000,esdproxy,s2d,gnd_vss,-2000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,0.016628,0.027489,0.016628,0.027489,0.013386,feedback input of unit C1 (gate = vfb = pad)
+hbmls_esdproxy_s2d_gnd_vss_n2000,esdproxy,s2d,gnd_vss,-2000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,0.016628,0.027489,0.016628,0.027489,0.013386,feedback input of unit C2 (gate = vfb = pad)
+hbmls_esdproxy_s2d_gnd_vss_n2000,esdproxy,s2d,gnd_vss,-2000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,0.064411,0.049062,0.064411,0.064411,0.015362,disable switch SA (a to iovdd)
+hbmls_esdproxy_s2d_gnd_vss_n2000,esdproxy,s2d,gnd_vss,-2000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,0.064411,0.045665,0.064411,0.064411,0.018747,disable switch SB (b to iovss)
+hbmls_esdproxy_s2d_gnd_vss_n2000,esdproxy,s2d,gnd_vss,-2000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.015362,0.013526,0.015362,0.015362,0.028882,output PMOS OP (drain = pad)
+hbmls_esdproxy_s2d_gnd_vss_n2000,esdproxy,s2d,gnd_vss,-2000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.018747,0.016794,0.018747,0.018747,0.035536,output NMOS ON (drain = pad)
+hbmls_esdproxy_s2d_gnd_vss_n2000,esdproxy,s2d,gnd_vss,-2000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,0.013497,0.013497,0.013497,0.013497,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbmls_esdproxy_s2d_gnd_vss_n2000,esdproxy,s2d,gnd_vss,-2000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,0.016766,0.016766,0.016766,0.016766,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbmls_esdproxy_s2d_gnd_vss_n2000,esdproxy,s2d,gnd_vss,-2000,d2s,xd2s.xt.xtdn,sg13_hv_nmos,1u,0.45u,0.064411,0.061613,0.064411,0.064411,0.0030626,largest max_vox of all MOS devices of this pad
+hbmls_esdproxy_s2d_gnd_vdd_p2000,esdproxy,s2d,gnd_vdd,2000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,4.9179,5.3385,4.9179,5.3385,0.76571,input device of unit XA1 (gate = pad)
+hbmls_esdproxy_s2d_gnd_vdd_p2000,esdproxy,s2d,gnd_vdd,2000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,4.9179,5.3385,4.9179,5.3385,0.76571,input device of unit XA2 (gate = pad)
+hbmls_esdproxy_s2d_gnd_vdd_p2000,esdproxy,s2d,gnd_vdd,2000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,1.9033,5.453,1.9033,5.453,5.5743,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbmls_esdproxy_s2d_gnd_vdd_p2000,esdproxy,s2d,gnd_vdd,2000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.292,5.7685,0.292,5.7685,5.7685,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbmls_esdproxy_s2d_gnd_vdd_p2000,esdproxy,s2d,gnd_vdd,2000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.292,5.7685,0.292,5.7685,5.7685,largest max_vox of all MOS devices of this pad
+hbmls_esdproxy_s2d_gnd_vdd_p2000,esdproxy,s2d,gnd_vdd,2000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,0.043366,0.075285,0.043366,0.075285,0.036182,feedback input of unit C1 (gate = vfb = pad)
+hbmls_esdproxy_s2d_gnd_vdd_p2000,esdproxy,s2d,gnd_vdd,2000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,0.043366,0.075285,0.043366,0.075285,0.036182,feedback input of unit C2 (gate = vfb = pad)
+hbmls_esdproxy_s2d_gnd_vdd_p2000,esdproxy,s2d,gnd_vdd,2000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,0.17926,0.13867,0.17926,0.17926,0.040599,disable switch SA (a to iovdd)
+hbmls_esdproxy_s2d_gnd_vdd_p2000,esdproxy,s2d,gnd_vdd,2000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,0.17926,0.12946,0.17926,0.17926,0.049791,disable switch SB (b to iovss)
+hbmls_esdproxy_s2d_gnd_vdd_p2000,esdproxy,s2d,gnd_vdd,2000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.040599,0.046186,0.040599,0.046186,0.086774,output PMOS OP (drain = pad)
+hbmls_esdproxy_s2d_gnd_vdd_p2000,esdproxy,s2d,gnd_vdd,2000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.049791,0.042701,0.049791,0.049791,0.092481,output NMOS ON (drain = pad)
+hbmls_esdproxy_s2d_gnd_vdd_p2000,esdproxy,s2d,gnd_vdd,2000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,0.046146,0.046146,0.046146,0.046146,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbmls_esdproxy_s2d_gnd_vdd_p2000,esdproxy,s2d,gnd_vdd,2000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,0.042663,0.042663,0.042663,0.042663,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbmls_esdproxy_s2d_gnd_vdd_p2000,esdproxy,s2d,gnd_vdd,2000,d2s,xd2s.xt.xtdn,sg13_hv_nmos,1u,0.45u,0.17926,0.17397,0.17926,0.17926,0.0052853,largest max_vox of all MOS devices of this pad
+hbmls_esdproxy_s2d_gnd_vdd_n2000,esdproxy,s2d,gnd_vdd,-2000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,3.9919,3.992,3.9919,3.992,0.40307,input device of unit XA1 (gate = pad)
+hbmls_esdproxy_s2d_gnd_vdd_n2000,esdproxy,s2d,gnd_vdd,-2000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,3.9919,3.992,3.9919,3.992,0.40307,input device of unit XA2 (gate = pad)
+hbmls_esdproxy_s2d_gnd_vdd_n2000,esdproxy,s2d,gnd_vdd,-2000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.48479,7.483,0.48479,7.483,7.4922,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbmls_esdproxy_s2d_gnd_vdd_n2000,esdproxy,s2d,gnd_vdd,-2000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.41208,4.412,0.41208,4.412,4.4124,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbmls_esdproxy_s2d_gnd_vdd_n2000,esdproxy,s2d,gnd_vdd,-2000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.48479,7.483,0.48479,7.483,7.4922,largest max_vox of all MOS devices of this pad
+hbmls_esdproxy_s2d_gnd_vdd_n2000,esdproxy,s2d,gnd_vdd,-2000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,0.91404,1.2071,0.91404,1.2071,0.78371,feedback input of unit C1 (gate = vfb = pad)
+hbmls_esdproxy_s2d_gnd_vdd_n2000,esdproxy,s2d,gnd_vdd,-2000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,0.91404,1.2071,0.91404,1.2071,0.78371,feedback input of unit C2 (gate = vfb = pad)
+hbmls_esdproxy_s2d_gnd_vdd_n2000,esdproxy,s2d,gnd_vdd,-2000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,3.0614,2.9381,3.0614,3.0614,0.49009,disable switch SA (a to iovdd)
+hbmls_esdproxy_s2d_gnd_vdd_n2000,esdproxy,s2d,gnd_vdd,-2000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,3.0614,3.03,3.0614,3.0614,0.41988,disable switch SB (b to iovss)
+hbmls_esdproxy_s2d_gnd_vdd_n2000,esdproxy,s2d,gnd_vdd,-2000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.49009,1.4668,0.49009,1.4668,1.6261,output PMOS OP (drain = pad)
+hbmls_esdproxy_s2d_gnd_vdd_n2000,esdproxy,s2d,gnd_vdd,-2000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.41988,1.4674,0.41988,1.4674,1.4757,output NMOS ON (drain = pad)
+hbmls_esdproxy_s2d_gnd_vdd_n2000,esdproxy,s2d,gnd_vdd,-2000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,1.4644,1.4644,1.4644,1.4644,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbmls_esdproxy_s2d_gnd_vdd_n2000,esdproxy,s2d,gnd_vdd,-2000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,1.4648,1.4648,1.4648,1.4648,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbmls_esdproxy_s2d_gnd_vdd_n2000,esdproxy,s2d,gnd_vdd,-2000,d2s,xd2s.xd.xsabp,sg13_hv_pmos,1u,0.45u,3.0614,3.0615,3.0614,3.0615,0.34552,largest max_vox of all MOS devices of this pad
+hbmls_esdproxy_d2s_gnd_vss_p2000,esdproxy,d2s,gnd_vss,2000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,0.85309,1.2707,0.85309,1.2707,0.83396,input device of unit XA1 (gate = pad)
+hbmls_esdproxy_d2s_gnd_vss_p2000,esdproxy,d2s,gnd_vss,2000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,0.85309,1.2707,0.85309,1.2707,0.83396,input device of unit XA2 (gate = pad)
+hbmls_esdproxy_d2s_gnd_vss_p2000,esdproxy,d2s,gnd_vss,2000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.16107,1.6098,0.16107,1.6098,1.6107,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbmls_esdproxy_d2s_gnd_vss_p2000,esdproxy,d2s,gnd_vss,2000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.15979,1.5689,0.15979,1.5689,1.5689,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbmls_esdproxy_d2s_gnd_vss_p2000,esdproxy,d2s,gnd_vss,2000,s2d,xs2d.xt.xtdn,sg13_hv_nmos,1u,0.45u,3.1488,3.1488,3.1488,3.1488,0.054243,largest max_vox of all MOS devices of this pad
+hbmls_esdproxy_d2s_gnd_vss_p2000,esdproxy,d2s,gnd_vss,2000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,4.1307,5.381,4.1307,5.381,2.8202,feedback input of unit C1 (gate = vfb = pad)
+hbmls_esdproxy_d2s_gnd_vss_p2000,esdproxy,d2s,gnd_vss,2000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,4.1307,5.381,4.1307,5.381,2.8202,feedback input of unit C2 (gate = vfb = pad)
+hbmls_esdproxy_d2s_gnd_vss_p2000,esdproxy,d2s,gnd_vss,2000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,3.1609,3.6167,3.1609,3.6167,0.84052,disable switch SA (a to iovdd)
+hbmls_esdproxy_d2s_gnd_vss_p2000,esdproxy,d2s,gnd_vss,2000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,3.1609,3.1139,3.1609,3.1609,1.5456,disable switch SB (b to iovss)
+hbmls_esdproxy_d2s_gnd_vss_p2000,esdproxy,d2s,gnd_vss,2000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.84052,2.8153,0.84052,2.8153,3.0094,output PMOS OP (drain = pad)
+hbmls_esdproxy_d2s_gnd_vss_p2000,esdproxy,d2s,gnd_vss,2000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,1.5456,6.0843,1.5456,6.0843,6.1698,output NMOS ON (drain = pad)
+hbmls_esdproxy_d2s_gnd_vss_p2000,esdproxy,d2s,gnd_vss,2000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,1.0492,1.0492,1.0492,1.0492,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbmls_esdproxy_d2s_gnd_vss_p2000,esdproxy,d2s,gnd_vss,2000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,4.1236,4.1236,4.1236,4.1236,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbmls_esdproxy_d2s_gnd_vss_p2000,esdproxy,d2s,gnd_vss,2000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,1.5456,6.0843,1.5456,6.0843,6.1698,largest max_vox of all MOS devices of this pad
+hbmls_esdproxy_d2s_gnd_vss_n2000,esdproxy,d2s,gnd_vss,-2000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,0.052428,0.085695,0.052428,0.085695,0.035268,input device of unit XA1 (gate = pad)
+hbmls_esdproxy_d2s_gnd_vss_n2000,esdproxy,d2s,gnd_vss,-2000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,0.052428,0.085695,0.052428,0.085695,0.035268,input device of unit XA2 (gate = pad)
+hbmls_esdproxy_d2s_gnd_vss_n2000,esdproxy,d2s,gnd_vss,-2000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.0096131,0.094147,0.0096131,0.094147,0.09427,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbmls_esdproxy_d2s_gnd_vss_n2000,esdproxy,d2s,gnd_vss,-2000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.010338,0.10987,0.010338,0.10987,0.10987,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbmls_esdproxy_d2s_gnd_vss_n2000,esdproxy,d2s,gnd_vss,-2000,s2d,xs2d.xt.xtdn,sg13_hv_nmos,1u,0.45u,0.20411,0.19639,0.20411,0.20411,0.0077176,largest max_vox of all MOS devices of this pad
+hbmls_esdproxy_d2s_gnd_vss_n2000,esdproxy,d2s,gnd_vss,-2000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,1.8994,1.8995,1.8994,1.8995,0.4136,feedback input of unit C1 (gate = vfb = pad)
+hbmls_esdproxy_d2s_gnd_vss_n2000,esdproxy,d2s,gnd_vss,-2000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,1.8994,1.8995,1.8994,1.8995,0.4136,feedback input of unit C2 (gate = vfb = pad)
+hbmls_esdproxy_d2s_gnd_vss_n2000,esdproxy,d2s,gnd_vss,-2000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,0.19999,0.78369,0.19999,0.78369,0.61163,disable switch SA (a to iovdd)
+hbmls_esdproxy_d2s_gnd_vss_n2000,esdproxy,d2s,gnd_vss,-2000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,0.19999,0.74284,0.19999,0.74284,0.86106,disable switch SB (b to iovss)
+hbmls_esdproxy_d2s_gnd_vss_n2000,esdproxy,d2s,gnd_vss,-2000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.61163,1.7091,0.61163,1.7091,2.2782,output PMOS OP (drain = pad)
+hbmls_esdproxy_d2s_gnd_vss_n2000,esdproxy,d2s,gnd_vss,-2000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.86106,1.7614,0.86106,1.7614,2.4721,output NMOS ON (drain = pad)
+hbmls_esdproxy_d2s_gnd_vss_n2000,esdproxy,d2s,gnd_vss,-2000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,0.63744,0.63744,0.63744,0.63744,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbmls_esdproxy_d2s_gnd_vss_n2000,esdproxy,d2s,gnd_vss,-2000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,1.0532,1.0532,1.0532,1.0532,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbmls_esdproxy_d2s_gnd_vss_n2000,esdproxy,d2s,gnd_vss,-2000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,1.8994,1.8995,1.8994,1.8995,0.4136,largest max_vox of all MOS devices of this pad
+hbmls_esdproxy_d2s_gnd_vdd_p2000,esdproxy,d2s,gnd_vdd,2000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,0.045337,0.082659,0.045337,0.082659,0.047765,input device of unit XA1 (gate = pad)
+hbmls_esdproxy_d2s_gnd_vdd_p2000,esdproxy,d2s,gnd_vdd,2000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,0.045337,0.082659,0.045337,0.082659,0.047765,input device of unit XA2 (gate = pad)
+hbmls_esdproxy_d2s_gnd_vdd_p2000,esdproxy,d2s,gnd_vdd,2000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.008466,0.091522,0.008466,0.091522,0.093076,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbmls_esdproxy_d2s_gnd_vdd_p2000,esdproxy,d2s,gnd_vdd,2000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.0090607,0.10568,0.0090607,0.10568,0.10572,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbmls_esdproxy_d2s_gnd_vdd_p2000,esdproxy,d2s,gnd_vdd,2000,s2d,xs2d.xa.xtpp,sg13_hv_pmos,1u,0.45u,2.0473e-09,0.01299,0.1985,0.1985,0.01299,largest max_vox of all MOS devices of this pad
+hbmls_esdproxy_d2s_gnd_vdd_p2000,esdproxy,d2s,gnd_vdd,2000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,2.4003,2.5526,2.4003,2.5526,0.64241,feedback input of unit C1 (gate = vfb = pad)
+hbmls_esdproxy_d2s_gnd_vdd_p2000,esdproxy,d2s,gnd_vdd,2000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,2.4003,2.5526,2.4003,2.5526,0.64241,feedback input of unit C2 (gate = vfb = pad)
+hbmls_esdproxy_d2s_gnd_vdd_p2000,esdproxy,d2s,gnd_vdd,2000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,0.18226,0.89708,0.18226,0.89708,0.91787,disable switch SA (a to iovdd)
+hbmls_esdproxy_d2s_gnd_vdd_p2000,esdproxy,d2s,gnd_vdd,2000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,0.18226,0.86261,0.18226,0.86261,0.7362,disable switch SB (b to iovss)
+hbmls_esdproxy_d2s_gnd_vdd_p2000,esdproxy,d2s,gnd_vdd,2000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.91787,2.2958,0.91787,2.2958,3.0411,output PMOS OP (drain = pad)
+hbmls_esdproxy_d2s_gnd_vdd_p2000,esdproxy,d2s,gnd_vdd,2000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.7362,2.2714,0.7362,2.2714,2.8814,output NMOS ON (drain = pad)
+hbmls_esdproxy_d2s_gnd_vdd_p2000,esdproxy,d2s,gnd_vdd,2000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,1.2281,1.2281,1.2281,1.2281,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbmls_esdproxy_d2s_gnd_vdd_p2000,esdproxy,d2s,gnd_vdd,2000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,0.89864,0.89864,0.89864,0.89864,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbmls_esdproxy_d2s_gnd_vdd_p2000,esdproxy,d2s,gnd_vdd,2000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,2.4003,2.5526,2.4003,2.5526,0.64241,largest max_vox of all MOS devices of this pad
+hbmls_esdproxy_d2s_gnd_vdd_n2000,esdproxy,d2s,gnd_vdd,-2000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,0.84157,1.2197,0.84157,1.2197,0.83605,input device of unit XA1 (gate = pad)
+hbmls_esdproxy_d2s_gnd_vdd_n2000,esdproxy,d2s,gnd_vdd,-2000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,0.84157,1.2197,0.84157,1.2197,0.83605,input device of unit XA2 (gate = pad)
+hbmls_esdproxy_d2s_gnd_vdd_n2000,esdproxy,d2s,gnd_vdd,-2000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.16203,1.5565,0.16203,1.5565,1.5574,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbmls_esdproxy_d2s_gnd_vdd_n2000,esdproxy,d2s,gnd_vdd,-2000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.15972,1.5042,0.15972,1.5042,1.5042,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbmls_esdproxy_d2s_gnd_vdd_n2000,esdproxy,d2s,gnd_vdd,-2000,s2d,xs2d.xa.xtpp,sg13_hv_pmos,1u,0.45u,7.3719e-14,0.12705,3.0276,3.0276,0.12705,largest max_vox of all MOS devices of this pad
+hbmls_esdproxy_d2s_gnd_vdd_n2000,esdproxy,d2s,gnd_vdd,-2000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,1.9413,1.9415,1.9413,1.9415,0.40796,feedback input of unit C1 (gate = vfb = pad)
+hbmls_esdproxy_d2s_gnd_vdd_n2000,esdproxy,d2s,gnd_vdd,-2000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,1.9413,1.9415,1.9413,1.9415,0.40796,feedback input of unit C2 (gate = vfb = pad)
+hbmls_esdproxy_d2s_gnd_vdd_n2000,esdproxy,d2s,gnd_vdd,-2000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,3.0376,2.8643,3.0376,3.0376,1.6209,disable switch SA (a to iovdd)
+hbmls_esdproxy_d2s_gnd_vdd_n2000,esdproxy,d2s,gnd_vdd,-2000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,3.0376,3.0946,3.0376,3.0946,0.62898,disable switch SB (b to iovss)
+hbmls_esdproxy_d2s_gnd_vdd_n2000,esdproxy,d2s,gnd_vdd,-2000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,1.6209,4.993,1.6209,4.993,5.449,output PMOS OP (drain = pad)
+hbmls_esdproxy_d2s_gnd_vdd_n2000,esdproxy,d2s,gnd_vdd,-2000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.62898,2.394,0.62898,2.394,2.4115,output NMOS ON (drain = pad)
+hbmls_esdproxy_d2s_gnd_vdd_n2000,esdproxy,d2s,gnd_vdd,-2000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,3.7415,3.7415,3.7415,3.7415,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbmls_esdproxy_d2s_gnd_vdd_n2000,esdproxy,d2s,gnd_vdd,-2000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,1.0096,1.0096,1.0096,1.0096,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbmls_esdproxy_d2s_gnd_vdd_n2000,esdproxy,d2s,gnd_vdd,-2000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,1.6209,4.993,1.6209,4.993,5.449,largest max_vox of all MOS devices of this pad
+hbm_pdk_s2d_gnd_vss_n500,pdk,s2d,gnd_vss,-500,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,10.095,10.095,10.095,10.095,1.1985,input device of unit XA1 (gate = pad)
+hbm_pdk_s2d_gnd_vss_n500,pdk,s2d,gnd_vss,-500,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,10.095,10.095,10.095,10.095,1.1985,input device of unit XA2 (gate = pad)
+hbm_pdk_s2d_gnd_vss_n500,pdk,s2d,gnd_vss,-500,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,0.85785,10.635,0.85785,10.635,10.17,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_pdk_s2d_gnd_vss_n500,pdk,s2d,gnd_vss,-500,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,4.0821,10.735,4.0821,10.735,10.736,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_pdk_s2d_gnd_vss_n500,pdk,s2d,gnd_vss,-500,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,4.0821,10.735,4.0821,10.735,10.736,largest max_vox of all MOS devices of this pad
+hbm_pdk_s2d_gnd_vss_n500,pdk,s2d,gnd_vss,-500,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,0.11528,0.33917,0.11528,0.33917,0.27314,feedback input of unit C1 (gate = vfb = pad)
+hbm_pdk_s2d_gnd_vss_n500,pdk,s2d,gnd_vss,-500,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,0.11528,0.33917,0.11528,0.33917,0.27314,feedback input of unit C2 (gate = vfb = pad)
+hbm_pdk_s2d_gnd_vss_n500,pdk,s2d,gnd_vss,-500,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,0.84854,0.67958,0.84854,0.84854,0.18675,disable switch SA (a to iovdd)
+hbm_pdk_s2d_gnd_vss_n500,pdk,s2d,gnd_vss,-500,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,0.84854,0.62506,0.84854,0.84854,0.23618,disable switch SB (b to iovss)
+hbm_pdk_s2d_gnd_vss_n500,pdk,s2d,gnd_vss,-500,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.18675,0.2404,0.18675,0.2404,0.39967,output PMOS OP (drain = pad)
+hbm_pdk_s2d_gnd_vss_n500,pdk,s2d,gnd_vss,-500,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.23618,0.24371,0.23618,0.24371,0.44887,output NMOS ON (drain = pad)
+hbm_pdk_s2d_gnd_vss_n500,pdk,s2d,gnd_vss,-500,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,0.20417,0.20417,0.20417,0.20417,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_pdk_s2d_gnd_vss_n500,pdk,s2d,gnd_vss,-500,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,0.203,0.203,0.203,0.203,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_pdk_s2d_gnd_vss_n500,pdk,s2d,gnd_vss,-500,d2s,xd2s.xt.xtdn,sg13_hv_nmos,1u,0.45u,0.84854,0.67844,0.84854,0.84854,0.17038,largest max_vox of all MOS devices of this pad
+hbm_pdk_s2d_gnd_vss_n2000,pdk,s2d,gnd_vss,-2000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,19.93,19.929,19.93,19.93,1.8436,input device of unit XA1 (gate = pad)
+hbm_pdk_s2d_gnd_vss_n2000,pdk,s2d,gnd_vss,-2000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,19.93,19.929,19.93,19.93,1.8436,input device of unit XA2 (gate = pad)
+hbm_pdk_s2d_gnd_vss_n2000,pdk,s2d,gnd_vss,-2000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,1.1026,19.773,1.1026,19.773,19.855,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_pdk_s2d_gnd_vss_n2000,pdk,s2d,gnd_vss,-2000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,5.6784,20.64,5.6784,20.64,20.63,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_pdk_s2d_gnd_vss_n2000,pdk,s2d,gnd_vss,-2000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,5.6784,20.64,5.6784,20.64,20.63,largest max_vox of all MOS devices of this pad
+hbm_pdk_s2d_gnd_vss_n2000,pdk,s2d,gnd_vss,-2000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,0.098016,0.44098,0.098016,0.44098,0.43811,feedback input of unit C1 (gate = vfb = pad)
+hbm_pdk_s2d_gnd_vss_n2000,pdk,s2d,gnd_vss,-2000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,0.098016,0.44098,0.098016,0.44098,0.43811,feedback input of unit C2 (gate = vfb = pad)
+hbm_pdk_s2d_gnd_vss_n2000,pdk,s2d,gnd_vss,-2000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,1.5043,1.025,1.5043,1.5043,0.55037,disable switch SA (a to iovdd)
+hbm_pdk_s2d_gnd_vss_n2000,pdk,s2d,gnd_vss,-2000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,1.5043,0.94011,1.5043,1.5043,0.60058,disable switch SB (b to iovss)
+hbm_pdk_s2d_gnd_vss_n2000,pdk,s2d,gnd_vss,-2000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.55037,0.39322,0.55037,0.55037,0.73994,output PMOS OP (drain = pad)
+hbm_pdk_s2d_gnd_vss_n2000,pdk,s2d,gnd_vss,-2000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.60058,0.3158,0.60058,0.60058,0.76982,output NMOS ON (drain = pad)
+hbm_pdk_s2d_gnd_vss_n2000,pdk,s2d,gnd_vss,-2000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,0.39322,0.39322,0.39322,0.39322,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_pdk_s2d_gnd_vss_n2000,pdk,s2d,gnd_vss,-2000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,0.22145,0.22145,0.22145,0.22145,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_pdk_s2d_gnd_vss_n2000,pdk,s2d,gnd_vss,-2000,d2s,xd2s.xt.xtdn,sg13_hv_nmos,1u,0.45u,1.5043,0.98081,1.5043,1.5043,0.56331,largest max_vox of all MOS devices of this pad
+hbm_pdk_s2d_gnd_vdd_p500,pdk,s2d,gnd_vdd,500,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,8.3679,8.4429,8.3679,8.4429,2.9888,input device of unit XA1 (gate = pad)
+hbm_pdk_s2d_gnd_vdd_p500,pdk,s2d,gnd_vdd,500,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,8.3679,8.4429,8.3679,8.4429,2.9888,input device of unit XA2 (gate = pad)
+hbm_pdk_s2d_gnd_vdd_p500,pdk,s2d,gnd_vdd,500,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,6.9083,8.5905,6.9083,8.5905,9.1183,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_pdk_s2d_gnd_vdd_p500,pdk,s2d,gnd_vdd,500,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.70572,8.881,0.70572,8.881,8.8811,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_pdk_s2d_gnd_vdd_p500,pdk,s2d,gnd_vdd,500,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,0.70572,8.881,0.70572,8.881,8.8811,largest max_vox of all MOS devices of this pad
+hbm_pdk_s2d_gnd_vdd_p500,pdk,s2d,gnd_vdd,500,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,0.056131,0.13356,0.056131,0.13356,0.11822,feedback input of unit C1 (gate = vfb = pad)
+hbm_pdk_s2d_gnd_vdd_p500,pdk,s2d,gnd_vdd,500,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,0.056131,0.13356,0.056131,0.13356,0.11822,feedback input of unit C2 (gate = vfb = pad)
+hbm_pdk_s2d_gnd_vdd_p500,pdk,s2d,gnd_vdd,500,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,0.3175,0.27125,0.3175,0.3175,0.055038,disable switch SA (a to iovdd)
+hbm_pdk_s2d_gnd_vdd_p500,pdk,s2d,gnd_vdd,500,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,0.3175,0.24518,0.3175,0.3175,0.072322,disable switch SB (b to iovss)
+hbm_pdk_s2d_gnd_vdd_p500,pdk,s2d,gnd_vdd,500,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.055038,0.097721,0.055038,0.097721,0.14319,output PMOS OP (drain = pad)
+hbm_pdk_s2d_gnd_vdd_p500,pdk,s2d,gnd_vdd,500,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.072322,0.10199,0.072322,0.10199,0.17431,output NMOS ON (drain = pad)
+hbm_pdk_s2d_gnd_vdd_p500,pdk,s2d,gnd_vdd,500,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,0.063486,0.063486,0.063486,0.063486,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_pdk_s2d_gnd_vdd_p500,pdk,s2d,gnd_vdd,500,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,0.061114,0.061114,0.061114,0.061114,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_pdk_s2d_gnd_vdd_p500,pdk,s2d,gnd_vdd,500,d2s,xd2s.xt.xtdn,sg13_hv_nmos,1u,0.45u,0.3175,0.30679,0.3175,0.3175,0.01071,largest max_vox of all MOS devices of this pad
+hbm_pdk_s2d_gnd_vdd_p2000,pdk,s2d,gnd_vdd,2000,s2d,xs2d.xa.xs.xa1.xma,sg13_hv_pmos,20u,1u,12.241,12.29,12.241,12.29,3.9993,input device of unit XA1 (gate = pad)
+hbm_pdk_s2d_gnd_vdd_p2000,pdk,s2d,gnd_vdd,2000,s2d,xs2d.xa.xs.xa2.xma,sg13_hv_pmos,20u,1u,12.241,12.29,12.241,12.29,3.9993,input device of unit XA2 (gate = pad)
+hbm_pdk_s2d_gnd_vdd_p2000,pdk,s2d,gnd_vdd,2000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,9.3105,12.826,9.3105,12.826,12.893,"clamp PMOS MCP (drain = pad, gate via rppd to iovdd)"
+hbm_pdk_s2d_gnd_vdd_p2000,pdk,s2d,gnd_vdd,2000,s2d,xs2d.xp.xmcn,sg13_hv_nmos,88u,0.6u,1.0244,12.737,1.0244,12.737,12.737,"clamp NMOS MCN (drain = pad, gate via rppd to iovss)"
+hbm_pdk_s2d_gnd_vdd_p2000,pdk,s2d,gnd_vdd,2000,s2d,xs2d.xp.xmcp,sg13_hv_pmos,266.4u,0.6u,9.3105,12.826,9.3105,12.826,12.893,largest max_vox of all MOS devices of this pad
+hbm_pdk_s2d_gnd_vdd_p2000,pdk,s2d,gnd_vdd,2000,d2s,xd2s.xd.xc1.xmb,sg13_hv_pmos,20u,1u,0.043216,0.28917,0.043216,0.28917,0.25957,feedback input of unit C1 (gate = vfb = pad)
+hbm_pdk_s2d_gnd_vdd_p2000,pdk,s2d,gnd_vdd,2000,d2s,xd2s.xd.xc2.xmb,sg13_hv_pmos,20u,1u,0.043216,0.28917,0.043216,0.28917,0.25957,feedback input of unit C2 (gate = vfb = pad)
+hbm_pdk_s2d_gnd_vdd_p2000,pdk,s2d,gnd_vdd,2000,d2s,xd2s.xd.xsa,sg13_hv_pmos,1u,0.45u,0.71831,0.61067,0.71831,0.71831,0.10993,disable switch SA (a to iovdd)
+hbm_pdk_s2d_gnd_vdd_p2000,pdk,s2d,gnd_vdd,2000,d2s,xd2s.xd.xsb,sg13_hv_nmos,1u,0.45u,0.71831,0.53894,0.71831,0.71831,0.18232,disable switch SB (b to iovss)
+hbm_pdk_s2d_gnd_vdd_p2000,pdk,s2d,gnd_vdd,2000,d2s,xd2s.xfp.xop,sg13_hv_pmos,546.12u,0.6u,0.10993,0.20974,0.10993,0.20974,0.31023,output PMOS OP (drain = pad)
+hbm_pdk_s2d_gnd_vdd_p2000,pdk,s2d,gnd_vdd,2000,d2s,xd2s.xfn.xon,sg13_hv_nmos,299.2u,1u,0.18232,0.22871,0.18232,0.22871,0.40842,output NMOS ON (drain = pad)
+hbm_pdk_s2d_gnd_vdd_p2000,pdk,s2d,gnd_vdd,2000,d2s,xd2s.xcma,sg13_hv_pmos,7.96u,32.16u,0.087986,0.087986,0.087986,0.087986,0.0,"Miller capacitor CMA (gate = a, body = pa: pad via 2 kOhm)"
+hbm_pdk_s2d_gnd_vdd_p2000,pdk,s2d,gnd_vdd,2000,d2s,xd2s.xcmb,sg13_hv_pmos,7.96u,32.16u,0.086672,0.086672,0.086672,0.086672,0.0,"Miller capacitor CMB (gate = pb: pad via 2 kOhm, body = b)"
+hbm_pdk_s2d_gnd_vdd_p2000,pdk,s2d,gnd_vdd,2000,d2s,xd2s.xt.xtdn,sg13_hv_nmos,1u,0.45u,0.71831,0.58981,0.71831,0.71831,0.1285,largest max_vox of all MOS devices of this pad

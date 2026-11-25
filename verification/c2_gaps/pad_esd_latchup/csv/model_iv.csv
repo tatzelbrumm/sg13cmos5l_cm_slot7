@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# IHP sg13cmos5l simulation (ngspice, PDK models; not ESD-calibrated)
+# forward voltage (V) at the forced current, DC, tt 27 C; pdk = PDK models as they are, esdproxy = antenna diodes re-modeled with the PDK ESD-diode models (common.py)
+model,device,direction,v_at_0.001A,v_at_0.01A,v_at_0.1A,v_at_0.5A,v_at_1A,v_at_1.33A,v_at_2A
+pdk,dpantenna 1.26x27.78 (S2D DP1),"p+/n-well, pad -> iovdd",4.888,41.448,404.703,2018.721,4036.176,5367.688,8062.984
+pdk,dantenna 1.26x27.78 (S2D DN1),n+/p-sub forward: iovss -> pad,5.79,50.54,495.644,2473.434,4945.601,6577.223,9880.017
+pdk,dpantenna 1.26x65.8 (D2S DP0),"p+/n-well, pad -> iovdd",2.563,18.498,175.606,873.418,1745.615,2321.256,3486.486
+pdk,dantenna 1.26x67.6 (D2S DN0),n+/p-sub forward: iovss -> pad,2.901,21.964,210.281,1046.795,2092.37,2782.44,4179.302
+pdk,"MCP drain path, hv PMOS 266.4/0.6 ng 40 (S2D)","pad (drain) -> iovdd (body, source); gate to iovdd via 6.768 kOhm (rppd value of the IO library cell Clamp_P20N0D)",0.517,1.199,4.441,10.579,12.541,13.278,14.6
+pdk,"MCN drain path, hv NMOS 88/0.6 ng 20 (S2D)","iovss (body, source) -> pad (drain); gate to iovss via 1.959 kOhm (Clamp_N20N0D)",0.614,1.44,5.781,13.131,18.885,21.973,27.402
+pdk,"OP drain path, hv PMOS 546.12/0.6 ng 82 (D2S)","pad (drain) -> iovdd (body, source); gate at iovdd (disabled)",0.461,0.929,3.03,8.149,10.655,11.461,12.515
+pdk,"ON drain path, hv NMOS 299.2/1 ng 68 (D2S)","iovss (body, source) -> pad (drain); gate at iovss (disabled)",0.526,1.096,3.144,10.754,15.356,17.427,22.037
+esdproxy,dpantenna 1.26x27.78 (S2D DP1),"p+/n-well, pad -> iovdd",0.778,1.002,1.818,5.187,9.353,12.096,17.642
+esdproxy,dantenna 1.26x27.78 (S2D DN1),n+/p-sub forward: iovss -> pad,0.758,0.979,1.6,3.969,6.862,8.763,12.601
+esdproxy,dpantenna 1.26x65.8 (D2S DP0),"p+/n-well, pad -> iovdd",0.749,0.929,1.312,2.763,4.536,5.701,8.051
+esdproxy,dantenna 1.26x67.6 (D2S DN0),n+/p-sub forward: iovss -> pad,0.729,0.911,1.219,2.239,3.449,4.239,5.829

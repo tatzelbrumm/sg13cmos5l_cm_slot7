@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# ring metal bands of sg13cmos5l_Filler2000 (PDK GDS); sheet resistance typ. (process spec 2.3)
+# resistance per um: iovdd 0.2505 mOhm/um, iovss 0.2165 mOhm/um
+net,layer,y0_um,y1_um,width_um,rsh_ohm_sq
+iovss,Metal3,7.0,32.5,25.5,0.088
+iovss,Metal3,34.5,60.0,25.5,0.088
+iovdd,Metal3,66.0,91.5,25.5,0.088
+iovdd,Metal3,93.5,119.0,25.5,0.088
+iovss,Metal3,126.0,134.0,8.0,0.088
+iovss,Metal4,7.0,32.5,25.5,0.088
+iovss,Metal4,34.5,60.0,25.5,0.088
+iovdd,Metal4,66.0,91.5,25.5,0.088
+iovdd,Metal4,93.5,119.0,25.5,0.088
+iovss,Metal4,126.0,134.0,8.0,0.088
+iovss,TopMetal1,7.0,32.5,25.5,0.018
+iovss,TopMetal1,34.5,60.0,25.5,0.018
+iovdd,TopMetal1,66.0,91.5,25.5,0.018
+iovdd,TopMetal1,93.5,119.0,25.5,0.018
+iovss,TopMetal1,126.0,134.0,8.0,0.018

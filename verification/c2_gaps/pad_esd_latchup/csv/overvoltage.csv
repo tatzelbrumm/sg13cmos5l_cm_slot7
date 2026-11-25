@@ -1,0 +1,9 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# IHP sg13cmos5l simulation (ngspice, PDK models; not ESD-calibrated)
+# supply (iovdd at the IOVdd bond pads) at 3.6 and 5.4 V, operating point, both pads enabled; largest terminal-voltage difference of any MOS device of each pad and which device; i_supply_mA = total from the supply (both pads, the 5 RC clamps and IOVss diodes)
+pad,v_supply,i_supply_mA,max_vgs,dev_vgs,max_vgd,dev_vgd,max_vgb,dev_vgb,max_vds,dev_vds,max_vdb,dev_vdb,max_vsb,dev_vsb
+s2d,3.6,0.4349275203444571,2.689,xs2d.xt.xtgn,3.008,xs2d.xa.xtnp,3.6,xs2d.xt.xtgp,3.212,xs2d.xa.xs.xcyc,3.6,xs2d.xa.xs.xcyc,2.679,xs2d.xt.xtgp
+s2d,5.4,0.4893094018517299,4.489,xs2d.xt.xtgn,5.047,xs2d.xa.xtnp,5.4,xs2d.xt.xtgp,5.002,xs2d.xa.xs.xcyc,5.4,xs2d.xa.xs.xcyc,4.481,xs2d.xt.xtgp
+d2s,3.6,0.4349275203444571,2.689,xd2s.xt.xtgn,2.679,xd2s.xt.xtgn,3.6,xd2s.xt.xtgp,2.686,xd2s.xt.xpbn,2.948,xd2s.xd.xfpl,2.679,xd2s.xt.xtgp
+d2s,5.4,0.4893094018517299,4.489,xd2s.xt.xtgn,4.481,xd2s.xt.xtgn,5.4,xd2s.xt.xtgp,4.472,xd2s.xt.xpbn,4.736,xd2s.xd.xfpl,4.481,xd2s.xt.xtgp

@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# latch-up geometry of the pad cells (KLayout, pads/<cell>/<cell>.gds); distances edge to edge
+pad,d_np_inj_to_core_pmos_nwell_um,d_pwell_esd_to_core_nplus_um,d_scr_esd_nplus_to_esd_pwell_um,area_n_inj_um2,area_esd_pwell_um2
+s2d,21.867,8.63,8.96,151.4,963.0
+d2s,6.33,7.24,17.33,453.3,2143.8
+#
+# guard rings of the ESD sub-cells
+pad,cell,origin,nwell_bbox,nwell_is_ring,nwell_ring_width_um,pplus_rings,nplus_rings
+s2d,DCNDiode,2.67 7.66,(0.39 5.38;38.01 20.2),True,1.58,1,1
+s2d,DCPDiode,43.7 7.66,(43.08 7.04;77.38 18.54),False,,1,1
+s2d,Clamp_N_M1,1.2 19.58,(0.58 18.96;37.82 30.1),True,1.58,1,1
+s2d,Clamp_P_M1,42.23 19.58,(43.41 20.76;77.05 37.66),False,,1,1
+d2s,Clamp_P_M1,0 65,(1.18 66.18;78.82 83.08),False,,1,1
+d2s,Clamp_N_M1,0 15.56,(-0.62 14.94;80.62 26.08),True,1.58,1,1
+d2s,Clamp_N_M1,0 6,(-0.62 5.38;80.62 16.52),True,1.58,1,1
+d2s,DCNDiode,3.56 27.12,(1.28 24.84;78.72 39.66),True,1.58,1,1
+d2s,DCPDiode,4.46 53.08,(3.84 52.46;76.16 63.96),False,,1,1

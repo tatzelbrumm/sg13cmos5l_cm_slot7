@@ -1,0 +1,4 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+_work/
+__pycache__/

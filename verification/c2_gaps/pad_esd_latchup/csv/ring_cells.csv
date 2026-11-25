@@ -1,0 +1,35 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# supply pads, splitters, corners and the slot-7 pads of sg13cmos5l_padframe.mag (tapeout_nov_2026 2ef5a869); s = ring coordinate of the cell origin, counterclockwise from the SE corner
+cell,instance,x_um,y_um,s_um
+sg13cmos5l_Corner,pad_corner_se,2080.0,100.0,0.0
+sg13cmos5l_IOPadIOVdd,pad_vdd3v3_0,2080.0,280.0,180.0
+sg13cmos5l_ocd_Split2000,splitter_14,2080.0,380.0,280.0
+sg13cmos5l_IOPadVdd,pad_vdd1v2_0,2080.0,390.0,290.0
+sg13cmos5l_IOPadVdd,pad_vdd1v2_1,2080.0,500.0,400.0
+sg13cmos5l_IOPadIOVss,pad_vss3v3_0,2080.0,1050.0,950.0
+sg13cmos5l_IOPadVss,pad_vss1v2_0,2080.0,1490.0,1390.0
+sg13cmos5l_IOPadVss,pad_vss1v2_1,2080.0,2150.0,2050.0
+sg13cmos5l_IOPadSingle2Diff,pad_s7_an_0,2080.0,2260.0,2160.0
+sg13cmos5l_IOPadDiff2Single,pad_s7_an_1,2080.0,2370.0,2270.0
+sg13cmos5l_IOPadIOVss,pad_vss3v3_1,2080.0,2590.0,2490.0
+sg13cmos5l_Corner,pad_corner_ne,2080.0,3180.0,3080.0
+sg13cmos5l_IOPadVdd,pad_vdd1v2_2,1900.0,3180.0,3260.0
+sg13cmos5l_IOPadIOVss,pad_vss3v3_2,1350.0,3180.0,3810.0
+sg13cmos5l_IOPadIOVss,pad_vss3v3_3,800.0,3180.0,4360.0
+sg13cmos5l_IOPadIOVdd,pad_vdd3v3_1,690.0,3180.0,4470.0
+sg13cmos5l_IOPadIOVdd,pad_vdd3v3_2,580.0,3180.0,4580.0
+sg13cmos5l_IOPadIOVdd,pad_vdd3v3_3,470.0,3180.0,4690.0
+sg13cmos5l_IOPadIOVdd,pad_vdd3v3_4,360.0,3180.0,4800.0
+sg13cmos5l_Corner,pad_corner_nw,100.0,3180.0,5060.0
+sg13cmos5l_IOPadVss,pad_vss1v2_2,100.0,2670.0,5570.0
+sg13cmos5l_IOPadIOVss,pad_vss3v3_4,100.0,2230.0,6010.0
+sg13cmos5l_IOPadIOVss,pad_vss3v3_5,100.0,1570.0,6670.0
+sg13cmos5l_IOPadVss,pad_vss1v2_3,100.0,1130.0,7110.0
+sg13cmos5l_IOPadVdd,pad_vdd1v2_3,100.0,580.0,7660.0
+sg13cmos5l_IOPadVdd,pad_vdd1v2_4,100.0,470.0,7770.0
+sg13cmos5l_ocd_Split2000,splitter_75,100.0,390.0,7850.0
+sg13cmos5l_IOPadVss,pad_vss1v2_4,100.0,360.0,7880.0
+sg13cmos5l_Corner,pad_corner_sw,100.0,100.0,8140.0
+sg13cmos5l_IOPadVdd,pad_vddd_0,830.0,100.0,8870.0
+sg13cmos5l_IOPadVdd,pad_vddd_1,940.0,100.0,8980.0
