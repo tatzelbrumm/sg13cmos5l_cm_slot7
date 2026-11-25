@@ -303,7 +303,10 @@ h3 { font-size: 9.8pt; margin: 9pt 0 3pt; bookmark-level: 4; }
 h4, h5, h6 { font-size: 9pt; margin: 7pt 0 2pt; bookmark-level: none; }
 .chapter { break-before: page; }
 .chapter .src { font-size: 7pt; color: #555; margin: 0 0 8pt 0; }
-.chapter h2[id$="--7-aside-the-tughra"], .chapter h2[id$="--8-about-this-document-set"] { break-before: page; }
+/* manual page breaks (heading ids, after the file prefix) */
+.chapter h2[id$="--7-aside-the-tughra"], .chapter h2[id$="--8-about-this-document-set"],
+.chapter h3[id$="--62-fail-safe-enables-ls_up_fs"],
+.chapter h2[id$="glue-logic--7-what-was-verified-and-what-was-not"] { break-before: page; }
 .part { break-before: page; padding-top: 70mm; }
 .part h1.part-title { font-size: 22pt; bookmark-level: 1; string-set: chapter content(); border: none; }
 .part p { font-size: 9.5pt; max-width: 140mm; }
@@ -466,7 +469,7 @@ COVER = '''<section class="cover">
 <tr><td>Taped-out design</td><td>commit <code>158afc5</code> of <a href="{repo}">{repo}</a></td></tr>
 <tr><td>This documentation</td><td>branch <code>chipalooza2-documentation</code>, commit <a href="{repo}/tree/{sha}"><code>{short}</code></a></td></tr>
 <tr><td>Built</td><td>{date}, from the Markdown files of that commit (<code>docs/chipalooza2_as_taped_out/book/build_book.py</code>)</td></tr>
-<tr><td>Licence</td><td>repository <code>LICENSE</code>: Solderpad Hardware License 2.1; the documentation files carry <code>SPDX-License-Identifier: Apache-2.0</code> (Appendix G, item 14)</td></tr>
+<tr><td>License</td><td>repository <code>LICENSE</code>: Solderpad Hardware License 2.1; the documentation files carry <code>SPDX-License-Identifier: Apache-2.0</code> (Appendix G, item 14)</td></tr>
 </table>
 <p class="note">No silicon results exist yet. Every number in this book is a simulation (IHP SG13CMOS5L, ngspice, schematic or
 extracted layout as stated). The design had no specification before it was characterized; the limits quoted are the

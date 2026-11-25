@@ -340,7 +340,7 @@ band with the Oguey–Aebischer core at 125 °C), stays at 0.5 V when hot where 
 ±45 mV over 3.0 … 3.6 V (input offset for a ground-referenced source), and cannot be switched off. The replicas use only
 hv MOS sizes that occur in the pads ("No resistor is used", `vcm_rb/README.md`).
 
-### 4.2 `vcm_rb`: centre of the band
+### 4.2 `vcm_rb`: center of the band
 
 ![vcm_rb schematic](pix/schematics/vcm_rb.svg)
 
@@ -359,7 +359,7 @@ vcm = m, buffered by a 5-transistor OTA in unity gain (pair = the unit's input d
 **Derivation (added here):** with the stack current `I`, `gh − m = V_SG(I)` and `m − xp = V_SG(I/2)` (no body effect:
 own wells), so `m = (gh + xp)/2 − [V_SG(I) − V_SG(I/2)]/2`. The unequal split moves `m` below the midpoint; the header's
 words: "the asymmetry subtracts the 0.06 V offset of (gh + xp)/2 against the centre". Result: `m` within −65 … +78 mV of
-the band centre over all PVT and references (README); margin to the band of both pads ≥ +142 mV with the harness
+the band center over all PVT and references (README); margin to the band of both pads ≥ +142 mV with the harness
 reference, ≥ +40 mV in the worst case (OA core, ff 125 °C 3.0 V). The OTA's CB (12 × 12 µm) is there for phase margin
 ("without it … peaks up to 1.25 … with 50 … 200 fF on the pin", header).
 
@@ -417,6 +417,13 @@ rises about 0.9 mV/K, as designed. Mismatch (100 runs, tt 27 °C): σ 5.4 mV / 3
 | XCBM1; XCBM2; XCBM3 | hv NMOS 19.24 / 12.66; 8.18 / 3.25; 2.9 / 12.4 | 2; 2; 1 | `vcm` bypass, 576.3 µm² | same |
 
 ## 5. Bandgap current reference (`bg_core_pd`)
+
+> **Why this reference.** Slot 7 was planned around the designer's own reference, the Oguey–Aebischer core `oa_core_pd`
+> (built and verified, used in the test platforms, [test_platforms.md](test_platforms.md)). For the taped-out slot the AI
+> assistant recommended the Banba bandgap instead, as the lower-risk choice at a time when the slot's place on the tapeout
+> run seemed to depend on clearing the final review without open questions. The designer, under the pressure of that
+> review, accepted the recommendation without the scrutiny it deserved. The Oguey–Aebischer core is therefore not on this
+> chip ([README §8](README.md#8-about-this-document-set)); it remains the designer's preferred reference.
 
 Sources: `macros/bg_core_pd/README.md`, `netlist/schematic/bg_core_pd_magic.spice` (S); the principle comment of
 `bg_core` in `macros/bias_tree_pd/netlist/source/bias_ref.spice` (P).
@@ -548,4 +555,11 @@ draw leakage only (S2D ≤ 0.4 nA at −40 / 27 °C, ≤ 25 nA at 125 °C; D2S �
 - The effect of `pad_ref_rb` running on the slot's `vdd_3v3` instead of the pads' iovdd (the README asks for iovdd).
 - A matching specification for `bias_dist_pd`; Monte Carlo of `ls_up_fs`; ESD / latch-up simulation of either pad.
 - The rhigh sheet resistance and its corner values (so the 1/R□ scaling in section 5 is checked only by its ratios).
-- Why the bandgap, and not the Oguey–Aebischer core, became the slot's only reference.
+- Why the bandgap, and not the Oguey–Aebischer core, became the slot's only reference: answered in section 5 ("Why this
+  reference").
+
+The sizes were chosen in the AI-assisted design sessions, and the designer relied on those choices; the gaps above are gaps
+in the recorded reasoning, not known defects. Slot 7 is a proof of concept for a custom pad cell. The question it is built
+to answer is whether matched-pair pads with a replica bias work on silicon. A detailed specification written before that
+question is answered would mostly fix numbers in advance; for a first cell of its kind the designer prefers to
+characterize what was built (the data sheets) and to set specifications once silicon has shown what the concept can do.
