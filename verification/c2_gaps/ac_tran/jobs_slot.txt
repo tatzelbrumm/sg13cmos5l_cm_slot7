@@ -1,0 +1,51 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# slot round-trip jobs for slot.py, priority order: <view>:<mos>:<temp>:<vdd>:<analysis>[:<load>]
+# PVT = the five points of the designer's tier-1 deck (run_tier1.py POINTS)
+schematic:tt:27:3.3:ac
+klayout:tt:27:3.3:ac
+pex:tt:27:3.3:ac
+schematic:ss:-40:3.0:ac
+schematic:ff:125:3.6:ac
+schematic:fs:125:3.6:ac
+schematic:sf:-40:3.0:ac
+pex:ss:-40:3.0:ac
+pex:ff:125:3.6:ac
+pex:fs:125:3.6:ac
+pex:sf:-40:3.0:ac
+klayout:ss:-40:3.0:ac
+klayout:ff:125:3.6:ac
+klayout:fs:125:3.6:ac
+klayout:sf:-40:3.0:ac
+schematic:tt:27:3.3:step:open
+schematic:tt:27:3.3:step:10p
+schematic:tt:27:3.3:step:100p
+pex:tt:27:3.3:step:open
+pex:tt:27:3.3:step:10p
+pex:tt:27:3.3:step:100p
+klayout:tt:27:3.3:step:open
+klayout:tt:27:3.3:step:10p
+klayout:tt:27:3.3:step:100p
+schematic:ss:-40:3.0:step:open
+schematic:ff:125:3.6:step:open
+schematic:fs:125:3.6:step:open
+schematic:sf:-40:3.0:step:open
+schematic:ss:-40:3.0:step:100p
+schematic:ff:125:3.6:step:100p
+schematic:fs:125:3.6:step:100p
+schematic:sf:-40:3.0:step:100p
+pex:ss:-40:3.0:step:open
+pex:ff:125:3.6:step:open
+pex:ss:-40:3.0:step:100p
+pex:ff:125:3.6:step:100p
+schematic:tt:27:3.3:sine:open
+schematic:tt:27:3.3:sine:100p
+pex:tt:27:3.3:sine:open
+pex:tt:27:3.3:sine:100p
+klayout:tt:27:3.3:sine:open
+schematic:ss:-40:3.0:sine:open
+schematic:ff:125:3.6:sine:open
+schematic:fs:125:3.6:sine:open
+schematic:sf:-40:3.0:sine:open
+# check: the solver aid rshunt=1e12 forced on the schematic pads (some cold schematic runs need it, see slot.py)
+schematic:tt:27:3.3:ac:open:rshunt

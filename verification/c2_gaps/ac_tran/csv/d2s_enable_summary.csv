@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# IHP sg13cmos5l simulation (schematic | magic PEX): D2S enable, scalars from the curves; units: t_on s, Glitch mV, Iio_end A
+view,sel,t_on,Glitch_max,Glitch_min,Iio_end
+schematic,0,9.82036e-07,121.649,-104.35,0.000308421
+schematic,1,1.81934e-06,225.546,-176.583,0.000315629
+schematic,2,1.22839e-06,124.381,-112.755,0.000315825
+pex,0,1.10892e-06,127.776,-128.267,0.000308431
+pex,1,2.38742e-06,228.132,-224.772,0.000315735
+pex,2,1.34877e-06,128.661,-132.471,0.000315841

@@ -1,0 +1,12 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# IHP sg13cmos5l simulation: slot-7 round trip sine, pads schematic | magic PEX | KLayout-extracted; units: THD / H dB(c), A1 V, gain_10k = A1_out/A1_in, delay_10k s, err V (pad_d2s - expected, 200-600 us)
+view,point,load,aid,THD_dB,THD_in_dB,H2_dBc,H3_dBc,A1_out,A1_in,gain_10k,delay_10k,err_pp,err_max_abs
+schematic,ff 125 °C 3.6 V,open,,-53.4204,-109.662,-55.3497,-59.8187,0.49837,0.5,0.996741,1.40831e-07,0.00911366,0.0064893
+schematic,fs 125 °C 3.6 V,open,,-61.7214,-109.662,-63.0074,-68.8883,0.499011,0.5,0.998022,1.36782e-07,0.00857644,0.00542534
+schematic,sf -40 °C 3.0 V,open,,-70.6333,-109.662,-71.211,-80.158,0.499129,0.5,0.998258,1.50169e-07,0.0095543,0.00479046
+schematic,ss -40 °C 3.0 V,open,rshunt,-67.9468,-109.662,-68.8411,-76.1321,0.499062,0.5,0.998124,1.43935e-07,0.00919729,0.00461136
+schematic,tt 27 °C 3.3 V,open,,-78.238,-109.662,-81.3715,-81.3048,0.499292,0.5,0.998584,1.45881e-07,0.00919594,0.00464087
+schematic,tt 27 °C 3.3 V,100p,,-72.4895,-109.662,-77.6811,-74.3793,0.499249,0.5,0.998498,1.70344e-07,0.0110114,0.00553565
+pex,tt 27 °C 3.3 V,open,rshunt,-77.8717,-109.662,-81.3913,-80.5748,0.499289,0.5,0.998579,1.64445e-07,0.0103416,0.00522503
+pex,tt 27 °C 3.3 V,100p,rshunt,-72.0083,-109.662,-77.432,-73.8227,0.499245,0.5,0.99849,1.91755e-07,0.0123694,0.00622644
