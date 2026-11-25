@@ -6,7 +6,8 @@ SPDX-License-Identifier: Apache-2.0
 
 Designer: Christoph Maier. Chipalooza Challenge #2 (IHP sg13cmos5l), slot 7, taped out on 2026-11-09 as commit `158afc5` of
 this repository. No silicon results exist yet: every number below is a **simulation** (IHP sg13cmos5l; schematic or extracted
-layout as stated), and the design had no specification before it was characterized (proof of concept).
+layout as stated). The design is a proof of concept. Its specification is an ad hoc one, the working limits written into
+the CACE files during the AI-assisted design, and the taped-out design does not quite meet it ([achieved vs limits](ACHIEVED_VS_LIMITS.md)).
 
 ## Slot 7 at a glance
 
@@ -78,7 +79,7 @@ PEX of the whole slot, ESD / latch-up simulation of the pads, silicon measuremen
 **In short:** an instrumentation / audio-class pad pair: about 0 … 1 V in, 0.2 … 2.3 V out, 1 … 2 MHz bandwidth, a few mV
 of error, about 0.45 mA in all; loads up to 300 pF; simulated only, ESD not simulated. The details:
 
-For reuse in a system. All simulation, no silicon; "limits" are the designer's working limits, not a specification
+For reuse in a system. All simulation, no silicon; "limits" are the working limits of the ad hoc specification, which the design does not quite meet
 ([achieved vs working limits](ACHIEVED_VS_LIMITS.md)).
 
 - **S2D input range** (1 mV linear): −0.157 … 1.296 V at tt 27 °C 3.3 V with the replica's `vref` 0.49 V / `vcm` 1.26 V; high end ≥ 0.980 V at every corner, low end above 0 V (≤ 0.086 V) at 125 °C. It moves with `vref` and `vcm` and shrinks at 3.0 V (e.g. `vref` 0.5 V, `vcm` 1.65 V: 0.371 … 0.630 V); above about 1.5 V the outputs saturate ([DC curves](../../verification/c2_gaps/dc_curves/results.md) §1, §1b, §4).
@@ -106,11 +107,12 @@ For reuse in a system. All simulation, no silicon; "limits" are the designer's w
 | What does each pad do, in numbers? | data sheets: [S2D](datasheets/sg13cmos5l_IOPadSingle2Diff.md), [D2S](datasheets/sg13cmos5l_IOPadDiff2Single.md), [replica bias](datasheets/pad_ref_rb.md), [whole slot](datasheets/slot_7_system.md) ([how the data sheets were made](datasheets/README.md)) |
 | Frequency response, steps, noise, enable transients | [AC / transient](../../verification/c2_gaps/ac_tran/README.md) (20 figures; read `results.md` first) |
 | DC transfer, input / output range, linearity | [DC curves](../../verification/c2_gaps/dc_curves/README.md) (22 figures; read `results.md` first) |
-| Which working limits were met, and by what margin? | [ACHIEVED_VS_LIMITS.md](ACHIEVED_VS_LIMITS.md) (per pad and `pad_ref_rb`; working limits, not a specification) |
+| Which working limits were met, and by what margin? | [ACHIEVED_VS_LIMITS.md](ACHIEVED_VS_LIMITS.md) (per pad and `pad_ref_rb`; the ad hoc specification and where it is not met) |
 | What was verified, and what is open? | [§3](#3-readiness-of-the-blocks-that-were-kicked-off), [§5](#5-verification-state), [§5a](#5a-gap-simulations-of-2026-11-23), [signoff](../../signoff/README.md) |
 | How to measure the chip | [TEST_PLAN.md](TEST_PLAN.md) |
 | Earlier test platforms (not taped out) | [test_platforms.md](test_platforms.md) |
-| Everything as PDF | [data book](pdf/slot7_databook.pdf) (summary, contents, all chapters, data sheets, figures, appendices; about 250 pages) and [data sheet in three pages](pdf/slot7_digest.pdf) ([source](DIGEST.md)); both made by [book/build_book.py](book/build_book.py) from the Markdown files |
+| Everything as PDF | [data book](pdf/slot7_databook.pdf) (summary, contents, all chapters, data sheets, figures, appendices; about 250 pages) and [data sheet in eight pages](pdf/slot7_digest.pdf) ([source](DIGEST.md); shorter versions kept for reference: [two-page summary](pdf/slot7_digest_2page_summary.pdf), [three-page data sheet](pdf/slot7_digest_3page_datasheet.pdf)); both made by [book/build_book.py](book/build_book.py) from the Markdown files |
+| What was proposed for Chipalooza #2? | [the proposal as submitted](PROPOSAL_chipalooza2.md) |
 | How this set was made; AI assistance | [§8](#8-about-this-document-set), [log.md](log.md), [../AI_ASSISTANCE.md](../AI_ASSISTANCE.md) |
 
 ## 1. Which version was taped out
@@ -206,7 +208,7 @@ pull-downs); `proj_ena` on; first route all `dig_in` registers to constant 0 (0x
 
 ## 3. Readiness of the blocks that were kicked off
 
-How each block was started, and how far it got by the tapeout. ("Pass" in the CACE results quoted below means inside the designer's *working limits*; the design is a proof of concept and had no specification. The observed intervals are in [datasheets/](datasheets/README.md).) "Kicked off" means a launch brief or cloud session recorded in the design repository (`docs/launch/`
+How each block was started, and how far it got by the tapeout. ("Pass" in the CACE results quoted below means inside the designer's *working limits*; the design is a proof of concept with an ad hoc specification, see [achieved vs limits](ACHIEVED_VS_LIMITS.md). The observed intervals are in [datasheets/](datasheets/README.md).) "Kicked off" means a launch brief or cloud session recorded in the design repository (`docs/launch/`
 on `harness-test`; the `sudelbuecher/cloud_sessions/` briefs and reports and the chat logs on `sudel_buecher`). Readiness is as the blocks' own reports and READMEs state it;
 where a README is older than a later report, the later one is used and the stale statement is named. "In the slot" = present in the taped-out `slot_7` (section 4).
 

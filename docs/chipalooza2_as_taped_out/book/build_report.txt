@@ -1,1 +1,2 @@
-# build_book.py report, source commit f84a1c1ce493dfeb356cc99840952ae09197939c
+# build_book.py report, source commit fbcc692e73593544286e6bc3410378f12c7fdf8d
+note: link to docs/chipalooza2_as_taped_out/PROPOSAL_chipalooza2.md: not in fbcc692, linked to branch chipalooza2-documentation

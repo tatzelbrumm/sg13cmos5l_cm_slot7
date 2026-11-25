@@ -123,7 +123,7 @@ low (as the fallback slot did); with it off the pull-downs are off, and the slot
 | ff 125 °C | all modes pass; default 6.50 mV, swap 2.88, mon 6.55, feed 2.22, ext 6.39, swap + feed 2.22 | same |
 | **ss −40 °C, DC** | default, all-high and no-key converge (1.31 mV); **swap, mon, feed, ext and swap + feed give no DC result** (convergence, even with more iterations and `rshunt` 1e12) | same; RUNLOG row 121 |
 | ss −40 °C, transient from power-up (supplies, enable and bits ramped) | feed 0.24 mV and ext 0.04 mV pass; **swap and mon stall at the bandgap's start-up node `xbg.ks` at the enable edge**; swap + feed not stated as rerun | RUNLOG row 122 |
-| enable cell | 128 / 128 CACE rows inside the designer's working limits (no specification existed) (output error ≤ 1.3 µV, delays ≤ 2.4 / 81 ns with 100 ps edges); Monte Carlo and PEX not done | `en_ctrl_3v3` README |
+| enable cell | 128 / 128 CACE rows inside the designer's working limits (the ad hoc specification) (output error ≤ 1.3 µV, delays ≤ 2.4 / 81 ns with 100 ps edges); Monte Carlo and PEX not done | `en_ctrl_3v3` README |
 | S2D enable kick through the ext switches (tt 27 °C) | `vcm` +118 / −63 mV, `vref` +85 / −62 mV (shorted: +107 / −58, +81 / −54 mV) | `slot_7` README |
 | mon / bus load | with the bus switches closed the S2D → D2S loop is 10–30× slower, stable; the bus taps add a shared chip pad on `outp` / `outn` | `slot_7` README, RUNLOG |
 

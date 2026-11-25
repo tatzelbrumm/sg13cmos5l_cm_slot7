@@ -7,8 +7,8 @@ SPDX-License-Identifier: Apache-2.0
 Designer: Christoph Maier. Scope: the slot 7 circuit **as taped out** (this repository at `158afc5`; see [README.md](README.md)
 section 1) on the Chipalooza #2 harness chip (`MPC9639`, harness branch `tapeout_nov_2026`). No chip has been measured yet.
 Every expected value below is a **simulated interval** (a corner table, a CACE result range or a single simulated point), copied
-with its source; none of them is a guaranteed limit, and the design had no specification (proof of concept; see
-[datasheets/README.md](datasheets/README.md)). The verdict for a measurement is therefore "inside the simulated interval" or
+with its source; none of them is a guaranteed limit, and the design's only specification is the ad hoc one of the CACE working limits (see
+[ACHIEVED_VS_LIMITS.md](ACHIEVED_VS_LIMITS.md)). The verdict for a measurement is therefore "inside the simulated interval" or
 "outside the simulated interval", never "pass / fail against a specification".
 
 ## 0. Sources
@@ -210,7 +210,7 @@ they are working estimates for a bench, not requirements of a specification.
 
 One row per measurement step: the quantity, the conditions, the **simulated** interval with its source, and how to classify
 the reading. The intervals are the current ones (DC curves of 2026-11-24, AC / transient, the D2S re-run of 2026-11-25, the
-ss −40 °C power-up runs); none is a guaranteed limit, and the design had no specification. "Inside" / "outside" always means
+ss −40 °C power-up runs); none is a guaranteed limit (the specification is the ad hoc one of [ACHIEVED_VS_LIMITS.md](ACHIEVED_VS_LIMITS.md)). "Inside" / "outside" always means
 **inside / outside the simulated interval** of §5, not pass / fail. A die sits at one process point, so compare with the
 interval over all simulated corners at the measured temperature; where only one corner was simulated at a temperature (27 °C:
 tt only), a reading outside it says little by itself. Mismatch is in none of the slot-level intervals (§5; D2S output offset

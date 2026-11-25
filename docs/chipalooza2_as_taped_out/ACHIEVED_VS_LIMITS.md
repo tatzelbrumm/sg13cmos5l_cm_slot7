@@ -4,11 +4,15 @@ SPDX-License-Identifier: Apache-2.0
 -->
 # Achieved vs working limits: S2D pad, D2S pad, `pad_ref_rb`
 
-Back to [README.md](README.md). **The limits below are the designer's working limits, not a specification.** The design is a
-proof of concept and had no specification before it was characterized; the CACE files carry the designer's working limits,
-"partly derived from earlier measured bands" ([datasheets/README.md](datasheets/README.md)), not pass / fail criteria. A
-specification, if one is wanted, would be set ex post facto from the observed intervals. "Inside" therefore means "inside the
-designer's working limit in simulation", not "meets a specification" and not a guarantee; nothing here was measured on silicon.
+Back to [README.md](README.md). **The limits below are an ad hoc specification, and the taped-out design does not quite meet it.** No specification was set
+before the design (proof of concept). During the AI-assisted design the AI assistant wrote working limits into the CACE files,
+"partly derived from earlier measured bands" ([datasheets/README.md](datasheets/README.md)); they serve as the specification.
+Not met: one of 30 D2S Monte Carlo samples has a gain of 0.48877 against the lower limit 0.49 (D2S table, mm_params); at the
+slot's own `vref` / `vcm` the S2D input range ends at 0.980 V against the 1.0 V limit applied for comparison (S2D table). The
+tentative targets of the Chipalooza #2 proposal ("to be discussed": bandwidth below 1 MHz unless advised otherwise, 10 … 100 nA
+branch currents, some 10 mA class-AB output current into 100 pF; [proposal](PROPOSAL_chipalooza2.md)) were superseded by these
+limits during the design. "Inside" means "inside the working limit in simulation", not a guarantee; nothing here was measured
+on silicon.
 
 **How to read the tables.** *Working limit*: as the data sheet shows it from the CACE yaml ("no limit" where both sides are
 `any`). *Schematic* / *post-layout*: min … max over the runs of the group, copied from the sources named under each table

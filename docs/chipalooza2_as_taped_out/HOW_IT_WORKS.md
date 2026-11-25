@@ -560,6 +560,7 @@ draw leakage only (S2D ≤ 0.4 nA at −40 / 27 °C, ≤ 25 nA at 125 °C; D2S �
 
 The sizes were chosen in the AI-assisted design sessions, and the designer relied on those choices; the gaps above are gaps
 in the recorded reasoning, not known defects. Slot 7 is a proof of concept for a custom pad cell. The question it is built
-to answer is whether matched-pair pads with a replica bias work on silicon. A detailed specification written before that
-question is answered would mostly fix numbers in advance; for a first cell of its kind the designer prefers to
-characterize what was built (the data sheets) and to set specifications once silicon has shown what the concept can do.
+to answer is whether matched-pair pads with a replica bias work on silicon. No detailed specification was written before the design;
+the AI assistant set ad hoc working limits during the design, and the taped-out design does not quite meet them
+([ACHIEVED_VS_LIMITS.md](ACHIEVED_VS_LIMITS.md)). For a first cell of its kind the designer prefers to characterize what was
+built and to set a specification once silicon has shown what the concept can do.

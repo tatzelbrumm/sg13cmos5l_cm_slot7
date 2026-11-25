@@ -83,6 +83,9 @@ BOOK = [
         (f'{DOCS}/log.md', None, False),
         (f'{DOCS}/characterization_candidates.md', None, False),
     ]),
+    ('Appendix I — Chipalooza #2 proposal', [
+        (f'{DOCS}/PROPOSAL_chipalooza2.md', None, False),
+    ]),
 ]
 SUMMARY_SRC = f'{DOCS}/README.md#summary'
 SPLIT_HEADING = '1. Which version was taped out'   # README: everything before this heading is the summary
@@ -437,7 +440,7 @@ PART_INTRO = {
         'supplies and modes; the design rationale with equations and sizing tables; the 3.3 V glue logic.</p>',
     'Part II — Data sheets':
         '<p>One data sheet per pad, for the replica bias, the enable level shifter and the whole slot. All values are '
-        'simulations; the limits are the designer\'s working limits, set after the design (no specification existed).</p>',
+        'simulations; the limits are the working limits of an ad hoc specification written during the AI-assisted design, which the design does not quite meet.</p>',
     'Part III — Working limits and test plan':
         '<p>What was achieved against the working limits, how to measure the chip, and the earlier test platforms that were '
         'not taped out.</p>',
@@ -456,6 +459,8 @@ PART_INTRO = {
         '<p>The repository README (files the harness reads, provenance, pin table) and the notes written for the harness '
         'owner at hand-over.</p>',
     'Appendix G — Chipalooza #2 rules': '<p>Slot 7 against each item of the Chipalooza #2 rules.</p>',
+    'Appendix I — Chipalooza #2 proposal':
+        '<p>The proposal for slot 7 as submitted (10 August 2026), unchanged.</p>',
     'Appendix H — How this documentation was made':
         '<p>AI assistance, the running log of the documentation session of 2026-11-22 and the inventory of '
         'characterization data it started from.</p>',
@@ -472,8 +477,8 @@ COVER = '''<section class="cover">
 <tr><td>License</td><td>repository <code>LICENSE</code>: Solderpad Hardware License 2.1; the documentation files carry <code>SPDX-License-Identifier: Apache-2.0</code> (Appendix G, item 14)</td></tr>
 </table>
 <p class="note">No silicon results exist yet. Every number in this book is a simulation (IHP SG13CMOS5L, ngspice, schematic or
-extracted layout as stated). The design had no specification before it was characterized; the limits quoted are the
-designer's working limits.</p>
+extracted layout as stated). The specification is an ad hoc one, the working limits written during the AI-assisted
+design; the taped-out design does not quite meet it (Part III).</p>
 <p style="margin-top:14pt;font-size:8.5pt">How to read it: the summary (next pages) gives the slot with its main figures and numbers; the
 contents list is clickable, and so is every cross-reference. Links into files that are not reprinted here (scripts, CSV
 files, netlists) open the file on GitHub at the commit above.</p>
