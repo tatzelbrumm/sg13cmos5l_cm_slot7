@@ -340,6 +340,8 @@ figure.gal figcaption { font-size: 7.4pt; text-align: left; margin-top: 2pt; }
 .summary { break-before: page; }
 .summary h1 { bookmark-level: 1; }
 .summary img { max-height: 72mm; }
+.summary h2[id$="--where-to-find-what"] { break-before: page; }
+.summary h2[id$="--where-to-find-what"] + table { break-inside: avoid; }
 .summary p:has(> img) { text-align: center; margin: 2pt 0 0 0; }
 .toc { break-before: page; }
 .toc h1 { bookmark-level: 1; }
