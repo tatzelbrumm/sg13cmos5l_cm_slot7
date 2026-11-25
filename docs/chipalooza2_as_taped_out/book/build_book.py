@@ -493,10 +493,13 @@ code { font-family: "DejaVu Sans Mono", monospace; font-size: 8pt; }
 table { border-collapse: collapse; width: 100%; margin: 4pt 0; font-size: 8.3pt; }
 th, td { border: 0.4pt solid #aaa; padding: 1.6pt 4pt; vertical-align: top; }
 th { background: #e9eef4; text-align: left; }
-td:first-child { width: 36%; }
 img { max-width: 100%; }
-p > img:only-child { display: block; margin: 3pt auto; max-height: 78mm; }
-table.figs td { border: none; width: 50%; font-size: 7.6pt; padding: 0 3pt; }
+p > img:only-child { display: block; margin: 3pt auto; max-height: 64mm; }
+tr { break-inside: avoid; }
+h2 + table, h2 + p { break-before: avoid; }
+table.figs { table-layout: fixed; }
+table.figs td { border: none; width: 50%; font-size: 7.6pt; padding: 0 3pt; text-align: left; }
+table.figs td img { width: 88%; }
 table.figs th { display: none; }
 '''
 
@@ -505,9 +508,8 @@ def build_digest(sha):
     book = Book(sha)
     book.files = {}                                   # the digest stands alone: every link goes to GitHub
     h, _ = book.convert(DIGEST_SRC)
-    h = h.replace('<table>', '<table class="figs">', 2)
-    # the first table is the key-number table, the second the figure pair
-    h = h.replace('<table class="figs">', '<table>', 1)
+    # tables that hold images are figure grids (no borders, equal columns); all others are data tables
+    h = re.sub(r'<table>(?=(?:(?!</table>).)*?<img)', '<table class="figs">', h, flags=re.S)
     doc = (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Slot 7 in two pages</title>'
            f'<meta name="author" content="Christoph Maier"><style>{DIGEST_CSS.replace("SHORTSHA", sha[:7])}</style></head>'
            f'<body>{h}</body></html>')
