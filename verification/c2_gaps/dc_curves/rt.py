@@ -117,7 +117,7 @@ def main(rdir, dest):
     save(fig, str(dest / 'plots' / 'rt_error_corners'))
     # table + CSV
     hd = ['pads', 'corner', 'T [°C]', 'V', 'replica vref / vcm [V]', 'D2S vref [V]', 'gain', 'offset [mV]',
-          'max |err| pad in 0 ... 1 V [mV]', 'pad in range 1 mV [V]', 'pad out range 1 mV [V]', 'pad in range 10 mV [V]']
+          'max \\|err\\| pad in 0 ... 1 V [mV]', 'pad in range 1 mV [V]', 'pad out range 1 mV [V]', 'pad in range 10 mV [V]']
     rr, cr = [], []
     for p in PTS:
         for v in VIEWS:

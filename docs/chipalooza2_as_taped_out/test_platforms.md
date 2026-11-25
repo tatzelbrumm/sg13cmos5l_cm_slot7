@@ -164,7 +164,7 @@ on: 5.0000 .. 5.0009 uA; off: max 2.9e-11 A
 
 ## Fail-safe (every dig_in = 1)
 
-| case | max V(bus2) into 1 Gohm | max |I(bus0)| | max |I(bus1)| | max |I(bus3)| |
+| case | max V(bus2) into 1 Gohm | max \|I(bus0)\| | max \|I(bus1)\| | max \|I(bus3)\| |
 |---|---|---|---|---|
 | vdd1v2_off | 200.9 mV | 6.32e-11 A | 1.57e-10 A | 2.9e-11 A |
 | vdd1v2_off_1uA | 200.9 mV | 6.32e-11 A | 1.57e-10 A | 2.9e-11 A |
@@ -184,7 +184,7 @@ on: 5.0000 .. 5.0009 uA; off: max 2.2e-11 A
 
 ## Fail-safe (every dig_in = 1)
 
-| case | max V(bus2) into 1 Gohm | max |I(bus0)| | max |I(bus1)| | max |I(bus3)| |
+| case | max V(bus2) into 1 Gohm | max \|I(bus0)\| | max \|I(bus1)\| | max \|I(bus3)\| |
 |---|---|---|---|---|
 | vdd1v2_off | 161.8 mV | 5.7e-11 A | 1.47e-10 A | 2.2e-11 A |
 | vdd1v2_off_1uA | 161.8 mV | 5.7e-11 A | 1.47e-10 A | 2.2e-11 A |

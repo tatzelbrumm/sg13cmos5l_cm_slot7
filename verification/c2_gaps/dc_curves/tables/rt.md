@@ -6,7 +6,7 @@ SPDX-License-Identifier: Apache-2.0
 
 #### Round trip S2D -> slot 7 -> D2S (pad out unloaded), IHP sg13cmos5l simulation, slot 7 tier-1 deck (pads: schematic | magic PEX | KLayout-extracted)
 
-| pads | corner | T [°C] | V | replica vref / vcm [V] | D2S vref [V] | gain | offset [mV] | max |err| pad in 0 ... 1 V [mV] | pad in range 1 mV [V] | pad out range 1 mV [V] | pad in range 10 mV [V] |
+| pads | corner | T [°C] | V | replica vref / vcm [V] | D2S vref [V] | gain | offset [mV] | max \|err\| pad in 0 ... 1 V [mV] | pad in range 1 mV [V] | pad out range 1 mV [V] | pad in range 10 mV [V] |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | schematic | tt | 27 | 3.3 | 0.4923 / 1.2566 | 1.2566 | 0.99875 | 0.05 | 0.86 | -0.171 ... 1.281 | 0.595 ... 2.044 | -0.297 ... 1.406 |
 | magic PEX (C-coupled) | tt | 27 | 3.3 | 0.4923 / 1.2566 | 1.2566 | 0.99875 | 0.06 | 0.87 | -0.171 ... 1.281 | 0.595 ... 2.044 | -0.297 ... 1.406 |
