@@ -67,6 +67,18 @@ SPDX-License-Identifier: Apache-2.0
 
 *Linear input range vs the vref and vcm settings (schematic)*
 
+![Closed-loop frequency response of (outp − outn)/(pad − vref), schematic and extracted, over corners](../../../verification/c2_gaps/ac_tran/plots/s2d_bode.png)
+
+*Closed-loop frequency response of (outp − outn)/(pad − vref), schematic and extracted, over corners: 1.24 … 1.81 MHz*
+
+![Step response (outp, outn, difference) at the CACE loads 0.001 and 0.5 pF](../../../verification/c2_gaps/ac_tran/plots/s2d_step.png)
+
+*Step response (outp, outn, difference) at the CACE loads 0.001 and 0.5 pF*
+
+![Input-referred noise density](../../../verification/c2_gaps/ac_tran/plots/s2d_noise.png)
+
+*Input-referred noise density: 680 nV/√Hz at 1 kHz, 153 nV/√Hz at 100 kHz*
+
 Schematics: [pad top](../pix/schematics/sg13cmos5l_IOPadSingle2Diff.svg), [core amplifier s2d_mpdda](../pix/schematics/s2d_mpdda.svg), [with power-down s2d_mpdda_pd](../pix/schematics/s2d_mpdda_pd.svg), [matched unit unit_r2](../pix/schematics/unit_r2.svg), [bias tree](../pix/schematics/bias_tree_noab_pd.svg), [ESD](../pix/schematics/s2d_pad_esd.svg). Layout: [all layers](../pix/layout/IOPadSingle2Diff.png), [Metal2 and below](../pix/layout/IOPadSingle2Diff_frontend.png). More figures and the range tables: [DC curves](../../../verification/c2_gaps/dc_curves/README.md).
 
 ## Specification (ex post facto, as characterized)

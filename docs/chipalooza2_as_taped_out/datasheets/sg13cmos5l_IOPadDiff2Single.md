@@ -73,6 +73,18 @@ SPDX-License-Identifier: Apache-2.0
 
 *Closed-loop −3 dB bandwidth per corner, schematic vs extracted layout*
 
+![Frequency response at the CACE loads 10 / 100 / 300 pF and 1 nF, 1 kΩ and unloaded](../../../verification/c2_gaps/ac_tran/plots/d2s_bode_loads.png)
+
+*Frequency response at the CACE loads 10 / 100 / 300 pF and 1 nF, 1 kΩ and unloaded: peaking appears at 1 nF (4.8 dB with 1 kΩ, 7.4 dB unloaded); fresh schematic run of the taped-out circuit and PEX*
+
+![Large-signal steps at 10 / 100 / 300 pF (slew 1.84 / 2.43 / 2.92 V/µs at tt)](../../../verification/c2_gaps/ac_tran/plots/d2s_step.png)
+
+*Large-signal steps at 10 / 100 / 300 pF (slew 1.84 / 2.43 / 2.92 V/µs at tt)*
+
+![Output impedance vs frequency](../../../verification/c2_gaps/ac_tran/plots/d2s_zout.png)
+
+*Output impedance vs frequency*
+
 Schematics: [pad top](../pix/schematics/sg13cmos5l_IOPadDiff2Single.svg), [driver d2s_mpdda_pd](../pix/schematics/d2s_mpdda_pd.svg), [output stage P](../pix/schematics/d2s_out_p.svg), [output stage N](../pix/schematics/d2s_out_n.svg), [bias tree](../pix/schematics/bias_tree_pd.svg). Layout: [all layers](../pix/layout/IOPadDiff2Single.png), [Metal2 and below](../pix/layout/IOPadDiff2Single_frontend.png). Post-layout CACE of all groups: [D2S post-layout](../../../verification/c2_gaps/d2s_pex/results.md) (this sheet's tables are schematic only).
 
 ## Specification (ex post facto, as characterized)

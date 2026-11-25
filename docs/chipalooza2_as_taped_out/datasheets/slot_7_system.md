@@ -32,6 +32,18 @@ SPDX-License-Identifier: Apache-2.0
 
 *bg_core_pd start-up for 1 µs and 1 ms supply ramps*
 
+![Round trip pad_s2d → pad_d2s](../../../verification/c2_gaps/ac_tran/plots/rt_bode_tt27.png)
+
+*Round trip pad_s2d → pad_d2s: magnitude and phase, tt 27 °C, three loads, pads schematic / PEX / KLayout-extracted*
+
+![Round-trip step 0.25 → 0.75 V](../../../verification/c2_gaps/ac_tran/plots/rt_step_tt27.png)
+
+*Round-trip step 0.25 → 0.75 V: settling to 1 % in 453 … 623 ns*
+
+![10 kHz sine 0 … 1 V through the loop](../../../verification/c2_gaps/ac_tran/plots/rt_sine_tt27.png)
+
+*10 kHz sine 0 … 1 V through the loop: output − expected and THD (−78 dB at tt)*
+
 Schematic: [slot_7](../pix/schematics/slot_7.svg), [s7_ctrl](../pix/schematics/s7_ctrl.svg), [bg_core_pd](../pix/schematics/bg_core_pd.svg). Layout: [slot_7](../pix/layout/slot_7.png). Analysis of the mode failures: [slot modes and bandgap](../../../verification/c2_gaps/slot_modes_bg/results.md).
 
 ## 1. Corner table (`results.txt`)

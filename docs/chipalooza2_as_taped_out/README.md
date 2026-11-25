@@ -42,6 +42,14 @@ mode vs pad voltage; shaded: linear input range (error < 1 mV input-referred).*
 *Figure 5: the output pad alone (D2S) at the slot's operating point (input common mode = vref = 1.26 V, 1 kΩ + 100 pF load),
 5 process corners × 3 temperatures: output (top) and error from the ideal ½ (vinp − vinn) (bottom, shaded ±10 mV).*
 
+![Round-trip Bode plot](../../verification/c2_gaps/ac_tran/plots/rt_bode_tt27.png)
+
+*Figure 6: the round trip as a small-signal transfer (pad_s2d → pad_d2s), magnitude and phase, tt 27 °C 3.3 V, unloaded and with 1 kΩ ∥ 10 / 100 pF, pads schematic, magic PEX and KLayout-extracted: about 1.1 … 1.5 MHz bandwidth, no peaking. Over the 5 PVT points of the slot simulation: 1.08 … 1.69 MHz.*
+
+![Round-trip step response](../../verification/c2_gaps/ac_tran/plots/rt_step_tt27.png)
+
+*Figure 7: a 0.25 → 0.75 V step through the loop: the output settles to 1 % in 453 … 623 ns (schematic and PEX, three loads), first-order, without overshoot.*
+
 ### Key numbers (simulation)
 
 | quantity | value | conditions | source |
@@ -53,6 +61,7 @@ mode vs pad voltage; shaded: linear input range (error < 1 mV input-referred).*
 | D2S INL over ±1 V differential | ≤ 0.56 mV at 3.3 V, ≤ 1.38 mV at 3.0 V | slot operating point (vicm 1.26 V), 1 kΩ | [DC curves](../../verification/c2_gaps/dc_curves/results.md) §2b |
 | D2S linear output range (10 mV) | 0.211 … 2.317 V at tt 27 °C; worst 0.328 … 2.258 V | 3.3 V, slot operating point, 1 kΩ | [DC curves](../../verification/c2_gaps/dc_curves/results.md) §2b |
 | D2S bandwidth, slew rate | 1.43 … 2.71 MHz, 1.59 … 2.79 V/µs | extracted layout, 10 … 300 pF | [D2S post-layout](../../verification/c2_gaps/d2s_pex/results.md) |
+| round-trip bandwidth, 1 % settling | 1.08 … 1.69 MHz, no peaking; 453 … 623 ns | 5 PVT points; schematic and PEX; unloaded … 1 kΩ ∥ 100 pF | [AC / transient](../../verification/c2_gaps/ac_tran/results.md), Figures 6, 7 |
 | round-trip error, pad in 0 … 1 V | ≤ 0.86 mV (tt 27 °C); ≤ 6.5 mV (ff 125 °C 3.6 V) | default mode, replica bias | [slot data sheet](datasheets/slot_7_system.md), Figure 3 |
 | `vcm` / `vref` from the replica | 1.115 … 1.395 V / 0.436 … 0.596 V; mismatch σ 5.4 / 3.8 mV | corners × −40 … 125 °C × 3.0 … 3.6 V | [replica data sheet](datasheets/pad_ref_rb.md), [replica bias](../../verification/c2_gaps/replica_bias/results.md) |
 | bandgap reference current | 3.83 … 6.37 µA (typ. 4.96 µA) | set by the resistor corner (−21 % / +28 %) | [bandgap](../../verification/c2_gaps/slot_modes_bg/results.md) |
@@ -73,6 +82,7 @@ PEX of the whole slot, ESD / latch-up simulation of the pads, silicon measuremen
 | What do the modes and the `dig_in` bits do? | [§2.4](#24-modes), [glue_logic.md](glue_logic.md) |
 | Which pins, where? | [§4](#4-physical-interface-and-layout-hierarchy) |
 | What does each pad do, in numbers? | data sheets: [S2D](datasheets/sg13cmos5l_IOPadSingle2Diff.md), [D2S](datasheets/sg13cmos5l_IOPadDiff2Single.md), [replica bias](datasheets/pad_ref_rb.md), [whole slot](datasheets/slot_7_system.md) ([how the data sheets were made](datasheets/README.md)) |
+| Frequency response, steps, noise, enable transients | [AC / transient](../../verification/c2_gaps/ac_tran/README.md) (23 figures; read `results.md` first) |
 | DC transfer, input / output range, linearity | [DC curves](../../verification/c2_gaps/dc_curves/README.md) (36 figures; read `results.md` first) |
 | What was verified, and what is open? | [§3](#3-readiness-of-the-blocks-that-were-kicked-off), [§5](#5-verification-state), [§5a](#5a-gap-simulations-of-2026-11-23), [signoff](../../signoff/README.md) |
 | How to measure the chip | [TEST_PLAN.md](TEST_PLAN.md) |
