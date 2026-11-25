@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# values in the yaml display unit (column unit)
+group,view,quantity,unit,n,runs,mean,sigma,min,median,max,mean-3sigma,mean+3sigma
+mm_params,schematic,Vos_in,mV,100,100,-0.402982,5.25127,-10.2227,-0.758051,15.9717,-16.1568,15.3508
+mm_params,schematic,Gain,,100,100,1.99871,0.0166847,1.95771,2.0001,2.04973,1.94865,2.04876
+mm_params,schematic,Vcm_err,mV,100,100,7.94286,10.9683,-27.2877,7.4984,47.0441,-24.9619,40.8477
+mm_params,pex,Vos_in,mV,100,100,-1.35188,6.14906,-13.1739,-1.73767,19.6252,-19.7991,17.0953
+mm_params,pex,Gain,,100,100,1.99919,0.0163806,1.95903,1.99924,2.03356,1.95005,2.04833
+mm_params,pex,Vcm_err,mV,100,100,9.34757,12.6998,-17.8692,10.4623,41.9525,-28.7519,47.447
+ac_mm_params,schematic,PSRRp_1k,dB,30,30,95.3697,9.75183,83.8275,92.9087,131.605,66.1142,124.625
+ac_mm_params,schematic,PSRRp_100k,dB,30,30,92.9528,7.36157,82.3242,91.6977,109.26,70.8681,115.037
+ac_mm_params,schematic,PSRRn_1k,dB,30,30,94.1465,8.82318,83.4234,91.0487,120.378,67.677,120.616
+ac_mm_params,schematic,PSRRn_100k,dB,30,30,76.7636,6.84206,66.0242,76.2053,91.8196,56.2374,97.2898
+ac_mm_params,schematic,CMRR_1k,dB,30,30,101.373,7.41816,90.0803,100.499,117.901,79.118,123.627
+mc_params,schematic,Vos_in,mV,30,30,-8.58299e-06,1.27365e-07,-8.79721e-06,-8.60795e-06,-8.3412e-06,-8.96509e-06,-8.20089e-06
+mc_params,schematic,Gain,,30,30,1.99896,8.60366e-06,1.99894,1.99896,1.99897,1.99893,1.99898
+mc_params,schematic,Vcm_err,mV,30,30,10.5153,0.172655,10.1946,10.5001,10.9106,9.99737,11.0333

@@ -1,0 +1,3 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+/tmp/claude-0/-home-user/468ace82-a4b3-592d-8838-6ea52a1be021/scratchpad/s2d_mm/design/macros/sg13cmos5l_IOPadSingle2Diff/netlist/pex/sg13cmos5l_IOPadSingle2Diff_magic_pex_2.spice -> netlist_pex/pex/sg13cmos5l_IOPadSingle2Diff.spice: mm_ok=1 on 221 devices; 28 capacitor-only nodes tied to iovss through 1e12 Ohm

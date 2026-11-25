@@ -1,0 +1,41 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# last commit (at design commit 91a7da8b) that changed each path: hash, committer date, subject
+## committed schematic results, per file
+mm_params.csv: 6229797 2026-10-26 00:55:35 +0100 macros/sg13cmos5l_IOPadSingle2Diff : Claude Opus 5.5 Extra pulled in single2diff design from sudelbuecher worktree into macro hierarchy
+summary_mm_params.md: 6229797 2026-10-26 00:55:35 +0100 macros/sg13cmos5l_IOPadSingle2Diff : Claude Opus 5.5 Extra pulled in single2diff design from sudelbuecher worktree into macro hierarchy
+ac_mm_params.csv: 6229797 2026-10-26 00:55:35 +0100 macros/sg13cmos5l_IOPadSingle2Diff : Claude Opus 5.5 Extra pulled in single2diff design from sudelbuecher worktree into macro hierarchy
+summary_ac_mm_params.md: 6229797 2026-10-26 00:55:35 +0100 macros/sg13cmos5l_IOPadSingle2Diff : Claude Opus 5.5 Extra pulled in single2diff design from sudelbuecher worktree into macro hierarchy
+mc_params.csv: 6229797 2026-10-26 00:55:35 +0100 macros/sg13cmos5l_IOPadSingle2Diff : Claude Opus 5.5 Extra pulled in single2diff design from sudelbuecher worktree into macro hierarchy
+summary_mc_params.md: 6229797 2026-10-26 00:55:35 +0100 macros/sg13cmos5l_IOPadSingle2Diff : Claude Opus 5.5 Extra pulled in single2diff design from sudelbuecher worktree into macro hierarchy
+dc_params.csv: c913388 2026-11-05 01:48:33 +0000 macros/sg13cmos5l_IOPadSingle2Diff : schematic CACE rerun complete; README — schematic and post-layout CACE results
+summary_dc_params.md: c913388 2026-11-05 01:48:33 +0000 macros/sg13cmos5l_IOPadSingle2Diff : schematic CACE rerun complete; README — schematic and post-layout CACE results
+## schematic, CACE file, templates, LVS netlist, layout, PEX netlist of the S2D pad
+macros/sg13cmos5l_IOPadSingle2Diff/schematic/xschem: 49bd7dc 2026-11-05 01:19:07 +0000 macros/sg13cmos5l_IOPadSingle2Diff : magic PEX (C-coupled) of the drawn cell, post-layout CACE in sim-cace
+macros/sg13cmos5l_IOPadSingle2Diff/verification/cace/sg13cmos5l_IOPadSingle2Diff.yaml: 668cf59 2026-11-04 17:47:15 +0000 macros/sg13cmos5l_IOPadSingle2Diff : backannotation of the drawn cell (sheets, symbol, source netlists, CACE harnesses)
+macros/sg13cmos5l_IOPadSingle2Diff/verification/cace/templates: 32e84e6 2026-11-05 01:28:08 +0000 macros/sg13cmos5l_IOPadSingle2Diff : CACE templates without ngspice's klu solver; interim pex window_params
+macros/sg13cmos5l_IOPadSingle2Diff/netlist/schematic/sg13cmos5l_IOPadSingle2Diff_magic.spice: 03c221b 2026-11-04 17:47:53 +0000 macros/sg13cmos5l_IOPadSingle2Diff : drawn pad cell (C3 stage B2, interim) and its make DRC / LVS reports
+macros/sg13cmos5l_IOPadSingle2Diff/layout/klayout/sg13cmos5l_IOPadSingle2Diff.klay.gds: 2b8516a 2026-11-04 21:17:21 +0000 macros/sg13cmos5l_IOPadSingle2Diff : drawn pad cell, stage B4 (input gate band: vfbp / vdd swapped)
+macros/sg13cmos5l_IOPadSingle2Diff/netlist/pex: 49bd7dc 2026-11-05 01:19:07 +0000 macros/sg13cmos5l_IOPadSingle2Diff : magic PEX (C-coupled) of the drawn cell, post-layout CACE in sim-cace
+## commits that changed macros/sg13cmos5l_IOPadSingle2Diff/schematic/xschem after the mismatch results (2026-10-26)
+49bd7dc 2026-11-05 01:19:07 +0000 macros/sg13cmos5l_IOPadSingle2Diff : magic PEX (C-coupled) of the drawn cell, post-layout CACE in sim-cace
+668cf59 2026-11-04 17:47:15 +0000 macros/sg13cmos5l_IOPadSingle2Diff : backannotation of the drawn cell (sheets, symbol, source netlists, CACE harnesses)
+41a8935 2026-11-03 19:11:22 +0000 macros/sg13cmos5l_IOPadSingle2Diff : template v4 — clamps directly on the diodes, short wires
+933fa9c 2026-11-03 19:03:40 +0000 macros/sg13cmos5l_IOPadSingle2Diff : template v3 (diodes at the pad, clamps above) and protection schematic
+f5b333c 2026-10-28 04:48:46 +0100 macros : update schematics and test benches to adapt to layout requirements
+61624e5 2026-10-28 03:42:22 +0100 macros : consequences of adapting schematics and test environments to the placement of components according to actual layout (bottom up modifications), also filling gaps in the macro hierarchy
+0d12e00 2026-10-28 00:27:53 +0100 macros : Claude Opus major consolidation; scripts/pcells : add more parameters for clamps
+69306a4 2026-10-26 15:25:32 +0100 macros/sg13cmos5l_IOPadSingle2Diff : hand edited Claude generated schematics and symbols, verified by Claude; sg13cmos5l_IOPadDiff2Single/README.md
+## schematic folders of the macros on the S2D library path
+macros/sg13cmos5l_IOPadDiff2Single: 2abcca1 2026-11-03 16:45:40 +0000 macros/sg13cmos5l_IOPadDiff2Single : vss / iovss substrate tie (2(a)); make klayout-lvs passes
+macros/en_ctrl_3v3: 61624e5 2026-10-28 03:42:22 +0100 macros : consequences of adapting schematics and test environments to the placement of components according to actual layout (bottom up modifications), also filling gaps in the macro hierarchy
+macros/bias_sel_pd: 61624e5 2026-10-28 03:42:22 +0100 macros : consequences of adapting schematics and test environments to the placement of components according to actual layout (bottom up modifications), also filling gaps in the macro hierarchy
+macros/bias_gen_pd: 61624e5 2026-10-28 03:42:22 +0100 macros : consequences of adapting schematics and test environments to the placement of components according to actual layout (bottom up modifications), also filling gaps in the macro hierarchy
+macros/ls_up_1v2_3v3: 61624e5 2026-10-28 03:42:22 +0100 macros : consequences of adapting schematics and test environments to the placement of components according to actual layout (bottom up modifications), also filling gaps in the macro hierarchy
+macros/hv_logic: 61624e5 2026-10-28 03:42:22 +0100 macros : consequences of adapting schematics and test environments to the placement of components according to actual layout (bottom up modifications), also filling gaps in the macro hierarchy
+macros/IOPad: 61624e5 2026-10-28 03:42:22 +0100 macros : consequences of adapting schematics and test environments to the placement of components according to actual layout (bottom up modifications), also filling gaps in the macro hierarchy
+macros/oa_core_pd: 82a57ec 2026-10-30 17:28:05 +0000 macros/oa_core_pd : magic DRC, magic+netgen LVS, magic PEX 1/2/3 and KLayout-PEX 2 outputs from cloud session C0
+macros/bg_core_pd: 0ee4cc0 2026-10-30 23:41:57 +0000 macros/bg_core_pd : magic DRC, magic+netgen LVS, magic PEX 1/2/3 and KLayout-PEX 2 outputs from cloud session C1
+macros/bias_tree_pd: 2b3d437 2026-11-03 16:27:56 +0000 macros/bias_tree_pd, sg13cmos5l_IOPadDiff2Single : the tree's layout dummies (MDBP, MDBN on ni) move into bias_tree_pd
+macros/bias_tree_noab_pd: 668cf59 2026-11-04 17:47:15 +0000 macros/sg13cmos5l_IOPadSingle2Diff : backannotation of the drawn cell (sheets, symbol, source netlists, CACE harnesses)
+macros/bias_sel_noab_pd: 61624e5 2026-10-28 03:42:22 +0100 macros : consequences of adapting schematics and test environments to the placement of components according to actual layout (bottom up modifications), also filling gaps in the macro hierarchy

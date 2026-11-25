@@ -1,0 +1,28 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# CACE schematic netlist (xschem, design commit 91a7da8b) vs taped-out LVS netlist pads/sg13cmos5l_IOPadSingle2Diff/sg13cmos5l_IOPadSingle2Diff.spice
+sha256 pads/sg13cmos5l_IOPadSingle2Diff/sg13cmos5l_IOPadSingle2Diff.spice without its 4-line header: 5a4e67f9b12f5f9017978ad0da4305fb331c9aa3abf4657ec48f5c77a8d32810
+sha256 design 91a7da8b:macros/sg13cmos5l_IOPadSingle2Diff/netlist/schematic/sg13cmos5l_IOPadSingle2Diff_magic.spice: 5a4e67f9b12f5f9017978ad0da4305fb331c9aa3abf4657ec48f5c77a8d32810
+lines (without ** comments): CACE 123, LVS 122
+diff LVS -> CACE (** comment lines dropped):
+5a6
+> Rsub iovss vss 1
+Rsub in the schematic:
+C {devices/res.sym} 330 -120 1 0 {name=Rsub value=1 footprint=1206 device=resistor lvs_ignore=open m=1} 
+mm_ok=1 instances in the CACE netlist: 75; MOSFET / rhigh / rppd lines without mm_ok=1: 0
+sha256 pads/sg13cmos5l_IOPadSingle2Diff/sg13cmos5l_IOPadSingle2Diff.gds: f4b0e07320821248872780b344d71845d08bc250a4bfc9bcf8633a39bdef0182
+sha256 design 91a7da8b:macros/sg13cmos5l_IOPadSingle2Diff/layout/klayout/sg13cmos5l_IOPadSingle2Diff.klay.gds: f4b0e07320821248872780b344d71845d08bc250a4bfc9bcf8633a39bdef0182
+design 91a7da8b:macros/sg13cmos5l_IOPadSingle2Diff/verification/lvs/sg13cmos5l_IOPadSingle2Diff.magic.lvs/sg13cmos5l_IOPadSingle2Diff.lvs.out (magic extraction of that GDS vs the LVS netlist):
+Number of devices: 76 |Number of devices: 76 
+Number of nets: 37 |Number of nets: 37 
+Netlists match with 7 symmetries with property errors.
+(no matching pin) |vss 
+Final result: Top level cell failed pin matching.
+  property errors other than mm_ok:
+  dantenna:54 vs. s2d_pad_esd:p/dantenna:DN1:
+   w circuit1: 2.778e-05   circuit2: 1.26e-06   (delta=183%, cutoff=1%)
+   l circuit1: 1.26e-06   circuit2: 2.778e-05   (delta=183%, cutoff=1%)
+  dpantenna:43 vs. s2d_pad_esd:p/dpantenna:DP1:
+   w circuit1: 2.778e-05   circuit2: 1.26e-06   (delta=183%, cutoff=1%)
+   l circuit1: 1.26e-06   circuit2: 2.778e-05   (delta=183%, cutoff=1%)
+PEX netlist 91a7da8b:macros/sg13cmos5l_IOPadSingle2Diff/netlist/pex/sg13cmos5l_IOPadSingle2Diff_magic_pex_2.spice: * PEX produced on Thu Nov  5 00:57:07 UTC 2026 using /usr/local/bin/sak-pex.sh with m=2 and s=1
