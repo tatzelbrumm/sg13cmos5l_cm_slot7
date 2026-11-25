@@ -1,0 +1,16 @@
+SPDX-FileCopyrightText: 2026 Christoph Maier
+SPDX-License-Identifier: Apache-2.0
+
+Slot 7 signal and current flow as plain text (the same content as slot7_signal_flow.svg).
+
+harness: enable, dig_in[0..5]            vdd_3v3 / vss_3v3 (gated)        vdd_1v2 (only dig_out pull-downs)
+              |                                   |
+          s7_ctrl  --- fail-safe enables, mode decode, switch matrix (3.3 V logic) ---------------+
+              |                                                                                     |
+        bg_core_pd (Banba bandgap, ~5 uA sourced) --> bias_dist_pd (1:1 copies, switched) --+--> pad_ref_rb: one bias tree -> vcm_rb, vref_s2d_rb
+                                                                                            |         vcm  (S2D vcm = D2S vref)    ~1.26 V
+                                                                                            |         vref (S2D vref)              ~0.49 V
+                                                                                            +--> iref of each pad's own bias tree (s7_an_0_iref, s7_an_1_iref)
+ pad s7_an[0] --> S2D pad: outp - outn = 2 (pad - vref), (outp+outn)/2 = vcm ----+ loop direct or crossed
+                                                                                  v
+ pad s7_an[1] <-- D2S pad: pad - vref = (vinp - vinn)/2  <------------------------+  (or fed from analog_bus0/1)
