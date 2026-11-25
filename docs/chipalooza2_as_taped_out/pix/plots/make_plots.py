@@ -258,12 +258,12 @@ def plot_pex_both(design):
     d2s = 'macros/sg13cmos5l_IOPadDiff2Single/verification/cace/results/sg13cmos5l_IOPadDiff2Single/'
     plot_pex('pex_vs_schematic_d2s.png',
              'D2S pad (sg13cmos5l_IOPadDiff2Single): magic C-coupled PEX of the taped-out cell vs schematic\n'
-             'IHP sg13cmos5l simulation; schematic: design repository 91a7da8b; PEX: verification/c2_gaps/d2s_pex/csv',
+             'IHP sg13cmos5l simulation; schematic: d2s_schematic_rerun (2026-11-25); PEX: d2s_pex',
              D2S_Q,
-             lambda g: read_csv_text(design.show(C91, d2s + '%s.csv' % g)),
+             lambda g: read_csv(GAPS / 'd2s_schematic_rerun' / 'csv' / ('%s.csv' % g)),
              lambda g: read_csv(GAPS / 'd2s_pex' / 'csv' / ('%s_pex_rshunt1e12.csv' % g)),
-             'PEX runs with ngspice rshunt = 1e12 (schematic runs without); the committed schematic results predate the layout\n'
-             '(Miller capacitor shape). Not plotted (near zero): offset, core current, peaking, overshoot, glitches, power-down.')
+             'PEX runs with ngspice rshunt = 1e12 (schematic: only drive_params); schematic = taped-out schematic, re-run 2026-11-25.\n'
+             'Not plotted (near zero): offset, core current, peaking, overshoot, glitches, power-down.')
 
 
 # ----------------------------------------------------------------------------------------------------------------

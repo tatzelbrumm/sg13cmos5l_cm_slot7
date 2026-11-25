@@ -1,0 +1,11 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# drive_params WITHOUT rshunt: runs without a complete result are missing (tt -40: ngspice killed by hand after 15.6 min; sf / ff -40: first DC sweep did not converge)
+corner_mos,temp,Vout_max[V],Vout_min[V],Isc_src[mA],Isc_snk[mA]
+ss,-40,3.27621,0.663283,0.06836,0.0986629
+fs,-40,3.27886,0.655713,0.0748761,0.117042
+ss,125,3.26619,0.735935,0.0497136,0.0547692
+sf,125,3.27312,0.705903,0.0618917,0.0576489
+tt,125,3.27133,0.71733,0.0578858,0.0605393
+fs,125,3.26918,0.72866,0.0539511,0.0637271
+ff,125,3.27437,0.701255,0.0657421,0.0672694

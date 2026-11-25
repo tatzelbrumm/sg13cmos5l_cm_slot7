@@ -203,7 +203,7 @@ leaves open whether the offset (σ 6–7 mV) is enough or SX / SY should get 4×
 
 ## 3. D2S pad (`sg13cmos5l_IOPadDiff2Single`)
 
-> **Note (2026-11-25):** D2S *schematic* simulation numbers quoted in this section come from the committed CACE results, which predate the final D2S schematic (committed 2026-10-21, schematic changed until 2026-11-03; see the warning in the [D2S data sheet](datasheets/sg13cmos5l_IOPadDiff2Single.md)). Post-layout numbers are current. Sizes are read from the netlists at `91a7da8b`, which are the taped-out circuit.
+> **Note (2026-11-25):** D2S *schematic* numbers in this section are from the re-run of the full CACE suite on the taped-out schematic ([d2s_schematic_rerun](../../verification/c2_gaps/d2s_schematic_rerun/results.md)); the committed results of 2026-10-21 predated the final schematic. Sizes are read from the netlists at `91a7da8b`, which are the taped-out circuit.
 
 Function: `pad − vref = (vinp − vinn)/2`, class-AB output into 10 … 300 pF. Sources:
 `macros/sg13cmos5l_IOPadDiff2Single/README.md`, `netlist/source/d2s_mpdda.spice`, `d2s_mpdda_pd.spice`, `d2s_out.spice`,
@@ -245,12 +245,12 @@ gain 0.4981 (derivation added here).
   RP1 + RP2 and RN1 + RN2 (RP2 = ABP's size, RN2 = ABN's). The replica mock-up README: "I_Q ratio 82 / 2".
 - **Quiescent current, derivation (added here):** around the loop iovdd → OP gate `a` → ABP → `vabp` → RP2 → RP1 → iovdd,
   `V_SG(OP) = V_SG(RP1) + V_SG(RP2) − V_SG(ABP)`. With ABP at RP2's current and size (5 µA, 6.66 / 0.6) the last two
-  cancel and OP runs at the finger ratio of RP1: `I_Q ≈ 82/2 × 5 µA = 205 µA`. Simulated I_Q(OP) 207 … 227 µA
-  (schematic), 217 … 239 µA (extracted). The N side has the ratio 68/2 = 34; both devices carry the same current
+  cancel and OP runs at the finger ratio of RP1: `I_Q ≈ 82/2 × 5 µA = 205 µA`. Simulated I_Q(OP) 217 … 239 µA
+  (schematic re-run and extracted alike). The N side has the ratio 68/2 = 34; both devices carry the same current
   without load, and the sources do not say how the split of the 10 µA between ABP and ABN settles to reconcile the two
   ratios.
 - **Current budget, derivation (added here):** 4 units × 10 µA + mirror 2 × 10 µA + tree branches (NBP 5, NBPC 2,
-  NABP 5, PBN 5, PBNC 2, PABN 5) 24 µA + I_Q ≈ 215 µA ≈ 299 µA, against 302 µA simulated (median, `dc_params`).
+  NABP 5, PBN 5, PBNC 2, PABN 5) 24 µA + I_Q ≈ 215 µA ≈ 299 µA, against 311 µA simulated (median, `dc_params`, schematic re-run).
 - **Why the output devices are the clamp frames:** the sources record the decision ("case (a): OP / ON are the pad's
   clamp frames", `d2s_mpdda_pd.spice`) but no further reason. The same header says that disabled, OP / ON are "off, with
   their gates tied to their sources as in a clamp": a disabled pad is a clamp pair, an enabled pad drives with the same
@@ -320,8 +320,8 @@ finger width of the clamp frames" are not stated in the sources.
 
 ![PEX vs schematic, D2S](pix/plots/pex_vs_schematic_d2s.png)
 
-*Figure 3.2: what the layout changed (D2S): the extraction lowers bandwidth and slew rate by about 12 %, raises I_Q by
-5 % and the enable time by up to 94 %; gain, PSRR, THD and swing move by about 2 % or less, noise by less than 5 %. S2D equivalent:
+*Figure 3.2: what the layout changed (D2S), against the taped-out schematic: the extraction lowers bandwidth and slew rate by about 11 %,
+raises settling time by about 10 % and the enable time by 10 % (median; up to 31 %); DC (gain, INL, currents, swing) is unchanged, noise moves by less than 5 %. S2D equivalent:
 [pex_vs_schematic_s2d.png](pix/plots/pex_vs_schematic_s2d.png) (bandwidth −8 %, step response +12 %, DC unchanged).*
 
 ## 4. Replica bias (`pad_ref_rb`)

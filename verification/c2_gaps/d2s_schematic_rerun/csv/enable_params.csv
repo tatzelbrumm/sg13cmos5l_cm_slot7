@@ -1,0 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+sel,tstop,t_on[us],Glitch_max[mV],Glitch_min[mV],Iio_end[A]
+0,6e-05,9.82036E-07,0.121649,-0.10435,0.000308421
+1,6e-05,1.81934E-06,0.225546,-0.176583,0.000315629
+2,6e-05,1.22839E-06,0.124381,-0.112755,0.000315825

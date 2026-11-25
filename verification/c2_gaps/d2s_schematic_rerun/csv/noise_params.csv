@@ -1,0 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+temp,En_1k[nV/rtHz],En_100k[nV/rtHz],Vn_int[uV]
+-40,7.15419E-07,1.56469E-07,0.000235615
+27,6.78804E-07,1.52586E-07,0.000234582
+125,6.05104E-07,1.42647E-07,0.000223267

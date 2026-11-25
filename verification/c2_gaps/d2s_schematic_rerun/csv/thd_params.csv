@@ -1,0 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+vdamp,THD[dB],Vout_amp[V]
+0.5,-73.3283,0.249954
+1,-57.6805,0.499951
+1.5,-38.6646,0.750377

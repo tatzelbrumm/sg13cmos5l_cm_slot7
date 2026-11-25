@@ -14,7 +14,7 @@ Generator: [tools/make_datasheet.py](tools/make_datasheet.py) (reads `<cell>.yam
 |---|---|---|---|---|---|
 | [pad_ref_rb.md](pad_ref_rb.md) | `pad_ref_rb`: replica bias `vcm` / `vref` | CACE, 8 groups | schematic | 24 of 24 | design repo `9052bd35` |
 | [sg13cmos5l_IOPadSingle2Diff.md](sg13cmos5l_IOPadSingle2Diff.md) | S2D pad, `s7_an[0]` | CACE, 12 groups + mismatch / MC | schematic and post-layout (magic PEX) | 57 of 57 and 46 of 46 | design repo `91a7da8b` |
-| [sg13cmos5l_IOPadDiff2Single.md](sg13cmos5l_IOPadDiff2Single.md) | D2S pad, `s7_an[1]` | CACE, 14 groups | schematic only (results predate the layout) | 79 of 79 | design repo `91a7da8b` |
+| [sg13cmos5l_IOPadDiff2Single.md](sg13cmos5l_IOPadDiff2Single.md) | D2S pad, `s7_an[1]` | CACE, 15 groups | schematic, re-run on 2026-11-25 on the taped-out schematic (the committed results of 2026-10-21 predated it); post-layout in [d2s_pex](../../../verification/c2_gaps/d2s_pex/results.md) | 78 of 79 (mismatch gain min 0.48877 < 0.49, 1 of 30 runs) | yaml and templates: design repo `91a7da8b`; results: [d2s_schematic_rerun](../../../verification/c2_gaps/d2s_schematic_rerun/README.md) |
 | [en_ctrl_3v3_level_shifter.md](en_ctrl_3v3_level_shifter.md) | `ls_up_fs` shifter of the glue (via the whole `en_ctrl_3v3` v2 cell, which `slot_7` does not instantiate) | CACE, 7 groups | schematic | 33 of 33 | design repo `9052bd35` |
 | [slot_7_system.md](slot_7_system.md) | the slot as a whole, five corners and the modes | tier-1 simulation (not CACE) | extracted blocks | n/a | design repo `9052bd35` |
 | [../test_platforms.md](../test_platforms.md) | test platforms (stage A / B), **not taped out** | ngspice testbench summaries | schematic and extracted | n/a | design repo `efb80141` |

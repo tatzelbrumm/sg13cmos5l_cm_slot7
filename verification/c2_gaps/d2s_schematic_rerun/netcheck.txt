@@ -1,0 +1,11 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# CACE schematic netlist (xschem, design commit 91a7da8b) vs taped-out LVS netlist pads/sg13cmos5l_IOPadDiff2Single/sg13cmos5l_IOPadDiff2Single.spice
+sha256 pads/sg13cmos5l_IOPadDiff2Single/sg13cmos5l_IOPadDiff2Single.spice without its 4-line header: b8d9103230bd7ced5c75a0fb38d56f078ec3cbf48d0f82a3772b85ff1edc2c1c
+sha256 design 91a7da8b67ac56a26c605501146667a1fde28c32:macros/sg13cmos5l_IOPadDiff2Single/netlist/schematic/sg13cmos5l_IOPadDiff2Single_magic.spice: b8d9103230bd7ced5c75a0fb38d56f078ec3cbf48d0f82a3772b85ff1edc2c1c
+lines (without ** comments): CACE 134, LVS 133
+diff LVS -> CACE (** comment lines dropped):
+14a15
+> Rsub iovss vss 1
+Rsub in the schematic:
+C {devices/res.sym} 330 -120 1 0 {name=Rsub value=1 footprint=1206 device=resistor lvs_ignore=open m=1} 

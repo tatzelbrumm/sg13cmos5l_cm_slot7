@@ -2,7 +2,7 @@
 <!-- SPDX-License-Identifier: Apache-2.0 -->
 # sg13cmos5l_IOPadDiff2Single: schematic vs post-layout (magic PEX) CACE results
 
-> **Note added 2026-11-25:** the "schematic" columns below are the committed CACE results of 2026-10-21, which predate the final D2S schematic (changed until 2026-11-03); the schematic-vs-PEX changes therefore mix layout effects with schematic changes. The PEX columns are runs of the taped-out cell and current. See `../ac_tran/results.md` (cross-check, "stale ref").
+> **Note added 2026-11-25:** the "schematic" columns below are the committed CACE results of 2026-10-21, which predate the final D2S schematic; the schematic-vs-PEX changes below therefore mix layout effects with schematic changes. **Against the taped-out schematic** (re-run, `../d2s_schematic_rerun/results.md` §3 and §5) the layout leaves DC unchanged (currents ≤ 0.02 %, INL ≤ 0.75 %) and lowers bandwidth and slew rate by about 11 %; the +5 % current shifts reported below are not layout effects. The PEX columns are current.
 
 
 **IHP sg13cmos5l post-layout (magic PEX) simulation** of the taped-out cell

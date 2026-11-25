@@ -1,0 +1,5 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+cload,rload,Acl_dB[],f3dB[MHz],Peak_dB[dB],PSRR_1k[],PSRR_100k[],CMRR_1k[],Zout_1k[],Zout_1M[]
+1e-09,1000,-6.02149,1.34991E+06,4.77099,71.5384,31.5056,124.953,0.209436,274.654
+1e-09,1000000000.0,-6.02062,1.39614E+06,7.42691,71.5375,31.4956,124.951,0.209457,373.375
