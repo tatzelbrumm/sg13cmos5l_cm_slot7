@@ -81,6 +81,10 @@ SPDX-License-Identifier: Apache-2.0
 
 Schematics: [pad top](../pix/schematics/sg13cmos5l_IOPadSingle2Diff.svg), [core amplifier s2d_mpdda](../pix/schematics/s2d_mpdda.svg), [with power-down s2d_mpdda_pd](../pix/schematics/s2d_mpdda_pd.svg), [matched unit unit_r2](../pix/schematics/unit_r2.svg), [bias tree](../pix/schematics/bias_tree_noab_pd.svg), [ESD](../pix/schematics/s2d_pad_esd.svg). Layout: [all layers](../pix/layout/IOPadSingle2Diff.png), [Metal2 and below](../pix/layout/IOPadSingle2Diff_frontend.png). More figures and the range tables: [DC curves](../../../verification/c2_gaps/dc_curves/README.md).
 
+![S2D mismatch histograms](../../../verification/c2_gaps/s2d_mismatch/figures/s2d_mm_hist.png)
+
+*Mismatch Monte Carlo (100 runs, schematic and extracted layout): input offset σ 5.25 / 6.15 mV, gain σ 0.0167 / 0.0164, output-CM error σ 11.0 / 12.7 mV; every run inside the working limits.*
+
 ## Specification (ex post facto, as characterized)
 
 The design is a proof of concept and had **no specification** before it was characterized. The limits and verdicts in the CACE files (section 'CACE run summaries') are the designer's *working limits*, in part set from earlier measured bands, so *Pass* means "inside the designer's working limit", not "meets a specification". This section instead states, **ex post facto**, the interval each characterized quantity covered: the minimum and maximum over every run of the group's characterization grid (corners, temperature, supply, … as listed), the value at typical conditions (default conditions of the CACE file: tt, 27 °C, 3.3 V, typical resistor / PNP corners) where such a run exists, and the median over the group (CACE's own *typ* value). It is a description of what was simulated, **not a guarantee**; Monte Carlo rows are the observed range of the sampled iterations, not ±3σ; no silicon was measured.
@@ -140,12 +144,12 @@ The design is a proof of concept and had **no specification** before it was char
 | enable_params | Output CM glitch, low | V | -0.01117 | -0.003697 | -0.003558 | -0.003362 | 9 | corner_mos=ss, temp=125 / corner_mos=ss, temp=-40 |
 | enable_params | Differential output at the end | V | 0.4998 | 0.4998 | 0.4998 | 0.4998 | 9 | corner_mos=ff, temp=-40 / corner_mos=ss, temp=125 |
 | enable_params | IO ring current, enabled | uA | 115.2 | 115.5 | 115.5 | 116.1 | 9 | corner_mos=ss, temp=125 / corner_mos=ff, temp=-40 |
-| mm_params | Input offset - Mismatch | mV | -17.25 | — | -0.391 | 18.17 | Monte Carlo (iterations up to 100) | CACE summary values (per-run CSV not committed) |
-| mm_params | Gain - Mismatch |  | 1.959 | — | 1.998 | 2.038 | Monte Carlo (iterations up to 100) | CACE summary values (per-run CSV not committed) |
-| mm_params | Output common-mode error - Mismatch | mV | -18.98 | — | 10.09 | 39.86 | Monte Carlo (iterations up to 100) | CACE summary values (per-run CSV not committed) |
+| mm_params | Input offset - Mismatch | mV | -10.22 | — | -0.758 | 15.97 | 100 (σ 5.25 mV) | re-run 2026-11-25, per-run CSV ([s2d_mismatch](../../../verification/c2_gaps/s2d_mismatch/results.md)); committed summary predated the layout |
+| mm_params | Gain - Mismatch |  | 1.958 | — | 2.000 | 2.050 | 100 (σ 0.0167) | re-run 2026-11-25, per-run CSV ([s2d_mismatch](../../../verification/c2_gaps/s2d_mismatch/results.md)); committed summary predated the layout |
+| mm_params | Output common-mode error - Mismatch | mV | -27.29 | — | 7.498 | 47.04 | 100 (σ 11.0 mV) | re-run 2026-11-25, per-run CSV ([s2d_mismatch](../../../verification/c2_gaps/s2d_mismatch/results.md)); committed summary predated the layout |
 | mc_params | Input offset - Process MC | mV | -0 | — | -0 | -0 | Monte Carlo (iterations up to 30) | CACE summary values (per-run CSV not committed) |
 | mc_params | Gain - Process MC |  | 1.999 | — | 1.999 | 1.999 | Monte Carlo (iterations up to 30) | CACE summary values (per-run CSV not committed) |
-| mc_params | Output common-mode error - Process MC | mV | 10.14 | — | 10.45 | 10.85 | Monte Carlo (iterations up to 30) | CACE summary values (per-run CSV not committed) |
+| mc_params | Output common-mode error - Process MC | mV | 10.19 | — | 10.50 | 10.91 | 30 (σ 0.17 mV) | re-run 2026-11-25, per-run CSV ([s2d_mismatch](../../../verification/c2_gaps/s2d_mismatch/results.md)); committed summary predated the layout |
 
 ### View: post-layout (magic PEX, C-coupled)
 
@@ -290,6 +294,9 @@ Results directory: `verification/cace/results/sg13cmos5l_IOPadSingle2Diff`. One 
 
 ### ac_mm_params
 
+> **Superseded (2026-11-25):** the Monte Carlo summaries in this group were committed on 2026-10-26, before the layout and 8 later schematic commits. Current values, with per-run data, histograms and the post-layout (PEX) mismatch: [s2d_mismatch](../../../verification/c2_gaps/s2d_mismatch/results.md). The specification table above uses the re-run.
+
+
 *Runs:* 0 rows in the committed CSV (header only: the per-run data were not committed; the values below are CACE's own summary)  
 *Swept conditions:* iterations: 1 … 30 (step 1); corner_mos: tt_mismatch; corner_r: typ_mismatch; temp: 27  
 
@@ -353,6 +360,9 @@ Results directory: `verification/cace/results/sg13cmos5l_IOPadSingle2Diff`. One 
 
 ### mm_params
 
+> **Superseded (2026-11-25):** the Monte Carlo summaries in this group were committed on 2026-10-26, before the layout and 8 later schematic commits. Current values, with per-run data, histograms and the post-layout (PEX) mismatch: [s2d_mismatch](../../../verification/c2_gaps/s2d_mismatch/results.md). The specification table above uses the re-run.
+
+
 *Runs:* 0 rows in the committed CSV (header only: the per-run data were not committed; the values below are CACE's own summary)  
 *Swept conditions:* iterations: 1 … 100 (step 1); corner_mos: tt_mismatch; corner_r: typ_mismatch; temp: 27  
 
@@ -363,6 +373,9 @@ Results directory: `verification/cace/results/sg13cmos5l_IOPadSingle2Diff`. One 
 | Output common-mode error - Mismatch | -60 mV | -18.980 mV | 10.088 mV | 60 mV | 39.864 mV | Pass ✅ |
 
 ### mc_params
+
+> **Superseded (2026-11-25):** the Monte Carlo summaries in this group were committed on 2026-10-26, before the layout and 8 later schematic commits. Current values, with per-run data, histograms and the post-layout (PEX) mismatch: [s2d_mismatch](../../../verification/c2_gaps/s2d_mismatch/results.md). The specification table above uses the re-run.
+
 
 *Runs:* 0 rows in the committed CSV (header only: the per-run data were not committed; the values below are CACE's own summary)  
 *Swept conditions:* iterations: 1 … 30 (step 1); corner_mos: tt_stat; corner_r: typ; temp: 27  

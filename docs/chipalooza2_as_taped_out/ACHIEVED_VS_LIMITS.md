@@ -46,7 +46,7 @@ reproduced to 0.000 % in [AC / transient](../../verification/c2_gaps/ac_tran/res
 | ac_params (15) | closed-loop gain at 1 kHz | no limit | 6.015 … 6.017 dB | 6.015 … 6.017 dB | — | no limit |
 | ac_params | −3 dB bandwidth | ≥ 1 MHz | 1.353 … 1.812 MHz | 1.237 … 1.666 MHz | 0.237 MHz | inside |
 | ac_params | output CM response to `iovdd`, 1 kHz | ≤ −30 dB | −58.31 … −53.85 dB | −58.31 … −53.85 dB | 23.85 dB | inside |
-| ac_mm_params (30 MC; summary only) | PSRR `iovdd` / `iovss` 1 kHz; CMRR 1 kHz | ≥ 60 / ≥ 60 / ≥ 70 dB | 79.09 … 113.43 / 83.32 … 110.64 / 87.70 … 131.13 dB | — | 17.70 dB (CMRR) | inside |
+| ac_mm_params (30 MC, re-run 2026-11-25) | PSRR `iovdd` / `iovss` 1 kHz; CMRR 1 kHz | ≥ 60 / ≥ 60 / ≥ 70 dB | 83.83 … 131.6 / 83.42 … 120.4 / 90.08 … 117.9 dB | — | 20.08 dB (CMRR) | inside |
 | tran_params (18) | rise time 10–90 % | no limit | 104.1 … 259.0 ns | 121.2 … 283.0 ns | — | no limit |
 | tran_params | settling to 1 % | ≤ 1000 ns | 222.3 … 546.0 ns | 258.6 … 596.1 ns | 403.9 ns | inside |
 | tran_params | overshoot | ≤ 5 % | 0.000 … 0.002 % | 0.000 … 0.001 % | 4.998 % | inside |
@@ -59,9 +59,9 @@ reproduced to 0.000 % in [AC / transient](../../verification/c2_gaps/ac_tran/res
 | pd_params | differential output / output CM, off | −1 … 1 mV each | −0.001 … 0.000 / −0.000 … 0.000 mV | the same | 0.999 mV | inside |
 | enable_params (9) | enable time | ≤ 3 µs | 1.359 … 1.430 µs | 1.463 … 1.524 µs | 1.476 µs | inside |
 | enable_params | output CM glitch, high / low | no limit | 0.211 … 0.270 / −0.011 … −0.003 V | 0.220 … 0.287 / −0.004 … −0.003 V | — | no limit |
-| mm_params (100 MC; summary only) | input offset | −20 … 20 mV | −17.250 … 18.173 mV | — | 1.83 mV | inside |
-| mm_params | gain | 1.93 … 2.07 | 1.95906 … 2.03785 | — | 0.029 | inside |
-| mm_params | output common-mode error | −60 … 60 mV | −18.980 … 39.864 mV | — | 20.14 mV | inside |
+| mm_params (100 MC, re-run 2026-11-25) | input offset | −20 … 20 mV | −10.22 … 15.97 mV | −13.17 … 19.63 mV | 0.37 mV (PEX) | inside |
+| mm_params | gain | 1.93 … 2.07 | 1.9577 … 2.0497 | 1.9590 … 2.0336 | 0.020 | inside |
+| mm_params | output common-mode error | −60 … 60 mV | −27.29 … 47.04 mV | −17.87 … 41.95 mV | 12.96 mV | inside |
 | mc_params (30 process MC; summary only) | gain; output CM error | 1.99 … 2.01; −30 … 30 mV | 1.99895 … 1.99898; 10.141 … 10.854 mV | — | 0.0090; 19.15 mV | inside |
 
 S2D mismatch with per-run data (re-run): **pending**, [`verification/c2_gaps/s2d_mismatch/`](../../verification/c2_gaps/s2d_mismatch/).

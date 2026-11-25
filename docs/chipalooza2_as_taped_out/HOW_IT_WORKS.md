@@ -99,7 +99,7 @@ null does not move with the differential signal; the header's wording is "linear
 order in the differential signal".
 
 **What is left of the gain error.** Simulated gain 1.9985 … 1.9993 (schematic = extracted, 135 PVT runs;
-[S2D data sheet](datasheets/sg13cmos5l_IOPadSingle2Diff.md)); mismatch Monte Carlo σ 0.74 % (100 runs, pad README).
+[S2D data sheet](datasheets/sg13cmos5l_IOPadSingle2Diff.md)); mismatch Monte Carlo σ 0.83 % (100 runs, re-run 2026-11-25, [S2D mismatch](../../verification/c2_gaps/s2d_mismatch/results.md); the pad README's 0.74 % came from the older pre-layout run).
 **Derivation (added here):** the worst DC loop gain in the loop fixture is 64.54 dB (README, `loop_params`), i.e.
 T ≈ 1680; a finite loop gain alone gives a gain error of about −1/T ≈ −0.06 %, the same order as the simulated −0.04 …
 −0.08 %. The sources do not separate the contributions.

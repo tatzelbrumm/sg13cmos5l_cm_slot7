@@ -214,7 +214,7 @@ ss −40 °C power-up runs); none is a guaranteed limit, and the design had no s
 **inside / outside the simulated interval** of §5, not pass / fail. A die sits at one process point, so compare with the
 interval over all simulated corners at the measured temperature; where only one corner was simulated at a temperature (27 °C:
 tt only), a reading outside it says little by itself. Mismatch is in none of the slot-level intervals (§5; D2S output offset
-σ 6.28 mV, DR §2; S2D input offset −17.25 … 18.17 mV over 100 samples, SD), so a loop deviation above its corner interval is
+σ 6.28 mV, DR §2; S2D input offset −10.2 … 16.0 mV over 100 samples, σ 5.25 mV, [S2D mismatch](../../verification/c2_gaps/s2d_mismatch/results.md)), so a loop deviation above its corner interval is
 recorded as outside and then checked against the mismatch spread before the circuit is suspected. DR = the D2S re-run
 ([d2s_schematic_rerun](../../verification/c2_gaps/d2s_schematic_rerun/results.md)); other keys: §0.
 
