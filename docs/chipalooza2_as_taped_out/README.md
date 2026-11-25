@@ -392,6 +392,8 @@ coordinates. Made on 2026-11-22 with KLayout and matplotlib from the chip data, 
 The art is why `slot_7.gds` differs from v3 (`7394d092…`) by one instance; `art/check_art_only.py` in the delivery proves it (86 sub-cells and slot_7's own shapes
 and labels identical; flat XOR of the result against v3 + art = 0 on every layer, and 0 against the design repository's `art/slot7_with_art.gds`).
 
+The same description, next to the art files: [art/README.md](../../art/README.md).
+
 ### 7.1 The inscription
 
 The tughra spells, in Ottoman Turkish in Arabic script, **اوراخلی وزیر اوزدمیر جم بکلربکی حضرتلری**, *Urachlı Vezir Özdemir Cem

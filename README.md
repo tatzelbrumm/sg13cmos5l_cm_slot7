@@ -39,7 +39,7 @@ joined by the harness). KLayout DRC / LVS on v3: as above (0 / 0, deep match, 49
 `final/lef/slot_7.lef` regenerated (magic `lef write -hide -pinonly 2um`, duplicate PIN blocks merged, as for stage A);
 `slot_7.lib` (pin-less stub) and `slot_7.vh` (same ports) unchanged.
 
-**Tughra art (2026-11-08):** `final/gds/slot_7.gds` = v3 plus one instance of the cell `tughra_art` (`art/tughra_art.gds`,
+**Tughra art (2026-11-08):** (description: [art/README.md](art/README.md)) `final/gds/slot_7.gds` = v3 plus one instance of the cell `tughra_art` (`art/tughra_art.gds`,
 design repo `toplevel`, rev 4: floating GatPoly and Metal1–4 with no-fill markers, 158 × 90 µm) at (88.5, 141.3) µm, in the
 empty band between the TopMetal1 straps. Made by `art/add_art.py`; `art/check_art_only.py` proves nothing else changed:
 all 86 sub-cells and slot_7's own shapes and labels identical, one added instance, flat XOR against v3 + art = 0 on every

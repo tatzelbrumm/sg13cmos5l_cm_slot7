@@ -515,6 +515,10 @@ table.figs th { display: none; }
 def build_digest(sha):
     book = Book(sha)
     book.files = {}                                   # the digest stands alone: every link goes to GitHub
+    # the digest is a data sheet of the circuit: no die art, no history of the art
+    md = open(os.path.join(ROOT, DIGEST_SRC), encoding='utf-8').read()
+    if re.search(r'tughra|art/|calligraph|latent', md, re.I):
+        sys.exit(f'{DIGEST_SRC} mentions the die art; the digest covers the circuit only')
     h, _ = book.convert(DIGEST_SRC)
     # tables that hold images are figure grids (no borders, equal columns); all others are data tables
     h = re.sub(r'<table>(?=(?:(?!</table>).)*?<img)', '<table class="figs">', h, flags=re.S)
