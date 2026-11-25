@@ -494,12 +494,14 @@ table { border-collapse: collapse; width: 100%; margin: 4pt 0; font-size: 8.3pt;
 th, td { border: 0.4pt solid #aaa; padding: 1.6pt 4pt; vertical-align: top; }
 th { background: #e9eef4; text-align: left; }
 img { max-width: 100%; }
-p > img:only-child { display: block; margin: 3pt auto; max-height: 64mm; }
+p > img:only-child { display: block; margin: 3pt auto; max-height: 60mm; }
 tr { break-inside: avoid; }
 h2 + table, h2 + p { break-before: avoid; }
+blockquote { margin: 5pt 0; padding: 4pt 7pt; border: 0.6pt solid #9bb; background: #f1f7f7; }
+blockquote p { margin: 0; }
 table.figs { table-layout: fixed; }
 table.figs td { border: none; width: 50%; font-size: 7.6pt; padding: 0 3pt; text-align: left; }
-table.figs td img { width: 88%; }
+table.figs td img { width: 80%; }
 table.figs th { display: none; }
 '''
 

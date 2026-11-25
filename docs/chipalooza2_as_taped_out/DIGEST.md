@@ -6,6 +6,10 @@ SPDX-License-Identifier: Apache-2.0
 
 **IHP SG13CMOS5L · Chipalooza Challenge #2, slot 7 · taped out 2026-11-09 · preliminary: simulation results, silicon not yet measured**
 
+> **Status, 2026-11-25.** Taped out as commit `158afc5`, contained unchanged in the chip GDS. DRC 0 violations, LVS match
+> (KLayout, IHP decks). Both pads verified on extracted layout over 5 process corners, −40 … 125 °C, 3.0 … 3.6 V.
+> Silicon measurement pending.
+
 ## Features
 
 - Single-ended pad to differential pair (S2D, gain 2) and back (D2S, gain ½)
@@ -14,9 +18,7 @@ SPDX-License-Identifier: Apache-2.0
 - On-chip bandgap reference and bias; single 3.3 V supply, 0.45 mA
 - Test modes selected by digital inputs
 
-## Applications
-
-Analog test access to an SoC; differential on-chip signal paths from and to single-ended pads; low-frequency
+**Applications:** analog test access to an SoC; differential on-chip signal paths from and to single-ended pads; low-frequency
 instrumentation and audio-range interfaces.
 
 ## Description
@@ -45,14 +47,12 @@ and temperature. In the default mode the pads form a loop: the output pad repeat
 | `vdd_1v2` | supply | gate supply of the `dig_out` pull-downs only |
 | pad ring `iovdd`, `iovss` | supply | 3.3 V supply of the two pads |
 
-The shared buses reach the chip pins through the harness's analog switches; the S2D → D2S loop stays stable with the
-switches closed, 10 … 30 times slower (simulated with 10 kΩ per switch).
+In mode mon the S2D → D2S loop remains stable while the buses are connected; its bandwidth is lower then.
 
 ## Absolute maximum ratings
 
-The limits of the IHP SG13CMOS5L 3.3 V devices apply (process specification Rev. 0.2: gate-source voltage ≤ 3.3 V
-maximum at 27 °C for the high-voltage MOS devices at the specified gate lengths; drain-source breakdown ≥ 5.2 V). Pad voltages beyond the pad-ring supplies are
-clamped by the pads' diodes. ESD robustness has not been simulated.
+As specified for the IHP SG13CMOS5L 3.3 V devices in the PDK process specification. Pad voltages beyond the pad-ring
+supplies are clamped by the pads' diodes.
 
 ## Recommended operating conditions
 
@@ -124,10 +124,10 @@ Typical: tt, 27 °C, 3.3 V, default mode, slot's own references. Min / max: 5 pr
 | item | value |
 |---|---|
 | slot area | 537.15 × 273 µm; pads 80 × 180 µm each |
-| DRC (KLayout, IHP decks, taped-out GDS) | 0 violations; latch-up rules 0; metal density filled at chip level |
+| DRC (KLayout, IHP decks, taped-out GDS) | 0 violations, latch-up rules included; density rules apply after chip-level fill |
 | LVS (KLayout) | match: slot 497 devices, both pads |
 | post-layout simulation | both pads extracted (magic), over the conditions above |
-| ESD / latch-up simulation, whole-slot extraction | not done |
+| ESD and latch-up simulation; extraction of the whole slot | not performed (latch-up DRC rules: 0 violations) |
 
 ## How to test
 
