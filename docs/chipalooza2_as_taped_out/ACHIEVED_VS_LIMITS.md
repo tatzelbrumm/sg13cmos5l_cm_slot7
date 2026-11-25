@@ -64,7 +64,7 @@ reproduced to 0.000 % in [AC / transient](../../verification/c2_gaps/ac_tran/res
 | mm_params | output common-mode error | −60 … 60 mV | −27.29 … 47.04 mV | −17.87 … 41.95 mV | 12.96 mV | inside |
 | mc_params (30 process MC; summary only) | gain; output CM error | 1.99 … 2.01; −30 … 30 mV | 1.99895 … 1.99898; 10.141 … 10.854 mV | — | 0.0090; 19.15 mV | inside |
 
-S2D mismatch with per-run data (re-run): **pending**, [`verification/c2_gaps/s2d_mismatch/`](../../verification/c2_gaps/s2d_mismatch/).
+S2D mismatch with per-run data: re-run of 2026-11-25 on the taped-out netlist, rows mm_params above ([`verification/c2_gaps/s2d_mismatch/`](../../verification/c2_gaps/s2d_mismatch/results.md)).
 
 ## D2S pad (`sg13cmos5l_IOPadDiff2Single`, `s7_an[1]`)
 
