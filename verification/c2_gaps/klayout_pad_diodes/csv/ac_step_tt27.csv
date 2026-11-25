@@ -1,0 +1,28 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# IHP sg13cmos5l simulation, slot 7 tier-1 deck; round trip tt 27 C 3.3 V: f-3dB (relative to 1 kHz) and step 0.25 -> 0.75 V settling (1 % / 0.1 %, s) and gain, ../ac_tran/rt.py definitions
+analysis,pads,load,quantity,value
+ac,schematic (../ac_tran committed),open,f3dB_Hz,1.53223e+06
+ac,pex (../ac_tran committed),open,f3dB_Hz,1.35559e+06
+ac,klayout (../ac_tran committed),open,f3dB_Hz,1.51422e+06
+ac,"klayout, antenna diodes fixed",open,f3dB_Hz,1.51529e+06
+ac,schematic (../ac_tran committed),10p,f3dB_Hz,1.26477e+06
+ac,pex (../ac_tran committed),10p,f3dB_Hz,1.12232e+06
+ac,klayout (../ac_tran committed),10p,f3dB_Hz,1.21973e+06
+ac,"klayout, antenna diodes fixed",10p,f3dB_Hz,1.22025e+06
+ac,schematic (../ac_tran committed),100p,f3dB_Hz,1.52333e+06
+ac,pex (../ac_tran committed),100p,f3dB_Hz,1.32479e+06
+ac,klayout (../ac_tran committed),100p,f3dB_Hz,1.48725e+06
+ac,"klayout, antenna diodes fixed",100p,f3dB_Hz,1.48795e+06
+step,schematic (../ac_tran committed),open,ts1_rise,4.601e-07
+step,pex (../ac_tran committed),open,ts1_rise,5.16697e-07
+step,klayout (../ac_tran committed),open,ts1_rise,4.66547e-07
+step,"klayout, antenna diodes fixed",open,ts1_rise,4.66288e-07
+step,schematic (../ac_tran committed),open,ts0.1_rise,6.33166e-07
+step,pex (../ac_tran committed),open,ts0.1_rise,7.09577e-07
+step,klayout (../ac_tran committed),open,ts0.1_rise,6.42881e-07
+step,"klayout, antenna diodes fixed",open,ts0.1_rise,6.42445e-07
+step,schematic (../ac_tran committed),open,gain_step,0.998716
+step,pex (../ac_tran committed),open,gain_step,0.998715
+step,klayout (../ac_tran committed),open,gain_step,0.998674
+step,"klayout, antenna diodes fixed",open,gain_step,0.998674

@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# IHP sg13cmos5l simulation, slot 7 tier-1 deck; round trip 10 kHz sine 0 ... 1 V, tt 27 C 3.3 V; THD / H dB(c) (harmonics 2-7, 200 ... 600 us), A1 V, gain_10k = A1_out / A1_in, delay_10k s, err V = pad_d2s - (vcm + pad_s2d - vref)
+pads,load,solver_aid,THD_dB,H2_dBc,H3_dBc,A1_out,gain_10k,delay_10k,err_pp,err_max_abs
+schematic,open,none,-78.238,-81.3715,-81.3048,0.499292,0.998584,1.45881e-07,0.00919594,0.00464087
+schematic,100p,none,-72.4895,-77.6811,-74.3793,0.499249,0.998498,1.70344e-07,0.0110114,0.00553565
+pex,open,rshunt=1e12,-77.8717,-81.3913,-80.5748,0.499289,0.998579,1.64445e-07,0.0103416,0.00522503
+pex,100p,rshunt=1e12,-72.0083,-77.432,-73.8227,0.499245,0.99849,1.91755e-07,0.0123694,0.00622644
+klayout (antenna diodes l/w from the extracted A/P),open,none,-78.2638,-81.3677,-81.3491,0.499269,0.998538,1.47531e-07,0.00930612,0.00471219
+klayout (antenna diodes l/w from the extracted A/P),100p,none,-69.8631,-75.4919,-71.6983,0.499214,0.998429,1.74665e-07,0.0113931,0.00573317

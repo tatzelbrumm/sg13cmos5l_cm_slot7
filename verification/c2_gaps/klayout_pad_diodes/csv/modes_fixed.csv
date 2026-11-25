@@ -1,0 +1,11 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# IHP sg13cmos5l simulation, slot 7 tier-1 deck; ../slot_modes_bg/slot_modes.py (dcop = the designer's mode DC deck; pu / pu0 = power-up transient with / without 10 pF on pad out), KLayout pads with the antenna diodes fixed; err_max_mV = max |pad out - expected| or FAILED; ngspice = first abort message
+mode,corner_mos,temp,vdd,variant,cload,err_max_mV,v_g_V,vcm_V,vref_V,ngspice
+ext,ss,-40,3.0,dcop,,FAILED,,,,Timestep too small;  vin = 0: trouble with dparea-instance d.x2s.xlay.x$63.d1
+feed,ss,-40,3.0,dcop,,FAILED,,,,Timestep too small; trouble with dparea-instance d.x2s.xlay.x$63.d1
+mon,sf,-40,3.0,pu,10p,FAILED,FAILED,FAILED,FAILED,"Timestep too small; time = 6.25536e-06, timestep = 1.25e-20: trouble with dparea-instance d.x2d.xlay.x$3.d1"
+mon,ss,-40,3.0,dcop,,FAILED,,,,Timestep too small;  vin = 0: trouble with dparea-instance d.x2s.xlay.x$63.d1
+swap+feed,ss,-40,3.0,dcop,,FAILED,,,,Timestep too small; trouble with dparea-instance d.x2s.xlay.x$63.d1
+swap,sf,-40,3.0,pu0,none,FAILED,FAILED,FAILED,FAILED,"Timestep too small; time = 6.26427e-06, timestep = 1.25e-20: trouble with dparea-instance d.x2d.xlay.x$167.d1"
+swap,ss,-40,3.0,dcop,,FAILED,,,,Timestep too small;  vin = 0: trouble with dparea-instance d.x2s.xlay.x$63.d1

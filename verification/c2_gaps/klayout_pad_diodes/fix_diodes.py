@@ -51,7 +51,8 @@ def fix_text(txt):
                 l, w = lw(a, p)
                 rest = ' '.join(f'{k}={v}' for k, v in prm.items())
                 new = f'{m.group(1)} l={l * 1e6:.6g}u w={w * 1e6:.6g}u' + (f' {rest}' if rest else '')
-                log.append(f'{line.strip()}  ->  {new.strip()}   (DEV_A {l * w * 1e12:.6g}, DEV_P {(l + w) / 0.5e-6:.6g})')
+                log.append(f'{line.strip()}  ->  {new.strip()}   '
+                           f'(DEV_A {l * w * 1e12:.6g}, DEV_P {(l + w) / 0.5e-6:.6g})')
                 line = new
         out.append(line)
     return '\n'.join(out) + '\n', log

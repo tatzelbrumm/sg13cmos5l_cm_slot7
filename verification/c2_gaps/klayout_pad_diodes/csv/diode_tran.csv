@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# IHP sg13cmos5l simulation (ngspice, PDK diodes.lib): S2D pad antenna diode X$65 (dantenna m=2) alone, cathode driven by the slot sine 0 ... 1 V 10 kHz, tran 0 ... 100 us; modified darea parameters = diagnosis only
+case,method,result,abort_time_s,v_cathode_at_abort,ngspice_trouble
+default size,gear,ABORTED,6.597230e-05,0.0783,darea-instance d.x65.d1
+extracted size,gear,completed,,,
+"extracted size, trap",trap,completed,,,
+"default size, trap",trap,ABORTED,6.597230e-05,0.0783,darea-instance d.x65.d1
+"default size, darea ibv=1e-30",gear,completed,,,
+"default size, darea rs=0",gear,completed,,,
+"default size, darea tt=0",gear,completed,,,
+"default size, darea cj0=0",gear,STUCK (no end within the 60 s timeout; last time point given),6.597270e-05,0.0783,
+"extracted size, darea rs as default size",gear,completed,,,
+"extracted size, darea cj0 as default size",gear,completed,,,
+"extracted size, darea rs and cj0 as default size",gear,ABORTED,6.597230e-05,0.0783,dperim-instance d.x65.d2

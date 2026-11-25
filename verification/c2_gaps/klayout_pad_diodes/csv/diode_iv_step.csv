@@ -1,0 +1,25 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# IHP sg13cmos5l simulation (ngspice, PDK diodes.lib): reverse current I (into the cathode) vs cathode voltage V, anode 0, sweep 0 ... 0.2 V; largest step dI between neighbouring points [A] and where; median |dI| = the smooth part
+device,temp_C,sweep_step_mV,sweep,max_step_A,between_V,and_V,median_abs_step_A
+dantenna_default,-40,0.5,"completed, 401 points",4.9195e-12,0.0605,0.0610,4.106e-15
+dantenna_extracted,-40,0.5,"completed, 401 points",4.9195e-12,0.0605,0.0610,4.106e-15
+darea_area1,-40,0.5,"completed, 401 points",2.4595e-12,0.0605,0.0610,1.803e-15
+dperim_area1,-40,0.5,"completed, 401 points",5.0004e-16,0.0615,0.0620,5.000e-16
+dcorner_area1,-40,0.5,"completed, 401 points",5.0000e-16,0.1015,0.1020,5.000e-16
+dantenna_default,27,0.5,"completed, 401 points",7.4126e-11,0.0780,0.0785,3.132e-14
+dantenna_extracted,27,0.5,"completed, 401 points",7.4126e-11,0.0780,0.0785,3.132e-14
+darea_area1,27,0.5,"completed, 401 points",3.7063e-11,0.0780,0.0785,1.541e-14
+dperim_area1,27,0.5,"completed, 401 points",5.0107e-16,0.0790,0.0795,5.000e-16
+dcorner_area1,27,0.5,"completed, 401 points",5.0000e-16,0.0000,0.0005,5.000e-16
+dantenna_default,125,0.5,"completed, 401 points",7.5689e-10,0.1035,0.1040,2.248e-15
+dantenna_extracted,125,0.5,"completed, 401 points",7.5546e-10,0.1035,0.1040,3.510e-14
+darea_area1,125,0.5,"completed, 401 points",3.7845e-10,0.1035,0.1040,9.383e-16
+dperim_area1,125,0.5,"completed, 401 points",5.2601e-16,0.0000,0.0005,5.054e-16
+dcorner_area1,125,0.5,"completed, 401 points",5.0855e-16,0.0000,0.0005,5.005e-16
+dantenna_default,-40,0.1,"completed, 2001 points",4.9178e-12,0.0608,0.0609,8.209e-16
+dantenna_extracted,-40,0.1,"completed, 2001 points",4.9178e-12,0.0608,0.0609,8.209e-16
+dantenna_default,27,0.1,"not finished in 60 s (ngspice batch, DC sweep)",,,,
+dantenna_extracted,27,0.1,"completed, 2001 points",7.4113e-11,0.0782,0.0783,6.262e-15
+dantenna_default,125,0.1,"not finished in 60 s (ngspice batch, DC sweep)",,,,
+dantenna_extracted,125,0.1,"completed, 2001 points",7.5541e-10,0.1038,0.1039,6.963e-15

@@ -1,0 +1,13 @@
+# SPDX-FileCopyrightText: 2026 Christoph Maier
+# SPDX-License-Identifier: Apache-2.0
+# IHP sg13cmos5l simulation (ngspice, PDK diodes.lib): area factor each component diode of dpantenna gets (listing expand); ngspice message about a= / p=: none
+instance,call,component,model,area,m
+xap,a=35.0028p p=58.08u m=2 (converted KLayout netlist),d1,dparea,0.6084000000000002,2.0
+xap,a=35.0028p p=58.08u m=2 (converted KLayout netlist),d2,dpperim,3.120000000000001,2.0
+xap,a=35.0028p p=58.08u m=2 (converted KLayout netlist),d3,dpcorner,4.0,2.0
+xlw,l=27.78u w=1.26u m=2 (schematic / PEX netlist),d1,dparea,35.00279999999999,2.0
+xlw,l=27.78u w=1.26u m=2 (schematic / PEX netlist),d2,dpperim,58.08000000000001,2.0
+xlw,l=27.78u w=1.26u m=2 (schematic / PEX netlist),d3,dpcorner,4.0,2.0
+xdef,(no parameters),d1,dparea,0.6084000000000002,1.0
+xdef,(no parameters),d2,dpperim,3.120000000000001,1.0
+xdef,(no parameters),d3,dpcorner,4.0,1.0
