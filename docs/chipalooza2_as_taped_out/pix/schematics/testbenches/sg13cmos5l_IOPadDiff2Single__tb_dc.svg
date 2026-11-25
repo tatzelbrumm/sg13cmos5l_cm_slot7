@@ -1,0 +1,396 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2271" height="884" viewBox="0 0 2271 884" version="1.1">
+<style type="text/css">
+.l0{
+  fill: #ffffff;
+  stroke: #ffffff;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01166;
+}
+.l1{
+  fill: #0099cc;
+  stroke: #0099cc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01166;
+}
+.l2{
+  fill: #aaaaaa; fill-opacity: 0.2;
+  stroke: #aaaaaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01166;
+}
+.l3{
+  fill: #222222; fill-opacity: 0.5;
+  stroke: #222222;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01166;
+}
+.l4{
+  fill: #229900;
+  stroke: #229900;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01166;
+}
+.l5{
+  fill: #bb2200;
+  stroke: #bb2200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01166;
+}
+.l6{
+  fill: #0066cc; fill-opacity: 0.5;
+  stroke: #0066cc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01166;
+}
+.l7{
+  fill: #ff0000; fill-opacity: 0.5;
+  stroke: #ff0000;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01166;
+}
+.l8{
+  fill: #888800; fill-opacity: 0.5;
+  stroke: #888800;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01166;
+}
+.l9{
+  fill: #00aaaa; fill-opacity: 0.5;
+  stroke: #00aaaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01166;
+}
+.l10{
+  fill: #880088;
+  stroke: #880088;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01166;
+}
+.l11{
+  fill: #00ff00; fill-opacity: 0.5;
+  stroke: #00ff00;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01166;
+}
+.l12{
+  fill: #0000cc; fill-opacity: 0.5;
+  stroke: #0000cc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01166;
+}
+.l13{
+  fill: #666600; fill-opacity: 0.5;
+  stroke: #666600;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01166;
+}
+.l14{
+  fill: #557755; fill-opacity: 0.2;
+  stroke: #557755;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01166;
+}
+.l15{
+  fill: #aa2222; fill-opacity: 0.5;
+  stroke: #aa2222;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01166;
+}
+.l16{
+  fill: #7ccc40; fill-opacity: 0.5;
+  stroke: #7ccc40;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01166;
+}
+.l17{
+  fill: #00ffcc; fill-opacity: 0.2;
+  stroke: #00ffcc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01166;
+}
+.l18{
+  fill: #ce0097; fill-opacity: 0.5;
+  stroke: #ce0097;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01166;
+}
+.l19{
+  fill: #d2d46b; fill-opacity: 0.2;
+  stroke: #d2d46b;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01166;
+}
+.l20{
+  fill: #ef6158; fill-opacity: 0.2;
+  stroke: #ef6158;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01166;
+}
+.l21{
+  fill: #fdb200; fill-opacity: 0.2;
+  stroke: #fdb200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01166;
+}
+text {font-family: Sans-Serif;}
+</style>
+<rect class="l0" x="0" y="0" width="2271" height="884"/>
+<path class="l4" d="M932.517 339.757L932.517 354.744"/>
+<path class="l4" d="M932.517 594.545L932.517 609.532"/>
+<path class="l4" d="M992.467 339.757L992.467 354.744"/>
+<path class="l4" d="M992.467 594.545L992.467 609.532"/>
+<path class="l4" d="M1112.37 474.645L1127.35 474.645"/>
+<path class="l4" d="M797.629 384.72L812.616 384.72"/>
+<path class="l4" d="M797.629 399.707L812.616 399.707"/>
+<path class="l4" d="M797.629 414.695L812.616 414.695"/>
+<path class="l4" d="M797.629 444.67L812.616 444.67"/>
+<path class="l4" d="M797.629 474.645L812.616 474.645"/>
+<path class="l4" d="M797.629 489.632L812.616 489.632"/>
+<path class="l4" style="fill:none;" d="M812.616 354.744L1112.37 354.744L1112.37 594.545L812.616 594.545L812.616 354.744"/>
+<path class="l4" d="M63.2399 122.438L115.696 122.438"/>
+<path class="l4" d="M63.2399 122.438L63.2399 137.425"/>
+<path class="l4" d="M63.2399 272.313L115.696 272.313"/>
+<path class="l4" d="M63.2399 272.313L63.2399 287.301"/>
+<path class="l4" d="M1337.18 122.438L1389.64 122.438"/>
+<path class="l4" d="M1337.18 122.438L1337.18 137.425"/>
+<path class="l4" d="M692.716 729.433L692.716 744.42"/>
+<path class="l4" d="M707.704 729.433L707.704 744.42"/>
+<path class="l4" d="M692.716 834.345L692.716 849.333"/>
+<path class="l4" d="M662.741 759.408L677.729 759.408"/>
+<path class="l4" d="M662.741 774.395L677.729 774.395"/>
+<path class="l4" d="M662.741 789.383L677.729 789.383"/>
+<path class="l4" d="M662.741 804.37L677.729 804.37"/>
+<path class="l4" d="M662.741 819.358L677.729 819.358"/>
+<path class="l4" d="M797.629 759.408L812.616 759.408"/>
+<path class="l4" d="M797.629 774.395L812.616 774.395"/>
+<path class="l4" d="M797.629 789.383L812.616 789.383"/>
+<path class="l4" d="M797.629 804.37L812.616 804.37"/>
+<path class="l4" style="fill:none;" d="M677.729 744.42L797.629 744.42L797.629 834.345L677.729 834.345L677.729 744.42"/>
+<path class="l4" d="M969.985 766.902L984.973 766.902"/>
+<path class="l4" d="M969.985 781.889L984.973 781.889"/>
+<path class="l4" d="M969.985 796.877L984.973 796.877"/>
+<path class="l4" d="M969.985 811.864L984.973 811.864"/>
+<path class="l4" d="M1089.89 789.383L1104.87 789.383"/>
+<path class="l4" d="M1037.43 729.433L1037.43 744.42"/>
+<path class="l4" d="M1037.43 834.345L1037.43 849.333"/>
+<path class="l4" style="fill:none;" d="M984.973 744.42L1089.89 744.42L1089.89 834.345L984.973 834.345L984.973 744.42"/>
+<path class="l5" d="M930.643 337.884L934.39 337.884L934.39 341.63L930.643 341.63L930.643 337.884z"/>
+<path class="l5" d="M930.643 607.659L934.39 607.659L934.39 611.406L930.643 611.406L930.643 607.659z"/>
+<path class="l5" d="M990.593 337.884L994.34 337.884L994.34 341.63L990.593 341.63L990.593 337.884z"/>
+<path class="l5" d="M990.593 607.659L994.34 607.659L994.34 611.406L990.593 611.406L990.593 607.659z"/>
+<path class="l5" d="M1125.48 472.771L1129.23 472.771L1129.23 476.518L1125.48 476.518L1125.48 472.771z"/>
+<path class="l5" d="M795.755 382.846L799.502 382.846L799.502 386.593L795.755 386.593L795.755 382.846z"/>
+<path class="l5" d="M795.755 397.834L799.502 397.834L799.502 401.581L795.755 401.581L795.755 397.834z"/>
+<path class="l5" d="M795.755 412.821L799.502 412.821L799.502 416.568L795.755 416.568L795.755 412.821z"/>
+<path class="l5" d="M795.755 442.796L799.502 442.796L799.502 446.543L795.755 446.543L795.755 442.796z"/>
+<path class="l5" d="M795.755 472.771L799.502 472.771L799.502 476.518L795.755 476.518L795.755 472.771z"/>
+<path class="l5" d="M795.755 487.759L799.502 487.759L799.502 491.506L795.755 491.506L795.755 487.759z"/>
+<path class="l5" d="M931.58 338.82L933.453 338.82L933.453 340.694L931.58 340.694L931.58 338.82z"/>
+<path class="l5" d="M931.58 608.596L933.453 608.596L933.453 610.469L931.58 610.469L931.58 608.596z"/>
+<path class="l5" d="M991.53 338.82L993.403 338.82L993.403 340.694L991.53 340.694L991.53 338.82z"/>
+<path class="l5" d="M991.53 608.596L993.403 608.596L993.403 610.469L991.53 610.469L991.53 608.596z"/>
+<path class="l5" d="M1126.42 473.708L1128.29 473.708L1128.29 475.581L1126.42 475.581L1126.42 473.708z"/>
+<path class="l5" d="M796.692 383.783L798.565 383.783L798.565 385.656L796.692 385.656L796.692 383.783z"/>
+<path class="l5" d="M796.692 398.77L798.565 398.77L798.565 400.644L796.692 400.644L796.692 398.77z"/>
+<path class="l5" d="M796.692 413.758L798.565 413.758L798.565 415.631L796.692 415.631L796.692 413.758z"/>
+<path class="l5" d="M796.692 443.733L798.565 443.733L798.565 445.606L796.692 445.606L796.692 443.733z"/>
+<path class="l5" d="M796.692 473.708L798.565 473.708L798.565 475.581L796.692 475.581L796.692 473.708z"/>
+<path class="l5" d="M796.692 488.696L798.565 488.696L798.565 490.569L796.692 490.569L796.692 488.696z"/>
+<path class="l5" d="M690.843 727.559L694.589 727.559L694.589 731.306L690.843 731.306L690.843 727.559z"/>
+<path class="l5" d="M705.83 727.559L709.577 727.559L709.577 731.306L705.83 731.306L705.83 727.559z"/>
+<path class="l5" d="M690.843 847.459L694.589 847.459L694.589 851.206L690.843 851.206L690.843 847.459z"/>
+<path class="l5" d="M660.868 757.534L664.614 757.534L664.614 761.281L660.868 761.281L660.868 757.534z"/>
+<path class="l5" d="M660.868 772.522L664.614 772.522L664.614 776.269L660.868 776.269L660.868 772.522z"/>
+<path class="l5" d="M660.868 787.509L664.614 787.509L664.614 791.256L660.868 791.256L660.868 787.509z"/>
+<path class="l5" d="M660.868 802.497L664.614 802.497L664.614 806.244L660.868 806.244L660.868 802.497z"/>
+<path class="l5" d="M660.868 817.484L664.614 817.484L664.614 821.231L660.868 821.231L660.868 817.484z"/>
+<path class="l5" d="M810.743 757.534L814.49 757.534L814.49 761.281L810.743 761.281L810.743 757.534z"/>
+<path class="l5" d="M810.743 787.509L814.49 787.509L814.49 791.256L810.743 791.256L810.743 787.509z"/>
+<path class="l5" d="M810.743 802.497L814.49 802.497L814.49 806.244L810.743 806.244L810.743 802.497z"/>
+<path class="l5" d="M810.743 772.522L814.49 772.522L814.49 776.269L810.743 776.269L810.743 772.522z"/>
+<path class="l5" d="M691.779 728.496L693.653 728.496L693.653 730.369L691.779 730.369L691.779 728.496z"/>
+<path class="l5" d="M706.767 728.496L708.64 728.496L708.64 730.369L706.767 730.369L706.767 728.496z"/>
+<path class="l5" d="M691.779 848.396L693.653 848.396L693.653 850.27L691.779 850.27L691.779 848.396z"/>
+<path class="l5" d="M661.804 758.471L663.678 758.471L663.678 760.344L661.804 760.344L661.804 758.471z"/>
+<path class="l5" d="M661.804 773.459L663.678 773.459L663.678 775.332L661.804 775.332L661.804 773.459z"/>
+<path class="l5" d="M661.804 788.446L663.678 788.446L663.678 790.32L661.804 790.32L661.804 788.446z"/>
+<path class="l5" d="M661.804 803.434L663.678 803.434L663.678 805.307L661.804 805.307L661.804 803.434z"/>
+<path class="l5" d="M661.804 818.421L663.678 818.421L663.678 820.295L661.804 820.295L661.804 818.421z"/>
+<path class="l5" d="M811.68 758.471L813.553 758.471L813.553 760.344L811.68 760.344L811.68 758.471z"/>
+<path class="l5" d="M811.68 773.459L813.553 773.459L813.553 775.332L811.68 775.332L811.68 773.459z"/>
+<path class="l5" d="M811.68 788.446L813.553 788.446L813.553 790.32L811.68 790.32L811.68 788.446z"/>
+<path class="l5" d="M811.68 803.434L813.553 803.434L813.553 805.307L811.68 805.307L811.68 803.434z"/>
+<path class="l5" d="M1035.56 727.559L1039.3 727.559L1039.3 731.306L1035.56 731.306L1035.56 727.559z"/>
+<path class="l5" d="M1035.56 847.459L1039.3 847.459L1039.3 851.206L1035.56 851.206L1035.56 847.459z"/>
+<path class="l5" d="M968.112 765.028L971.859 765.028L971.859 768.775L968.112 768.775L968.112 765.028z"/>
+<path class="l5" d="M1103 787.509L1106.75 787.509L1106.75 791.256L1103 791.256L1103 787.509z"/>
+<path class="l5" d="M968.112 780.016L971.859 780.016L971.859 783.762L968.112 783.762L968.112 780.016z"/>
+<path class="l5" d="M968.112 795.003L971.859 795.003L971.859 798.75L968.112 798.75L968.112 795.003z"/>
+<path class="l5" d="M968.112 809.991L971.859 809.991L971.859 813.738L968.112 813.738L968.112 809.991z"/>
+<path class="l5" d="M1036.49 728.496L1038.37 728.496L1038.37 730.369L1036.49 730.369L1036.49 728.496z"/>
+<path class="l5" d="M1036.49 848.396L1038.37 848.396L1038.37 850.27L1036.49 850.27L1036.49 848.396z"/>
+<path class="l5" d="M969.049 765.965L970.922 765.965L970.922 767.838L969.049 767.838L969.049 765.965z"/>
+<path class="l5" d="M969.049 780.952L970.922 780.952L970.922 782.826L969.049 782.826L969.049 780.952z"/>
+<path class="l5" d="M969.049 795.94L970.922 795.94L970.922 797.813L969.049 797.813L969.049 795.94z"/>
+<path class="l5" d="M969.049 810.927L970.922 810.927L970.922 812.801L969.049 812.801L969.049 810.927z"/>
+<path class="l5" d="M1103.94 788.446L1105.81 788.446L1105.81 790.32L1103.94 790.32L1103.94 788.446z"/>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" transform="translate(850.085, 335.384)" >sg13cmos5l_IOPadDiff2Single</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" transform="translate(820.11, 612.653)" >x1</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79351" transform="translate(820.11, 376.809)" >pad - vref = (vinp - vinn) / 2</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79351" transform="translate(928.77, 365.568)" >iovdd</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79351" transform="translate(928.77, 586.634)" >iovss</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79351" transform="translate(988.72, 365.568)" >vdd (1.2 V ring, n.c.)</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79351" transform="translate(988.72, 586.634)" >vss (n.c.)</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79351" transform="translate(1094.62, 477.225)" >pad</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79351" transform="translate(816.363, 387.3)" >vinp</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79351" transform="translate(816.363, 402.287)" >vinn</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79351" transform="translate(816.363, 417.275)" >vref</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79351" transform="translate(816.363, 447.25)" >iref (sourced, 5 uA)</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79351" transform="translate(816.363, 477.225)" >en_3v3</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79351" transform="translate(816.363, 492.212)" >en_3v3_b</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79351" transform="translate(820.11, 526.684)" >en_ctrl_3v3, bias_gen_pd: outside the cell</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8593" transform="translate(938.137, 345.345)" >iovdd</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8593" transform="translate(938.137, 615.12)" >0</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8593" transform="translate(998.087, 345.345)" >vcore</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8593" transform="translate(998.087, 615.12)" >0</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8593" transform="translate(1132.97, 480.232)" >pad</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8593" transform="translate(766.008, 390.307)" >vinp</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8593" transform="translate(766.008, 405.295)" >vinn</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8593" transform="translate(767.008, 420.282)" >vref</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" transform="translate(66.9868, 118.065)" >MODEL</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(74.4805, 150.208)" >.lib cornerMOShv.lib mos_CACE{corner_mos}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(74.4805, 163.617)" >.lib cornerMOSlv.lib mos_CACE{corner_mos}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(74.4805, 177.026)" >.lib cornerRES.lib res_CACE{corner_r=typ}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(74.4805, 190.434)" >.lib cornerCAP.lib cap_CACE{corner_c=typ}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(74.4805, 203.843)" >.lib cornerPNP.lib CACE{corner_pnp=typ}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(74.4805, 217.252)" >.lib cornerDIO.lib dio_tt</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(74.4805, 230.661)" >* IHP IO library (DCNDiode, DCPDiode); on the sourcepath of the PDK .spiceinit</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(74.4805, 244.069)" >.include sg13cmos5l_io.spice</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" transform="translate(66.9868, 267.94)" >SOURCES</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(74.4805, 300.083)" >* ---- supplies: iovdd = ring 3.3 V (front end, bias, output stage), vcore = 1.2 V core ring</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(74.4805, 313.492)" >Vio iovdd 0 dc CACE{vdd} ac 0</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(74.4805, 326.901)" >Vcore vcore 0 CACE{vddl=1.2}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(74.4805, 340.31)" >* ---- slot-side controls (1.2 V logic) and the slot supplies seen by the presence detectors</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(74.4805, 353.718)" >Ven en 0 CACE{en=1.2}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(74.4805, 367.127)" >Vs0 s0 0 CACE[(CACE{sel=0} % 2)*CACE{vddl=1.2}]</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(74.4805, 380.536)" >Vs1 s1 0 CACE[floor(CACE{sel=0} / 2)*CACE{vddl=1.2}]</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(74.4805, 393.945)" >Vs12 s12 0 CACE{vs12=1.2}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(74.4805, 407.353)" >Vs33 s33 0 CACE{vs33=3.3}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(74.4805, 420.762)" >* ---- harness iDAC: a sourced current from a PMOS mirror on its own 3.3 V supply</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(74.4805, 434.171)" >Vext vext 0 3.3</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(74.4805, 447.58)" >Iext xg 0 CACE{ibias=5e-6}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(74.4805, 460.988)" >XEd xg xg vext vext sg13_hv_pmos w=5u l=6u</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(74.4805, 474.397)" >XEm ibias xg vext vext sg13_hv_pmos w=5u l=6u</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(74.4805, 487.806)" >* ---- differential input around vicm: vinp - vinn = v(dp)</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(74.4805, 501.215)" >Vref vref 0 CACE{vref=1.65}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(74.4805, 514.623)" >Vic vic 0 dc CACE{vicm=1.65} ac 0</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(74.4805, 528.032)" >Vd dp 0 dc 0 ac 0</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(74.4805, 541.441)" >Ep vinp vic dp 0 0.5</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(74.4805, 554.85)" >En vinn vic dp 0 -0.5</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(74.4805, 568.258)" >* ---- load</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(74.4805, 581.667)" >RL pad vterm CACE{rload=1000}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(74.4805, 595.076)" >Vterm vterm 0 CACE{vterm=1.65}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(74.4805, 608.485)" >CL pad 0 CACE{cload=1e-10}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" transform="translate(1340.93, 118.065)" >NGSPICE</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(1348.42, 150.208)" >.include CACE{DUT_path}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(1348.42, 163.617)" >.temp CACE{temp}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(1348.42, 177.026)" >.options savecurrents klu method=gear reltol=1e-4 abstol=1e-15 gmin=1e-15 SEED=CACE[CACE{seed=12345} + CACE{iterations=0}]</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(1348.42, 190.434)" >.option warn=1</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(1348.42, 203.843)" >.control</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(1348.42, 217.252)" >save v(pad) v(vref) v(dp) i(vio) i(vcore) @n.x1.xfp.xop.nsg13_hv_pmos[ids] @n.x1.xfn.xon.nsg13_hv_nmos[ids]</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(1348.42, 230.661)" >dc Vd -CACE{vdmax=1} CACE{vdmax=1} CACE{vdstep=0.01}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(1348.42, 244.069)" >let vo = v(pad) - v(vref)</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(1348.42, 257.478)" >meas dc vo0 find vo at=0</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(1348.42, 270.887)" >meas dc vop find vo at=CACE{vdlin=0.2}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(1348.42, 284.296)" >meas dc vom find vo at=-CACE{vdlin=0.2}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(1348.42, 297.704)" >let Gain = (vop - vom) / (2*CACE{vdlin=0.2})</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(1348.42, 311.113)" >let Vos_out = vo0</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(1348.42, 324.522)" >let dev = abs(vo - vo0 - Gain*v(dp))</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(1348.42, 337.931)" >meas dc INL max dev</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(1348.42, 351.339)" >let iio = -i(vio)</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(1348.42, 364.748)" >meas dc Iio find iio at=0</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(1348.42, 378.157)" >let icore = -i(vcore)</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(1348.42, 391.566)" >meas dc Icore find icore at=0</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(1348.42, 404.974)" >let ip = abs(@n.x1.xfp.xop.nsg13_hv_pmos[ids])</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(1348.42, 418.383)" >let inn = abs(@n.x1.xfn.xon.nsg13_hv_nmos[ids])</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(1348.42, 431.792)" >meas dc IqP find ip at=0</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(1348.42, 445.201)" >meas dc IqN find inn at=0</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(1348.42, 458.609)" >let imn = 0.5*(ip + inn - abs(ip - inn))</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(1348.42, 472.018)" >meas dc ImA find imn at=-CACE{vdmax=1}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(1348.42, 485.427)" >meas dc ImB find imn at=CACE{vdmax=1}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(1348.42, 498.835)" >let Imin = 0.5*(ImA + ImB - abs(ImA - ImB))</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(1348.42, 512.244)" >echo $&amp;Gain $&amp;Vos_out $&amp;INL $&amp;Iio $&amp;Icore $&amp;IqP $&amp;IqN $&amp;Imin &gt; CACE{filename}_CACE{N}.data</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" style="font-family:Monospace;" transform="translate(1348.42, 525.653)" >.endc</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8593" transform="translate(771.008, 450.257)" >iref</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8593" transform="translate(747.008, 480.232)" >en_3v3</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8593" transform="translate(733.008, 495.22)" >en_3v3_b</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79351" transform="translate(678.212, 754.494)" >vddh</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79351" transform="translate(703.694, 754.494)" >vddl</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79351" transform="translate(688.22, 829.432)" >vss</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79351" transform="translate(680.726, 761.239)" >en_1v2</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79351" transform="translate(680.726, 776.226)" >sel0_1v2</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79351" transform="translate(680.726, 791.214)" >sel1_1v2</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79351" transform="translate(680.726, 806.201)" >vdd1v2_sense</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79351" transform="translate(680.726, 821.189)" >vdd3v3_sense</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79351" transform="translate(766.631, 761.239)" >en_3v3</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79351" transform="translate(760.631, 791.214)" >sel0_3v3</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79351" transform="translate(762.631, 806.201)" >sel1_3v3</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79351" transform="translate(757.631, 776.226)" >en_3v3_b</text>
+<text fill="#222222"  xml:space="preserve" font-size="9.74189" transform="translate(677.729, 844.007)" >en_ctrl_3v3</text>
+<text fill="#222222"  xml:space="preserve" font-size="9.74189" transform="translate(677.729, 742.092)" >xc</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8593" transform="translate(653.096, 735.02)" >iovdd</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8593" transform="translate(713.324, 735.02)" >vcore</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8593" transform="translate(698.336, 854.92)" >0</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8593" transform="translate(641.121, 764.995)" >en</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8593" transform="translate(642.121, 779.983)" >s0</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8593" transform="translate(645.121, 794.97)" >s1</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8593" transform="translate(637.121, 809.958)" >s12</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8593" transform="translate(634.121, 824.945)" >s33</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8593" transform="translate(818.237, 764.995)" >en_3v3</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8593" transform="translate(818.237, 779.983)" >en_3v3_b</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8593" transform="translate(818.237, 794.97)" >sel0_3v3</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8593" transform="translate(818.237, 809.958)" >sel1_3v3</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79351" transform="translate(987.97, 768.732)" >ibias</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79351" transform="translate(987.97, 783.72)" >en_3v3</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79351" transform="translate(987.97, 798.707)" >sel0_3v3</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79351" transform="translate(987.97, 813.695)" >sel1_3v3</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79351" transform="translate(1073.89, 791.214)" >iref</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79351" transform="translate(1041.93, 754.494)" >vdd</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79351" transform="translate(1041.93, 829.432)" >vss</text>
+<text fill="#222222"  xml:space="preserve" font-size="9.74189" transform="translate(984.973, 847.687)" >bias_gen_pd</text>
+<text fill="#222222"  xml:space="preserve" font-size="9.74189" transform="translate(984.973, 733.782)" >xg</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8593" transform="translate(1043.05, 735.02)" >iovdd</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8593" transform="translate(1043.05, 854.92)" >0</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8593" transform="translate(936.365, 772.489)" >ibias</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8593" transform="translate(919.365, 787.477)" >en_3v3</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8593" transform="translate(909.365, 802.464)" >sel0_3v3</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8593" transform="translate(912.365, 817.452)" >sel1_3v3</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8593" transform="translate(1110.49, 794.97)" >iref</text>
+<text fill="#222222"  xml:space="preserve" font-size="23.3805" transform="translate(63.2399, 46.2484)" >CACE template: DC transfer pad(vd), quiescent currents</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6903" transform="translate(63.2399, 80.5962)" >sg13cmos5l_IOPadDiff2Single.  Sources, load and analysis are in the code blocks; the DUT pins carry net labels.</text>
+<text fill="#222222"  xml:space="preserve" font-size="9.74189" transform="translate(63.2399, 101.308)" >run directory: CACE{simpath}</text>
+<text fill="#222222"  xml:space="preserve" font-size="9.74189" transform="translate(647.753, 655.847)" >xc (en_ctrl_3v3) and xg (bias_gen_pd): outside the pad cell since 2026-11-03 (backannotation to the drawn cell),</text>
+<text fill="#222222"  xml:space="preserve" font-size="9.74189" transform="translate(647.753, 672.333)" >wired as in the former pad sheet; the sources that drove the old pad pins now drive them.</text>
+</svg>

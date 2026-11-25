@@ -1,0 +1,300 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1082" height="1159" viewBox="0 0 1082 1159" version="1.1">
+<style type="text/css">
+.l0{
+  fill: #ffffff;
+  stroke: #ffffff;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01171;
+}
+.l1{
+  fill: #0099cc;
+  stroke: #0099cc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01171;
+}
+.l2{
+  fill: #aaaaaa; fill-opacity: 0.2;
+  stroke: #aaaaaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01171;
+}
+.l3{
+  fill: #222222; fill-opacity: 0.5;
+  stroke: #222222;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01171;
+}
+.l4{
+  fill: #229900;
+  stroke: #229900;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01171;
+}
+.l5{
+  fill: #bb2200;
+  stroke: #bb2200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01171;
+}
+.l6{
+  fill: #0066cc; fill-opacity: 0.5;
+  stroke: #0066cc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01171;
+}
+.l7{
+  fill: #ff0000; fill-opacity: 0.5;
+  stroke: #ff0000;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01171;
+}
+.l8{
+  fill: #888800; fill-opacity: 0.5;
+  stroke: #888800;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01171;
+}
+.l9{
+  fill: #00aaaa; fill-opacity: 0.5;
+  stroke: #00aaaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01171;
+}
+.l10{
+  fill: #880088;
+  stroke: #880088;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01171;
+}
+.l11{
+  fill: #00ff00; fill-opacity: 0.5;
+  stroke: #00ff00;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01171;
+}
+.l12{
+  fill: #0000cc; fill-opacity: 0.5;
+  stroke: #0000cc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01171;
+}
+.l13{
+  fill: #666600; fill-opacity: 0.5;
+  stroke: #666600;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01171;
+}
+.l14{
+  fill: #557755; fill-opacity: 0.2;
+  stroke: #557755;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01171;
+}
+.l15{
+  fill: #aa2222; fill-opacity: 0.5;
+  stroke: #aa2222;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01171;
+}
+.l16{
+  fill: #7ccc40; fill-opacity: 0.5;
+  stroke: #7ccc40;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01171;
+}
+.l17{
+  fill: #00ffcc; fill-opacity: 0.2;
+  stroke: #00ffcc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01171;
+}
+.l18{
+  fill: #ce0097; fill-opacity: 0.5;
+  stroke: #ce0097;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01171;
+}
+.l19{
+  fill: #d2d46b; fill-opacity: 0.2;
+  stroke: #d2d46b;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01171;
+}
+.l20{
+  fill: #ef6158; fill-opacity: 0.2;
+  stroke: #ef6158;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01171;
+}
+.l21{
+  fill: #fdb200; fill-opacity: 0.2;
+  stroke: #fdb200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01171;
+}
+text {font-family: Sans-Serif;}
+</style>
+<rect class="l0" x="0" y="0" width="1082" height="1159"/>
+<path class="l4" d="M285.401 92.7551L285.401 107.743"/>
+<path class="l4" d="M300.39 92.7551L300.39 107.743"/>
+<path class="l4" d="M285.401 197.673L285.401 212.661"/>
+<path class="l4" d="M255.425 122.732L270.413 122.732"/>
+<path class="l4" d="M255.425 137.72L270.413 137.72"/>
+<path class="l4" d="M255.425 152.708L270.413 152.708"/>
+<path class="l4" d="M255.425 167.697L270.413 167.697"/>
+<path class="l4" d="M255.425 182.685L270.413 182.685"/>
+<path class="l4" d="M390.32 122.732L405.308 122.732"/>
+<path class="l4" d="M390.32 137.72L405.308 137.72"/>
+<path class="l4" d="M390.32 152.708L405.308 152.708"/>
+<path class="l4" d="M390.32 167.697L405.308 167.697"/>
+<path class="l4" style="fill:none;" d="M270.413 107.743L390.32 107.743L390.32 197.673L270.413 197.673L270.413 107.743"/>
+<path class="l4" d="M30.6004 250.132L83.0594 250.132"/>
+<path class="l4" d="M30.6004 250.132L30.6004 265.12"/>
+<path class="l4" d="M30.6004 340.062L83.0594 340.062"/>
+<path class="l4" d="M30.6004 340.062L30.6004 355.05"/>
+<path class="l5" d="M283.528 90.8815L287.275 90.8815L287.275 94.6286L283.528 94.6286L283.528 90.8815z"/>
+<path class="l5" d="M298.516 90.8815L302.263 90.8815L302.263 94.6286L298.516 94.6286L298.516 90.8815z"/>
+<path class="l5" d="M283.528 210.788L287.275 210.788L287.275 214.535L283.528 214.535L283.528 210.788z"/>
+<path class="l5" d="M253.551 120.858L257.298 120.858L257.298 124.605L253.551 124.605L253.551 120.858z"/>
+<path class="l5" d="M253.551 135.846L257.298 135.846L257.298 139.593L253.551 139.593L253.551 135.846z"/>
+<path class="l5" d="M253.551 150.835L257.298 150.835L257.298 154.582L253.551 154.582L253.551 150.835z"/>
+<path class="l5" d="M253.551 165.823L257.298 165.823L257.298 169.57L253.551 169.57L253.551 165.823z"/>
+<path class="l5" d="M253.551 180.811L257.298 180.811L257.298 184.558L253.551 184.558L253.551 180.811z"/>
+<path class="l5" d="M403.434 120.858L407.181 120.858L407.181 124.605L403.434 124.605L403.434 120.858z"/>
+<path class="l5" d="M403.434 150.835L407.181 150.835L407.181 154.582L403.434 154.582L403.434 150.835z"/>
+<path class="l5" d="M403.434 165.823L407.181 165.823L407.181 169.57L403.434 169.57L403.434 165.823z"/>
+<path class="l5" d="M403.434 135.846L407.181 135.846L407.181 139.593L403.434 139.593L403.434 135.846z"/>
+<path class="l5" d="M284.465 61.8417L286.338 61.8417L286.338 63.7152L284.465 63.7152L284.465 61.8417z"/>
+<path class="l5" d="M299.453 61.8417L301.327 61.8417L301.327 63.7152L299.453 63.7152L299.453 61.8417z"/>
+<path class="l5" d="M284.465 241.701L286.338 241.701L286.338 243.575L284.465 243.575L284.465 241.701z"/>
+<path class="l5" d="M224.511 121.795L226.385 121.795L226.385 123.668L224.511 123.668L224.511 121.795z"/>
+<path class="l5" d="M224.511 136.783L226.385 136.783L226.385 138.657L224.511 138.657L224.511 136.783z"/>
+<path class="l5" d="M224.511 151.771L226.385 151.771L226.385 153.645L224.511 153.645L224.511 151.771z"/>
+<path class="l5" d="M224.511 166.76L226.385 166.76L226.385 168.633L224.511 168.633L224.511 166.76z"/>
+<path class="l5" d="M224.511 181.748L226.385 181.748L226.385 183.622L224.511 183.622L224.511 181.748z"/>
+<path class="l5" d="M434.348 121.795L436.221 121.795L436.221 123.668L434.348 123.668L434.348 121.795z"/>
+<path class="l5" d="M434.348 151.771L436.221 151.771L436.221 153.645L434.348 153.645L434.348 151.771z"/>
+<path class="l5" d="M434.348 166.76L436.221 166.76L436.221 168.633L434.348 168.633L434.348 166.76z"/>
+<path class="l5" d="M434.348 136.783L436.221 136.783L436.221 138.657L434.348 138.657L434.348 136.783z"/>
+<text fill="#222222"  xml:space="preserve" font-size="7.79391" transform="translate(270.898, 117.818)" >vddh</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79391" transform="translate(296.38, 117.818)" >vddl</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79391" transform="translate(280.905, 192.759)" >vss</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79391" transform="translate(273.411, 124.563)" >en_1v2</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79391" transform="translate(273.411, 139.551)" >sel0_1v2</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79391" transform="translate(273.411, 154.539)" >sel1_1v2</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79391" transform="translate(273.411, 169.528)" >vdd1v2_sense</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79391" transform="translate(273.411, 184.516)" >vdd3v3_sense</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79391" transform="translate(359.322, 124.563)" >en_3v3</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79391" transform="translate(353.322, 154.539)" >sel0_3v3</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79391" transform="translate(355.322, 169.528)" >sel1_3v3</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79391" transform="translate(350.322, 139.551)" >en_3v3_b</text>
+<text fill="#222222"  xml:space="preserve" font-size="9.74239" transform="translate(270.413, 207.335)" >en_ctrl_3v3</text>
+<text fill="#222222"  xml:space="preserve" font-size="9.74239" transform="translate(270.413, 105.415)" >x1</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.86" transform="translate(248.781, 68.3663)" >vddh</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.86" transform="translate(306.01, 68.3663)" >vddl</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.86" transform="translate(291.022, 248.226)" >GND</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.86" transform="translate(177.828, 128.32)" >en_1v2</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.86" transform="translate(167.828, 143.308)" >sel0_1v2</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.86" transform="translate(170.828, 158.296)" >sel1_1v2</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.86" transform="translate(132.828, 173.284)" >vdd1v2_sense</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.86" transform="translate(129.828, 188.273)" >vdd3v3_sense</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.86" transform="translate(440.905, 128.32)" >en_3v3</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.86" transform="translate(440.905, 158.296)" >sel0_3v3</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.86" transform="translate(440.905, 173.284)" >sel1_3v3</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.86" transform="translate(440.905, 143.308)" >en_3v3_b</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" transform="translate(34.3475, 245.759)" >MODEL</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 277.904)" >.lib cornerMOSlv.lib mos_CACE{corner_mos}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 291.313)" >.lib cornerMOShv.lib mos_CACE{corner_mos}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" transform="translate(34.3475, 335.689)" >NGSPICE</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 367.834)" >.include CACE{DUT_path}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 381.243)" >.temp CACE{temp}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 394.653)" >.options gmin=1e-15 abstol=1e-15 reltol=1e-4</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 408.062)" >.option warn=1</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 421.471)" >* sup: 0 = (vddl, vddh) = (1.08, 3.0) V, 1 = (1.32, 3.6) V, 0.5 = nominal (1.2, 3.3) V</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 434.881)" >.param s=CACE{sup}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 448.29)" >.param vl={1.08+0.24*s} vh={3.0+0.6*s}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 461.7)" >Vh vddh 0 {vh}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 475.109)" >Cl0 en_3v3 0 CACE{cload}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 488.519)" >Cl1 sel0_3v3 0 10f</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 501.928)" >Cl2 sel1_3v3 0 10f</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 515.338)" >* case (v2: en_3v3 follows en_1v2 whatever vddl and the sense inputs do; the sense inputs are held at their supplies):</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 528.747)" >*       0 all on, en = 1, sel0 = 1 | 1 en = 0 | 2 vddl = 0 (slot vdd_1v2 off), en = 1 | 3 vddl = 0, en = 0</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 542.156)" >*       4 vddl floating (1e12 ohm to 0.62 V), en = 1 | 5 vddl floating, en = 0 | 6 en, sel0, sel1 all 1 | 7 sel swapped</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 555.566)" >.param c=CACE{case}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 568.975)" >.param vlv='(c==2 || c==3) ? 0 : ((c==4 || c==5) ? 0.62 : vl)'</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 582.385)" >.param rl='(c==4 || c==5) ? 1e12 : 1'</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 595.794)" >.param ven='(c==1 || c==3 || c==5) ? 0 : vl'</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 609.204)" >.param v12=vl</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 622.613)" >.param r12=1</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 636.022)" >.param v33=vh</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 649.432)" >.param r33=1</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 662.841)" >.param vs0='(c==7) ? 0 : vl'</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 676.251)" >.param vs1='(c==6 || c==7) ? vl : 0'</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 689.66)" >* expected outputs (in units of vddh)</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 703.07)" >.param xen='(c==1 || c==3 || c==5) ? 0 : 1'</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 716.479)" >.param xs0='(c==7) ? 0 : 1'</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 729.888)" >.param xs1='(c==6 || c==7) ? 1 : 0'</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 743.298)" >.param chk=1</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 756.707)" >Vl vlsrc 0 {vlv}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 770.117)" >Rl vlsrc vddl {rl}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 783.526)" >Ven en_1v2 0 {ven}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 796.936)" >Vs0 sel0_1v2 0 {vs0}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 810.345)" >Vs1 sel1_1v2 0 {vs1}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 823.754)" >V12 s12 0 {v12}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 837.164)" >R12 s12 vdd1v2_sense {r12}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 850.573)" >V33 s33 0 {v33}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 863.983)" >R33 s33 vdd3v3_sense {r33}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 877.392)" >Vx1 xen 0 {xen}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 890.802)" >Vx2 xs0 0 {xs0}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 904.211)" >Vx3 xs1 0 {xs1}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 917.62)" >Vx4 chk 0 {chk}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 931.03)" >Vx5 vhn 0 {vh}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 944.439)" >.control</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 957.849)" >op</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 971.258)" >let Verr_en = abs(v(en_3v3) - v(xen) * v(vhn))</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 984.668)" >let e0 = abs(v(sel0_3v3) - v(xs0) * v(vhn))</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 998.077)" >let e1 = abs(v(sel1_3v3) - v(xs1) * v(vhn))</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 1011.49)" >let Verr_sel = v(chk) * (e0 + e1)</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 1024.9)" >let I_vddh = -i(Vh)</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 1038.31)" >let I_vddl = -i(Vl)</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 1051.71)" >let I_s12 = -i(V12)</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 1065.12)" >let I_s33 = -i(V33)</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 1078.53)" >let I_en = -i(Ven)</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 1091.94)" >echo $&amp;Verr_en $&amp;Verr_sel $&amp;I_vddh $&amp;I_vddl $&amp;I_s12 $&amp;I_s33 $&amp;I_en &gt; CACE{simpath}/CACE{filename}_CACE{N}.data</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6909" style="font-family:Monospace;" transform="translate(41.8416, 1105.35)" >.endc</text>
+<path class="l1" d="M285.401 62.7785L285.401 92.7551"/>
+<path class="l1" d="M300.39 62.7785L300.39 92.7551"/>
+<path class="l1" d="M285.401 212.661L285.401 242.638"/>
+<path class="l1" d="M225.448 122.732L255.425 122.732"/>
+<path class="l1" d="M225.448 137.72L255.425 137.72"/>
+<path class="l1" d="M225.448 152.708L255.425 152.708"/>
+<path class="l1" d="M225.448 167.697L255.425 167.697"/>
+<path class="l1" d="M225.448 182.685L255.425 182.685"/>
+<path class="l1" d="M405.308 122.732L435.284 122.732"/>
+<path class="l1" d="M405.308 152.708L435.284 152.708"/>
+<path class="l1" d="M405.308 167.697L435.284 167.697"/>
+<path class="l1" d="M405.308 137.72L435.284 137.72"/>
+<text fill="#222222"  xml:space="preserve" font-size="15.5878" transform="translate(30.6004, 46.9556)" >CACE template, DC truth table: en_ctrl_3v3 v2 (en_3v3 = en_1v2 whatever vddl does). Conditions: case, corner_mos, temp, sup, cload</text>
+</svg>

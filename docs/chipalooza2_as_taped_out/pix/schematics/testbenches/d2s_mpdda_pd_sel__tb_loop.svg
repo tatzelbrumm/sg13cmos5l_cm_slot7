@@ -1,0 +1,289 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1906" height="598" viewBox="0 0 1906 598" version="1.1">
+<style type="text/css">
+.l0{
+  fill: #ffffff;
+  stroke: #ffffff;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01159;
+}
+.l1{
+  fill: #0099cc;
+  stroke: #0099cc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01159;
+}
+.l2{
+  fill: #aaaaaa; fill-opacity: 0.2;
+  stroke: #aaaaaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01159;
+}
+.l3{
+  fill: #222222; fill-opacity: 0.5;
+  stroke: #222222;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01159;
+}
+.l4{
+  fill: #229900;
+  stroke: #229900;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01159;
+}
+.l5{
+  fill: #bb2200;
+  stroke: #bb2200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01159;
+}
+.l6{
+  fill: #0066cc; fill-opacity: 0.5;
+  stroke: #0066cc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01159;
+}
+.l7{
+  fill: #ff0000; fill-opacity: 0.5;
+  stroke: #ff0000;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01159;
+}
+.l8{
+  fill: #888800; fill-opacity: 0.5;
+  stroke: #888800;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01159;
+}
+.l9{
+  fill: #00aaaa; fill-opacity: 0.5;
+  stroke: #00aaaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01159;
+}
+.l10{
+  fill: #880088;
+  stroke: #880088;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01159;
+}
+.l11{
+  fill: #00ff00; fill-opacity: 0.5;
+  stroke: #00ff00;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01159;
+}
+.l12{
+  fill: #0000cc; fill-opacity: 0.5;
+  stroke: #0000cc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01159;
+}
+.l13{
+  fill: #666600; fill-opacity: 0.5;
+  stroke: #666600;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01159;
+}
+.l14{
+  fill: #557755; fill-opacity: 0.2;
+  stroke: #557755;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01159;
+}
+.l15{
+  fill: #aa2222; fill-opacity: 0.5;
+  stroke: #aa2222;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01159;
+}
+.l16{
+  fill: #7ccc40; fill-opacity: 0.5;
+  stroke: #7ccc40;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01159;
+}
+.l17{
+  fill: #00ffcc; fill-opacity: 0.2;
+  stroke: #00ffcc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01159;
+}
+.l18{
+  fill: #ce0097; fill-opacity: 0.5;
+  stroke: #ce0097;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01159;
+}
+.l19{
+  fill: #d2d46b; fill-opacity: 0.2;
+  stroke: #d2d46b;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01159;
+}
+.l20{
+  fill: #ef6158; fill-opacity: 0.2;
+  stroke: #ef6158;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01159;
+}
+.l21{
+  fill: #fdb200; fill-opacity: 0.2;
+  stroke: #fdb200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 1.01159;
+}
+text {font-family: Sans-Serif;}
+</style>
+<rect class="l0" x="0" y="0" width="1906" height="598"/>
+<path class="l4" d="M907.557 361.616L907.557 376.602"/>
+<path class="l4" d="M907.557 556.441L907.557 571.428"/>
+<path class="l4" d="M997.477 361.616L997.477 376.602"/>
+<path class="l4" d="M997.477 556.441L997.477 571.428"/>
+<path class="l4" d="M817.638 406.576L832.624 406.576"/>
+<path class="l4" d="M817.638 421.562L832.624 421.562"/>
+<path class="l4" d="M817.638 436.549L832.624 436.549"/>
+<path class="l4" d="M1072.41 466.522L1087.4 466.522"/>
+<path class="l4" d="M817.638 451.535L832.624 451.535"/>
+<path class="l4" d="M817.638 466.522L832.624 466.522"/>
+<path class="l4" d="M817.638 481.508L832.624 481.508"/>
+<path class="l4" d="M817.638 496.495L832.624 496.495"/>
+<path class="l4" d="M817.638 511.482L832.624 511.482"/>
+<path class="l4" d="M817.638 526.468L832.624 526.468"/>
+<path class="l4" style="fill:none;" d="M832.624 376.602L1072.41 376.602L1072.41 556.441L832.624 556.441L832.624 376.602"/>
+<path class="l4" d="M53.3222 114.337L105.775 114.337"/>
+<path class="l4" d="M53.3222 114.337L53.3222 129.324"/>
+<path class="l4" d="M53.3222 234.23L105.775 234.23"/>
+<path class="l4" d="M53.3222 234.23L53.3222 249.216"/>
+<path class="l4" d="M1327.18 114.337L1379.63 114.337"/>
+<path class="l4" d="M1327.18 114.337L1327.18 129.324"/>
+<path class="l5" d="M905.684 359.742L909.43 359.742L909.43 363.489L905.684 363.489L905.684 359.742z"/>
+<path class="l5" d="M905.684 569.555L909.43 569.555L909.43 573.301L905.684 573.301L905.684 569.555z"/>
+<path class="l5" d="M995.603 359.742L999.35 359.742L999.35 363.489L995.603 363.489L995.603 359.742z"/>
+<path class="l5" d="M995.603 569.555L999.35 569.555L999.35 573.301L995.603 573.301L995.603 569.555z"/>
+<path class="l5" d="M815.764 404.702L819.511 404.702L819.511 408.449L815.764 408.449L815.764 404.702z"/>
+<path class="l5" d="M815.764 419.689L819.511 419.689L819.511 423.435L815.764 423.435L815.764 419.689z"/>
+<path class="l5" d="M815.764 434.675L819.511 434.675L819.511 438.422L815.764 438.422L815.764 434.675z"/>
+<path class="l5" d="M1085.52 464.649L1089.27 464.649L1089.27 468.395L1085.52 468.395L1085.52 464.649z"/>
+<path class="l5" d="M815.764 449.662L819.511 449.662L819.511 453.409L815.764 453.409L815.764 449.662z"/>
+<path class="l5" d="M815.764 464.649L819.511 464.649L819.511 468.395L815.764 468.395L815.764 464.649z"/>
+<path class="l5" d="M815.764 479.635L819.511 479.635L819.511 483.382L815.764 483.382L815.764 479.635z"/>
+<path class="l5" d="M815.764 509.608L819.511 509.608L819.511 513.355L815.764 513.355L815.764 509.608z"/>
+<path class="l5" d="M815.764 524.595L819.511 524.595L819.511 528.341L815.764 528.341L815.764 524.595z"/>
+<path class="l5" d="M815.764 494.622L819.511 494.622L819.511 498.368L815.764 498.368L815.764 494.622z"/>
+<path class="l5" d="M906.62 360.679L908.494 360.679L908.494 362.552L906.62 362.552L906.62 360.679z"/>
+<path class="l5" d="M906.62 570.491L908.494 570.491L908.494 572.365L906.62 572.365L906.62 570.491z"/>
+<path class="l5" d="M996.54 360.679L998.413 360.679L998.413 362.552L996.54 362.552L996.54 360.679z"/>
+<path class="l5" d="M996.54 570.491L998.413 570.491L998.413 572.365L996.54 572.365L996.54 570.491z"/>
+<path class="l5" d="M816.701 405.639L818.574 405.639L818.574 407.512L816.701 407.512L816.701 405.639z"/>
+<path class="l5" d="M816.701 420.625L818.574 420.625L818.574 422.499L816.701 422.499L816.701 420.625z"/>
+<path class="l5" d="M816.701 435.612L818.574 435.612L818.574 437.485L816.701 437.485L816.701 435.612z"/>
+<path class="l5" d="M816.701 450.599L818.574 450.599L818.574 452.472L816.701 452.472L816.701 450.599z"/>
+<path class="l5" d="M816.701 465.585L818.574 465.585L818.574 467.458L816.701 467.458L816.701 465.585z"/>
+<path class="l5" d="M816.701 480.572L818.574 480.572L818.574 482.445L816.701 482.445L816.701 480.572z"/>
+<path class="l5" d="M816.701 510.545L818.574 510.545L818.574 512.418L816.701 512.418L816.701 510.545z"/>
+<path class="l5" d="M816.701 525.531L818.574 525.531L818.574 527.405L816.701 527.405L816.701 525.531z"/>
+<path class="l5" d="M816.701 495.558L818.574 495.558L818.574 497.432L816.701 497.432L816.701 495.558z"/>
+<path class="l5" d="M1086.46 465.585L1088.33 465.585L1088.33 467.458L1086.46 467.458L1086.46 465.585z"/>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" transform="translate(840.118, 357.243)" >d2s_mpdda_pd_sel</text>
+<text fill="#222222"  xml:space="preserve" font-size="9.74127" transform="translate(840.118, 569.033)" >x1</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.79302" transform="translate(840.118, 391.172)" >CACE fixture: driver + selectable bias, vfb open</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.01372" transform="translate(900.064, 384.469)" >vdd</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.01372" transform="translate(900.064, 547.823)" >vss</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.01372" transform="translate(989.983, 384.469)" >vddo</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.01372" transform="translate(989.983, 547.823)" >vsso</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.01372" transform="translate(836.371, 408.448)" >vinp</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.01372" transform="translate(836.371, 423.435)" >vinn</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.01372" transform="translate(836.371, 438.421)" >vref</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.01372" transform="translate(1053.66, 468.394)" >vout</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.01372" transform="translate(836.371, 453.408)" >vfb</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.01372" transform="translate(836.371, 468.394)" >ibias</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.01372" transform="translate(836.371, 483.381)" >en_3v3</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.01372" transform="translate(836.371, 513.354)" >sel0_3v3</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.01372" transform="translate(836.371, 528.341)" >sel1_3v3</text>
+<text fill="#222222"  xml:space="preserve" font-size="7.01372" transform="translate(836.371, 498.367)" >en_3v3_b</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8585" transform="translate(913.177, 367.203)" >vdd</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8585" transform="translate(913.177, 577.015)" >0</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8585" transform="translate(1003.1, 367.203)" >vdd</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8585" transform="translate(1003.1, 577.015)" >0</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8585" transform="translate(786.018, 412.163)" >vinp</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8585" transform="translate(786.018, 427.149)" >vinn</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8585" transform="translate(787.018, 442.136)" >vref</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8585" transform="translate(799.018, 457.122)" >fb</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8585" transform="translate(784.018, 472.109)" >ibias</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8585" transform="translate(789.018, 487.096)" >vdd</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8585" transform="translate(797.018, 517.069)" >s0</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8585" transform="translate(800.018, 532.055)" >s1</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8585" transform="translate(804.018, 502.082)" >0</text>
+<text fill="#0099cc"  xml:space="preserve" font-size="12.8585" transform="translate(1093.02, 472.109)" >vout</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" transform="translate(57.0689, 109.965)" >MODEL</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(64.5622, 142.106)" >.lib cornerMOShv.lib mos_CACE{corner_mos}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(64.5622, 155.514)" >.lib cornerRES.lib res_CACE{corner_r=typ}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(64.5622, 168.922)" >.lib cornerCAP.lib cap_CACE{corner_c=typ}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(64.5622, 182.33)" >.lib cornerPNP.lib CACE{corner_pnp=typ}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" transform="translate(57.0689, 229.857)" >SOURCES</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(64.5622, 261.999)" >* all rails on one supply (the pad's iovdd / iovss); en_3v3 tied to vdd, en_3v3_b to 0</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(64.5622, 275.406)" >Vdd vdd 0 CACE{vdd}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(64.5622, 288.814)" >Vs0 s0 0 CACE[(CACE{sel=0} % 2)*CACE{vdd}]</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(64.5622, 302.222)" >Vs1 s1 0 CACE[floor(CACE{sel=0} / 2)*CACE{vdd}]</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(64.5622, 315.63)" >Vext vext 0 3.3</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(64.5622, 329.038)" >Iext xg 0 CACE{ibias=5e-6}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(64.5622, 342.446)" >XEd xg xg vext vext sg13_hv_pmos w=5u l=6u</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(64.5622, 355.854)" >XEm ibias xg vext vext sg13_hv_pmos w=5u l=6u</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(64.5622, 369.262)" >Vref vref 0 CACE{vref=1.65}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(64.5622, 382.67)" >Vic vic 0 CACE{vicm=1.65}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(64.5622, 396.077)" >Ep vinp vic 0 0 0.5</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(64.5622, 409.485)" >En vinn vic 0 0 -0.5</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(64.5622, 422.893)" >* loop broken at vfb: DC through Lb, AC injected through Cb</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(64.5622, 436.301)" >Lb vout fb 1G</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(64.5622, 449.709)" >Cb fb inj 1</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(64.5622, 463.117)" >Vinj inj 0 dc 0 ac 1</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(64.5622, 476.525)" >RL vout vterm CACE{rload=1000}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(64.5622, 489.933)" >Vterm vterm 0 CACE{vterm=1.65}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(64.5622, 503.341)" >CL vout 0 CACE{cload=1e-10}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" transform="translate(1330.93, 109.965)" >NGSPICE</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(1338.42, 142.106)" >.include CACE{DUT_path}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(1338.42, 155.514)" >.temp CACE{temp}</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(1338.42, 168.922)" >.options savecurrents klu method=gear reltol=1e-4 abstol=1e-15 gmin=1e-15</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(1338.42, 182.33)" >.option warn=1</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(1338.42, 195.737)" >.control</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(1338.42, 209.145)" >save v(vout) v(fb)</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(1338.42, 222.553)" >ac dec 50 1 1G</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(1338.42, 235.961)" >let T = -v(vout)/v(fb)</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(1338.42, 249.369)" >let Tdb = vdb(T)</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(1338.42, 262.777)" >let Tph = cph(T)*180/pi</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(1338.42, 276.185)" >meas ac T0 find Tdb at=10</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(1338.42, 289.593)" >let fc = 0</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(1338.42, 303.001)" >meas ac fc when Tdb=0 fall=1</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(1338.42, 316.408)" >let phc = -180</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(1338.42, 329.816)" >meas ac phc find Tph when Tdb=0 fall=1</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(1338.42, 343.224)" >let PM = 180 + phc</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(1338.42, 356.632)" >let gmdb = -1000</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(1338.42, 370.04)" >meas ac gmdb find Tdb when Tph=-180 cross=1</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(1338.42, 383.448)" >let GM = -gmdb</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(1338.42, 396.856)" >echo $&amp;T0 $&amp;fc $&amp;PM $&amp;GM &gt; CACE{filename}_CACE{N}.data</text>
+<text fill="#222222"  xml:space="preserve" font-size="11.6895" style="font-family:Monospace;" transform="translate(1338.42, 410.264)" >.endc</text>
+<text fill="#222222"  xml:space="preserve" font-size="23.3791" transform="translate(53.3222, 38.1527)" >CACE template: loop gain of the pad driver (fixture d2s_mpdda_pd_sel, loop opened at vfb)</text>
+<text fill="#222222"  xml:space="preserve" font-size="9.74127" transform="translate(53.3222, 93.2092)" >run directory: CACE{simpath}</text>
+</svg>

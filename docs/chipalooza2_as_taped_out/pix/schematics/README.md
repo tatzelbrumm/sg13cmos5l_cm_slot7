@@ -16,6 +16,8 @@ All pictures: xschem 3.4.8RC, IHP open PDK `ihp-sg13cmos5l` symbols, the design 
 bounding box + 3 % margin. Every sheet was checked as a PNG (Playwright Chromium): all symbols resolve.
 Source paths are relative to `macros/` of the design repository.
 
+**Test benches:** the CACE templates and stand-alone xschem test benches of these cells, rendered the same way, are in [`testbenches/`](testbenches/README.md).
+
 ## Hierarchy
 
 ```
