@@ -26,7 +26,7 @@ SPDX-License-Identifier: Apache-2.0
 
 ![Power-up from 0 V at ss −40 °C 3.0 V](../../../verification/c2_gaps/slot_modes_bg/slot_powerup_ss_m40.png)
 
-*Power-up from 0 V at ss −40 °C 3.0 V: every mode settles (the DC failures in the mode table below are a simulator artefact)*
+*Power-up from 0 V at ss −40 °C 3.0 V: every mode settles (the DC failures in the mode table below are a simulator artifact)*
 
 ![bg_core_pd start-up for 1 µs and 1 ms supply ramps](../../../verification/c2_gaps/slot_modes_bg/bg_core_ramp.png)
 

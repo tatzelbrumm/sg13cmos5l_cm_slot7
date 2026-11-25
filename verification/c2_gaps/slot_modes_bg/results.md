@@ -9,9 +9,9 @@ IHP sg13cmos5l simulation, ngspice-47. Views: in the slot decks `bg_core_pd` **s
 source; `bg_core_pd` alone: **schematic** and **extracted** (magic PEX R + C). Design repository commit `9052bd3`,
 slot commit `158afc5`. Method and limits: `README.md`.
 
-## 1. ss / −40 °C mode failures: simulator artefact, not a second state of the bandgap
+## 1. ss / −40 °C mode failures: simulator artifact, not a second state of the bandgap
 
-**Verdict: simulator (DC solver / time-step) artefact.** In every run where the circuit was simulated from power-up,
+**Verdict: simulator (DC solver / time-step) artifact.** In every run where the circuit was simulated from power-up,
 the bandgap started and the slot settled to the expected output; no zero-current (second) state of `bg_core_pd` was
 found by any method. Evidence:
 

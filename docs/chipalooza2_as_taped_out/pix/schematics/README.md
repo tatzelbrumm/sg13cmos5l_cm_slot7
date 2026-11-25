@@ -12,7 +12,7 @@ at the two taped-out commits:
 - **S** = [`9052bd3`](https://github.com/tatzelbrumm/sg13cmos5l_cm_ip__single2diff2single/tree/9052bd35928c6d40344e8e686c9abbe736bfadb9) (`9052bd35928c6d40344e8e686c9abbe736bfadb9`): `slot_7` and the blocks it places
 
 All pictures: xschem 3.4.8RC, IHP open PDK `ihp-sg13cmos5l` symbols, the design repo's `macros/xschemrc`
-(every `macros/*/schematic/xschem` on the symbol path), light colour scheme, exported area = drawing
+(every `macros/*/schematic/xschem` on the symbol path), light color scheme, exported area = drawing
 bounding box + 3 % margin. Every sheet was checked as a PNG (Playwright Chromium): all symbols resolve.
 Source paths are relative to `macros/` of the design repository.
 

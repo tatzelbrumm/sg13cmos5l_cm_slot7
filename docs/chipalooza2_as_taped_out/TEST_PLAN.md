@@ -48,7 +48,7 @@ with its source; none of them is a guaranteed limit, and the design had no speci
 The path from a shared pin to the slot is the one PL §5 describes for stage A: chip pin `analog[k]` → shared net → slot 7's harness bus
 switch → `analog_bus<k>`. The shared net also carries the open switches of the other 17 slots, so a bus-current measurement needs the
 leak subtraction of PL §5; a bus-voltage measurement needs a high-impedance voltmeter (FT: "read them with a high-impedance voltmeter").
-The bus switch's series resistance was modelled as 10 kΩ ("harness switch and instrument") in the mode simulations (MO, `run_modes.py`).
+The bus switch's series resistance was modeled as 10 kΩ ("harness switch and instrument") in the mode simulations (MO, `run_modes.py`).
 
 ## 2. Harness registers used (HK, quoted from the RTL)
 
@@ -124,7 +124,7 @@ not part of FT): `0x51` bit 3 = 0, route writes, `0x51` bit 3 = 1. Return to the
 | M6 all high | `0x20 … 0x37 = 0x0E` | `0x0F` | as D2 | `s7_an[1]` | key invalid (`dig_in[4]` = 1) → default: 0.90 mV (tt 27 °C), 1.31 mV (ss −40 °C), 6.50 mV (ff 125 °C) |
 | M7 no key, swap | `0x20 = 0x0E` only | `0x0F` | as D2 | `s7_an[1]` | default (not crossed): 0.90 / 1.31 / 6.50 mV at tt 27 / ss −40 / ff 125 °C |
 
-M6 and M7 test the key: a crossed or opened loop there is outside the simulated behaviour. GL §3 lists all 16 combinations of the four mode bits.
+M6 and M7 test the key: a crossed or opened loop there is outside the simulated behavior. GL §3 lists all 16 combinations of the four mode bits.
 
 ### 3.4 Disable, fail-safe and leakage
 

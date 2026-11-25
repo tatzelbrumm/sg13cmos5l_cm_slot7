@@ -7,7 +7,7 @@ SPDX-License-Identifier: Apache-2.0
 PNG renders of the taped-out GDS in this repository, made with KLayout 0.30.12 in batch mode
 (`pya.LayoutView`, `save_image_with_options`, 2× oversampling, white background, texts hidden) and the IHP
 layer properties `ihp-sg13cmos5l/libs.tech/klayout/tech/sg13cmos5l.lyp`. Each picture has a caption strip
-with the cell name, its size and a scale bar (added with Pillow, then stored as a 123-colour palette PNG).
+with the cell name, its size and a scale bar (added with Pillow, then stored as a 123-color palette PNG).
 "Front end" views hide Passiv, Via2 … TopVia2 and Metal3 … TopMetal2, so the devices, Metal1 and Metal2
 under the pad's top-metal plates show.
 

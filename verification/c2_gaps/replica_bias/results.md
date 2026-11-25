@@ -181,7 +181,7 @@ different random draws (the device order differs) and differ by about the statis
 
 ## Not resolved here (TBD)
 
-- Dynamic behaviour on the PEX view (enable time, supply rejection, the pads' kick-back on vcm / vref): no AC or
+- Dynamic behavior on the PEX view (enable time, supply rejection, the pads' kick-back on vcm / vref): no AC or
   transient group exists in the pad_ref_rb yaml; not run.
 - Full-RC extraction (wiring resistance) not done; `vcm_sel_params` not run on the PEX view.
 - bias_dist_pd with its real loads (the trees' input diodes behind their switches), with several inputs summed, at

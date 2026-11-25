@@ -37,7 +37,7 @@ and temperature. In the default mode the pads form a loop: the output pad repeat
 |---|---|---|
 | S2D pad `sg13cmos5l_IOPadSingle2Diff` | single-ended in, differential out | matched-pair differential difference amplifier `s2d_mpdda`: identical units on (pad, vref) and on the two feedback paths set outp − outn = 2 (pad − vref); two further units form the common-mode feedback to vcm; folded cascode |
 | D2S pad `sg13cmos5l_IOPadDiff2Single` | differential in, single-ended out | Miller-compensated class-AB driver `d2s_mpdda_pd` with a matched-pair front end; the output transistors are the pad's own clamp frames, biased through replicas; 2 kΩ secondary protection |
-| replica bias `pad_ref_rb` | vcm and vref for both pads | copies of the pads' input and folding nodes place vcm at the centre of the linear band and vref near 0.5 V; one 5 µA reference, bypass capacitors |
+| replica bias `pad_ref_rb` | vcm and vref for both pads | copies of the pads' input and folding nodes place vcm at the center of the linear band and vref near 0.5 V; one 5 µA reference, bypass capacitors |
 | bandgap core `bg_core_pd` | 5 µA reference currents | current-mode (Banba) bandgap without op amp; 47.55 × 50.05 µm |
 | bias distribution `bias_dist_pd` | one copy of the reference per pad | 1:1 current mirrors, each input and output behind a transmission gate |
 | glue `s7_ctrl`, `s7_doutpd` | enable, mode decode, switch matrix | fail-safe 3.3 V level shifters, 3.3 V static logic, 10 transmission gates; 12 pull-downs for `dig_out` |
@@ -253,8 +253,8 @@ Register values and acceptance intervals: test plan (`docs/chipalooza2_as_taped_
 | schematics (SVG) and layout renders | `docs/chipalooza2_as_taped_out/pix/` |
 | xschem schematics, CACE test benches | design repository `tatzelbrumm/sg13cmos5l_cm_ip__single2diff2single` at `91a7da8b` (pads) and `9052bd35` (slot) |
 
-## Repository and licence
+## Repository and license
 
 [github.com/tatzelbrumm/sg13cmos5l_cm_slot7](https://github.com/tatzelbrumm/sg13cmos5l_cm_slot7): taped-out commit
-`158afc5`, documentation on branch `chipalooza2-documentation`. Licence: Solderpad Hardware License 2.1 (an Apache 2.0
+`158afc5`, documentation on branch `chipalooza2-documentation`. License: Solderpad Hardware License 2.1 (an Apache 2.0
 wrapper); documentation Apache 2.0. Full data book with all results: `docs/chipalooza2_as_taped_out/pdf/slot7_databook.pdf`.

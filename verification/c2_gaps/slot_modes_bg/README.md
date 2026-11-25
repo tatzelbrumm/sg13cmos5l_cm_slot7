@@ -9,7 +9,7 @@ taped-out slot 7 (commit `158afc5afab0056bd6d216a4db3833e34a364949` of this repo
 
 1. **The ss / −40 °C mode failures** in the designer's tier-1 mode runs (`docs/slot7_hookup/tier1/modes.txt` of the
    design repository: swap, mon, feed, ext, swap+feed `FAILED` at ss −40 °C, "stall at the bandgap's start-up node").
-   Question: simulator artefact or a second stable state of the bandgap (real start-up risk)?
+   Question: simulator artifact or a second stable state of the bandgap (real start-up risk)?
 2. **Mode table over more PVT points** than the designer's 3 (modes) / 5 (round trip).
 3. **`bg_core_pd` alone**: output current over MOS × rhigh corners × T × V, start-up by supply ramp, supply
    sensitivity, and a check for a zero-current state.

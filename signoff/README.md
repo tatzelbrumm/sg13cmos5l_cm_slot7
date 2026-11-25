@@ -38,7 +38,7 @@ and of each device pair.
 | `sg13cmos5l_IOPadDiff2Single/verification/lvs/sg13cmos5l_IOPadDiff2Single.klayout.lvs/sg13cmos5l_IOPadDiff2Single.lvsdb` | T | same path under `macros/sg13cmos5l_IOPadDiff2Single/` | 1215986 | `ae628fa81bd8b2627e5cf75b979d8e90a673070d8ceb0ef8bce141bbf8a1d780` | KLayout LVS: circuit `sg13cmos5l_IOPadDiff2Single` status Match; 77 device pairs, all Match |
 
 No file was over 2 MB, so nothing was skipped for size. The copied reports carry no SPDX header, so that they stay byte-identical
-to their sources (sha256 above); they are tool output and have no licence header of their own (repository licence: `../LICENSE`).
+to their sources (sha256 above); they are tool output and have no license header of their own (repository license: `../LICENSE`).
 
 ## Not collected, and why
 

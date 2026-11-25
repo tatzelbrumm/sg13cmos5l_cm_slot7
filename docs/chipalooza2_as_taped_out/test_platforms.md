@@ -201,7 +201,7 @@ Reading: with the bandgap as reference `vbn` varies 0.841 … 0.962 V and `vbp` 
 | question | answer from the platforms | caveat |
 |---|---|---|
 | reference current of the bandgap core | BG: 3.83 … 6.37 µA over corners / temperature / supply, 4.96 µA tt 27 °C; 0.37 % supply dependence 3.0 → 3.6 V; flat over temperature in tt (4.87 / 4.96 / 4.88 µA); extracted layout same to 4 digits | `bg_core_pd` as in the platforms; not geometry-compared with the taped-out cell here; the taped-out slot feeds it into `bias_dist_pd`, not a bus switch (a compliance of 0 … 2.5 V on the bus is therefore not directly the operating condition) |
-| enable behaviour | enable to 1 %: 0.43 … 0.93 µs (BG); disable ≈ 70 … 100 ns; fail-safe against `vdd_1v2` off / enable low: bus currents ≤ 0.17 nA | the taped-out enable is a different circuit (`ls_up_fs`, [glue_logic.md](glue_logic.md)); the platform's `tp_en_ctrl` was ratioed and needed `vdd_1v2` present |
+| enable behavior | enable to 1 %: 0.43 … 0.93 µs (BG); disable ≈ 70 … 100 ns; fail-safe against `vdd_1v2` off / enable low: bus currents ≤ 0.17 nA | the taped-out enable is a different circuit (`ls_up_fs`, [glue_logic.md](glue_logic.md)); the platform's `tp_en_ctrl` was ratioed and needed `vdd_1v2` present |
 | tree bias voltages | `vbn` ≈ 0.84 … 0.98 V, `vbp` ≈ 1.5 … 2.4 V on the S2D pad's tree with each reference | the taped-out pads use their own trees fed by `iref` from the slot; the tree of stage B is the same tree design (`bias_tree_noab_pd`), not the same instance |
 | OA core | characterized here; **not in the taped-out slot** | for the record of the design only |
 

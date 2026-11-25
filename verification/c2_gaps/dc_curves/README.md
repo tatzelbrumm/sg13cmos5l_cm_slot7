@@ -153,7 +153,7 @@ came out byte-identical to the ones here, and the same 36 plot files were writte
 
 ## What this does NOT show
 
-- No mismatch / Monte Carlo: systematic (corner) behaviour only; offsets here are systematic offsets. Mismatch is
+- No mismatch / Monte Carlo: systematic (corner) behavior only; offsets here are systematic offsets. Mismatch is
   covered by the committed CACE `mm_params` groups of both pads (not repeated here) and is not in these curves.
 - Resistor corners: `res_typ` only (the S2D gain depends on resistor ratios, not on the sheet value; CACE
   `dc_params` covers `res_bcs` / `res_wcs`).
@@ -165,4 +165,4 @@ came out byte-identical to the ones here, and the same 36 plot files were writte
   KLayout-extracted / schematic views, not magic PEX).
 - Round trip: default mode only, pad out unloaded (1 GΩ) as the designer's deck, five PVT points.
 - The S2D range vs vref / vcm (section 4 of results.md) is schematic only and covers ss / tt / ff.
-- No transient, AC or noise behaviour: DC transfer only.
+- No transient, AC or noise behavior: DC transfer only.

@@ -28,8 +28,8 @@ Each title states the simulation view(s) and the conditions.
 | `rt_bode_tt27` | small-signal gain pad_d2s / pad_s2d, magnitude and phase, 1 kHz … 100 MHz, at pad_s2d = 0.5 V DC, tt 27 °C 3.3 V; three loads (color: unloaded = 1 GΩ only as the designer's deck, 1 kΩ ∥ 10 pF, 1 kΩ ∥ 100 pF), three pad views (line style). Ideal: 0 dB (S2D gain 2 × D2S gain ½). The text box lists f−3dB and peaking per curve. |
 | `rt_bode_pvt` | the same at the five tier-1 PVT points (color = corner; the temperature / supply of each point in the legend), unloaded and 1 kΩ ∥ 100 pF, pads schematic and magic PEX |
 | `rt_f3db` | round-trip −3 dB bandwidth (relative to the gain at 1 kHz) per PVT point × pad view × load, as points |
-| `rt_step_tt27` | step 0.25 → 0.75 V at pad_s2d (10 ns edges, up at 2 µs, down at 7 µs): top pad_s2d (the ideal source) and pad_d2s, bottom pad_d2s − final value in mV with the ±1 % band (±5 mV) grey; the 1 % settling time of each curve is the vertical line / triangle; tt 27 °C, three loads, schematic and PEX pads |
-| `rt_step_pvt` | settling after the rising edge, pad_d2s − final in mV, five PVT points × pad views, unloaded and 1 kΩ ∥ 100 pF; grey bands ±1 % and ±0.1 % |
+| `rt_step_tt27` | step 0.25 → 0.75 V at pad_s2d (10 ns edges, up at 2 µs, down at 7 µs): top pad_s2d (the ideal source) and pad_d2s, bottom pad_d2s − final value in mV with the ±1 % band (±5 mV) gray; the 1 % settling time of each curve is the vertical line / triangle; tt 27 °C, three loads, schematic and PEX pads |
+| `rt_step_pvt` | settling after the rising edge, pad_d2s − final in mV, five PVT points × pad views, unloaded and 1 kΩ ∥ 100 pF; gray bands ±1 % and ±0.1 % |
 | `rt_sine_tt27` | 10 kHz sine 0 … 1 V at pad_s2d, 4 periods after 2 settling periods: input, expected output vcm + pad_s2d − vref (the replica's actual vcm / vref, as the designer's run_tier1.py) and pad_d2s (top); pad_d2s − expected (bottom). That error is mostly the round-trip delay (≈ 2π f A τ, a 90°-shifted sine), not distortion; the black curve (×10) is pad_d2s minus its own fitted dc + 10 kHz fundamental, i.e. the distortion; THD (harmonics 2–7), H2, H3, gain and delay in the text box |
 
 ### 2. S2D alone (CACE tb_ac / tb_tran / tb_noise / tb_enable conditions: iovdd 3.3 V, vref 1.2 V, vcm 1.2 V, rsrc 50 Ω, 0.5 pF per output, harness iDAC 5 µA)
@@ -172,7 +172,7 @@ under 1 min. Partial reruns: `run.sh <work_dir> plots` regenerates everything co
 
 ## What this does NOT show
 
-- No mismatch / Monte Carlo: all curves are systematic (corner) behaviour. In particular the S2D PSRR / CMRR (CACE
+- No mismatch / Monte Carlo: all curves are systematic (corner) behavior. In particular the S2D PSRR / CMRR (CACE
   `ac_mm_params`) need mismatch and are not plotted; the S2D common-mode curves are the systematic part only.
 - Resistor / capacitor corners: typical only.
 - No package, bond wire, ESD event, board or probe; sources ideal except the CACE testbench's rsrc (S2D) and load.
@@ -183,7 +183,7 @@ under 1 min. Partial reruns: `run.sh <work_dir> plots` regenerates everything co
   round trip has the slot's own bias, and only in its default mode at five PVT points.
 - Noise only for the pads alone (not the round trip); no 1/f-noise corner model beyond the PDK's.
 - Enable transients of the pads alone (the slot power-up / mode transients are in ../slot_modes_bg).
-- Large-signal behaviour only for the steps / sine listed (no slew-limited sine sweep, no overload recovery).
+- Large-signal behavior only for the steps / sine listed (no slew-limited sine sweep, no overload recovery).
 - Round trip with KLayout-extracted pads: AC at all five PVT points, step only at tt 27 °C, no sine (the run aborts,
   results.md); magic PEX pads: step at tt / ss −40 °C / ff 125 °C, sine at tt only.
 - The D2S schematic values cannot be confirmed against its committed CACE CSVs, which are older than the schematic

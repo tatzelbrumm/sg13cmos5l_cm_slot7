@@ -149,4 +149,4 @@ Sources: [replica data sheet](datasheets/pad_ref_rb.md) (working limits; schemat
 | mm_params | supply current | ≤ 25 µA | 18.76 … 19.42 µA | — | 5.58 µA | inside |
 
 No working limit exists for the enable time (`vcm` 0.79 … 1.81 µs, `vref` 1.03 … 2.02 µs, [README §2.3](README.md#23-the-blocks))
-or for dynamic behaviour on the PEX view, which was not simulated ([replica bias results](../../verification/c2_gaps/replica_bias/results.md), "Not resolved here").
+or for dynamic behavior on the PEX view, which was not simulated ([replica bias results](../../verification/c2_gaps/replica_bias/results.md), "Not resolved here").
